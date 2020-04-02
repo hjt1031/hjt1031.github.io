@@ -10,26 +10,28 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[nodejs] 파일생성, 리다이렉션, 파일삭제 - juntae</title>
-<meta name="description" content="JavaScript And Node.js ">
+<meta name="description" content="파일생성과 리다이렉션 response.writeHead(302, {Location : &#39;http://whateverhostthiswillbe:8675/&#39; +newRoom}); response.end();  ">
 
 
   <meta name="author" content="동센">
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="juntae">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="[nodejs] 파일생성, 리다이렉션, 파일삭제">
+<meta property="og:url" content="http://localhost:4000/nodejs/">
 
 
-  <meta property="og:description" content="JavaScript And Node.js ">
-
-
-
+  <meta property="og:description" content="파일생성과 리다이렉션 response.writeHead(302, {Location : &#39;http://whateverhostthiswillbe:8675/&#39; +newRoom}); response.end();  ">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2020-04-02T00:00:00+09:00">
 
 
 
@@ -40,7 +42,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/nodejs/">
 
 
 
@@ -101,7 +103,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -259,32 +261,19 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[nodejs] 파일생성, 리다이렉션, 파일삭제">
+    <meta itemprop="description" content="파일생성과 리다이렉션response.writeHead(302, {Location : &#39;http://whateverhostthiswillbe:8675/&#39; +newRoom});response.end();">
+    <meta itemprop="datePublished" content="2020-04-02T00:00:00+09:00">
     
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
 
-<h3 class="archive__subtitle">최근 포스트</h3>
-
-
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/nodejs/" rel="permalink">[nodejs] 파일생성, 리다이렉션, 파일삭제
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] 파일생성, 리다이렉션, 파일삭제
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
@@ -292,22 +281,84 @@
   최대 1 분 소요
 
 </p>
-    
-    <p class="archive__item-excerpt" itemprop="description">파일생성과 리다이렉션
-response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>파일생성과 리다이렉션</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
 response.end();
+</code></pre></div></div>
 
-</p>
+<p>writeHead(200) 은 성공시켰다.
+writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
+
+<p>ex)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.writeFile(`data/${title}`, description, 'utf8', function(err){
+            response.writeHead(302, {Location: `/?id=${title}`});
+            response.end();
+          })
+</code></pre></div></div>
+
+<p>fs.unlink(path, callback) =&gt; 파일삭제
+ex)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.unlink(`data/${id}`, function(error){
+            response.writeHead(302, {Location: `/`});
+            response.end();
+          })
+</code></pre></div></div>
+<p>삭제가 되고 홈으로 이동한다.</p>
+
+<p><em>Get 방식</em>
+QueryString 이 있는 것</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-04-02T00:00:00+09:00">April 2, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+%ED%8C%8C%EC%9D%BC%EC%83%9D%EC%84%B1%2C+%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98%2C+%ED%8C%8C%EC%9D%BC%EC%82%AD%EC%A0%9C%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
   </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+            
+      </div>
+    </div>
+  
 </div>
 
-
-
-
-
-
-  </div>
-</div>
     </div>
 
     

@@ -1,0 +1,5 @@
+I"<p><strong>파일생성과 리다이렉션</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
+response.end();
+</code></pre></div></div>
+:ET

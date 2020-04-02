@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[nodejs] 파일생성, 리다이렉션, 파일삭제 - juntae</title>
-<meta name="description" content="파일생성과 리다이렉션 response.writeHead(302, {Location : &#39;http://whateverhostthiswillbe:8675/&#39; +newRoom}); response.end();  ">
+<meta name="description" content="파일생성과 리다이렉션    리다이렉션 : 출력의 방향을 바꾼다.  ">
 
 
   <meta name="author" content="동센">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/nodejs/">
 
 
-  <meta property="og:description" content="파일생성과 리다이렉션 response.writeHead(302, {Location : &#39;http://whateverhostthiswillbe:8675/&#39; +newRoom}); response.end();  ">
+  <meta property="og:description" content="파일생성과 리다이렉션    리다이렉션 : 출력의 방향을 바꾼다.  ">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[nodejs] 파일생성, 리다이렉션, 파일삭제">
-    <meta itemprop="description" content="파일생성과 리다이렉션response.writeHead(302, {Location : &#39;http://whateverhostthiswillbe:8675/&#39; +newRoom});response.end();">
+    <meta itemprop="description" content="파일생성과 리다이렉션  리다이렉션 : 출력의 방향을 바꾼다.">
     <meta itemprop="datePublished" content="2020-04-02T00:00:00+09:00">
     
 
@@ -288,6 +288,10 @@
       <section class="page__content" itemprop="text">
         
         <p><strong>파일생성과 리다이렉션</strong></p>
+<blockquote>
+  <p>리다이렉션 : 출력의 방향을 바꾼다.</p>
+</blockquote>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
 response.end();
 </code></pre></div></div>
@@ -302,8 +306,11 @@ writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
           })
 </code></pre></div></div>
 
-<p>fs.unlink(path, callback) =&gt; 파일삭제
-ex)</p>
+<blockquote>
+  <p>fs.unlink(path, callback) =&gt; 파일삭제</p>
+</blockquote>
+
+<p>ex)</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.unlink(`data/${id}`, function(error){
             response.writeHead(302, {Location: `/`});
             response.end();
@@ -311,8 +318,8 @@ ex)</p>
 </code></pre></div></div>
 <p>삭제가 되고 홈으로 이동한다.</p>
 
-<p><em>Get 방식</em>
-QueryString 이 있는 것</p>
+<h1 id="get-방식"><em>Get 방식</em></h1>
+<p>QueryString 이 있는 것</p>
 
         
       </section>

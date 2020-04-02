@@ -1,4 +1,5 @@
-I"6<p><strong>파일생성과 리다이렉션</strong></p>
+I"�<p><strong>파일생성과 리다이렉션</strong>
+리다이렉션 : 출력의 방향을 바꾼다.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
 response.end();
 </code></pre></div></div>
@@ -13,15 +14,18 @@ writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
           })
 </code></pre></div></div>
 
-<p><em>Get 방식</em>
-QueryString 이 있는 것</p>
+<blockquote>
+  <p>fs.unlink(path, callback) =&gt; 파일삭제</p>
+</blockquote>
 
-<p>fs.unlink(path, callback) =&gt; 파일삭제
-ex)</p>
+<p>ex)</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.unlink(`data/${id}`, function(error){
             response.writeHead(302, {Location: `/`});
             response.end();
           })
 </code></pre></div></div>
 <p>삭제가 되고 홈으로 이동한다.</p>
+
+<h1 id="get-방식"><em>Get 방식</em></h1>
+<p>QueryString 이 있는 것</p>
 :ET

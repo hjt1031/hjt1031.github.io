@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-02T21:00:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[nodejs] 파일생성, 리다이렉션, 파일삭제</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs] 파일생성, 리다이렉션, 파일삭제" /><published>2020-04-02T00:00:00+09:00</published><updated>2020-04-02T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;&lt;strong&gt;파일생성과 리다이렉션&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-02T21:05:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[nodejs] 파일생성, 리다이렉션, 파일삭제</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs] 파일생성, 리다이렉션, 파일삭제" /><published>2020-04-02T00:00:00+09:00</published><updated>2020-04-02T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;&lt;strong&gt;파일생성과 리다이렉션&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;리다이렉션 : 출력의 방향을 바꾼다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
 response.end();
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -13,8 +17,11 @@ writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.&lt;/p&gt;
           })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;fs.unlink(path, callback) =&amp;gt; 파일삭제
-ex)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;fs.unlink(path, callback) =&amp;gt; 파일삭제&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ex)&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fs.unlink(`data/${id}`, function(error){
             response.writeHead(302, {Location: `/`});
             response.end();
@@ -22,5 +29,5 @@ ex)&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;삭제가 되고 홈으로 이동한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Get 방식&lt;/em&gt;
-QueryString 이 있는 것&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">파일생성과 리다이렉션 response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom}); response.end();</summary></entry></feed>
+&lt;h1 id=&quot;get-방식&quot;&gt;&lt;em&gt;Get 방식&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;QueryString 이 있는 것&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">파일생성과 리다이렉션 리다이렉션 : 출력의 방향을 바꾼다.</summary></entry></feed>

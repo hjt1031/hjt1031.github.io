@@ -10,4 +10,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/aws/",
         "teaser": null
+      },{
+        "title": "[node js] 객체",
+        "excerpt":"Object 와 Array var members = ['egoging','k8805','hoya']; console.log(members[1]); var i = 0; while (i&lt;members.length) { console.log('array loop',members[i]); i = i+1; } var roles = { 'programmer':'egoing', // key : value 'designer' : 'k8805', 'manager' : 'hoya'} console.log(roles.designer) //객체는 . 을 찍어서 가져온다. console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다. for(var...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/node-js/",
+        "teaser": null
       }]

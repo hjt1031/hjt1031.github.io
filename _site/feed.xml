@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-03T10:04:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[AWS]기초용어</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]기초용어" /><published>2020-04-03T00:00:00+09:00</published><updated>2020-04-03T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;p&gt;&lt;strong&gt;EC2&lt;/strong&gt; : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품&lt;br /&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-06T21:36:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[node js] 객체</title><link href="http://localhost:4000/node-js/" rel="alternate" type="text/html" title="[node js] 객체" /><published>2020-04-06T00:00:00+09:00</published><updated>2020-04-06T00:00:00+09:00</updated><id>http://localhost:4000/node-js</id><content type="html" xml:base="http://localhost:4000/node-js/">&lt;h1 id=&quot;object-와-array&quot;&gt;Object 와 Array&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var members = ['egoging','k8805','hoya'];
+console.log(members[1]);
+
+
+var i = 0;
+while (i&amp;lt;members.length) {
+    console.log('array loop',members[i]);
+    i = i+1;
+}
+
+var roles = {
+'programmer':'egoing', // key : value
+'designer' : 'k8805',
+'manager' : 'hoya'}
+
+console.log(roles.designer) //객체는 . 을 찍어서 가져온다.
+console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다.
+
+ for(var name in roles){ //name 은 아무거나 써도 상관이없다.
+     console.log('object =&amp;gt;',name, 'value =&amp;gt;',roles[name]);
+ }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;objeck-oriented-programming-oop&quot;&gt;objeck oriented Programming (OOP)&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//자바스크립트 에게 함수는 값이기도하고 , 그렇기에 배열과 객체에 담을 수 있다.
+var f = function() {
+    console.log(1+2);
+    console.log(1+2);
+}
+var a = [f];
+a[0](); //배열의 함수로서 사용 가능
+
+var o = {
+    func:f //프로퍼티
+}
+o.func();
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;객체--코드가-복잡해짐에-따라-코드를-정리정돈-을-해서-복잡성을-낮춘다&quot;&gt;객체 : 코드가 복잡해짐에 따라 코드를 정리정돈 을 해서 복잡성을 낮춘다.&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var o = { //하나의 객체의 정리해놓는다.(폴더의기능?)
+    v1:'v1',
+    v2:'v2',
+    f1:function f1(){
+    console.log(this.v1); //this : 함수가 속해있는 객체를 참조할 수 있다.
+    },
+    f2:function f2 (){
+    console.log(this.v2);
+    }
+}
+o.f1();
+o.f2(); 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">Object 와 Array ``` var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]);</summary></entry><entry><title type="html">[AWS]기초용어</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]기초용어" /><published>2020-04-03T00:00:00+09:00</published><updated>2020-04-03T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;p&gt;&lt;strong&gt;EC2&lt;/strong&gt; : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품&lt;br /&gt;&lt;br /&gt;
 &lt;strong&gt;Instance&lt;/strong&gt; : Instance 한개당 한대의 컴퓨터라 생각하면 된다&lt;br /&gt;&lt;br /&gt;
 &lt;strong&gt;온디맨드 인스턴스&lt;/strong&gt; : 필요할때 키고 필요없을땐 끊다. 우리가 컴퓨터를 필요할 때마다 켜고 끄고 할 수 있는 인스턴스를 의미&lt;br /&gt;&lt;br /&gt;
 &lt;strong&gt;예약 인스턴스&lt;/strong&gt; : 서버를 키는데 365일 동안 끄지 않는 경우면 예약 인스턴스를 사용하는게 훨씬 저렴하다. (3년치를 한꺼번에 사면 더 저렴하게 구매할 수 있다.)&lt;br /&gt;&lt;br /&gt;

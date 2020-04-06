@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs] 파일생성, 리다이렉션, 파일삭제 - juntae</title>
-<meta name="description" content="파일생성과 리다이렉션    리다이렉션 : 출력의 방향을 바꾼다.  ">
+<!-- begin _includes/seo.html --><title>[node js] 객체 - juntae</title>
+<meta name="description" content="Object 와 Array ``` var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
 
 
   <meta name="author" content="동센">
@@ -19,30 +19,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[nodejs] 파일생성, 리다이렉션, 파일삭제">
-<meta property="og:url" content="http://localhost:4000/nodejs/">
+<meta property="og:title" content="[node js] 객체">
+<meta property="og:url" content="http://localhost:4000/node-js/">
 
 
-  <meta property="og:description" content="파일생성과 리다이렉션    리다이렉션 : 출력의 방향을 바꾼다.  ">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2020-04-02T00:00:00+09:00">
+  <meta property="og:description" content="Object 와 Array ``` var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2020-04-06T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/nodejs/">
+
+<link rel="canonical" href="http://localhost:4000/node-js/">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[nodejs] 파일생성, 리다이렉션, 파일삭제">
-    <meta itemprop="description" content="파일생성과 리다이렉션  리다이렉션 : 출력의 방향을 바꾼다.">
-    <meta itemprop="datePublished" content="2020-04-02T00:00:00+09:00">
+    <meta itemprop="headline" content="[node js] 객체">
+    <meta itemprop="description" content="Object 와 Array```var members = [‘egoging’,’k8805’,’hoya’];console.log(members[1]);">
+    <meta itemprop="datePublished" content="2020-04-06T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] 파일생성, 리다이렉션, 파일삭제
+          <h1 id="page-title" class="page__title" itemprop="headline">[node js] 객체
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,39 +287,60 @@
 
       <section class="page__content" itemprop="text">
         
-        <p><strong>파일생성과 리다이렉션</strong></p>
-<blockquote>
-  <p>리다이렉션 : 출력의 방향을 바꾼다.</p>
-</blockquote>
+        <h1 id="object-와-array">Object 와 Array</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var members = ['egoging','k8805','hoya'];
+console.log(members[1]);
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
-response.end();
+
+var i = 0;
+while (i&lt;members.length) {
+    console.log('array loop',members[i]);
+    i = i+1;
+}
+
+var roles = {
+'programmer':'egoing', // key : value
+'designer' : 'k8805',
+'manager' : 'hoya'}
+
+console.log(roles.designer) //객체는 . 을 찍어서 가져온다.
+console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다.
+
+ for(var name in roles){ //name 은 아무거나 써도 상관이없다.
+     console.log('object =&gt;',name, 'value =&gt;',roles[name]);
+ }
 </code></pre></div></div>
 
-<p>writeHead(200) 은 성공시켰다.
-writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
+<h1 id="objeck-oriented-programming-oop">objeck oriented Programming (OOP)</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//자바스크립트 에게 함수는 값이기도하고 , 그렇기에 배열과 객체에 담을 수 있다.
+var f = function() {
+    console.log(1+2);
+    console.log(1+2);
+}
+var a = [f];
+a[0](); //배열의 함수로서 사용 가능
 
-<p>ex)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.writeFile(`data/${title}`, description, 'utf8', function(err){
-            response.writeHead(302, {Location: `/?id=${title}`});
-            response.end();
-          })
+var o = {
+    func:f //프로퍼티
+}
+o.func();
+
 </code></pre></div></div>
 
-<blockquote>
-  <p>fs.unlink(path, callback) =&gt; 파일삭제</p>
-</blockquote>
-
-<p>ex)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.unlink(`data/${id}`, function(error){
-            response.writeHead(302, {Location: `/`});
-            response.end();
-          })
+<h1 id="객체--코드가-복잡해짐에-따라-코드를-정리정돈-을-해서-복잡성을-낮춘다">객체 : 코드가 복잡해짐에 따라 코드를 정리정돈 을 해서 복잡성을 낮춘다.</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var o = { //하나의 객체의 정리해놓는다.(폴더의기능?)
+    v1:'v1',
+    v2:'v2',
+    f1:function f1(){
+    console.log(this.v1); //this : 함수가 속해있는 객체를 참조할 수 있다.
+    },
+    f2:function f2 (){
+    console.log(this.v2);
+    }
+}
+o.f1();
+o.f2(); 
 </code></pre></div></div>
-<p>삭제가 되고 홈으로 이동한다.</p>
-
-<h1 id="get-방식"><em>Get 방식</em></h1>
-<p>QueryString 이 있는 것</p>
 
         
       </section>
@@ -330,7 +351,7 @@ writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-04-02T00:00:00+09:00">April 2, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-04-06T00:00:00+09:00">April 6, 2020</time></p>
         
       </footer>
 
@@ -339,22 +360,22 @@ writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+%ED%8C%8C%EC%9D%BC%EC%83%9D%EC%84%B1%2C+%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98%2C+%ED%8C%8C%EC%9D%BC%EC%82%AD%EC%A0%9C%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Bnode+js%5D+%EA%B0%9D%EC%B2%B4%20http%3A%2F%2Flocalhost%3A4000%2Fnode-js%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnode-js%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnode-js%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">이전</a>
-    
-    
       <a href="/aws/" class="pagination--pager" title="[AWS]기초용어
-">다음</a>
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -368,38 +389,6 @@ writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/node-js/" rel="permalink">[node js] 객체
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Object 와 Array
-```
-var members = [‘egoging’,’k8805’,’hoya’];
-console.log(members[1]);
-</p>
-  </article>
-</div>
-
         
           
 
@@ -427,6 +416,38 @@ console.log(members[1]);
     <p class="archive__item-excerpt" itemprop="description">EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품
 Instance : Instance 한개당 한대의 컴퓨터라 생각하면 된다
 온디맨드 인스턴스 : 필요할때 키고 필요없을땐 끊다. 우리가 컴퓨터를 필요할 때마다 켜고 끄고 할 수 있는 인스턴스를 의...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs] 파일생성, 리다이렉션, 파일삭제
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">파일생성과 리다이렉션
+
+  리다이렉션 : 출력의 방향을 바꾼다.
+
+</p>
   </article>
 </div>
 

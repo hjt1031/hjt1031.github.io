@@ -1,0 +1,24 @@
+I"�<h1 id="object-와-array">Object 와 Array</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var members = ['egoging','k8805','hoya'];
+console.log(members[1]);
+
+
+var i = 0;
+while (i&lt;members.length) {
+    console.log('array loop',members[i]);
+    i = i+1;
+}
+
+var roles = {
+'programmer':'egoing', // key : value
+'designer' : 'k8805',
+'manager' : 'hoya'}
+
+console.log(roles.designer) //객체는 . 을 찍어서 가져온다.
+console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다.
+
+ for(var name in roles){ //name 은 아무거나 써도 상관이없다.
+     console.log('object =&gt;',name, 'value =&gt;',roles[name]);
+ }
+</code></pre></div></div>
+:ET

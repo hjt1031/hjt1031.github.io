@@ -1,0 +1,38 @@
+I"n<p>코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">template</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="nl">HTML:</span><span class="n">function</span><span class="o">(</span><span class="n">title</span><span class="o">,</span> <span class="n">list</span><span class="o">,</span> <span class="n">body</span><span class="o">,</span> <span class="n">control</span><span class="o">){</span>
+    <span class="k">return</span> <span class="err">`</span>
+    <span class="o">&lt;!</span><span class="n">doctype</span> <span class="n">html</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="no">WEB1</span> <span class="o">-</span> <span class="err">$</span><span class="o">{</span><span class="n">title</span><span class="o">}&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">"/"</span><span class="o">&gt;</span><span class="no">WEB</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+      <span class="err">$</span><span class="o">{</span><span class="n">list</span><span class="o">}</span>
+      <span class="err">$</span><span class="o">{</span><span class="n">control</span><span class="o">}</span>
+      <span class="err">$</span><span class="o">{</span><span class="n">body</span><span class="o">}</span>
+    <span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+    <span class="err">`</span><span class="o">;</span>
+  <span class="o">},</span><span class="nl">list:</span><span class="n">function</span><span class="o">(</span><span class="n">filelist</span><span class="o">){</span>
+    <span class="kt">var</span> <span class="n">list</span> <span class="o">=</span> <span class="err">'</span><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span><span class="err">'</span><span class="o">;</span>
+    <span class="kt">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">filelist</span><span class="o">.</span><span class="na">length</span><span class="o">){</span>
+      <span class="n">list</span> <span class="o">=</span> <span class="n">list</span> <span class="o">+</span> <span class="err">`</span><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">"/?id=${filelist[i]}"</span><span class="o">&gt;</span><span class="err">$</span><span class="o">{</span><span class="n">filelist</span><span class="o">[</span><span class="n">i</span><span class="o">]}&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span><span class="err">`</span><span class="o">;</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">list</span> <span class="o">=</span> <span class="n">list</span><span class="o">+</span><span class="err">'</span><span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span><span class="err">'</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//사용</span>
+<span class="kt">var</span> <span class="n">list</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="n">filelist</span><span class="o">);</span>
+          <span class="kt">var</span> <span class="n">html</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">HTML</span><span class="o">(</span><span class="n">title</span><span class="o">,</span> <span class="n">list</span><span class="o">,</span>
+            <span class="err">`</span><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">$</span><span class="o">{</span><span class="n">title</span><span class="o">}&lt;/</span><span class="n">h2</span><span class="o">&gt;</span><span class="err">$</span><span class="o">{</span><span class="n">description</span><span class="o">}</span><span class="err">`</span><span class="o">,</span>
+            <span class="err">`</span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">"/create"</span><span class="o">&gt;</span><span class="n">create</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="err">`</span>
+          <span class="o">);</span>
+</code></pre></div></div>
+:ET

@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[node js] 객체 - juntae</title>
-<meta name="description" content="Object 와 Array ``` var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
+<meta name="description" content="Object 와 Array ```javascript var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
 
 
   <meta name="author" content="동센">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/node-js/">
 
 
-  <meta property="og:description" content="Object 와 Array ``` var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
+  <meta property="og:description" content="Object 와 Array ```javascript var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[node js] 객체">
-    <meta itemprop="description" content="Object 와 Array```var members = [‘egoging’,’k8805’,’hoya’];console.log(members[1]);">
+    <meta itemprop="description" content="Object 와 Array```javascriptvar members = [‘egoging’,’k8805’,’hoya’];console.log(members[1]);">
     <meta itemprop="datePublished" content="2020-04-06T00:00:00+09:00">
     
 
@@ -288,58 +288,58 @@
       <section class="page__content" itemprop="text">
         
         <h1 id="object-와-array">Object 와 Array</h1>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var members = ['egoging','k8805','hoya'];
-console.log(members[1]);
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">members</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">egoging</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">k8805</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">hoya</span><span class="dl">'</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">members</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 
 
-var i = 0;
-while (i&lt;members.length) {
-    console.log('array loop',members[i]);
-    i = i+1;
-}
+<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">members</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">array loop</span><span class="dl">'</span><span class="p">,</span><span class="nx">members</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
 
-var roles = {
-'programmer':'egoing', // key : value
-'designer' : 'k8805',
-'manager' : 'hoya'}
+<span class="kd">var</span> <span class="nx">roles</span> <span class="o">=</span> <span class="p">{</span>
+<span class="dl">'</span><span class="s1">programmer</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">egoing</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// key : value</span>
+<span class="dl">'</span><span class="s1">designer</span><span class="dl">'</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">k8805</span><span class="dl">'</span><span class="p">,</span>
+<span class="dl">'</span><span class="s1">manager</span><span class="dl">'</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">hoya</span><span class="dl">'</span><span class="p">}</span>
 
-console.log(roles.designer) //객체는 . 을 찍어서 가져온다.
-console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다.
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">roles</span><span class="p">.</span><span class="nx">designer</span><span class="p">)</span> <span class="c1">//객체는 . 을 찍어서 가져온다.</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">roles</span><span class="p">[</span><span class="dl">'</span><span class="s1">debugger</span><span class="dl">'</span><span class="p">])</span> <span class="c1">//키값을 문자로 전달해도 가져올 수 있다.</span>
 
- for(var name in roles){ //name 은 아무거나 써도 상관이없다.
-     console.log('object =&gt;',name, 'value =&gt;',roles[name]);
- }
+ <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">name</span> <span class="k">in</span> <span class="nx">roles</span><span class="p">){</span> <span class="c1">//name 은 아무거나 써도 상관이없다.</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">object =&gt;</span><span class="dl">'</span><span class="p">,</span><span class="nx">name</span><span class="p">,</span> <span class="dl">'</span><span class="s1">value =&gt;</span><span class="dl">'</span><span class="p">,</span><span class="nx">roles</span><span class="p">[</span><span class="nx">name</span><span class="p">]);</span>
+ <span class="p">}</span>
 </code></pre></div></div>
 
 <h1 id="objeck-oriented-programming-oop">objeck oriented Programming (OOP)</h1>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//자바스크립트 에게 함수는 값이기도하고 , 그렇기에 배열과 객체에 담을 수 있다.
-var f = function() {
-    console.log(1+2);
-    console.log(1+2);
-}
-var a = [f];
-a[0](); //배열의 함수로서 사용 가능
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//자바스크립트 에게 함수는 값이기도하고 , 그렇기에 배열과 객체에 담을 수 있다.</span>
+<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="nx">f</span><span class="p">];</span>
+<span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]();</span> <span class="c1">//배열의 함수로서 사용 가능</span>
 
-var o = {
-    func:f //프로퍼티
-}
-o.func();
+<span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">func</span><span class="p">:</span><span class="nx">f</span> <span class="c1">//프로퍼티</span>
+<span class="p">}</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">func</span><span class="p">();</span>
 
 </code></pre></div></div>
 
 <h1 id="객체--코드가-복잡해짐에-따라-코드를-정리정돈-을-해서-복잡성을-낮춘다">객체 : 코드가 복잡해짐에 따라 코드를 정리정돈 을 해서 복잡성을 낮춘다.</h1>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var o = { //하나의 객체의 정리해놓는다.(폴더의기능?)
-    v1:'v1',
-    v2:'v2',
-    f1:function f1(){
-    console.log(this.v1); //this : 함수가 속해있는 객체를 참조할 수 있다.
-    },
-    f2:function f2 (){
-    console.log(this.v2);
-    }
-}
-o.f1();
-o.f2(); 
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">//하나의 객체의 정리해놓는다.(폴더의기능?)</span>
+    <span class="na">v1</span><span class="p">:</span><span class="dl">'</span><span class="s1">v1</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">v2</span><span class="p">:</span><span class="dl">'</span><span class="s1">v2</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">f1</span><span class="p">:</span><span class="kd">function</span> <span class="nx">f1</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">v1</span><span class="p">);</span> <span class="c1">//this : 함수가 속해있는 객체를 참조할 수 있다.</span>
+    <span class="p">},</span>
+    <span class="na">f2</span><span class="p">:</span><span class="kd">function</span> <span class="nx">f2</span> <span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">v2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">f1</span><span class="p">();</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">f2</span><span class="p">();</span> 
 </code></pre></div></div>
 
         
@@ -375,7 +375,8 @@ o.f2();
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/aws-osx-aws/" class="pagination--pager" title="[AWS] OSX로 AWS연결
+">다음</a>
     
   </nav>
 
@@ -389,6 +390,73 @@ o.f2();
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs] 객체화, 모듈사용법,  경로보안, 출력정보 보안
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함
+```javascript
+var template = { //template 라는 객체를 생성
+  HTML:function(title, list, body, control){
+    return `
+    &lt;!...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/aws-osx-aws/" rel="permalink">[AWS] OSX로 AWS연결
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">터미널로 접속 server 켜기
+
+  ssh key 를 받아 안전한 폴더에 저장
+  aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다
+  인스터스를 킨다.
+  ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.
+  ssh ...</p>
+  </article>
+</div>
+
         
           
 

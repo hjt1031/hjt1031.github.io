@@ -1,0 +1,31 @@
+I"L<p>코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함
+```javascript
+var template = { //template 라는 객체를 생성
+  HTML:function(title, list, body, control){
+    return `
+    &lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      <title>WEB1 - ${title}</title>
+      <meta charset="utf-8" />
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;<a href="/">WEB</a>&lt;/h1&gt;
+      ${list}
+      ${control}
+      ${body}
+    &lt;/body&gt;
+    &lt;/html&gt;
+    <code class="highlighter-rouge">;
+  },list:function(filelist){
+    var list = '&lt;ul&gt;';
+    var i = 0;
+    while(i &lt; filelist.length){
+      list = list + </code>&lt;li&gt;<a href="/?id=${filelist[i]}">${filelist[i]}</a>&lt;/li&gt;`;
+      i = i + 1;
+    }
+    list = list+’&lt;/ul&gt;’;
+    return list;
+  }
+}</p>
+:ET

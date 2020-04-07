@@ -1,0 +1,48 @@
+I"H<h1 id="코드를-간결하게-객체화-해서-사용가능-다른말로-리팩토링-이라고도-함">코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함</h1>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">//template 라는 객체를 생성</span>
+  <span class="na">HTML</span><span class="p">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">list</span><span class="p">,</span> <span class="nx">body</span><span class="p">,</span> <span class="nx">control</span><span class="p">){</span>
+    <span class="k">return</span> <span class="s2">`
+    &lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;WEB1 - </span><span class="p">${</span><span class="nx">title</span><span class="p">}</span><span class="s2">&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;WEB&lt;/a&gt;&lt;/h1&gt;
+      </span><span class="p">${</span><span class="nx">list</span><span class="p">}</span><span class="s2">
+      </span><span class="p">${</span><span class="nx">control</span><span class="p">}</span><span class="s2">
+      </span><span class="p">${</span><span class="nx">body</span><span class="p">}</span><span class="s2">
+    &lt;/body&gt;
+    &lt;/html&gt;
+    `</span><span class="p">;</span>
+  <span class="p">},</span><span class="na">list</span><span class="p">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">filelist</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">&lt;ul&gt;</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">filelist</span><span class="p">.</span><span class="nx">length</span><span class="p">){</span>
+      <span class="nx">list</span> <span class="o">=</span> <span class="nx">list</span> <span class="o">+</span> <span class="s2">`&lt;li&gt;&lt;a href="/?id=</span><span class="p">${</span><span class="nx">filelist</span><span class="p">[</span><span class="nx">i</span><span class="p">]}</span><span class="s2">"&gt;</span><span class="p">${</span><span class="nx">filelist</span><span class="p">[</span><span class="nx">i</span><span class="p">]}</span><span class="s2">&lt;/a&gt;&lt;/li&gt;`</span><span class="p">;</span>
+      <span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">list</span> <span class="o">=</span> <span class="nx">list</span><span class="o">+</span><span class="dl">'</span><span class="s1">&lt;/ul&gt;</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">list</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//사용</span>
+<span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">template</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="nx">filelist</span><span class="p">);</span>
+          <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">template</span><span class="p">.</span><span class="nx">HTML</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">list</span><span class="p">,</span>
+            <span class="s2">`&lt;h2&gt;</span><span class="p">${</span><span class="nx">title</span><span class="p">}</span><span class="s2">&lt;/h2&gt;</span><span class="p">${</span><span class="nx">description</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+            <span class="s2">`&lt;a href="/create"&gt;create&lt;/a&gt;`</span>
+          <span class="p">);</span>
+</code></pre></div></div>
+
+<h1 id="mudule">mudule</h1>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">//nodejs/muse.js</span>
+<span class="kd">var</span> <span class="nx">part</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./mpart.js</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 현재 디렉토리 </span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">part</span><span class="p">);</span>
+
+<span class="nx">part</span><span class="p">.</span><span class="nx">f</span><span class="p">();</span>
+
+</code></pre></div></div>
+:ET

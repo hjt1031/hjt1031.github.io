@@ -28,4 +28,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[AWS]인스턴스 에서 웹서버 사용",
+        "excerpt":"   홈페이지로 로그인해 연결을 눌러 키를 터미널에 복사 붙여넣기 를 해서 접속한다.   아마존 EC2 인스턴스에 퍼블릭 DNS(IPv4)에 있는 주소를 복사해 주소창에 붙여넣기를 한다.   홈페이지에 우분투 라고 나오면 제대로 접속한게 맞는것이다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws/",
+        "teaser": null
       }]

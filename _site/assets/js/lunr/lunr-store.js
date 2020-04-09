@@ -34,4 +34,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/aws/",
         "teaser": null
+      },{
+        "title": "[AWS]AMI",
+        "excerpt":"   Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/awsami/",
+        "teaser": null
       }]

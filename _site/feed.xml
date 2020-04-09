@@ -1,7 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-09T09:46:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[AWS]AMI</title><link href="http://localhost:4000/awsami/" rel="alternate" type="text/html" title="[AWS]AMI" /><published>2020-04-09T00:00:00+09:00</published><updated>2020-04-09T00:00:00+09:00</updated><id>http://localhost:4000/awsami</id><content type="html" xml:base="http://localhost:4000/awsami/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-09T19:32:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[AWS]AMI &amp;amp; WordPress 설치</title><link href="http://localhost:4000/awsami/" rel="alternate" type="text/html" title="[AWS]AMI &amp; WordPress 설치" /><published>2020-04-09T00:00:00+09:00</published><updated>2020-04-09T00:00:00+09:00</updated><id>http://localhost:4000/awsami</id><content type="html" xml:base="http://localhost:4000/awsami/">&lt;blockquote&gt;
   &lt;p&gt;Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등)
 백업 기능이라 생각하면 된다&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>동센</name></author><summary type="html">Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다</summary></entry><entry><title type="html">[AWS]인스턴스 에서 웹서버 사용</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]인스턴스 에서 웹서버 사용" /><published>2020-04-08T00:00:00+09:00</published><updated>2020-04-08T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Wordpress : 가상머신의 형태로 제공된 솔루션을 사고 팔 수 있는 공간이라고 보면 된다.(다른사람이 만든 인스턴스를 사용하는 것)&lt;/p&gt;
+&lt;h1 id=&quot;wordpress-설치방법&quot;&gt;wordpress 설치방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;aws markplace 에서 wordpresss 를 찾아 설치하고 인스턴스를 생성하면 된다.&lt;/li&gt;
+  &lt;li&gt;새로만든 인스턴스 도메인을 들어가보고 제대로 생성이 되었는지 확인한다.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;instance로그인-방법&quot;&gt;Instance로그인 방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;key 가있는 폴더로 이동한다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;터미널을 켜서  ssh 를 넣어 로그인하면 된다.(인스턴스 우클릭 &amp;gt; 연결 &amp;gt; ssh -i 로 시작한다.)&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;로그인을 해보면 비트남이라고 나온다. (비트남 회사 wordpress라서)&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;application-로그인-방법&quot;&gt;Application 로그인 방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;관리자 권한으로 들어가고 싶으면 도메인 뒤에 /admin-wp/ 를 타이핑 해서 들어간다&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;로그인 화면이 나오는데 id 는 user , 비밀번호는 EC2 에 들어가서 생성한 인스턴스 우클릭&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;인스턴스설정 &amp;gt;  시스템로그 가져오기 &amp;gt; 하단쯤에   Setting Bitnami application password 라 써져있다 ‘ ‘ 안에있는 걸 넣으면 로그인이 된다.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;database-로그인-하는방법&quot;&gt;Database 로그인 하는방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;터미널을 켜서 해당 인스턴스로 로그인을 한다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;mysql -uroot -p 를 입력&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;show databases; 를 입력하면 현재 제공하는 데이터베이스를 볼 수 있다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;use bitnami_wordpress 를 타이핑&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;show tables; 를 타이핑 해보면 wordpress 에서 제공하는 데이터베이스를 볼 수 있다.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다</summary></entry><entry><title type="html">[AWS]인스턴스 에서 웹서버 사용</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]인스턴스 에서 웹서버 사용" /><published>2020-04-08T00:00:00+09:00</published><updated>2020-04-08T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;ol&gt;
   &lt;li&gt;홈페이지로 로그인해 연결을 눌러 키를 터미널에 복사 붙여넣기 를 해서 접속한다.&lt;/li&gt;
   &lt;li&gt;아마존 EC2 인스턴스에 퍼블릭 DNS(IPv4)에 있는 주소를 복사해 주소창에 붙여넣기를 한다.&lt;/li&gt;
   &lt;li&gt;홈페이지에 우분투 라고 나오면 제대로 접속한게 맞는것이다.&lt;/li&gt;

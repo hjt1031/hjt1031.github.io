@@ -35,8 +35,8 @@ var store = [{
         "url": "http://localhost:4000/aws/",
         "teaser": null
       },{
-        "title": "[AWS]AMI",
-        "excerpt":"   Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다   ","categories": [],
+        "title": "[AWS]AMI & WordPress 설치",
+        "excerpt":"Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다 Wordpress : 가상머신의 형태로 제공된 솔루션을 사고 팔 수 있는 공간이라고 보면 된다.(다른사람이 만든 인스턴스를 사용하는 것) wordpress 설치방법 aws markplace 에서 wordpresss 를...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/awsami/",
         "teaser": null

@@ -40,4 +40,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/awsami/",
         "teaser": null
+      },{
+        "title": "[AWS]Scalability",
+        "excerpt":"변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅   Scale Up : 웹사이트를 운영하는데 접속자가 계속 많아지면 그 수요에 대해 어떻게 탄력적으로 어떻게 대응할 건지. (수요가 많으면 좋은 컴퓨터로 업그레이드)  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/awsscalability/",
+        "teaser": null
       }]

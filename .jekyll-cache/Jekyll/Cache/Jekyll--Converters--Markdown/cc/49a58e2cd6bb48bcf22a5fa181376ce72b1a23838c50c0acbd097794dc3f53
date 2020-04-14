@@ -1,0 +1,11 @@
+I"�<p>인스턴스 접속 : ssh -i 키위치 .pem ubunt@ip
+컴퓨터의 CPU 점유율 보기 : top</p>
+
+<p>sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드
+ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑)
+requests  : 어떤 웹서버에 몇번의 접속을 시도하겠냐
+concurrency : 동시에 몇번의 접속을 시도하겠냐</p>
+
+<p>ex)concurrency 1 이고 requests 가 100 이면 접속한번하고 또접속한번하고 … 순차적으로 접속이됨
+ex)concurrency 10 이고 requests가 100이면  한번에 10명이 접속하는 것과 똑같다</p>
+:ET

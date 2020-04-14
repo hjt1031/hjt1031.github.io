@@ -1,0 +1,72 @@
+I"<p>인스턴스 접속 : ssh -i 키위치 .pem ubunt@ip<br />
+컴퓨터의 CPU 점유율 보기 : top <br /></p>
+
+<p>sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드<br />
+ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑)<br />
+requests  : 어떤 웹서버에 몇번의 접속을 시도하겠냐<br />
+concurrency : 동시에 몇번의 접속을 시도하겠냐 <br /></p>
+
+<p>ex)concurrency 1 이고 requests 가 100 이면 접속한번하고 또접속한번하고 … 순차적으로 접속이됨<br />
+ex)concurrency 10 이고 requests가 100이면  한번에 10명이 접속하는 것과 똑같다<br /></p>
+
+<blockquote>
+  <h1 id="실험top-을-타이핑-해서-cpu-점유율-등-을-관찰-">실험(top 을 타이핑 해서 cpu 점유율 등 을 관찰) <br /></h1>
+  <p>$ ab -n 400 -c 1 http:// ip주소/ &lt;-끝에 슬래시를 꼭 붙여줘야한다. (400명의 사람이 동시접속1 (없다는 뜻))<br />
+요청 : 400<br />
+동시접속 : 1 <br />
+Time taken for tests(총소요시간):   9.641 seconds 약(9.641초)<br />
+Failed requests(실패):        0<br />
+Requests per second(초당처리속도):    41.49 [#/sec] <br />
+Time per request(개별초리속도(초)):       24.103 [ms]  ( 약 0.024초)<br /></p>
+</blockquote>
+
+<p>$ ab -n 400 -c 2 http:// ip주소/  (400명의 사람이 동시접속2)<br />
+요청 : 400<br />
+동시접속 : 2<br />
+Time taken for tests:   9.338 seconds<br />
+Failed requests:        0<br />
+Requests per second:    43.60 [#/sec] <br />
+Time per request:       46.688 [ms] <br /></p>
+
+<p>$ ab -n 400 -c 10 http:// ip주소/  (400명의 사람이 동시접속10)<br />
+요청 : 400<br />
+동시접속 : 10<br />
+Time taken for tests:   9.305 seconds<br />
+Failed requests:        0<br />
+Requests per second:    42.99 [#/sec] <br />
+Time per request:       232.628 [ms] <br /></p>
+
+<p>$ ab -n 400 -c 20 http:// ip주소/  (400명의 사람이 동시접속20)<br />
+요청 : 400<br />
+동시접속 : 10<br />
+Time taken for tests:   9.251 seconds<br />
+Failed requests:        0<br />
+Requests per second:    43.24 [#/sec] <br />
+Time per request:       462.548 [ms] <br /></p>
+
+<p>$ ab -n 400 -c 50 http:// ip주소/  (400명의 사람이 동시접속50)<br />
+요청 : 400<br />
+동시접속 : 10<br />
+Time taken for tests:   9.162 seconds<br />
+Failed requests:        0<br />
+Requests per second:    43.66 [#/sec] <br />
+Time per request:       1145.275 [ms] <br /></p>
+
+<p>$ ab -n 400 -c 100 http:// ip주소/  (400명의 사람이 동시접속100)<br />
+요청 : 400<br />
+동시접속 : 100<br />
+Time taken for tests:   9.120 seconds<br />
+Failed requests:        0<br />
+Requests per second:    43.86 [#/sec] <br />
+Time per request:       2279.948 [ms] <br /></p>
+
+<p>$ ab -n 400 -c 200 http:// ip주소/  (400명의 사람이 동시접속200)<br />
+요청 : 400<br />
+동시접속 : 200<br />
+Time taken for tests:   9.070 seconds<br />
+Failed requests:        0<br />
+Requests per second:    44.10 [#/sec] <br />
+Time per request:       4535.100 [ms]<br /></p>
+
+<p>동시접속이 많을 수록 사용자들은 느리게 접근하게 된다.</p>
+:ET

@@ -46,4 +46,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/awsscalability/",
         "teaser": null
+      },{
+        "title": "[nodejs]API & Mysql",
+        "excerpt":"API : Application Programming interface   개발자와 함수를 사용하는 개발자 들의 약속된 조작장치  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejsapi/",
+        "teaser": null
+      },{
+        "title": "[AWS]스트래스 테스트",
+        "excerpt":"인스턴스 접속 : ssh -i 키위치 .pem ubunt@ip 컴퓨터의 CPU 점유율 보기 : top sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐 ex)concurrency 1 이고...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws/",
+        "teaser": null
       }]

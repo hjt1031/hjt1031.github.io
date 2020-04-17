@@ -53,8 +53,8 @@ var store = [{
         "url": "http://localhost:4000/nodejsapi/",
         "teaser": null
       },{
-        "title": "[AWS]스트래스 테스트",
-        "excerpt":"인스턴스 접속 : ssh -i 키위치 .pem ubunt@ip 컴퓨터의 CPU 점유율 보기 : top sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐 ex)concurrency 1 이고...","categories": [],
+        "title": "[AWS]스트래스 테스트(ab test)",
+        "excerpt":"인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip 컴퓨터의 CPU 점유율 보기 : top ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171 sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/aws/",
         "teaser": null
@@ -63,5 +63,11 @@ var store = [{
         "excerpt":"기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다. 소스코드를 나중에 복제하고 사용할때 편리하기 위해 db.query(SELECT * FROM topic WHERE id=${query.id}`,function(error2,topic){ //이런식으로 쓰면 사용자에게 공격을 당할 수 있다. db.query(`SELECT * FROM topic WHERE id=?`,[queryData.id],function(error2,topic){ //id에 ? 에 두번쨰 인자가 치환되서 들어간다.보안성이좋음 response.writeHead(302, {Location:...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejsmysql/",
+        "teaser": null
+      },{
+        "title": "[AWS] Elastic Ips & Scale Up",
+        "excerpt":"Elastic Ips(탄력적 IP) instances 를 다시 껏다가 키면 Public IP 가 달라진다. why? ip의 고갈현상이랑 밀접한 관계가 있다. 00.000.00.000 부터 255.255.255.255 까지 IP가 존재할 수 있다 약 (40억개) 이세상에 40억개만 IP만 가질 수 있다. (40억대만 인터넷을 사용할 수 있다) 그래서 내가 쓰는 IP 를 컴퓨터를 킬때마다 배분해 준다. 끄면 가져가고....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws-elastic-ips/",
         "teaser": null
       }]

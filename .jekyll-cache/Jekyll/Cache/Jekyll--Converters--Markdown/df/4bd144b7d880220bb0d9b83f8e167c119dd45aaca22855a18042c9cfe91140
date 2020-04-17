@@ -1,0 +1,8 @@
+I"s<p><strong>인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip<br /></strong>
+<strong>컴퓨터의 CPU 점유율 보기 : top <br /></strong>
+ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171
+<strong>sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드<br /></strong>
+<strong>ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑)<br /></strong>
+<strong>requests  : 어떤 웹서버에 몇번의 접속을 시도하겠냐<br /></strong>
+<strong>concurrency : 동시에 몇번의 접속을 시도하겠냐 <br /></strong></p>
+:ET

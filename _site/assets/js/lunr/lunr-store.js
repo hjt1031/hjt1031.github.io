@@ -70,4 +70,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/aws-elastic-ips/",
         "teaser": null
+      },{
+        "title": "[nodejs] web server, 변수, Template literals,URL",
+        "excerpt":"web browser 가 web server 한테 정보를 요청하면 web server 그정보를 찾아서 web browser에게 응답해준다. DataType String console.log('asdjlkasdvnlkfnvljkfndjlvndfljvnjldfvdf.length) // 갯수를 확인 할 수 있다 Variable(변수) a = 1; //대입연산자 1은 상수 console.log(a); a = 2; //a는 변수 (변할 수 있다), 2는 상수 (항상 상, 언제나 2이다.) console.log(a) Template literals (문자를...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-web-server/",
+        "teaser": null
       }]

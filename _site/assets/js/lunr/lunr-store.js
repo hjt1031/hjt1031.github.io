@@ -76,4 +76,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs-web-server/",
         "teaser": null
+      },{
+        "title": "[AWS] Scale Out",
+        "excerpt":"여러대의 컴퓨터가 협력해서 어떤 동일한 목표를 달성하는 컴퓨터들의 사회를 만든다 라고 할 수 있다.   처음에 Scale up 을 하다보면 단일 컴퓨팅으로써 한계에 도달하게 되는데 그 한계에 도달했을때 한계를 뛰어넘을 수 있는건 Scale out  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws-scale-out/",
+        "teaser": null
+      },{
+        "title": "[얄코]Cookie, Session, Cache",
+        "excerpt":"쿠키 : 브라우저에 저장되는 내용들 , 내컴퓨터에 있으닌깐 내가 갖고 있는 정보들 하지만 쿠키는 한계가 있다 내가임의로 고치거나 고칠 수 있고 남이 쉽게 볼 수 도있다. ( 로그인자동완성, 오늘 하루 안보기, 쇼핑을 하는데 로그인을 하지않고 물건을 장바구니에 담는 등 지워지거나, 조작되거나, 가로채거나 보여져도 큰 지장이없는 정보들을 브라우져에 저장하는데 사용됨) 세션...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/cookie-session-cache/",
+        "teaser": null
       }]

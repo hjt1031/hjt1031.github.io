@@ -1,17 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-23T10:23:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[알코]객체지향 프로그래밍</title><link href="http://localhost:4000/" rel="alternate" type="text/html" title="[알코]객체지향 프로그래밍" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/</id><content type="html" xml:base="http://localhost:4000/">&lt;p&gt;&lt;strong&gt;객체지향&lt;/strong&gt;이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;데이터와 기능이 클래스로 ‘캡슐화’ 된 컴퓨터 자원의 묶음을 ‘객체’라고 한다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;밀가루 반죽과 팥이 클래스란 붕어빵이 틀에 찍혀서 객체라는 붕어빵이 나온다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;‘은닉성’&lt;/strong&gt;  :  우리가 TV 속을 뜯어보지 않아도 리모콘으로 필요한 조작을 다 할 수 있는 것처럼 내부구조는 private 로 감춰놓고,  외부에서 조작할 수 있는 명령어만 public으로 공개해놓는다. 이로서 바깥의 간섭으로 발생하는 오류를 방지할 수 있고 남이 만든 클래스의 객체들도 일일이 뜯어볼 필요 없이 제공되는 기능들을 그대로 사용할 수 있는것&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;‘다형성’&lt;/strong&gt; : 중국집에서 ‘탕수육주세요’ 하면 일반 탕수육이  나오지만 이를 상속한 사천식 중국집에서는 ‘탕수육 주세요’ 가 override 돼서 시뻘건 탕수육이 나오는 것.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;상속&lt;/strong&gt;은 트리구조의 상하관계가 뚜렷하기 떄문에 한 자식이 두 부모로부터 상속받는게 언어마다 불가능하거나, 부작용들이 있다. 반면 인터페이스는 이로부터 자유롭다.&lt;br /&gt;
-박쥐와 날다람쥐는 포유류란 부모에게서, 날치는 어류란 부모에게서 상속받지만 ‘난다’라는 기능을 인터페이스로 장착해서 대다수 조류와 곤충처럼 ‘날짐승’이란 카테고리에 들어갈 수 있는 것.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;상속은 물려받는것, 인터페이스는 장착하는 것 이라생각하면 된다.&lt;br /&gt;&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">객체지향이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)</summary></entry><entry><title type="html">[ad]</title><link href="http://localhost:4000/ad/" rel="alternate" type="text/html" title="[ad]" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/ad</id><content type="html" xml:base="http://localhost:4000/ad/">&lt;p&gt;흐어&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">흐어</summary></entry><entry><title type="html">[AWS] Scale Out</title><link href="http://localhost:4000/aws-scale-out/" rel="alternate" type="text/html" title="[AWS] Scale Out" /><published>2020-04-21T00:00:00+09:00</published><updated>2020-04-21T00:00:00+09:00</updated><id>http://localhost:4000/aws-scale-out</id><content type="html" xml:base="http://localhost:4000/aws-scale-out/">&lt;h1 id=&quot;여러대의-컴퓨터가-협력해서-어떤-동일한-목표를-달성하는-컴퓨터들의-사회를-만든다-라고-할-수-있다&quot;&gt;여러대의 컴퓨터가 협력해서 어떤 동일한 목표를 달성하는 컴퓨터들의 사회를 만든다 라고 할 수 있다.&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-23T10:25:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[AWS] Scale Out</title><link href="http://localhost:4000/aws-scale-out/" rel="alternate" type="text/html" title="[AWS] Scale Out" /><published>2020-04-21T00:00:00+09:00</published><updated>2020-04-21T00:00:00+09:00</updated><id>http://localhost:4000/aws-scale-out</id><content type="html" xml:base="http://localhost:4000/aws-scale-out/">&lt;h1 id=&quot;여러대의-컴퓨터가-협력해서-어떤-동일한-목표를-달성하는-컴퓨터들의-사회를-만든다-라고-할-수-있다&quot;&gt;여러대의 컴퓨터가 협력해서 어떤 동일한 목표를 달성하는 컴퓨터들의 사회를 만든다 라고 할 수 있다.&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;처음에 Scale up 을 하다보면 단일 컴퓨팅으로써 한계에 도달하게 되는데 그 한계에 도달했을때 한계를 뛰어넘을 수 있는건 Scale out&lt;/strong&gt;&lt;/p&gt;
 
@@ -178,7 +165,45 @@ Failed requests:        0&lt;br /&gt;
 Requests per second:    44.10 [#/sec] &lt;br /&gt;
 Time per request:       4535.100 [ms]&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;동시접속이 많을 수록 사용자들은 느리게 접근하게 된다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip 컴퓨터의 CPU 점유율 보기 : top ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171 sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐</summary></entry><entry><title type="html">[AWS]Scalability</title><link href="http://localhost:4000/awsscalability/" rel="alternate" type="text/html" title="[AWS]Scalability" /><published>2020-04-10T00:00:00+09:00</published><updated>2020-04-10T00:00:00+09:00</updated><id>http://localhost:4000/awsscalability</id><content type="html" xml:base="http://localhost:4000/awsscalability/">&lt;p&gt;변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅&lt;/p&gt;
+&lt;p&gt;동시접속이 많을 수록 사용자들은 느리게 접근하게 된다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip 컴퓨터의 CPU 점유율 보기 : top ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171 sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐</summary></entry><entry><title type="html">[nodejs]API &amp;amp; Mysql</title><link href="http://localhost:4000/nodejsapi/" rel="alternate" type="text/html" title="[nodejs]API &amp; Mysql" /><published>2020-04-10T00:00:00+09:00</published><updated>2020-04-10T00:00:00+09:00</updated><id>http://localhost:4000/nodejsapi</id><content type="html" xml:base="http://localhost:4000/nodejsapi/">&lt;p&gt;API : Application Programming interface &lt;br /&gt;
+개발자와 함수를 사용하는 개발자 들의 약속된 조작장치&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">API : Application Programming interface 개발자와 함수를 사용하는 개발자 들의 약속된 조작장치</summary></entry><entry><title type="html">[AWS]Scalability</title><link href="http://localhost:4000/awsscalability/" rel="alternate" type="text/html" title="[AWS]Scalability" /><published>2020-04-10T00:00:00+09:00</published><updated>2020-04-10T00:00:00+09:00</updated><id>http://localhost:4000/awsscalability</id><content type="html" xml:base="http://localhost:4000/awsscalability/">&lt;p&gt;변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅&lt;/p&gt;
 
-&lt;p&gt;Scale Up : 웹사이트를 운영하는데 접속자가 계속 많아지면 그 수요에 대해 어떻게 탄력적으로 어떻게 대응할 건지. (수요가 많으면 좋은 컴퓨터로 업그레이드)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅</summary></entry><entry><title type="html">[nodejs]API &amp;amp; Mysql</title><link href="http://localhost:4000/nodejsapi/" rel="alternate" type="text/html" title="[nodejs]API &amp; Mysql" /><published>2020-04-10T00:00:00+09:00</published><updated>2020-04-10T00:00:00+09:00</updated><id>http://localhost:4000/nodejsapi</id><content type="html" xml:base="http://localhost:4000/nodejsapi/">&lt;p&gt;API : Application Programming interface &lt;br /&gt;
-개발자와 함수를 사용하는 개발자 들의 약속된 조작장치&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">API : Application Programming interface 개발자와 함수를 사용하는 개발자 들의 약속된 조작장치</summary></entry></feed>
+&lt;p&gt;Scale Up : 웹사이트를 운영하는데 접속자가 계속 많아지면 그 수요에 대해 어떻게 탄력적으로 어떻게 대응할 건지. (수요가 많으면 좋은 컴퓨터로 업그레이드)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅</summary></entry><entry><title type="html">[AWS]AMI &amp;amp; WordPress 설치</title><link href="http://localhost:4000/awsami/" rel="alternate" type="text/html" title="[AWS]AMI &amp; WordPress 설치" /><published>2020-04-09T00:00:00+09:00</published><updated>2020-04-09T00:00:00+09:00</updated><id>http://localhost:4000/awsami</id><content type="html" xml:base="http://localhost:4000/awsami/">&lt;blockquote&gt;
+  &lt;p&gt;Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등)
+백업 기능이라 생각하면 된다&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Wordpress : 가상머신의 형태로 제공된 솔루션을 사고 팔 수 있는 공간이라고 보면 된다.(다른사람이 만든 인스턴스를 사용하는 것)&lt;/p&gt;
+&lt;h1 id=&quot;wordpress-설치방법&quot;&gt;wordpress 설치방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;aws markplace 에서 wordpresss 를 찾아 설치하고 인스턴스를 생성하면 된다.&lt;/li&gt;
+  &lt;li&gt;새로만든 인스턴스 도메인을 들어가보고 제대로 생성이 되었는지 확인한다.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;instance로그인-방법&quot;&gt;Instance로그인 방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;key 가있는 폴더로 이동한다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;터미널을 켜서  ssh 를 넣어 로그인하면 된다.(인스턴스 우클릭 &amp;gt; 연결 &amp;gt; ssh -i 로 시작한다.)&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;로그인을 해보면 비트남이라고 나온다. (비트남 회사 wordpress라서)&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;application-로그인-방법&quot;&gt;Application 로그인 방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;관리자 권한으로 들어가고 싶으면 도메인 뒤에 /admin-wp/ 를 타이핑 해서 들어간다&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;로그인 화면이 나오는데 id 는 user , 비밀번호는 EC2 에 들어가서 생성한 인스턴스 우클릭&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;인스턴스설정 &amp;gt;  시스템로그 가져오기 &amp;gt; 하단쯤에   Setting Bitnami application password 라 써져있다 ‘ ‘ 안에있는 걸 넣으면 로그인이 된다.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;database-로그인-하는방법&quot;&gt;Database 로그인 하는방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;터미널을 켜서 해당 인스턴스로 로그인을 한다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;mysql -uroot -p 를 입력&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;show databases; 를 입력하면 현재 제공하는 데이터베이스를 볼 수 있다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;use bitnami_wordpress 를 타이핑&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;show tables; 를 타이핑 해보면 wordpress 에서 제공하는 데이터베이스를 볼 수 있다.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다</summary></entry><entry><title type="html">[AWS]인스턴스 에서 웹서버 사용</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]인스턴스 에서 웹서버 사용" /><published>2020-04-08T00:00:00+09:00</published><updated>2020-04-08T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;ol&gt;
+  &lt;li&gt;홈페이지로 로그인해 연결을 눌러 키를 터미널에 복사 붙여넣기 를 해서 접속한다.&lt;/li&gt;
+  &lt;li&gt;아마존 EC2 인스턴스에 퍼블릭 DNS(IPv4)에 있는 주소를 복사해 주소창에 붙여넣기를 한다.&lt;/li&gt;
+  &lt;li&gt;홈페이지에 우분투 라고 나오면 제대로 접속한게 맞는것이다.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">홈페이지로 로그인해 연결을 눌러 키를 터미널에 복사 붙여넣기 를 해서 접속한다. 아마존 EC2 인스턴스에 퍼블릭 DNS(IPv4)에 있는 주소를 복사해 주소창에 붙여넣기를 한다. 홈페이지에 우분투 라고 나오면 제대로 접속한게 맞는것이다.</summary></entry></feed>

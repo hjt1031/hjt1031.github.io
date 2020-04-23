@@ -88,10 +88,4 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/cookie-session-cache/",
         "teaser": null
-      },{
-        "title": "vkdjfl",
-        "excerpt":"vfxfgdfdggdffgdgdf  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/",
-        "teaser": null
       }]

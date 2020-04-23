@@ -94,4 +94,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/",
         "teaser": null
+      },{
+        "title": "[ad]",
+        "excerpt":"흐어  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/ad/",
+        "teaser": null
       }]

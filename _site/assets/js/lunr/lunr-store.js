@@ -90,7 +90,7 @@ var store = [{
         "teaser": null
       },{
         "title": "vkdjfl",
-        "excerpt":"방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)   ","categories": [],
+        "excerpt":"vfxfgdfdggdffgdgdf  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/",
         "teaser": null

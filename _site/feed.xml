@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-23T13:20:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[얄코]객체지향 프로그래밍</title><link href="http://localhost:4000/fe/" rel="alternate" type="text/html" title="[얄코]객체지향 프로그래밍" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/fe</id><content type="html" xml:base="http://localhost:4000/fe/">&lt;p&gt;&lt;strong&gt;객체지향&lt;/strong&gt;이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)&lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-06T10:07:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[얄코]포인터</title><link href="http://localhost:4000/po/" rel="alternate" type="text/html" title="[얄코]포인터" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/po</id><content type="html" xml:base="http://localhost:4000/po/">&lt;p&gt;철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐
+교과서의 페이지만 알려준다 이것이 포인터&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char language = 'c';
+int thisYear = 2019;
+double pi = 3.14;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다.&lt;/p&gt;
+
+&lt;p&gt;메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐 교과서의 페이지만 알려준다 이것이 포인터 char language = 'c'; int thisYear = 2019; double pi = 3.14; 이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다. 메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)</summary></entry><entry><title type="html">[얄코]비동기 프로그래밍</title><link href="http://localhost:4000/dad/" rel="alternate" type="text/html" title="[얄코]비동기 프로그래밍" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/dad</id><content type="html" xml:base="http://localhost:4000/dad/">&lt;p&gt;동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
+비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.&lt;/p&gt;
+
+&lt;p&gt;비동기 함수 call back 이라 생각하면 된다.&lt;/p&gt;
+
+&lt;p&gt;만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게
+콜백 지옥이다.&lt;/p&gt;
+
+&lt;p&gt;콜백 지옥을 해결하기위해 나온게 
+Promise (체이닝 방식 .then 사용) 를 사용하게 되면 순차적으로 처리 가능
+하지만 Promise 는 polyfill 등의 라이브러리 없이는 익스플로러에서는 동작하지 않으니 주의해야함!&lt;/p&gt;
+
+&lt;p&gt;그리고
+asyme await 도 비동기방식의 한 종류이며 동기 작업처럼 작성 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;await를 붙여주면 이 함수가 끝나기 전에 다음 작업으로 넘어갈 수 없다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;학생_학번&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;학생_정보&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;학생정보_조회_Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;학생_학번&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//원래라면 그냥 바로 밑으로 흘러가는 비동기 처리가 되겠지만 await 를 써주면 동기처럼 사용가능&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;고교_DB_주소&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;고교_DB_주소_조회_Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;학생_정보&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;고교명&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.</summary></entry><entry><title type="html">[nodejs] Escaping (탈출)</title><link href="http://localhost:4000/nodejs-escaping/" rel="alternate" type="text/html" title="[nodejs] Escaping (탈출)" /><published>2020-05-05T00:00:00+09:00</published><updated>2020-05-05T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-escaping</id><content type="html" xml:base="http://localhost:4000/nodejs-escaping/">&lt;p&gt;저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것
+(&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sanitizeHtml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sanitize-html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것 (</summary></entry><entry><title type="html">[AWS]터미널로 서버접속, ELB 적용(ab 테스터)</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]터미널로 서버접속, ELB 적용(ab 테스터)" /><published>2020-04-29T00:00:00+09:00</published><updated>2020-04-29T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;ol&gt;
+  &lt;li&gt;두개의 인스턴스를 생성해준다.&lt;/li&gt;
+  &lt;li&gt;$ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소&lt;/li&gt;
+  &lt;li&gt;$ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다.&lt;/li&gt;
+  &lt;li&gt;$ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ELB적용&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;웹서버를 이미지를 만들어준다.(AMI)&lt;/li&gt;
+  &lt;li&gt;load balances 를 들어가 웹서버 2개를 save 해준다.&lt;/li&gt;
+  &lt;li&gt;DNS name 주소를 복사하면 우리가만든 웹서버에 접속하게된다.&lt;/li&gt;
+  &lt;li&gt;접속 로그 보는 방법 $sudo tail -f /var/log/apach2/access.log ( DNS name 에 접속을 하면 한번은 웹서버1 한번은 웹서버2 에 접속하는걸 눈으로 확인할 수 있다,)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">두개의 인스턴스를 생성해준다. $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소 $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다. $ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2</summary></entry><entry><title type="html">[얄코] Angular, React, Vue</title><link href="http://localhost:4000/angular-react-vue/" rel="alternate" type="text/html" title="[얄코] Angular, React, Vue" /><published>2020-04-24T00:00:00+09:00</published><updated>2020-04-24T00:00:00+09:00</updated><id>http://localhost:4000/angular-react-vue</id><content type="html" xml:base="http://localhost:4000/angular-react-vue/">&lt;p&gt;SPA 프레임워크&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;“재료는 우리가 주는데 요리는 너네가 알아서해” 라고 역할을 맡겨버리는 것.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;옛날 에는 페이지에 좋아요 버튼을 누르면 화면이 다시 리로드가 되었는데 지금은 리로드없이 가능하다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;브라우저는 javascript, css html이 진열된 묶음을 받아간다음 이 레시피대로 데이터를 요청하고, 화면을 렌더링해서 모니터에 띄워주게 되는 것&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Evan You란 개인이 만든 Vue는 코드가 깔끔하고 배우기 쉽다는 특성떄문에 후발주자임에도 빠르게 성장하고있다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;React는 페이북에서 만들었는데 막강한 커뮤니티와 자료들을 갖추고 있다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Angular 는 구글에서만들었는데 Javascript 를 보완한 언어, TypeScript라고 부르며 매우 안정적이고 탄탄한 프론트엔드 앱을 만들 수 있다. 하지만 무겁고 배우기어렵다.&lt;br /&gt;&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">SPA 프레임워크</summary></entry><entry><title type="html">[AWS] ELB(Elastic Load Balancing)</title><link href="http://localhost:4000/aws-elbelastic-load-balancing/" rel="alternate" type="text/html" title="[AWS] ELB(Elastic Load Balancing)" /><published>2020-04-24T00:00:00+09:00</published><updated>2020-04-24T00:00:00+09:00</updated><id>http://localhost:4000/aws-elbelastic-load-balancing</id><content type="html" xml:base="http://localhost:4000/aws-elbelastic-load-balancing/">&lt;p&gt;로드밸런서 생성을 하는데,&lt;/p&gt;
+
+&lt;p&gt;만약 우리의 서비스가 HTTPS 도 지원한다면 리스너 추가를 해서 HTTPS 를 추가하는데 인스턴스는 HTTPS 로 할필요없이 HTTP 로만 해줘도된다.&lt;/p&gt;
+
+&lt;p&gt;왜냐하면 로브밸런서와 EC2 사이에 로드밸런서가 안전하게 통신할 수 있기 때문에&lt;/p&gt;
+
+&lt;p&gt;DNS name 이 만들어지는데 DNS name 으로 접속이 가능하다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">로드밸런서 생성을 하는데,</summary></entry><entry><title type="html">[얄코]객체지향 프로그래밍</title><link href="http://localhost:4000/fe/" rel="alternate" type="text/html" title="[얄코]객체지향 프로그래밍" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/fe</id><content type="html" xml:base="http://localhost:4000/fe/">&lt;p&gt;&lt;strong&gt;객체지향&lt;/strong&gt;이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;데이터와 기능이 클래스로 ‘캡슐화’ 된 컴퓨터 자원의 묶음을 ‘객체’라고 한다.&lt;br /&gt;&lt;/p&gt;
 
@@ -80,139 +144,4 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
   그래서 접속할 때 접속할때 3000이라 하면 3000번 포트에 연결되어 있는 서버와 통신하게 된다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h6 id=&quot;80번-port는-전세계적으로-약속되어-있기에-http를-통해-접속했으면-웹서버에-접속한것이다-80을-생략한것이다&quot;&gt;80번 port는 전세계적으로 약속되어 있기에 http를 통해 접속했으면 웹서버에 접속한것이다. 80을 생략한것이다.&lt;br /&gt;&lt;br /&gt;&lt;/h6&gt;
 &lt;p&gt;main : path라고 한다. 어떤파일인지 가르킨다.&lt;br /&gt;&lt;br /&gt;
-id=HTML&amp;amp;page=12 : queryString 이라고 한다. 내가읽고 싶은 정보는 html 에 12페이지 이다  쿼리스트링의 시작은 ? 이며 값과 값은 &amp;amp; 쓰기로 약속 되어있고 값의 이름과 값은 =로 구분하기로 약속되어 있다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">web browser 가 web server 한테 정보를 요청하면 web server 그정보를 찾아서 web browser에게 응답해준다.</summary></entry><entry><title type="html">[AWS] Elastic Ips &amp;amp; Scale Up</title><link href="http://localhost:4000/aws-elastic-ips/" rel="alternate" type="text/html" title="[AWS] Elastic Ips &amp; Scale Up" /><published>2020-04-17T00:00:00+09:00</published><updated>2020-04-17T00:00:00+09:00</updated><id>http://localhost:4000/aws-elastic-ips</id><content type="html" xml:base="http://localhost:4000/aws-elastic-ips/">&lt;h1 id=&quot;elastic-ips탄력적-ip-&quot;&gt;&lt;strong&gt;Elastic Ips(탄력적 IP)&lt;/strong&gt; &lt;br /&gt;&lt;/h1&gt;
-&lt;p&gt;instances 를 다시 껏다가 키면 Public IP 가 달라진다. why? &lt;br /&gt;
-ip의 고갈현상이랑 밀접한 관계가 있다. 00.000.00.000 부터 255.255.255.255 까지 IP가 존재할 수 있다 약 (40억개) &lt;br /&gt;
-이세상에 40억개만 IP만 가질 수 있다. (40억대만 인터넷을 사용할 수 있다) 그래서 내가 쓰는 IP 를 컴퓨터를 킬때마다 배분해 준다. 끄면 가져가고. 항상 컴퓨터를 켜놓는 상태가 아니닌깐 그렇다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그러면 IP 가 계속 바뀌면 맨날 주소를 다르게 입력을 해야하는데 이럴경우 
-Network &amp;amp; Security 탭에 있는 Elastic IP를 할당받으면 된다 (1개까지만 무료, 나머지는 유료)&lt;/p&gt;
-
-&lt;h1 id=&quot;scale-up--서버그자체를-증강하는-것에-의해서-처리-능력을-향상-시키는-것이다&quot;&gt;&lt;strong&gt;Scale Up : 서버그자체를 증강하는 것에 의해서 처리 능력을 향상 시키는 것이다.&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;컴퓨터의 수요에 따라, 컴퓨팅 파워에 요구에 따라 더 좋은 컴퓨터로 업그레이드를 하는 것
-인스턴스 교체&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;교체할려는 인스턴스를 이미지 화 한다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;type 을 정해야하는데 이미지 우클릭을 한뒤,  시작하기를 누른다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;6단계에서  http, ssh, https 까지 잘들어와있는지 확인 후 만든다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Elastic Ips 에 연결시켜준다.&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;전에 했던 스트래스 테스트에 
-microinstances 보다 largeinstances 가 훨씬 빨리 동시접속 을 처리해준다.(약2배)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">Elastic Ips(탄력적 IP) instances 를 다시 껏다가 키면 Public IP 가 달라진다. why? ip의 고갈현상이랑 밀접한 관계가 있다. 00.000.00.000 부터 255.255.255.255 까지 IP가 존재할 수 있다 약 (40억개) 이세상에 40억개만 IP만 가질 수 있다. (40억대만 인터넷을 사용할 수 있다) 그래서 내가 쓰는 IP 를 컴퓨터를 킬때마다 배분해 준다. 끄면 가져가고. 항상 컴퓨터를 켜놓는 상태가 아니닌깐 그렇다.</summary></entry><entry><title type="html">[nodejs]Mysql Module</title><link href="http://localhost:4000/nodejsmysql/" rel="alternate" type="text/html" title="[nodejs]Mysql Module" /><published>2020-04-15T00:00:00+09:00</published><updated>2020-04-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejsmysql</id><content type="html" xml:base="http://localhost:4000/nodejsmysql/">&lt;p&gt;기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다.
-pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  소스코드를 나중에 복제하고 사용할때 편리하기 위해&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;topic&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//이런식으로 쓰면 사용자에게 공격을 당할 수 있다.&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;topic&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=?&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queryData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//id에 ? 에 두번쨰 인자가 치환되서 들어간다.보안성이좋음&lt;/span&gt;
-
- &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;writeHead&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;302&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;Location:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;insertId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;});&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//추가된 id 을 가져오는 방법 (바로 추가된 id로 리다이렉션이 됨)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다. 소스코드를 나중에 복제하고 사용할때 편리하기 위해</summary></entry><entry><title type="html">[AWS]스트래스 테스트(ab test)</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]스트래스 테스트(ab test)" /><published>2020-04-14T00:00:00+09:00</published><updated>2020-04-14T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;p&gt;&lt;strong&gt;인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip&lt;br /&gt;&lt;/strong&gt;
-&lt;strong&gt;컴퓨터의 CPU 점유율 보기 : top &lt;br /&gt;&lt;/strong&gt;
-ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171
-&lt;strong&gt;sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드&lt;br /&gt;&lt;/strong&gt;
-&lt;strong&gt;ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑)&lt;br /&gt;&lt;/strong&gt;
-&lt;strong&gt;requests  : 어떤 웹서버에 몇번의 접속을 시도하겠냐&lt;br /&gt;&lt;/strong&gt;
-&lt;strong&gt;concurrency : 동시에 몇번의 접속을 시도하겠냐 &lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;ex)concurrency 1 이고 requests 가 100 이면 접속한번하고 또접속한번하고 … 순차적으로 접속이됨&lt;br /&gt;
-ex)concurrency 10 이고 requests가 100이면  한번에 10명이 접속하는 것과 똑같다&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h1 id=&quot;실험top-을-타이핑-해서-cpu-점유율-등-을-관찰-&quot;&gt;실험(top 을 타이핑 해서 cpu 점유율 등 을 관찰) &lt;br /&gt;&lt;/h1&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;$ ab -n 400 -c 1 http:// ip주소/ &amp;lt;-끝에 슬래시를 꼭 붙여줘야한다. (400명의 사람이 동시접속1 (없다는 뜻))&lt;br /&gt;
-요청 : 400&lt;br /&gt;
-동시접속 : 1 &lt;br /&gt;
-Time taken for tests(총소요시간):   9.641 seconds 약(9.641초)&lt;br /&gt;
-Failed requests(실패):        0&lt;br /&gt;
-Requests per second(초당처리속도):    41.49 [#/sec] &lt;br /&gt;
-Time per request(개별초리속도(초)):       24.103 [ms]  ( 약 0.024초)&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;$ ab -n 400 -c 2 http:// ip주소/  (400명의 사람이 동시접속2)&lt;br /&gt;
-요청 : 400&lt;br /&gt;
-동시접속 : 2&lt;br /&gt;
-Time taken for tests:   9.338 seconds&lt;br /&gt;
-Failed requests:        0&lt;br /&gt;
-Requests per second:    43.60 [#/sec] &lt;br /&gt;
-Time per request:       46.688 [ms] &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;$ ab -n 400 -c 10 http:// ip주소/  (400명의 사람이 동시접속10)&lt;br /&gt;
-요청 : 400&lt;br /&gt;
-동시접속 : 10&lt;br /&gt;
-Time taken for tests:   9.305 seconds&lt;br /&gt;
-Failed requests:        0&lt;br /&gt;
-Requests per second:    42.99 [#/sec] &lt;br /&gt;
-Time per request:       232.628 [ms] &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;$ ab -n 400 -c 20 http:// ip주소/  (400명의 사람이 동시접속20)&lt;br /&gt;
-요청 : 400&lt;br /&gt;
-동시접속 : 10&lt;br /&gt;
-Time taken for tests:   9.251 seconds&lt;br /&gt;
-Failed requests:        0&lt;br /&gt;
-Requests per second:    43.24 [#/sec] &lt;br /&gt;
-Time per request:       462.548 [ms] &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;$ ab -n 400 -c 50 http:// ip주소/  (400명의 사람이 동시접속50)&lt;br /&gt;
-요청 : 400&lt;br /&gt;
-동시접속 : 10&lt;br /&gt;
-Time taken for tests:   9.162 seconds&lt;br /&gt;
-Failed requests:        0&lt;br /&gt;
-Requests per second:    43.66 [#/sec] &lt;br /&gt;
-Time per request:       1145.275 [ms] &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;$ ab -n 400 -c 100 http:// ip주소/  (400명의 사람이 동시접속100)&lt;br /&gt;
-요청 : 400&lt;br /&gt;
-동시접속 : 100&lt;br /&gt;
-Time taken for tests:   9.120 seconds&lt;br /&gt;
-Failed requests:        0&lt;br /&gt;
-Requests per second:    43.86 [#/sec] &lt;br /&gt;
-Time per request:       2279.948 [ms] &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;$ ab -n 400 -c 200 http:// ip주소/  (400명의 사람이 동시접속200)&lt;br /&gt;
-요청 : 400&lt;br /&gt;
-동시접속 : 200&lt;br /&gt;
-Time taken for tests:   9.070 seconds&lt;br /&gt;
-Failed requests:        0&lt;br /&gt;
-Requests per second:    44.10 [#/sec] &lt;br /&gt;
-Time per request:       4535.100 [ms]&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;동시접속이 많을 수록 사용자들은 느리게 접근하게 된다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip 컴퓨터의 CPU 점유율 보기 : top ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171 sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐</summary></entry><entry><title type="html">[nodejs]API &amp;amp; Mysql</title><link href="http://localhost:4000/nodejsapi/" rel="alternate" type="text/html" title="[nodejs]API &amp; Mysql" /><published>2020-04-10T00:00:00+09:00</published><updated>2020-04-10T00:00:00+09:00</updated><id>http://localhost:4000/nodejsapi</id><content type="html" xml:base="http://localhost:4000/nodejsapi/">&lt;p&gt;API : Application Programming interface &lt;br /&gt;
-개발자와 함수를 사용하는 개발자 들의 약속된 조작장치&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">API : Application Programming interface 개발자와 함수를 사용하는 개발자 들의 약속된 조작장치</summary></entry><entry><title type="html">[AWS]Scalability</title><link href="http://localhost:4000/awsscalability/" rel="alternate" type="text/html" title="[AWS]Scalability" /><published>2020-04-10T00:00:00+09:00</published><updated>2020-04-10T00:00:00+09:00</updated><id>http://localhost:4000/awsscalability</id><content type="html" xml:base="http://localhost:4000/awsscalability/">&lt;p&gt;변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅&lt;/p&gt;
-
-&lt;p&gt;Scale Up : 웹사이트를 운영하는데 접속자가 계속 많아지면 그 수요에 대해 어떻게 탄력적으로 어떻게 대응할 건지. (수요가 많으면 좋은 컴퓨터로 업그레이드)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅</summary></entry><entry><title type="html">[AWS]AMI &amp;amp; WordPress 설치</title><link href="http://localhost:4000/awsami/" rel="alternate" type="text/html" title="[AWS]AMI &amp; WordPress 설치" /><published>2020-04-09T00:00:00+09:00</published><updated>2020-04-09T00:00:00+09:00</updated><id>http://localhost:4000/awsami</id><content type="html" xml:base="http://localhost:4000/awsami/">&lt;blockquote&gt;
-  &lt;p&gt;Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등)
-백업 기능이라 생각하면 된다&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Wordpress : 가상머신의 형태로 제공된 솔루션을 사고 팔 수 있는 공간이라고 보면 된다.(다른사람이 만든 인스턴스를 사용하는 것)&lt;/p&gt;
-&lt;h1 id=&quot;wordpress-설치방법&quot;&gt;wordpress 설치방법&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;aws markplace 에서 wordpresss 를 찾아 설치하고 인스턴스를 생성하면 된다.&lt;/li&gt;
-  &lt;li&gt;새로만든 인스턴스 도메인을 들어가보고 제대로 생성이 되었는지 확인한다.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;instance로그인-방법&quot;&gt;Instance로그인 방법&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;key 가있는 폴더로 이동한다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;터미널을 켜서  ssh 를 넣어 로그인하면 된다.(인스턴스 우클릭 &amp;gt; 연결 &amp;gt; ssh -i 로 시작한다.)&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;로그인을 해보면 비트남이라고 나온다. (비트남 회사 wordpress라서)&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;application-로그인-방법&quot;&gt;Application 로그인 방법&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;관리자 권한으로 들어가고 싶으면 도메인 뒤에 /admin-wp/ 를 타이핑 해서 들어간다&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;로그인 화면이 나오는데 id 는 user , 비밀번호는 EC2 에 들어가서 생성한 인스턴스 우클릭&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;인스턴스설정 &amp;gt;  시스템로그 가져오기 &amp;gt; 하단쯤에   Setting Bitnami application password 라 써져있다 ‘ ‘ 안에있는 걸 넣으면 로그인이 된다.&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;database-로그인-하는방법&quot;&gt;Database 로그인 하는방법&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;터미널을 켜서 해당 인스턴스로 로그인을 한다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;mysql -uroot -p 를 입력&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;show databases; 를 입력하면 현재 제공하는 데이터베이스를 볼 수 있다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;use bitnami_wordpress 를 타이핑&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;show tables; 를 타이핑 해보면 wordpress 에서 제공하는 데이터베이스를 볼 수 있다.&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다</summary></entry></feed>
+id=HTML&amp;amp;page=12 : queryString 이라고 한다. 내가읽고 싶은 정보는 html 에 12페이지 이다  쿼리스트링의 시작은 ? 이며 값과 값은 &amp;amp; 쓰기로 약속 되어있고 값의 이름과 값은 =로 구분하기로 약속되어 있다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">web browser 가 web server 한테 정보를 요청하면 web server 그정보를 찾아서 web browser에게 응답해준다.</summary></entry></feed>

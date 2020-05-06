@@ -1,0 +1,7 @@
+I"�<ol>
+  <li>두개의 인스턴스를 생성해준다.</li>
+  <li>$ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소</li>
+  <li>$ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다.</li>
+  <li>$ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2</li>
+</ol>
+:ET

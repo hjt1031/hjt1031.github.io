@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[AWS] OSX로 AWS연결 - juntae</title>
-<meta name="description" content="터미널로 접속 server 켜기    ssh key 를 받아 안전한 폴더에 저장   aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다   인스터스를 킨다.   ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.   ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)   ssh -i “aws_password.pem” ……….. 복붙하면 된다.  ">
+<meta name="description" content="터미널로 접속 server 켜기    ssh key 를 받아 안전한 폴더에 저장   aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다   인스터스를 킨다.   ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.   ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)   ssh -i “/aws_password.pem” ……….. 복붙하면 된다.  ">
 
 
   <meta name="author" content="동센">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/aws-osx-aws/">
 
 
-  <meta property="og:description" content="터미널로 접속 server 켜기    ssh key 를 받아 안전한 폴더에 저장   aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다   인스터스를 킨다.   ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.   ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)   ssh -i “aws_password.pem” ……….. 복붙하면 된다.  ">
+  <meta property="og:description" content="터미널로 접속 server 켜기    ssh key 를 받아 안전한 폴더에 저장   aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다   인스터스를 킨다.   ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.   ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)   ssh -i “/aws_password.pem” ……….. 복붙하면 된다.  ">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[AWS] OSX로 AWS연결">
-    <meta itemprop="description" content="터미널로 접속 server 켜기  ssh key 를 받아 안전한 폴더에 저장  aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다  인스터스를 킨다.  ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.  ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)  ssh -i “aws_password.pem” ……….. 복붙하면 된다.">
+    <meta itemprop="description" content="터미널로 접속 server 켜기  ssh key 를 받아 안전한 폴더에 저장  aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다  인스터스를 킨다.  ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.  ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)  ssh -i “/aws_password.pem” ……….. 복붙하면 된다.">
     <meta itemprop="datePublished" content="2020-04-07T00:00:00+09:00">
     
 
@@ -294,7 +294,7 @@
   <li>인스터스를 킨다.</li>
   <li>ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.</li>
   <li>ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)</li>
-  <li>ssh -i “aws_password.pem” ……….. 복붙하면 된다.</li>
+  <li>ssh -i “/aws_password.pem” ……….. 복붙하면 된다.</li>
 </ol>
 
 <h1 id="apache-다운로드">Apache 다운로드</h1>
@@ -362,7 +362,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/fe/" rel="permalink">[얄코]객체지향 프로그래밍
+        <a href="/po/" rel="permalink">[얄코]포인터
 </a>
       
     </h2>
@@ -376,8 +376,11 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">객체지향이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)
-</p>
+    <p class="archive__item-excerpt" itemprop="description">철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐
+교과서의 페이지만 알려준다 이것이 포인터
+char language = 'c';
+int thisYear = 2019;
+double pi = ...</p>
   </article>
 </div>
 
@@ -391,37 +394,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/cookie-session-cache/" rel="permalink">[얄코]Cookie, Session, Cache
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">쿠키 :
-브라우저에 저장되는 내용들  , 내컴퓨터에 있으닌깐 내가 갖고 있는 정보들 하지만 쿠키는 한계가 있다 내가임의로 고치거나 고칠 수 있고 남이 쉽게 볼 수 도있다.
-( 로그인자동완성, 오늘 하루 안보기, 쇼핑을 하는데 로그인을 하지않고 물건을 장바구니에 담는 등 지워지거나,...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/aws-scale-out/" rel="permalink">[AWS] Scale Out
+        <a href="/dad/" rel="permalink">[얄코]비동기 프로그래밍
 </a>
       
     </h2>
@@ -435,7 +408,8 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">여러대의 컴퓨터가 협력해서 어떤 동일한 목표를 달성하는 컴퓨터들의 사회를 만든다 라고 할 수 있다.
+    <p class="archive__item-excerpt" itemprop="description">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
+비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.
 </p>
   </article>
 </div>
@@ -450,7 +424,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs-web-server/" rel="permalink">[nodejs] web server, 변수, Template literals,URL
+        <a href="/nodejs-escaping/" rel="permalink">[nodejs] Escaping (탈출)
 </a>
       
     </h2>
@@ -460,12 +434,45 @@
 
 
 
-  1 분 소요
+  최대 1 분 소요
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">web browser 가 web server 한테 정보를 요청하면 web server 그정보를 찾아서 web browser에게 응답해준다.
+    <p class="archive__item-excerpt" itemprop="description">저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것
+(
 </p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/aws/" rel="permalink">[AWS]터미널로 서버접속, ELB 적용(ab 테스터)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+  두개의 인스턴스를 생성해준다.
+  $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소
+  $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다.
+  $ sudo...</p>
   </article>
 </div>
 

@@ -94,4 +94,40 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/fe/",
         "teaser": null
+      },{
+        "title": "[얄코] Angular, React, Vue",
+        "excerpt":"SPA 프레임워크 “재료는 우리가 주는데 요리는 너네가 알아서해” 라고 역할을 맡겨버리는 것. 옛날 에는 페이지에 좋아요 버튼을 누르면 화면이 다시 리로드가 되었는데 지금은 리로드없이 가능하다. 브라우저는 javascript, css html이 진열된 묶음을 받아간다음 이 레시피대로 데이터를 요청하고, 화면을 렌더링해서 모니터에 띄워주게 되는 것 Evan You란 개인이 만든 Vue는 코드가 깔끔하고 배우기...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/angular-react-vue/",
+        "teaser": null
+      },{
+        "title": "[AWS] ELB(Elastic Load Balancing)",
+        "excerpt":"로드밸런서 생성을 하는데,   만약 우리의 서비스가 HTTPS 도 지원한다면 리스너 추가를 해서 HTTPS 를 추가하는데 인스턴스는 HTTPS 로 할필요없이 HTTP 로만 해줘도된다.   왜냐하면 로브밸런서와 EC2 사이에 로드밸런서가 안전하게 통신할 수 있기 때문에   DNS name 이 만들어지는데 DNS name 으로 접속이 가능하다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws-elbelastic-load-balancing/",
+        "teaser": null
+      },{
+        "title": "[AWS]터미널로 서버접속, ELB 적용(ab 테스터)",
+        "excerpt":"두개의 인스턴스를 생성해준다. $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소 $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다. $ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2 ELB적용 웹서버를 이미지를 만들어준다.(AMI) load balances 를 들어가 웹서버 2개를 save 해준다. DNS...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws/",
+        "teaser": null
+      },{
+        "title": "[nodejs] Escaping (탈출)",
+        "excerpt":"저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것 (   var sanitizeHtml = require('sanitize-html');  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-escaping/",
+        "teaser": null
+      },{
+        "title": "[얄코]비동기 프로그래밍",
+        "excerpt":"동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다. 비동기 함수 call back 이라 생각하면 된다. 만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게 콜백 지옥이다. 콜백 지옥을 해결하기위해...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/dad/",
+        "teaser": null
+      },{
+        "title": "[얄코]포인터",
+        "excerpt":"철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐 교과서의 페이지만 알려준다 이것이 포인터 char language = 'c'; int thisYear = 2019; double pi = 3.14; 이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다. 메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/po/",
+        "teaser": null
       }]

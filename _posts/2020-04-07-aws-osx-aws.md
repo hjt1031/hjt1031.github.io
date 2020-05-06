@@ -8,7 +8,7 @@ title: "[AWS] OSX로 AWS연결"
 3. 인스터스를 킨다.
 4. ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.
 5. ssh 키가 있는 디렉토리에서 chmod 400 aws_password.pem 실행 (만약, 접근권한이 없다면 sudo 를 붙여서 실행)
-6. ssh -i "aws_password.pem" ........... 복붙하면 된다.
+6. ssh -i "/aws_password.pem" ........... 복붙하면 된다.
 
 
 # Apache 다운로드

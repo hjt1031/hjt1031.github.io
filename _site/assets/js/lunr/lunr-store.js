@@ -125,9 +125,21 @@ var store = [{
         "url": "http://localhost:4000/dad/",
         "teaser": null
       },{
+        "title": "[nodejs] express 홈페이지 구현",
+        "excerpt":"기존 라우팅 방식은  var app = http.createServer(function(request,response){}   많은 부분에서 공유하고 사용했다. 어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.   express 방식의 라우팅 방식으로 하면  request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.   path 방식 url 파라미터 처리방법  app.get('/page/:pageId/:chapterId', function(request, response){   return response.send(request.params);   //{\"pageId\":\"HTML\",\"chapterId\":\"css\"} })   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-express/",
+        "teaser": null
+      },{
         "title": "[얄코]포인터",
         "excerpt":"철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐 교과서의 페이지만 알려준다 이것이 포인터 char language = 'c'; int thisYear = 2019; double pi = 3.14; 이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다. 메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/po/",
+        "teaser": null
+      },{
+        "title": "[nodejs]express(Hello World!)",
+        "excerpt":"nodejs 에서 가장많이 사용하는 프레임웤 npm install express –save 으로 설치 var express = require('express') //express 모듈을 load 해온다 const 는 상수 바뀌지않음. var app = express() //express 호출 (함수) app.get('/' , (req, res) =&gt; res.send('/'))//첫번째 인자는 경로, 두번째는 접속했을때 호출될 함수가 표현되어있음.(라우터라 생각하면됨) //(라우팅라 생각하면됨(라우팅은 경로 즉 길을가고있는데 갈림길...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
         "teaser": null
       }]

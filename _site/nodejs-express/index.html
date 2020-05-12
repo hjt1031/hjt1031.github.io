@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs] express 홈페이지 구현 - juntae</title>
-<meta name="description" content="기존 라우팅 방식은 var app = http.createServer(function(request,response){}  ">
+<!-- begin _includes/seo.html --><title>[nodejs] Express 미들웨어 - juntae</title>
+<meta name="description" content="Express 의 중요 기능 2가지    라우터   미들웨어  ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[nodejs] express 홈페이지 구현">
+<meta property="og:title" content="[nodejs] Express 미들웨어">
 <meta property="og:url" content="http://localhost:4000/nodejs-express/">
 
 
-  <meta property="og:description" content="기존 라우팅 방식은 var app = http.createServer(function(request,response){}  ">
+  <meta property="og:description" content="Express 의 중요 기능 2가지    라우터   미들웨어  ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-05-06T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-05-07T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[nodejs] express 홈페이지 구현">
-    <meta itemprop="description" content="기존 라우팅 방식은var app = http.createServer(function(request,response){}">
-    <meta itemprop="datePublished" content="2020-05-06T00:00:00+09:00">
+    <meta itemprop="headline" content="[nodejs] Express 미들웨어">
+    <meta itemprop="description" content="Express 의 중요 기능 2가지  라우터  미들웨어">
+    <meta itemprop="datePublished" content="2020-05-07T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] express 홈페이지 구현
+          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] Express 미들웨어
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,21 +287,25 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>기존 라우팅 방식은</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var app = http.createServer(function(request,response){}
+        <p>Express 의 중요 기능 2가지</p>
+<ol>
+  <li>라우터</li>
+  <li>미들웨어</li>
+</ol>
+
+<p>소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다.
+다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install body-parser //로설치
 </code></pre></div></div>
 
-<p>많은 부분에서 공유하고 사용했다.
-어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.</p>
+<p>body 는 웹브라우저에서 요청한 정보 본체를 뜻한다.</p>
 
-<p>express 방식의 라우팅 방식으로 하면 
-request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.</p>
+<p>parser 는 분석</p>
 
-<p>path 방식 url 파라미터 처리방법</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.get('/page/:pageId/:chapterId', function(request, response){
-  return response.send(request.params);
-  //{"pageId":"HTML","chapterId":"css"}
-}) 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var bodyParser = require('body-parser'); //맨위에 선언
+
+var post = request.body //로고쳐서 실행시켜준다.
 </code></pre></div></div>
 
         
@@ -313,7 +317,7 @@ request,response의 개발할려는 로직에  필요한 것만 들어있어서 
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-06T00:00:00+09:00">May 6, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-07T00:00:00+09:00">May 7, 2020</time></p>
         
       </footer>
 
@@ -322,7 +326,7 @@ request,response의 개발할려는 로직에  필요한 것만 들어있어서 
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+express+%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80+%EA%B5%AC%ED%98%84%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+Express+%EB%AF%B8%EB%93%A4%EC%9B%A8%EC%96%B4%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -333,11 +337,11 @@ request,response의 개발할려는 로직에  필요한 것만 들어있어서 
       
   <nav class="pagination">
     
-      <a href="/dad/" class="pagination--pager" title="[얄코]비동기 프로그래밍
+      <a href="/nodejs-2/" class="pagination--pager" title="[nodejs] 페이지 생성 구현2
 ">이전</a>
     
     
-      <a href="/po/" class="pagination--pager" title="[얄코]포인터
+      <a href="/nodejs/" class="pagination--pager" title="[nodejs]express(Hello World!)
 ">다음</a>
     
   </nav>
@@ -352,6 +356,35 @@ request,response의 개발할려는 로직에  필요한 것만 들어있어서 
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejsexpresshello-world1/" rel="permalink">[얄코]REST API
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식
+</p>
+  </article>
+</div>
+
         
           
 
@@ -391,7 +424,7 @@ request,response의 개발할려는 로직에  필요한 것만 들어있어서 
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/po/" rel="permalink">[얄코]포인터
+        <a href="/nodejs-2/" rel="permalink">[nodejs] 페이지 생성 구현2
 </a>
       
     </h2>
@@ -405,40 +438,8 @@ request,response의 개발할려는 로직에  필요한 것만 들어있어서 
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐
-교과서의 페이지만 알려준다 이것이 포인터
-char language = 'c';
-int thisYear = 2019;
-double pi = ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/dad/" rel="permalink">[얄코]비동기 프로그래밍
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
-비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.
+    <p class="archive__item-excerpt" itemprop="description">```
+app.get(‘/create’,function(request,response){ //get방식일떄
 </p>
   </article>
 </div>
@@ -453,7 +454,7 @@ double pi = ...</p>
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs-escaping/" rel="permalink">[nodejs] Escaping (탈출)
+        <a href="/aws/" rel="permalink">[AWS]Auto Scaling (오토스케일링)
 </a>
       
     </h2>
@@ -467,8 +468,7 @@ double pi = ...</p>
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것
-(
+    <p class="archive__item-excerpt" itemprop="description">컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)
 </p>
   </article>
 </div>

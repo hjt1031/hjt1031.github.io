@@ -137,9 +137,33 @@ var store = [{
         "url": "http://localhost:4000/po/",
         "teaser": null
       },{
+        "title": "[AWS]Auto Scaling (오토스케일링)",
+        "excerpt":"컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능) AUTO SCALING 목록에 보면 시작구성과, Auto Scaling group 이 있다. 먼저 Auto Scaling group에 먼저 생성을 해준다. 그러면 오토스케일의 이미지를 선택한다 이미지화 시켯던 내AMI를 선택한다. 인스턴스 성능 선택한다. name 정하고 스토리지 정하고 시큐리티 그룹을 만든다. 그다음 오토스케일 그룹을 만드는...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws/",
+        "teaser": null
+      },{
+        "title": "[nodejs] 페이지 생성 구현2",
+        "excerpt":"app.get('/create',function(request,response){ //get방식일떄  app.post('/create_process',function(request,response){ //post방식   쿼리 스트링이 아닌 방식으로 바꿀려면   &lt;a href=\"/update/?id=${sanitizedTitle}\"&gt;update&lt;/a&gt; 에서 &lt;a href=\"/update/${sanitizedTitle}\"&gt;update&lt;/a&gt;   삭제기능  &lt;form action=\"/delete_process\" method=\"post\"&gt; //action 에 delete 앞에 /를 주게되면 최상위 path 바로밑으로 감   express 는 리다이렉션 기능을 편리하게 제공하고 있다.   response.redirect //를 사용하면 된다  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-2/",
+        "teaser": null
+      },{
+        "title": "[nodejs] Express 미들웨어",
+        "excerpt":"Express 의 중요 기능 2가지 라우터 미들웨어 소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다. 다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다. npm install body-parser //로설치 body 는 웹브라우저에서 요청한 정보 본체를 뜻한다. parser 는 분석 var bodyParser = require('body-parser'); //맨위에 선언 var post = request.body //로고쳐서 실행시켜준다....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-express/",
+        "teaser": null
+      },{
         "title": "[nodejs]express(Hello World!)",
         "excerpt":"nodejs 에서 가장많이 사용하는 프레임웤 npm install express –save 으로 설치 var express = require('express') //express 모듈을 load 해온다 const 는 상수 바뀌지않음. var app = express() //express 호출 (함수) app.get('/' , (req, res) =&gt; res.send('/'))//첫번째 인자는 경로, 두번째는 접속했을때 호출될 함수가 표현되어있음.(라우터라 생각하면됨) //(라우팅라 생각하면됨(라우팅은 경로 즉 길을가고있는데 갈림길...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
+        "teaser": null
+      },{
+        "title": "[얄코]REST API",
+        "excerpt":"REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식 어떤 기수링나 제품이 아니라, 형식이기 때문에 어떤 프로그래밍 언어를 쓰든 폼에 맞춰서 기능을 만들어내면 된다. REST API 는 결국 어떤 URI에 어떤 메소드를 사용할지 개발자들 사이에 널리 지켜지는 약속이다. ex) https://(도메인)/classes 이면 아마도 학원의반들 목록을 받아오는 요청 일것이다....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejsexpresshello-world1/",
         "teaser": null
       }]

@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-06T21:15:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[nodejs]express(Hello World!)</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs]express(Hello World!)" /><published>2020-05-07T00:00:00+09:00</published><updated>2020-05-07T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;nodejs 에서 가장많이 사용하는 프레임웤&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-12T09:45:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[얄코]REST API</title><link href="http://localhost:4000/nodejsexpresshello-world1/" rel="alternate" type="text/html" title="[얄코]REST API" /><published>2020-05-12T00:00:00+09:00</published><updated>2020-05-12T00:00:00+09:00</updated><id>http://localhost:4000/nodejsexpresshello-world1</id><content type="html" xml:base="http://localhost:4000/nodejsexpresshello-world1/">&lt;p&gt;REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식&lt;/p&gt;
+
+&lt;p&gt;어떤 기수링나 제품이 아니라, 형식이기 때문에 어떤 프로그래밍 언어를 쓰든 폼에 맞춰서 기능을 만들어내면 된다.&lt;/p&gt;
+
+&lt;p&gt;REST API 는 결국 어떤 URI에 어떤 메소드를 사용할지 개발자들 사이에 널리 지켜지는 약속이다.&lt;/p&gt;
+
+&lt;p&gt;ex) https://(도메인)/classes  이면 아마도 학원의반들 목록을 받아오는 요청 일것이다.
+ 그리고 https://(도메인)/classes/2 를 붙인 idx 고유 번호가 따라붙으면 보통은 인덱스 번호가 이 숫자인 반의 정보가 온다.&lt;/p&gt;
+
+&lt;p&gt;REST API에서는 GET, POST, PUT ,DELETE, PATCH 를 주로 사용한다.
+ POST, PUT, PATCH 에는 BODY 란 주머니가 있어서. 정보들을 GET 이나 DELETE 보다 많이 비교적 안전하게 보낼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;GET 는 주로 데이터를 read 하는데 사용하기
+POST 는 create, 새로운 정보를 추가하는데 사용된다. url 로  https://(도메인)/classes/2/students 주고 body에 새 학생의 정보를 실어보낸다. 보통 idx 는 정보가 추가되면서 생성되기 때문에 따로 idx 를 줄 필요가 없다.  하지만 update 를 한다면,&lt;/p&gt;
+
+&lt;p&gt;PUT 또는 PATCH 에 BODY에 실어서 정보를 보낸다.&lt;/p&gt;
+
+&lt;p&gt;PUT은 정보를 통째로 갈아 끼울 때 (ex) 이름 : 연두부, 성별 : 남자, 출석 :2   =&amp;gt; 이름 :연놀부, 성별 : 여자, 출석 : 3
+PATCH 는 정보를 정보 중 일부를 바꿀때&lt;/p&gt;
+
+&lt;p&gt;REST API 를 보낼때 HTTP 규약에 따라 신호를 전송한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식</summary></entry><entry><title type="html">[nodejs] Express 미들웨어</title><link href="http://localhost:4000/nodejs-express/" rel="alternate" type="text/html" title="[nodejs] Express 미들웨어" /><published>2020-05-07T00:00:00+09:00</published><updated>2020-05-07T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-express</id><content type="html" xml:base="http://localhost:4000/nodejs-express/">&lt;p&gt;Express 의 중요 기능 2가지&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;라우터&lt;/li&gt;
+  &lt;li&gt;미들웨어&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다.
+다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install body-parser //로설치
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;body 는 웹브라우저에서 요청한 정보 본체를 뜻한다.&lt;/p&gt;
+
+&lt;p&gt;parser 는 분석&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var bodyParser = require('body-parser'); //맨위에 선언
+
+var post = request.body //로고쳐서 실행시켜준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">Express 의 중요 기능 2가지 라우터 미들웨어</summary></entry><entry><title type="html">[nodejs] 페이지 생성 구현2</title><link href="http://localhost:4000/nodejs-2/" rel="alternate" type="text/html" title="[nodejs] 페이지 생성 구현2" /><published>2020-05-07T00:00:00+09:00</published><updated>2020-05-07T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-2</id><content type="html" xml:base="http://localhost:4000/nodejs-2/">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.get('/create',function(request,response){ //get방식일떄
+
+app.post('/create_process',function(request,response){ //post방식
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;쿼리 스트링이 아닌 방식으로 바꿀려면&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a href=&quot;/update/?id=${sanitizedTitle}&quot;&amp;gt;update&amp;lt;/a&amp;gt;
+에서
+&amp;lt;a href=&quot;/update/${sanitizedTitle}&quot;&amp;gt;update&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;삭제기능&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;form action=&quot;/delete_process&quot; method=&quot;post&quot;&amp;gt; //action 에 delete 앞에 /를 주게되면 최상위 path 바로밑으로 감
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;express 는 리다이렉션 기능을 편리하게 제공하고 있다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;response.redirect //를 사용하면 된다
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">``` app.get(‘/create’,function(request,response){ //get방식일떄</summary></entry><entry><title type="html">[AWS]Auto Scaling (오토스케일링)</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]Auto Scaling (오토스케일링)" /><published>2020-05-07T00:00:00+09:00</published><updated>2020-05-07T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;p&gt;컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)&lt;/p&gt;
+
+&lt;p&gt;AUTO SCALING 목록에 보면
+시작구성과, Auto Scaling group 이 있다.
+먼저 Auto Scaling group에 먼저 생성을 해준다. 그러면&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;오토스케일의 이미지를 선택한다&lt;/li&gt;
+  &lt;li&gt;이미지화 시켯던 내AMI를 선택한다.&lt;/li&gt;
+  &lt;li&gt;인스턴스 성능 선택한다.&lt;/li&gt;
+  &lt;li&gt;name 정하고 스토리지 정하고&lt;/li&gt;
+  &lt;li&gt;시큐리티 그룹을 만든다.&lt;/li&gt;
+  &lt;li&gt;그다음 오토스케일 그룹을 만드는 것이 나오는데&lt;/li&gt;
+  &lt;li&gt;1번탭에 몇개의 인스턴스로 지정하는지 로드밸런싱 연결할건지 등등..&lt;/li&gt;
+  &lt;li&gt;2번탭의(Confilgure scaling pollcles:조정 정책 구성)   첫번째 (이 그룹을 초기 크기로 유지) 가있는데 이건 1번탭에서 예를 들어 10개를 생성했다고 치고 그 10개중에서 4개의 인스턴스가 죽었다고 가정하면 그 죽은 인스턴스를 자동생성해준다.
+두번째는 (조정 정책을 사용하여 이 그룹의 용량 조정)최대와 최소의 인스턴스를 설정해준다. 예를들어 각각의 input 박스에 1과 3을 입력하면 최대1개이상과 3개이하의 인스턴스를 생성한다.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)</summary></entry><entry><title type="html">[nodejs]express(Hello World!)</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs]express(Hello World!)" /><published>2020-05-07T00:00:00+09:00</published><updated>2020-05-07T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;nodejs 에서 가장많이 사용하는 프레임웤&lt;/p&gt;
 
 &lt;p&gt;npm install express –save 으로 설치&lt;/p&gt;
 
@@ -12,22 +85,15 @@ app.get('/page', function(req, res){
 }) //위에 app.get 이랑 똑같은 로직, 위에께 최신 밑에께 구버전
 
 app.listen(3000, () =&amp;gt; console.log('Example app listening on port 3000!'))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">nodejs 에서 가장많이 사용하는 프레임웤</summary></entry><entry><title type="html">[nodejs] express 홈페이지 구현</title><link href="http://localhost:4000/nodejs-express/" rel="alternate" type="text/html" title="[nodejs] express 홈페이지 구현" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-express</id><content type="html" xml:base="http://localhost:4000/nodejs-express/">&lt;p&gt;기존 라우팅 방식은&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var app = http.createServer(function(request,response){}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">nodejs 에서 가장많이 사용하는 프레임웤</summary></entry><entry><title type="html">[얄코]포인터</title><link href="http://localhost:4000/po/" rel="alternate" type="text/html" title="[얄코]포인터" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/po</id><content type="html" xml:base="http://localhost:4000/po/">&lt;p&gt;철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐
+교과서의 페이지만 알려준다 이것이 포인터&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char language = 'c';
+int thisYear = 2019;
+double pi = 3.14;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다.&lt;/p&gt;
 
-&lt;p&gt;많은 부분에서 공유하고 사용했다.
-어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.&lt;/p&gt;
-
-&lt;p&gt;express 방식의 라우팅 방식으로 하면 
-request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;path 방식 url 파라미터 처리방법&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.get('/page/:pageId/:chapterId', function(request, response){
-  return response.send(request.params);
-  //{&quot;pageId&quot;:&quot;HTML&quot;,&quot;chapterId&quot;:&quot;css&quot;}
-}) 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">기존 라우팅 방식은 var app = http.createServer(function(request,response){}</summary></entry><entry><title type="html">[얄코]비동기 프로그래밍</title><link href="http://localhost:4000/dad/" rel="alternate" type="text/html" title="[얄코]비동기 프로그래밍" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/dad</id><content type="html" xml:base="http://localhost:4000/dad/">&lt;p&gt;동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
+&lt;p&gt;메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐 교과서의 페이지만 알려준다 이것이 포인터 char language = 'c'; int thisYear = 2019; double pi = 3.14; 이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다. 메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)</summary></entry><entry><title type="html">[얄코]비동기 프로그래밍</title><link href="http://localhost:4000/dad/" rel="alternate" type="text/html" title="[얄코]비동기 프로그래밍" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/dad</id><content type="html" xml:base="http://localhost:4000/dad/">&lt;p&gt;동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
 비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.&lt;/p&gt;
 
 &lt;p&gt;비동기 함수 call back 이라 생각하면 된다.&lt;/p&gt;
@@ -48,15 +114,22 @@ asyme await 도 비동기방식의 한 종류이며 동기 작업처럼 작성 �
 
 &lt;span class=&quot;nx&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;고교_DB_주소&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;고교_DB_주소_조회_Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;학생_정보&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;고교명&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.</summary></entry><entry><title type="html">[얄코]포인터</title><link href="http://localhost:4000/po/" rel="alternate" type="text/html" title="[얄코]포인터" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/po</id><content type="html" xml:base="http://localhost:4000/po/">&lt;p&gt;철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐
-교과서의 페이지만 알려준다 이것이 포인터&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char language = 'c';
-int thisYear = 2019;
-double pi = 3.14;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.</summary></entry><entry><title type="html">[nodejs] express 홈페이지 구현</title><link href="http://localhost:4000/nodejs-express/" rel="alternate" type="text/html" title="[nodejs] express 홈페이지 구현" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-express</id><content type="html" xml:base="http://localhost:4000/nodejs-express/">&lt;p&gt;기존 라우팅 방식은&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var app = http.createServer(function(request,response){}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다.&lt;/p&gt;
 
-&lt;p&gt;메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐 교과서의 페이지만 알려준다 이것이 포인터 char language = 'c'; int thisYear = 2019; double pi = 3.14; 이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다. 메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)</summary></entry><entry><title type="html">[nodejs] Escaping (탈출)</title><link href="http://localhost:4000/nodejs-escaping/" rel="alternate" type="text/html" title="[nodejs] Escaping (탈출)" /><published>2020-05-05T00:00:00+09:00</published><updated>2020-05-05T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-escaping</id><content type="html" xml:base="http://localhost:4000/nodejs-escaping/">&lt;p&gt;저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것
+&lt;p&gt;많은 부분에서 공유하고 사용했다.
+어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.&lt;/p&gt;
+
+&lt;p&gt;express 방식의 라우팅 방식으로 하면 
+request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;path 방식 url 파라미터 처리방법&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.get('/page/:pageId/:chapterId', function(request, response){
+  return response.send(request.params);
+  //{&quot;pageId&quot;:&quot;HTML&quot;,&quot;chapterId&quot;:&quot;css&quot;}
+}) 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">기존 라우팅 방식은 var app = http.createServer(function(request,response){}</summary></entry><entry><title type="html">[nodejs] Escaping (탈출)</title><link href="http://localhost:4000/nodejs-escaping/" rel="alternate" type="text/html" title="[nodejs] Escaping (탈출)" /><published>2020-05-05T00:00:00+09:00</published><updated>2020-05-05T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-escaping</id><content type="html" xml:base="http://localhost:4000/nodejs-escaping/">&lt;p&gt;저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것
 (&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sanitizeHtml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sanitize-html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -73,47 +146,4 @@ double pi = 3.14;
   &lt;li&gt;load balances 를 들어가 웹서버 2개를 save 해준다.&lt;/li&gt;
   &lt;li&gt;DNS name 주소를 복사하면 우리가만든 웹서버에 접속하게된다.&lt;/li&gt;
   &lt;li&gt;접속 로그 보는 방법 $sudo tail -f /var/log/apach2/access.log ( DNS name 에 접속을 하면 한번은 웹서버1 한번은 웹서버2 에 접속하는걸 눈으로 확인할 수 있다,)&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">두개의 인스턴스를 생성해준다. $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소 $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다. $ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2</summary></entry><entry><title type="html">[얄코] Angular, React, Vue</title><link href="http://localhost:4000/angular-react-vue/" rel="alternate" type="text/html" title="[얄코] Angular, React, Vue" /><published>2020-04-24T00:00:00+09:00</published><updated>2020-04-24T00:00:00+09:00</updated><id>http://localhost:4000/angular-react-vue</id><content type="html" xml:base="http://localhost:4000/angular-react-vue/">&lt;p&gt;SPA 프레임워크&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;“재료는 우리가 주는데 요리는 너네가 알아서해” 라고 역할을 맡겨버리는 것.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;옛날 에는 페이지에 좋아요 버튼을 누르면 화면이 다시 리로드가 되었는데 지금은 리로드없이 가능하다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;브라우저는 javascript, css html이 진열된 묶음을 받아간다음 이 레시피대로 데이터를 요청하고, 화면을 렌더링해서 모니터에 띄워주게 되는 것&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Evan You란 개인이 만든 Vue는 코드가 깔끔하고 배우기 쉽다는 특성떄문에 후발주자임에도 빠르게 성장하고있다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;React는 페이북에서 만들었는데 막강한 커뮤니티와 자료들을 갖추고 있다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Angular 는 구글에서만들었는데 Javascript 를 보완한 언어, TypeScript라고 부르며 매우 안정적이고 탄탄한 프론트엔드 앱을 만들 수 있다. 하지만 무겁고 배우기어렵다.&lt;br /&gt;&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">SPA 프레임워크</summary></entry><entry><title type="html">[AWS] ELB(Elastic Load Balancing)</title><link href="http://localhost:4000/aws-elbelastic-load-balancing/" rel="alternate" type="text/html" title="[AWS] ELB(Elastic Load Balancing)" /><published>2020-04-24T00:00:00+09:00</published><updated>2020-04-24T00:00:00+09:00</updated><id>http://localhost:4000/aws-elbelastic-load-balancing</id><content type="html" xml:base="http://localhost:4000/aws-elbelastic-load-balancing/">&lt;p&gt;로드밸런서 생성을 하는데,&lt;/p&gt;
-
-&lt;p&gt;만약 우리의 서비스가 HTTPS 도 지원한다면 리스너 추가를 해서 HTTPS 를 추가하는데 인스턴스는 HTTPS 로 할필요없이 HTTP 로만 해줘도된다.&lt;/p&gt;
-
-&lt;p&gt;왜냐하면 로브밸런서와 EC2 사이에 로드밸런서가 안전하게 통신할 수 있기 때문에&lt;/p&gt;
-
-&lt;p&gt;DNS name 이 만들어지는데 DNS name 으로 접속이 가능하다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">로드밸런서 생성을 하는데,</summary></entry><entry><title type="html">[얄코]객체지향 프로그래밍</title><link href="http://localhost:4000/fe/" rel="alternate" type="text/html" title="[얄코]객체지향 프로그래밍" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/fe</id><content type="html" xml:base="http://localhost:4000/fe/">&lt;p&gt;&lt;strong&gt;객체지향&lt;/strong&gt;이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;데이터와 기능이 클래스로 ‘캡슐화’ 된 컴퓨터 자원의 묶음을 ‘객체’라고 한다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;밀가루 반죽과 팥이 클래스란 붕어빵이 틀에 찍혀서 객체라는 붕어빵이 나온다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;‘은닉성’&lt;/strong&gt;  :  우리가 TV 속을 뜯어보지 않아도 리모콘으로 필요한 조작을 다 할 수 있는 것처럼 내부구조는 private 로 감춰놓고,  외부에서 조작할 수 있는 명령어만 public으로 공개해놓는다. 이로서 바깥의 간섭으로 발생하는 오류를 방지할 수 있고 남이 만든 클래스의 객체들도 일일이 뜯어볼 필요 없이 제공되는 기능들을 그대로 사용할 수 있는것&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;‘다형성’&lt;/strong&gt; : 중국집에서 ‘탕수육주세요’ 하면 일반 탕수육이  나오지만 이를 상속한 사천식 중국집에서는 ‘탕수육 주세요’ 가 override 돼서 시뻘건 탕수육이 나오는 것.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;상속&lt;/strong&gt;은 트리구조의 상하관계가 뚜렷하기 떄문에 한 자식이 두 부모로부터 상속받는게 언어마다 불가능하거나, 부작용들이 있다. 반면 인터페이스는 이로부터 자유롭다.&lt;br /&gt;
-박쥐와 날다람쥐는 포유류란 부모에게서, 날치는 어류란 부모에게서 상속받지만 ‘난다’라는 기능을 인터페이스로 장착해서 대다수 조류와 곤충처럼 ‘날짐승’이란 카테고리에 들어갈 수 있는 것.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;상속은 물려받는것, 인터페이스는 장착하는 것 이라생각하면 된다.&lt;br /&gt;&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">객체지향이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)</summary></entry><entry><title type="html">[얄코]Cookie, Session, Cache</title><link href="http://localhost:4000/cookie-session-cache/" rel="alternate" type="text/html" title="[얄코]Cookie, Session, Cache" /><published>2020-04-21T00:00:00+09:00</published><updated>2020-04-21T00:00:00+09:00</updated><id>http://localhost:4000/cookie-session-cache</id><content type="html" xml:base="http://localhost:4000/cookie-session-cache/">&lt;h1 id=&quot;쿠키-&quot;&gt;쿠키 :&lt;/h1&gt;
-&lt;p&gt;브라우저에 저장되는 내용들  , 내컴퓨터에 있으닌깐 내가 갖고 있는 정보들 하지만 쿠키는 한계가 있다 내가임의로 고치거나 고칠 수 있고 남이 쉽게 볼 수 도있다.&lt;br /&gt;
-( 로그인자동완성, 오늘 하루 안보기, 쇼핑을 하는데 로그인을 하지않고 물건을 장바구니에 담는 등 지워지거나, 조작되거나, 가로채거나 보여져도 큰 지장이없는 정보들을 브라우져에 저장하는데 사용됨)&lt;/p&gt;
-&lt;h1 id=&quot;세션-&quot;&gt;세션 :&lt;/h1&gt;
-&lt;p&gt;서버에서 사용자를 구분하기위한 기한이 짧은 임시 키 하나를 부라우저에 보내서 쿠키로 저장한다.&lt;br /&gt;
-사용자가 어떤 사이트에 돌아다닐 때 이 사용자의 중요한 정보들은 서버의 메모리나 데이터베이스에 저장되는 것.&lt;br /&gt;
-브라우저가 이 사이트의 페이지들에 접속할 때마다. http 요청에 이 키를 실어서 전송하고 서버는 그 키를 보고 ‘얘는 그 사용자구나’ 인식해서 이 사용자의 정보들을 가공해서 응답으로 보내준다.&lt;br /&gt;
-ex) 네이버에 로그인 해서 다른페이지 를 이용할때마다 로그인을 안해도 되는 이유는 쿠키와 세션 조합으로 네이버서 네이버 서버가 인지하고 있다.&lt;br /&gt;
-사용자나 다른 누군가에게 노출되어서는 안 되는, 서비스 제공자가 직접 관리해야 할 정보들은 세션으로 서버 안에서 다뤄짐&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;캐쉬-&quot;&gt;캐쉬 :&lt;/h1&gt;
-&lt;p&gt;가져오는데 비용이 드는 데이터를 한 번 가져온 뒤에는 임시로 저장해두는것, 캐쉬는 이미지 같을걸 불러올때 데이터 사용량도 발생하고 시간도 들기 때문에 사용자가 여러 번 방문할 법한 사이트에서는 사용자의 컴퓨터 또는 중간 역할을 하는 서버에 저장해둔다.&lt;br /&gt;
-ex) 손님이 신발을 사는데 손님이 사이즈를 갖다달라고 직원에게 요청한다. 직원은 창고에 손님 사이즈 신발을 가져온다. 손님은 매장을 한번 더 둘러보고 온다고 하지만 직원은 그 손님이 다시와서 살것같아서 창고에 넣어두지 않고 한편의 거치대에 넣어논다. (거치대 = 캐쉬)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">쿠키 : 브라우저에 저장되는 내용들 , 내컴퓨터에 있으닌깐 내가 갖고 있는 정보들 하지만 쿠키는 한계가 있다 내가임의로 고치거나 고칠 수 있고 남이 쉽게 볼 수 도있다. ( 로그인자동완성, 오늘 하루 안보기, 쇼핑을 하는데 로그인을 하지않고 물건을 장바구니에 담는 등 지워지거나, 조작되거나, 가로채거나 보여져도 큰 지장이없는 정보들을 브라우져에 저장하는데 사용됨) 세션 : 서버에서 사용자를 구분하기위한 기한이 짧은 임시 키 하나를 부라우저에 보내서 쿠키로 저장한다. 사용자가 어떤 사이트에 돌아다닐 때 이 사용자의 중요한 정보들은 서버의 메모리나 데이터베이스에 저장되는 것. 브라우저가 이 사이트의 페이지들에 접속할 때마다. http 요청에 이 키를 실어서 전송하고 서버는 그 키를 보고 ‘얘는 그 사용자구나’ 인식해서 이 사용자의 정보들을 가공해서 응답으로 보내준다. ex) 네이버에 로그인 해서 다른페이지 를 이용할때마다 로그인을 안해도 되는 이유는 쿠키와 세션 조합으로 네이버서 네이버 서버가 인지하고 있다. 사용자나 다른 누군가에게 노출되어서는 안 되는, 서비스 제공자가 직접 관리해야 할 정보들은 세션으로 서버 안에서 다뤄짐</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">두개의 인스턴스를 생성해준다. $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소 $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다. $ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2</summary></entry></feed>

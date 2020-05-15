@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-12T09:45:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[얄코]REST API</title><link href="http://localhost:4000/nodejsexpresshello-world1/" rel="alternate" type="text/html" title="[얄코]REST API" /><published>2020-05-12T00:00:00+09:00</published><updated>2020-05-12T00:00:00+09:00</updated><id>http://localhost:4000/nodejsexpresshello-world1</id><content type="html" xml:base="http://localhost:4000/nodejsexpresshello-world1/">&lt;p&gt;REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-15T09:41:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[nodejs]라우터-주소체계변경</title><link href="http://localhost:4000/nodejs3/" rel="alternate" type="text/html" title="[nodejs]라우터-주소체계변경" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs3</id><content type="html" xml:base="http://localhost:4000/nodejs3/"></content><author><name>동센</name></author><summary type="html"></summary></entry><entry><title type="html">[nodejs]정적파일 서비스</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs]정적파일 서비스" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;images 디렉토리 만들어주고&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그다음 본문 로직에&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;/images/hello.jpg&quot; style=&quot;width:300px; display:block; margin-top:10px;&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">images 디렉토리 만들어주고 app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.</summary></entry><entry><title type="html">[nodejs]에러처리</title><link href="http://localhost:4000/nodejs2/" rel="alternate" type="text/html" title="[nodejs]에러처리" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs2</id><content type="html" xml:base="http://localhost:4000/nodejs2/">&lt;p&gt;존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
+express 기준&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.use(function(req, res, next){
+  res.status(404).send('Sorry cant find that!');
+}) //추가해준다
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;페이지에 에러가 있을 경우(서버에러 500)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.
+ 
+ 
+ app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고
+  res.status(500).send('Something broke!');
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준</summary></entry><entry><title type="html">[AWS]S3 (Simple Storage Service)</title><link href="http://localhost:4000/awss3-simple-storage-service/" rel="alternate" type="text/html" title="[AWS]S3 (Simple Storage Service)" /><published>2020-05-14T00:00:00+09:00</published><updated>2020-05-14T00:00:00+09:00</updated><id>http://localhost:4000/awss3-simple-storage-service</id><content type="html" xml:base="http://localhost:4000/awss3-simple-storage-service/">&lt;p&gt;파일을 저장하는 서비스 라고 생각하면 된다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">파일을 저장하는 서비스 라고 생각하면 된다.</summary></entry><entry><title type="html">[얄코] GraphQL</title><link href="http://localhost:4000/graphql/" rel="alternate" type="text/html" title="[얄코] GraphQL" /><published>2020-05-13T00:00:00+09:00</published><updated>2020-05-13T00:00:00+09:00</updated><id>http://localhost:4000/graphql</id><content type="html" xml:base="http://localhost:4000/graphql/">&lt;p&gt;기존 REST API는&lt;/p&gt;
+
+&lt;p&gt;메소드와 URL을 조합해서, 예측 가능하고 일정한 정보와 작업을 요청하는 것이다. 버튼마다 나오는 것이 확실한 자판기 처럼 하지만 불편할 때가 있다.&lt;/p&gt;
+
+&lt;p&gt;ex) 국어강사가 학생들의 국어 성적을 보고자 하는데 요청을 보낼때 학번, 이름, 국어 성적이면 충분하다.
+			(도메인)/classes/(반idx)/students 이렇게 요청을 보내면 쓸때없는 정보들도 다같이 들고온다. (주소, 키, 성별,등등) 즉, 데이터 소모가 심하다.
+			결국 두번을 요청해야지 필요한 정보만 갖고올 수 있다.&lt;/p&gt;
+
+&lt;p&gt;GraphQL 은 body에 들어간 데이터로 유도리 있게 요청이 가능하다. 즉 여러댑스를 한 정보에 다 받아올 수 있는 것.
+ex) (도메인)/graphql post 에 body에 담에서 보내면 된다.
+insert 는&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;서버에 지정된 함수 이름을 적고.&lt;/li&gt;
+  &lt;li&gt;거기에 정보들을 넣어 보내면 된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;update delete 도 마찬가지&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">기존 REST API는</summary></entry><entry><title type="html">[얄코]REST API</title><link href="http://localhost:4000/nodejsexpresshello-world1/" rel="alternate" type="text/html" title="[얄코]REST API" /><published>2020-05-12T00:00:00+09:00</published><updated>2020-05-12T00:00:00+09:00</updated><id>http://localhost:4000/nodejsexpresshello-world1</id><content type="html" xml:base="http://localhost:4000/nodejsexpresshello-world1/">&lt;p&gt;REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식&lt;/p&gt;
+
+&lt;p&gt;메소드와 URL을 조합해서, 예측 가능하고 일정한 정보와 작업을 요청하는 것이다. 버튼마다 나오는 것이 확실한 자판기 처럼&lt;/p&gt;
 
 &lt;p&gt;어떤 기수링나 제품이 아니라, 형식이기 때문에 어떤 프로그래밍 언어를 쓰든 폼에 맞춰서 기능을 만들어내면 된다.&lt;/p&gt;
 
@@ -27,16 +66,36 @@ PATCH 는 정보를 정보 중 일부를 바꿀때&lt;/p&gt;
 &lt;p&gt;소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다.
 다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install body-parser //로설치
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//로설치&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;body 는 웹브라우저에서 요청한 정보 본체를 뜻한다.&lt;/p&gt;
 
 &lt;p&gt;parser 는 분석&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var bodyParser = require('body-parser'); //맨위에 선언
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;body-parser&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//맨위에 선언&lt;/span&gt;
 
-var post = request.body //로고쳐서 실행시켜준다.
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//로고쳐서 실행시켜준다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;압축하기(데이터가 너무많으면 압축을 해야한다.)&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;compression&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;compression&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requrie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;compression&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;compression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;미들웨어 만들기.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//공통으로 된 함수 &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//ex)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filelist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//글목록을 표현해주는 기능&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filelist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//그다음에 호출되어야 할 미들웨어가 담겨있다.&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">Express 의 중요 기능 2가지 라우터 미들웨어</summary></entry><entry><title type="html">[nodejs] 페이지 생성 구현2</title><link href="http://localhost:4000/nodejs-2/" rel="alternate" type="text/html" title="[nodejs] 페이지 생성 구현2" /><published>2020-05-07T00:00:00+09:00</published><updated>2020-05-07T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-2</id><content type="html" xml:base="http://localhost:4000/nodejs-2/">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.get('/create',function(request,response){ //get방식일떄
 
 app.post('/create_process',function(request,response){ //post방식
@@ -85,65 +144,4 @@ app.get('/page', function(req, res){
 }) //위에 app.get 이랑 똑같은 로직, 위에께 최신 밑에께 구버전
 
 app.listen(3000, () =&amp;gt; console.log('Example app listening on port 3000!'))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">nodejs 에서 가장많이 사용하는 프레임웤</summary></entry><entry><title type="html">[얄코]포인터</title><link href="http://localhost:4000/po/" rel="alternate" type="text/html" title="[얄코]포인터" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/po</id><content type="html" xml:base="http://localhost:4000/po/">&lt;p&gt;철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐
-교과서의 페이지만 알려준다 이것이 포인터&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char language = 'c';
-int thisYear = 2019;
-double pi = 3.14;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다.&lt;/p&gt;
-
-&lt;p&gt;메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐 교과서의 페이지만 알려준다 이것이 포인터 char language = 'c'; int thisYear = 2019; double pi = 3.14; 이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다. 메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을 사용할 떄는 예외)</summary></entry><entry><title type="html">[얄코]비동기 프로그래밍</title><link href="http://localhost:4000/dad/" rel="alternate" type="text/html" title="[얄코]비동기 프로그래밍" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/dad</id><content type="html" xml:base="http://localhost:4000/dad/">&lt;p&gt;동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
-비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.&lt;/p&gt;
-
-&lt;p&gt;비동기 함수 call back 이라 생각하면 된다.&lt;/p&gt;
-
-&lt;p&gt;만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게
-콜백 지옥이다.&lt;/p&gt;
-
-&lt;p&gt;콜백 지옥을 해결하기위해 나온게 
-Promise (체이닝 방식 .then 사용) 를 사용하게 되면 순차적으로 처리 가능
-하지만 Promise 는 polyfill 등의 라이브러리 없이는 익스플로러에서는 동작하지 않으니 주의해야함!&lt;/p&gt;
-
-&lt;p&gt;그리고
-asyme await 도 비동기방식의 한 종류이며 동기 작업처럼 작성 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;await를 붙여주면 이 함수가 끝나기 전에 다음 작업으로 넘어갈 수 없다.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;학생_학번&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;학생_정보&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;학생정보_조회_Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;학생_학번&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//원래라면 그냥 바로 밑으로 흘러가는 비동기 처리가 되겠지만 await 를 써주면 동기처럼 사용가능&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;고교_DB_주소&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;고교_DB_주소_조회_Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;학생_정보&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;고교명&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.</summary></entry><entry><title type="html">[nodejs] express 홈페이지 구현</title><link href="http://localhost:4000/nodejs-express/" rel="alternate" type="text/html" title="[nodejs] express 홈페이지 구현" /><published>2020-05-06T00:00:00+09:00</published><updated>2020-05-06T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-express</id><content type="html" xml:base="http://localhost:4000/nodejs-express/">&lt;p&gt;기존 라우팅 방식은&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var app = http.createServer(function(request,response){}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;많은 부분에서 공유하고 사용했다.
-어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.&lt;/p&gt;
-
-&lt;p&gt;express 방식의 라우팅 방식으로 하면 
-request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;path 방식 url 파라미터 처리방법&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.get('/page/:pageId/:chapterId', function(request, response){
-  return response.send(request.params);
-  //{&quot;pageId&quot;:&quot;HTML&quot;,&quot;chapterId&quot;:&quot;css&quot;}
-}) 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">기존 라우팅 방식은 var app = http.createServer(function(request,response){}</summary></entry><entry><title type="html">[nodejs] Escaping (탈출)</title><link href="http://localhost:4000/nodejs-escaping/" rel="alternate" type="text/html" title="[nodejs] Escaping (탈출)" /><published>2020-05-05T00:00:00+09:00</published><updated>2020-05-05T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-escaping</id><content type="html" xml:base="http://localhost:4000/nodejs-escaping/">&lt;p&gt;저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것
-(&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sanitizeHtml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;sanitize-html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것 (</summary></entry><entry><title type="html">[AWS]터미널로 서버접속, ELB 적용(ab 테스터)</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[AWS]터미널로 서버접속, ELB 적용(ab 테스터)" /><published>2020-04-29T00:00:00+09:00</published><updated>2020-04-29T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;ol&gt;
-  &lt;li&gt;두개의 인스턴스를 생성해준다.&lt;/li&gt;
-  &lt;li&gt;$ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소&lt;/li&gt;
-  &lt;li&gt;$ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다.&lt;/li&gt;
-  &lt;li&gt;$ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;ELB적용&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;웹서버를 이미지를 만들어준다.(AMI)&lt;/li&gt;
-  &lt;li&gt;load balances 를 들어가 웹서버 2개를 save 해준다.&lt;/li&gt;
-  &lt;li&gt;DNS name 주소를 복사하면 우리가만든 웹서버에 접속하게된다.&lt;/li&gt;
-  &lt;li&gt;접속 로그 보는 방법 $sudo tail -f /var/log/apach2/access.log ( DNS name 에 접속을 하면 한번은 웹서버1 한번은 웹서버2 에 접속하는걸 눈으로 확인할 수 있다,)&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">두개의 인스턴스를 생성해준다. $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소 $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다. $ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">nodejs 에서 가장많이 사용하는 프레임웤</summary></entry></feed>

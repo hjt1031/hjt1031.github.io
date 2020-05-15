@@ -1,0 +1,4 @@
+I"�<p>images 디렉토리 만들어주고</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
+</code></pre></div></div>
+:ET

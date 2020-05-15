@@ -162,8 +162,38 @@ var store = [{
         "teaser": null
       },{
         "title": "[얄코]REST API",
-        "excerpt":"REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식 어떤 기수링나 제품이 아니라, 형식이기 때문에 어떤 프로그래밍 언어를 쓰든 폼에 맞춰서 기능을 만들어내면 된다. REST API 는 결국 어떤 URI에 어떤 메소드를 사용할지 개발자들 사이에 널리 지켜지는 약속이다. ex) https://(도메인)/classes 이면 아마도 학원의반들 목록을 받아오는 요청 일것이다....","categories": [],
+        "excerpt":"REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식 메소드와 URL을 조합해서, 예측 가능하고 일정한 정보와 작업을 요청하는 것이다. 버튼마다 나오는 것이 확실한 자판기 처럼 어떤 기수링나 제품이 아니라, 형식이기 때문에 어떤 프로그래밍 언어를 쓰든 폼에 맞춰서 기능을 만들어내면 된다. REST API 는 결국 어떤 URI에 어떤...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejsexpresshello-world1/",
+        "teaser": null
+      },{
+        "title": "[얄코] GraphQL",
+        "excerpt":"기존 REST API는 메소드와 URL을 조합해서, 예측 가능하고 일정한 정보와 작업을 요청하는 것이다. 버튼마다 나오는 것이 확실한 자판기 처럼 하지만 불편할 때가 있다. ex) 국어강사가 학생들의 국어 성적을 보고자 하는데 요청을 보낼때 학번, 이름, 국어 성적이면 충분하다. (도메인)/classes/(반idx)/students 이렇게 요청을 보내면 쓸때없는 정보들도 다같이 들고온다. (주소, 키, 성별,등등) 즉, 데이터...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/graphql/",
+        "teaser": null
+      },{
+        "title": "[AWS]S3 (Simple Storage Service)",
+        "excerpt":"파일을 저장하는 서비스 라고 생각하면 된다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/awss3-simple-storage-service/",
+        "teaser": null
+      },{
+        "title": "[nodejs]정적파일 서비스",
+        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
+      },{
+        "title": "[nodejs]에러처리",
+        "excerpt":"존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준   app.use(function(req, res, next){   res.status(404).send('Sorry cant find that!'); }) //추가해준다  페이지에 에러가 있을 경우(서버에러 500)    next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.      app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고   res.status(500).send('Something broke!'); })  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs2/",
+        "teaser": null
+      },{
+        "title": "[nodejs]라우터-주소체계변경",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs3/",
         "teaser": null
       }]

@@ -1,0 +1,8 @@
+I"9<p>존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
+express 기준</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.use(function(req, res, next){
+  res.status(404).send('Sorry cant find that!');
+}) //추가해준다
+</code></pre></div></div>
+:ET

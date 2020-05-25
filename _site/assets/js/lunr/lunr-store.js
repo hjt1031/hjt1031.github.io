@@ -221,9 +221,9 @@ var store = [{
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
       },{
-        "title": "d",
-        "excerpt":"d ddddddd  ","categories": [],
+        "title": "[test]",
+        "excerpt":"test  ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/d/",
+        "url": "http://localhost:4000/test/",
         "teaser": null
       }]

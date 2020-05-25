@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs]정적파일 서비스 - juntae</title>
-<meta name="description" content="images 디렉토리 만들어주고 app.use(express.static(&#39;public&#39;));//public 디렉토리 안에서 static 파일을 찾겠다.  ">
+<!-- begin _includes/seo.html --><title>[nodejs] 쿠키 실습 - juntae</title>
+<meta name="description" content="로그인 상태체크 ```javascript function authIsOwner(request,response){ //쿠키 체크      var isOwner = false;//기본으로 false    if(request.headers.cookie){//쿠키 값 유무 체크         cookies = cookie.parse(request.headers.cookie);     }     if(cookies.email === ‘egoing777@gmail.com’ &amp;&amp; cookies.password === ‘11111’){       isOwner = true;     }     console.log(cookies)     return isOwner; } ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[nodejs]정적파일 서비스">
+<meta property="og:title" content="[nodejs] 쿠키 실습">
 <meta property="og:url" content="http://localhost:4000/nodejs/">
 
 
-  <meta property="og:description" content="images 디렉토리 만들어주고 app.use(express.static(&#39;public&#39;));//public 디렉토리 안에서 static 파일을 찾겠다.  ">
+  <meta property="og:description" content="로그인 상태체크 ```javascript function authIsOwner(request,response){ //쿠키 체크      var isOwner = false;//기본으로 false    if(request.headers.cookie){//쿠키 값 유무 체크         cookies = cookie.parse(request.headers.cookie);     }     if(cookies.email === ‘egoing777@gmail.com’ &amp;&amp; cookies.password === ‘11111’){       isOwner = true;     }     console.log(cookies)     return isOwner; } ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-05-15T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-05-20T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[nodejs]정적파일 서비스">
-    <meta itemprop="description" content="images 디렉토리 만들어주고app.use(express.static(&#39;public&#39;));//public 디렉토리 안에서 static 파일을 찾겠다.">
-    <meta itemprop="datePublished" content="2020-05-15T00:00:00+09:00">
+    <meta itemprop="headline" content="[nodejs] 쿠키 실습">
+    <meta itemprop="description" content="로그인 상태체크```javascriptfunction authIsOwner(request,response){ //쿠키 체크     var isOwner = false;//기본으로 false   if(request.headers.cookie){//쿠키 값 유무 체크        cookies = cookie.parse(request.headers.cookie);    }    if(cookies.email === ‘egoing777@gmail.com’ &amp;&amp; cookies.password === ‘11111’){      isOwner = true;    }    console.log(cookies)    return isOwner;}">
+    <meta itemprop="datePublished" content="2020-05-20T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs]정적파일 서비스
+          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] 쿠키 실습
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,12 +287,34 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>images 디렉토리 만들어주고</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
+        <p>로그인 상태체크</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">authIsOwner</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span> <span class="c1">//쿠키 체크 </span>
+    <span class="kd">var</span> <span class="nx">isOwner</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span><span class="c1">//기본으로 false</span>
+   <span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">cookie</span><span class="p">){</span><span class="c1">//쿠키 값 유무 체크</span>
+        <span class="nx">cookies</span> <span class="o">=</span> <span class="nx">cookie</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span>  
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">cookies</span><span class="p">.</span><span class="nx">email</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">egoing777@gmail.com</span><span class="dl">'</span> <span class="o">&amp;&amp;</span> <span class="nx">cookies</span><span class="p">.</span><span class="nx">password</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">11111</span><span class="dl">'</span><span class="p">){</span>
+      <span class="nx">isOwner</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cookies</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">isOwner</span><span class="p">;</span>
+<span class="p">}</span>   
+
+
+
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span>
+
+
+<span class="kd">var</span> <span class="nx">isOwner</span> <span class="o">=</span> <span class="nx">authIsOwner</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">);</span> 
+<span class="p">}</span>
 </code></pre></div></div>
 
-<p>그다음 본문 로직에</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/images/hello.jpg" style="width:300px; display:block; margin-top:10px;"&gt;
+<p>로그인 상태를 UI에 반영</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>template.js
+module.exports = {
+  HTML:function(title, list, body, control, authStatusUI = '&lt;a href="/login"&gt;login&lt;/a&gt;'){//authStatusUI에 값이 없으면 &lt;a href="/login"&gt;login&lt;/a&gt; 이게 들어간다.
+	}
 </code></pre></div></div>
 
         
@@ -304,7 +326,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-15T00:00:00+09:00">May 15, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-20T00:00:00+09:00">May 20, 2020</time></p>
         
       </footer>
 
@@ -313,7 +335,7 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D%EC%A0%95%EC%A0%81%ED%8C%8C%EC%9D%BC+%EC%84%9C%EB%B9%84%EC%8A%A4%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+%EC%BF%A0%ED%82%A4+%EC%8B%A4%EC%8A%B5%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -324,12 +346,11 @@
       
   <nav class="pagination">
     
-      <a href="/awss3-simple-storage-service/" class="pagination--pager" title="[AWS]S3 (Simple Storage Service)
+      <a href="/nodejs/" class="pagination--pager" title="[nodejs]쿠키
 ">이전</a>
     
     
-      <a href="/nodejs2/" class="pagination--pager" title="[nodejs]에러처리
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -343,6 +364,101 @@
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs]쿠키
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">웹브라우저가 서로 주고받는 데이터
+http 프로토콜에 포함되어있는 기술
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejsexpress-generator/" rel="permalink">[nodejs]express generator
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">```
+npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs]보안
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+  express 를 항상 최신버전으로 유지.
+  https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에.
+  단골손님같은 보안이슈를 자동으로 해결해준다.
+    npm install -save helmet
+    
+  
+  쿠키를 올바르게 사용해라(누가들...</p>
+  </article>
+</div>
+
         
           
 
@@ -367,95 +483,8 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs2/" rel="permalink">[nodejs]에러처리
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
-express 기준
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/awss3-simple-storage-service/" rel="permalink">[AWS]S3 (Simple Storage Service)
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">파일을 저장하는 서비스 라고 생각하면 된다.
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/graphql/" rel="permalink">[얄코] GraphQL
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">기존 REST API는
+    <p class="archive__item-excerpt" itemprop="description">```javacript
+app.use(‘/topic’,topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.
 </p>
   </article>
 </div>

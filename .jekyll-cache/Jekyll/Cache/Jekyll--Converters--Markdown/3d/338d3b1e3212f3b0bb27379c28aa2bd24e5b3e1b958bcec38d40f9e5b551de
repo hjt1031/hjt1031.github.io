@@ -1,0 +1,3 @@
+I"�<p>```javacript
+app.use(‘/topic’,topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.</p>
+:ET

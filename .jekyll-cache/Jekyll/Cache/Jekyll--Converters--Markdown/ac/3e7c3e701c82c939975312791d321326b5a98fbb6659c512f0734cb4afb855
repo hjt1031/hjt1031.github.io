@@ -1,0 +1,4 @@
+I"f<p>로그인 상태체크
+```
+var cookie = require(‘cookie’);//쿠키모듈 갖고오기</p>
+:ET

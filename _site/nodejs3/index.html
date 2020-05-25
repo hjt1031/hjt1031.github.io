@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[nodejs]라우터-주소체계변경 - juntae</title>
-<meta name="description" content=" ">
+<meta name="description" content="```javacript app.use(‘/topic’,topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다. ">
 
 
   <meta name="author" content="동센">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/nodejs3/">
 
 
-  <meta property="og:description" content=" ">
+  <meta property="og:description" content="```javacript app.use(‘/topic’,topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다. ">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[nodejs]라우터-주소체계변경">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="```javacriptapp.use(‘/topic’,topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.">
     <meta itemprop="datePublished" content="2020-05-15T00:00:00+09:00">
     
 
@@ -287,7 +287,32 @@
 
       <section class="page__content" itemprop="text">
         
-        
+        <pre><code class="language-javacript">app.use('/topic',topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.
+
+
+router.get('/create',function(request,response){
+var title = 'WEB - create';
+        var list = template.list(request.list);//미들웨어 
+        var html = template.HTML(title, list, `
+          &lt;form action="/topic/create_process" method="post"&gt;
+            &lt;p&gt;&lt;input type="text" name="title" placeholder="title"&gt;&lt;/p&gt;
+            &lt;p&gt;
+              &lt;textarea name="description" placeholder="description"&gt;&lt;/textarea&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;input type="submit"&gt;
+            &lt;/p&gt;
+          &lt;/form&gt;
+        `, '');
+        response.send(html);
+}
+</code></pre>
+<p>routers 에 위치한 topic.js 를 만든뒤 path 하는 메소드 들을 전부다 이주 시켜주었다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
+</code></pre></div></div>
+<p>기본 모듈은 이렇게 써준다.</p>
 
         
       </section>
@@ -322,7 +347,8 @@
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/nodejs/" class="pagination--pager" title="[nodejs]보안
+">다음</a>
     
   </nav>
 
@@ -346,7 +372,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs2/" rel="permalink">[nodejs]에러처리
+        <a href="/nodejs/" rel="permalink">[nodejs] 쿠키 실습
 </a>
       
     </h2>
@@ -360,8 +386,41 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
-express 기준
+    <p class="archive__item-excerpt" itemprop="description">로그인 상태체크
+```javascript
+function authIsOwner(request,response){ //쿠키 체크 
+    var isOwner = false;//기본으로 false
+   if(request.headers.cookie){//쿠키 값 유무 체크
+     ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs]쿠키
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">웹브라우저가 서로 주고받는 데이터
+http 프로토콜에 포함되어있는 기술
 </p>
   </article>
 </div>
@@ -376,7 +435,7 @@ express 기준
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs/" rel="permalink">[nodejs]정적파일 서비스
+        <a href="/nodejsexpress-generator/" rel="permalink">[nodejs]express generator
 </a>
       
     </h2>
@@ -390,9 +449,8 @@ express 기준
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">images 디렉토리 만들어주고
-app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
-
+    <p class="archive__item-excerpt" itemprop="description">```
+npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다
 </p>
   </article>
 </div>
@@ -407,7 +465,7 @@ app.use(express.static('public'));//public 디렉토리 안에서 static 파일�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/awss3-simple-storage-service/" rel="permalink">[AWS]S3 (Simple Storage Service)
+        <a href="/nodejs/" rel="permalink">[nodejs]보안
 </a>
       
     </h2>
@@ -421,37 +479,14 @@ app.use(express.static('public'));//public 디렉토리 안에서 static 파일�
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">파일을 저장하는 서비스 라고 생각하면 된다.
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    <p class="archive__item-excerpt" itemprop="description">
+  express 를 항상 최신버전으로 유지.
+  https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에.
+  단골손님같은 보안이슈를 자동으로 해결해준다.
+    npm install -save helmet
     
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/graphql/" rel="permalink">[얄코] GraphQL
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">기존 REST API는
-</p>
+  
+  쿠키를 올바르게 사용해라(누가들...</p>
   </article>
 </div>
 

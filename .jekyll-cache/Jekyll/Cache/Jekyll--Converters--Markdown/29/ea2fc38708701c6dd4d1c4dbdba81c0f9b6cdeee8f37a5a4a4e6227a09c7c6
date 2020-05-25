@@ -1,0 +1,14 @@
+I"�<p>로그인 상태체크
+```
+function authIsOwner(request,response){ //쿠키 체크 
+    var isOwner = false;//기본으로 false
+   if(request.headers.cookie){//쿠키 값 유무 체크
+        cookies = cookie.parse(request.headers.cookie);<br />
+    }
+    if(cookies.email === ‘egoing777@gmail.com’ &amp;&amp; cookies.password === ‘11111’){
+      isOwner = true;
+    }
+    console.log(cookies)
+    return isOwner;
+}</p>
+:ET

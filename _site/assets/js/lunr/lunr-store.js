@@ -174,7 +174,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[AWS]S3 (Simple Storage Service)",
-        "excerpt":"파일을 저장하는 서비스 라고 생각하면 된다.  ","categories": [],
+        "excerpt":"파일을 저장하는 서비스 라고 생각하면 된다.      s3 클릭한뒤 버킷을 생성한다.   버킷생성 뒤 파일을 업로드 해본다.   ex) 를 들어 웹사이트를 운영한다.그러면 그 사이트에서 사용자가 파일을 업로드하면 미들웨어(루비, 파이썬, 자바 등등)가 s3 의 api 를 통해 s3로 전송한다.  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/awss3-simple-storage-service/",
         "teaser": null
@@ -192,8 +192,32 @@ var store = [{
         "teaser": null
       },{
         "title": "[nodejs]라우터-주소체계변경",
-        "excerpt":" ","categories": [],
+        "excerpt":"app.use('/topic',topicRouter) //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다. router.get('/create',function(request,response){ var title = 'WEB - create'; var list = template.list(request.list);//미들웨어 var html = template.HTML(title, list, ` &lt;form action=\"/topic/create_process\" method=\"post\"&gt; &lt;p&gt;&lt;input type=\"text\" name=\"title\" placeholder=\"title\"&gt;&lt;/p&gt; &lt;p&gt; &lt;textarea name=\"description\" placeholder=\"description\"&gt;&lt;/textarea&gt; &lt;/p&gt; &lt;p&gt; &lt;input type=\"submit\"&gt; &lt;/p&gt; &lt;/form&gt; `, ''); response.send(html); } routers 에 위치한 topic.js...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejs3/",
+        "teaser": null
+      },{
+        "title": "[nodejs]보안",
+        "excerpt":"   express 를 항상 최신버전으로 유지.   https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에.   단골손님같은 보안이슈를 자동으로 해결해준다.     npm install -save helmet           쿠키를 올바르게 사용해라(누가들어왓는지 확인하는용도?)   웹애플리케이션이 쓰고있는 모듈들을 잘 관리해라     npm i nsp -g          ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
+      },{
+        "title": "[nodejs]express generator",
+        "excerpt":"npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다  express myapp //그다음 타이핑하면 폴더가 만들어지면서 설치가 된다.  npm start //그다음 타이핑 하게 되면 package.json에 start는 실행하게된다. 그다음 local3000으로 들어가면 심플한 페이지가 하나 생성되어있다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejsexpress-generator/",
+        "teaser": null
+      },{
+        "title": "[nodejs]쿠키",
+        "excerpt":"웹브라우저가 서로 주고받는 데이터 http 프로토콜에 포함되어있는 기술 쿠키생성하는방법 var http = require('http'); http.createServer(function(request, response){ // response.writeHead(200, { //성공했다는 가정하에 2번쨰는 객체를 넣어준다. // 'Set-Cookie':['yummy_cookie=choco', 'tasty_cookie=strawberry'] //두개의 쿠키가 생성됨. // }) response.end('Cookie!!!'); }).listen(3000); 쿠키를 서버에 요청하는 법 먼저 npm 을 다운로드한다 npm install -s cookie 그다음 var cookie = require('cookie');...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
+      },{
+        "title": "[nodejs] 쿠키 실습",
+        "excerpt":"로그인 상태체크 function authIsOwner(request,response){ //쿠키 체크 var isOwner = false;//기본으로 false if(request.headers.cookie){//쿠키 값 유무 체크 cookies = cookie.parse(request.headers.cookie); } if(cookies.email === 'egoing777@gmail.com' &amp;&amp; cookies.password === '11111'){ isOwner = true; } console.log(cookies) return isOwner; } var app = http.createServer(function(request,response){ var isOwner = authIsOwner(request,response); } 로그인 상태를 UI에 반영 template.js module.exports =...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
         "teaser": null
       }]

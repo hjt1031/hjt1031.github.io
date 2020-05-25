@@ -289,6 +289,13 @@
         
         <p>파일을 저장하는 서비스 라고 생각하면 된다.</p>
 
+<ol>
+  <li>s3 클릭한뒤 버킷을 생성한다.</li>
+  <li>버킷생성 뒤 파일을 업로드 해본다.</li>
+</ol>
+
+<p>ex) 를 들어 웹사이트를 운영한다.그러면 그 사이트에서 사용자가 파일을 업로드하면 미들웨어(루비, 파이썬, 자바 등등)가 s3 의 api 를 통해 s3로 전송한다.</p>
+
         
       </section>
 
@@ -347,7 +354,100 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs3/" rel="permalink">[nodejs]라우터-주소체계변경
+        <a href="/nodejs/" rel="permalink">[nodejs] 쿠키 실습
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">로그인 상태체크
+```javascript
+function authIsOwner(request,response){ //쿠키 체크 
+    var isOwner = false;//기본으로 false
+   if(request.headers.cookie){//쿠키 값 유무 체크
+     ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs]쿠키
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">웹브라우저가 서로 주고받는 데이터
+http 프로토콜에 포함되어있는 기술
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejsexpress-generator/" rel="permalink">[nodejs]express generator
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">```
+npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs]보안
 </a>
       
     </h2>
@@ -362,97 +462,13 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+  express 를 항상 최신버전으로 유지.
+  https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에.
+  단골손님같은 보안이슈를 자동으로 해결해준다.
+    npm install -save helmet
     
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs2/" rel="permalink">[nodejs]에러처리
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
-express 기준
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs/" rel="permalink">[nodejs]정적파일 서비스
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">images 디렉토리 만들어주고
-app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/graphql/" rel="permalink">[얄코] GraphQL
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">기존 REST API는
-</p>
+  
+  쿠키를 올바르게 사용해라(누가들...</p>
   </article>
 </div>
 

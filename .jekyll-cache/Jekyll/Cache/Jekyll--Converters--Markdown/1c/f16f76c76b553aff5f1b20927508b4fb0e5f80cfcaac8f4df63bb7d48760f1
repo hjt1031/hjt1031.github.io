@@ -1,9 +1,0 @@
-I"o<p>로그인 상태체크</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var cookie = require('cookie');//쿠키모듈 갖고오기
-
-var isOwner = false;  //기본으로 false
-    if(request.headers.cookie){//쿠키 값 유무 체크
-      var cookikes = cookie.parse(request.headers.cookie);  
-    }
-</code></pre></div></div>
-:ET

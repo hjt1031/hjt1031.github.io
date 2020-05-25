@@ -222,7 +222,7 @@ var store = [{
         "teaser": null
       },{
         "title": "d",
-        "excerpt":"d  ","categories": [],
+        "excerpt":"d ddddddd  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/d/",
         "teaser": null

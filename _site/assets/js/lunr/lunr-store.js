@@ -216,12 +216,12 @@ var store = [{
         "teaser": null
       },{
         "title": "[nodejs] 쿠키 실습",
-        "excerpt":"로그인 상태체크 function authIsOwner(request,response){ //쿠키 체크 var isOwner = false;//기본으로 false if(request.headers.cookie){//쿠키 값 유무 체크 cookies = cookie.parse(request.headers.cookie); } if(cookies.email === 'egoing777@gmail.com' &amp;&amp; cookies.password === '11111'){ isOwner = true; } console.log(cookies) return isOwner; } var app = http.createServer(function(request,response){ var isOwner = authIsOwner(request,response); } 로그인 상태를 UI에 반영 template.js module.exports =...","categories": [],
+        "excerpt":"로그인 상태체크 function authIsOwner(request,response){ //쿠키 체크 var isOwner = false;//기본으로 false if(request.headers.cookie){//쿠키 값 유무 체크 cookies = cookie.parse(request.headers.cookie); } if(cookies.email === 'egoing777@gmail.com' &amp;&amp; cookies.password === '11111'){ isOwner = true; } console.log(cookies) return isOwner; } ㅎ var app = http.createServer(function(request,response){ var isOwner = authIsOwner(request,response); } 로그인 상태를 UI에 반영 template.js module.exports...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
       },{
-        "title": "핸들러",
+        "title": "Handler",
         "excerpt":"1. 핸들러(Handler) 란 무엇인가? 핸들러란 무엇이고 왜 필요한 것일까요? 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다. 분명 스레드는 하나의 프로그램에 정의된 자원을 공유할...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/",

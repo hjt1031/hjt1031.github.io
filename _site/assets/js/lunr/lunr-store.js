@@ -221,9 +221,9 @@ var store = [{
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
       },{
-        "title": 1,
-        "excerpt":"1 1  ","categories": [],
+        "title": "[핸들러]",
+        "excerpt":"1. 핸들러(Handler) 란 무엇인가? 핸들러란 무엇이고 왜 필요한 것일까요? 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다. 분명 스레드는 하나의 프로그램에 정의된 자원을 공유할...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/1/",
+        "url": "http://localhost:4000/",
         "teaser": null
       }]

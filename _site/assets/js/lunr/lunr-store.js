@@ -226,4 +226,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/",
         "teaser": null
+      },{
+        "title": "Parsing & Parser",
+        "excerpt":"Parsing parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다. Parser Parser란 Compiler의 일부로서 원시 프로그램의 명령문이나 온라인 명령문, HTML...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/parsing-parser/",
+        "teaser": null
       }]

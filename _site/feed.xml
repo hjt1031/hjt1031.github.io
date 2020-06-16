@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-10T15:38:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">Handler</title><link href="http://localhost:4000/" rel="alternate" type="text/html" title="Handler" /><published>2020-06-10T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>http://localhost:4000/</id><content type="html" xml:base="http://localhost:4000/">&lt;p&gt;&lt;strong&gt;1. 핸들러(Handler) 란 무엇인가?&lt;/strong&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-16T15:05:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">Parsing &amp;amp; Parser</title><link href="http://localhost:4000/parsing-parser/" rel="alternate" type="text/html" title="Parsing &amp; Parser" /><published>2020-06-11T00:00:00+09:00</published><updated>2020-06-11T00:00:00+09:00</updated><id>http://localhost:4000/parsing-parser</id><content type="html" xml:base="http://localhost:4000/parsing-parser/">&lt;p&gt;Parsing
+parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;Parser
+Parser란 Compiler의 일부로서 원시 프로그램의 명령문이나 온라인 명령문, HTML 문서 등에서 Markup Tag 등을 입력으로 받아들여서 구분을 해석 할 수 있는 단위로 여러 부분으로 해석해 w는 역할을 한다. 즉 Compiler나 Interpreter에서 원시 프로그램을 읽어 들여, 그 문장이 구조를 알아내는 Parsing을 행하여 주는 프로그램이다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">Parsing parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다.</summary></entry><entry><title type="html">Handler</title><link href="http://localhost:4000/" rel="alternate" type="text/html" title="Handler" /><published>2020-06-10T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>http://localhost:4000/</id><content type="html" xml:base="http://localhost:4000/">&lt;p&gt;&lt;strong&gt;1. 핸들러(Handler) 란 무엇인가?&lt;/strong&gt;&lt;br /&gt;
   핸들러란 무엇이고 왜 필요한 것일까요?
 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다.&lt;/p&gt;
 
@@ -143,28 +147,7 @@ path : 특정디렉토리 안에서만 쿠키를 활성화 하고싶을때 사�
 express myapp //그다음 타이핑하면 폴더가 만들어지면서 설치가 된다.
 
 npm start //그다음 타이핑 하게 되면 package.json에 start는 실행하게된다. 그다음 local3000으로 들어가면 심플한 페이지가 하나 생성되어있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">``` npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다</summary></entry><entry><title type="html">[nodejs]에러처리</title><link href="http://localhost:4000/nodejs2/" rel="alternate" type="text/html" title="[nodejs]에러처리" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs2</id><content type="html" xml:base="http://localhost:4000/nodejs2/">&lt;p&gt;존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
-express 기준&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.use(function(req, res, next){
-  res.status(404).send('Sorry cant find that!');
-}) //추가해준다
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;페이지에 에러가 있을 경우(서버에러 500)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.
- 
- 
- app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고
-  res.status(500).send('Something broke!');
-})
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준</summary></entry><entry><title type="html">[nodejs]정적파일 서비스</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs]정적파일 서비스" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;images 디렉토리 만들어주고&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그다음 본문 로직에&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;/images/hello.jpg&quot; style=&quot;width:300px; display:block; margin-top:10px;&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">images 디렉토리 만들어주고 app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.</summary></entry><entry><title type="html">[nodejs]라우터-주소체계변경</title><link href="http://localhost:4000/nodejs3/" rel="alternate" type="text/html" title="[nodejs]라우터-주소체계변경" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs3</id><content type="html" xml:base="http://localhost:4000/nodejs3/">&lt;pre&gt;&lt;code class=&quot;language-javacript&quot;&gt;app.use('/topic',topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">``` npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다</summary></entry><entry><title type="html">[nodejs]라우터-주소체계변경</title><link href="http://localhost:4000/nodejs3/" rel="alternate" type="text/html" title="[nodejs]라우터-주소체계변경" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs3</id><content type="html" xml:base="http://localhost:4000/nodejs3/">&lt;pre&gt;&lt;code class=&quot;language-javacript&quot;&gt;app.use('/topic',topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.
 
 
 router.get('/create',function(request,response){
@@ -189,27 +172,32 @@ var title = 'WEB - create';
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;router&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Router&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;기본 모듈은 이렇게 써준다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">```javacript app.use(‘/topic’,topicRouter) //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.</summary></entry><entry><title type="html">[AWS]S3 (Simple Storage Service)</title><link href="http://localhost:4000/awss3-simple-storage-service/" rel="alternate" type="text/html" title="[AWS]S3 (Simple Storage Service)" /><published>2020-05-14T00:00:00+09:00</published><updated>2020-05-14T00:00:00+09:00</updated><id>http://localhost:4000/awss3-simple-storage-service</id><content type="html" xml:base="http://localhost:4000/awss3-simple-storage-service/">&lt;p&gt;파일을 저장하는 서비스 라고 생각하면 된다.&lt;/p&gt;
+&lt;p&gt;기본 모듈은 이렇게 써준다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">```javacript app.use(‘/topic’,topicRouter) //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.</summary></entry><entry><title type="html">[nodejs]에러처리</title><link href="http://localhost:4000/nodejs2/" rel="alternate" type="text/html" title="[nodejs]에러처리" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs2</id><content type="html" xml:base="http://localhost:4000/nodejs2/">&lt;p&gt;존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
+express 기준&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.use(function(req, res, next){
+  res.status(404).send('Sorry cant find that!');
+}) //추가해준다
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;페이지에 에러가 있을 경우(서버에러 500)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.
+ 
+ 
+ app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고
+  res.status(500).send('Something broke!');
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준</summary></entry><entry><title type="html">[nodejs]정적파일 서비스</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs]정적파일 서비스" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;images 디렉토리 만들어주고&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그다음 본문 로직에&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;/images/hello.jpg&quot; style=&quot;width:300px; display:block; margin-top:10px;&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">images 디렉토리 만들어주고 app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.</summary></entry><entry><title type="html">[AWS]S3 (Simple Storage Service)</title><link href="http://localhost:4000/awss3-simple-storage-service/" rel="alternate" type="text/html" title="[AWS]S3 (Simple Storage Service)" /><published>2020-05-14T00:00:00+09:00</published><updated>2020-05-14T00:00:00+09:00</updated><id>http://localhost:4000/awss3-simple-storage-service</id><content type="html" xml:base="http://localhost:4000/awss3-simple-storage-service/">&lt;p&gt;파일을 저장하는 서비스 라고 생각하면 된다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;s3 클릭한뒤 버킷을 생성한다.&lt;/li&gt;
   &lt;li&gt;버킷생성 뒤 파일을 업로드 해본다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;ex) 를 들어 웹사이트를 운영한다.그러면 그 사이트에서 사용자가 파일을 업로드하면 미들웨어(루비, 파이썬, 자바 등등)가 s3 의 api 를 통해 s3로 전송한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">파일을 저장하는 서비스 라고 생각하면 된다.</summary></entry><entry><title type="html">[얄코] GraphQL</title><link href="http://localhost:4000/graphql/" rel="alternate" type="text/html" title="[얄코] GraphQL" /><published>2020-05-13T00:00:00+09:00</published><updated>2020-05-13T00:00:00+09:00</updated><id>http://localhost:4000/graphql</id><content type="html" xml:base="http://localhost:4000/graphql/">&lt;p&gt;기존 REST API는&lt;/p&gt;
-
-&lt;p&gt;메소드와 URL을 조합해서, 예측 가능하고 일정한 정보와 작업을 요청하는 것이다. 버튼마다 나오는 것이 확실한 자판기 처럼 하지만 불편할 때가 있다.&lt;/p&gt;
-
-&lt;p&gt;ex) 국어강사가 학생들의 국어 성적을 보고자 하는데 요청을 보낼때 학번, 이름, 국어 성적이면 충분하다.
-			(도메인)/classes/(반idx)/students 이렇게 요청을 보내면 쓸때없는 정보들도 다같이 들고온다. (주소, 키, 성별,등등) 즉, 데이터 소모가 심하다.
-			결국 두번을 요청해야지 필요한 정보만 갖고올 수 있다.&lt;/p&gt;
-
-&lt;p&gt;GraphQL 은 body에 들어간 데이터로 유도리 있게 요청이 가능하다. 즉 여러댑스를 한 정보에 다 받아올 수 있는 것.
-ex) (도메인)/graphql post 에 body에 담에서 보내면 된다.
-insert 는&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;서버에 지정된 함수 이름을 적고.&lt;/li&gt;
-  &lt;li&gt;거기에 정보들을 넣어 보내면 된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;update delete 도 마찬가지&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">기존 REST API는</summary></entry></feed>
+&lt;p&gt;ex) 를 들어 웹사이트를 운영한다.그러면 그 사이트에서 사용자가 파일을 업로드하면 미들웨어(루비, 파이썬, 자바 등등)가 s3 의 api 를 통해 s3로 전송한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">파일을 저장하는 서비스 라고 생각하면 된다.</summary></entry></feed>

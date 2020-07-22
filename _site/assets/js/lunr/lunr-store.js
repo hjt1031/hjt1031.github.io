@@ -221,12 +221,6 @@ var store = [{
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
       },{
-        "title": "Handler",
-        "excerpt":"1. 핸들러(Handler) 란 무엇인가? 핸들러란 무엇이고 왜 필요한 것일까요? 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다. 분명 스레드는 하나의 프로그램에 정의된 자원을 공유할...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/",
-        "teaser": null
-      },{
         "title": "Parsing & Parser",
         "excerpt":"Parsing parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다. Parser Parser란 Compiler의 일부로서 원시 프로그램의 명령문이나 온라인 명령문, HTML...","categories": [],
         "tags": [],
@@ -237,6 +231,24 @@ var store = [{
         "excerpt":"component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함     가독성을 높힘   재사용성이 좋음   유지보수가 좋아짐   리액트는 항상 파일 위에다가 import React from ‘react’; &lt;- 써줘야함 아니면 JSX 인식못함  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/react/",
+        "teaser": null
+      },{
+        "title": "Handler",
+        "excerpt":"1. 핸들러(Handler) 란 무엇인가? 핸들러란 무엇이고 왜 필요한 것일까요? 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다. 분명 스레드는 하나의 프로그램에 정의된 자원을 공유할...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/handler/",
+        "teaser": null
+      },{
+        "title": "[React]생활코딩 기초",
+        "excerpt":"ReactDOM.render(   &lt;React.StrictMode&gt;     &lt;App /&gt; //사용자 정의에 의한 컨포넌트   &lt;/React.StrictMode&gt;,   document.getElementById('root') );  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-1/",
+        "teaser": null
+      },{
+        "title": "[React] component 생성",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-component/",
         "teaser": null
       },{
         "title": "[React] 컨포넌트",

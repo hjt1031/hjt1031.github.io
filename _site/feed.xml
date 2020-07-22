@@ -1,21 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-22T21:17:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[React] 컨포넌트</title><link href="http://localhost:4000/react/" rel="alternate" type="text/html" title="[React] 컨포넌트" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>http://localhost:4000/react</id><content type="html" xml:base="http://localhost:4000/react/">&lt;p&gt;component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-22T22:44:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[React] 컨포넌트</title><link href="http://localhost:4000/react/" rel="alternate" type="text/html" title="[React] 컨포넌트" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>http://localhost:4000/react</id><content type="html" xml:base="http://localhost:4000/react/">&lt;p&gt;component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐&lt;/p&gt;
 
 &lt;p&gt;사이드바,로그인창,게시판테이불 같은게 하나하나가 컴포넌트&lt;/p&gt;
 
-&lt;p&gt;그리고 이걸 원하는데로 페이지의 목적에 맞게 조합해서 하나의 화면&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐</summary></entry><entry><title type="html">[React] component</title><link href="http://localhost:4000/react/" rel="alternate" type="text/html" title="[React] component" /><published>2020-07-21T00:00:00+09:00</published><updated>2020-07-21T00:00:00+09:00</updated><id>http://localhost:4000/react</id><content type="html" xml:base="http://localhost:4000/react/">&lt;p&gt;component 는 HTML 을 반환하는 함수다.
-사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나
-사용자가 정의 해서 만드는걸 컨포넌트라 함&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;가독성을 높힘&lt;/li&gt;
-  &lt;li&gt;재사용성이 좋음&lt;/li&gt;
-  &lt;li&gt;유지보수가 좋아짐&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;리액트는 항상 파일 위에다가 import React from ‘react’; &amp;lt;- 써줘야함 아니면 JSX 인식못함&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐</summary></entry><entry><title type="html">Parsing &amp;amp; Parser</title><link href="http://localhost:4000/parsing-parser/" rel="alternate" type="text/html" title="Parsing &amp; Parser" /><published>2020-06-11T00:00:00+09:00</published><updated>2020-06-11T00:00:00+09:00</updated><id>http://localhost:4000/parsing-parser</id><content type="html" xml:base="http://localhost:4000/parsing-parser/">&lt;p&gt;Parsing
-parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;Parser
-Parser란 Compiler의 일부로서 원시 프로그램의 명령문이나 온라인 명령문, HTML 문서 등에서 Markup Tag 등을 입력으로 받아들여서 구분을 해석 할 수 있는 단위로 여러 부분으로 해석해 w는 역할을 한다. 즉 Compiler나 Interpreter에서 원시 프로그램을 읽어 들여, 그 문장이 구조를 알아내는 Parsing을 행하여 주는 프로그램이다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">Parsing parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다.</summary></entry><entry><title type="html">Handler</title><link href="http://localhost:4000/" rel="alternate" type="text/html" title="Handler" /><published>2020-06-10T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>http://localhost:4000/</id><content type="html" xml:base="http://localhost:4000/">&lt;p&gt;&lt;strong&gt;1. 핸들러(Handler) 란 무엇인가?&lt;/strong&gt;&lt;br /&gt;
+&lt;p&gt;그리고 이걸 원하는데로 페이지의 목적에 맞게 조합해서 하나의 화면&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐</summary></entry><entry><title type="html">[React]생활코딩 기초</title><link href="http://localhost:4000/react-1/" rel="alternate" type="text/html" title="[React]생활코딩 기초" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>http://localhost:4000/react-1</id><content type="html" xml:base="http://localhost:4000/react-1/">&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;StrictMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//사용자 정의에 의한 컨포넌트&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/React.StrictMode&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,
+&lt;/span&gt;  &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">ReactDOM.render( &amp;lt;React.StrictMode&amp;gt; &amp;lt;App /&amp;gt; //사용자 정의에 의한 컨포넌트 &amp;lt;/React.StrictMode&amp;gt;, document.getElementById('root') );</summary></entry><entry><title type="html">Handler</title><link href="http://localhost:4000/handler/" rel="alternate" type="text/html" title="Handler" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>http://localhost:4000/handler</id><content type="html" xml:base="http://localhost:4000/handler/">&lt;p&gt;&lt;strong&gt;1. 핸들러(Handler) 란 무엇인가?&lt;/strong&gt;&lt;br /&gt;
   핸들러란 무엇이고 왜 필요한 것일까요?
 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다.&lt;/p&gt;
 
@@ -39,7 +32,20 @@ Parser란 Compiler의 일부로서 원시 프로그램의 명령문이나 온라
 
 &lt;p&gt;Sub Thread 들은 Text View 를 변화 시키도록 요청하는 Sender 의 역할을 하게 됩니다.  즉, 이 스레드들은 주로 메세지를 보내는 요소라 할 수 있습니다. 그리고 Main Thread 는 이러한 요청들을 받아 관리하고 적절한 동작을 수행하는 Receiver 의 역할을 하게 됩니다. 쭉 메세지를 받기만 하는 요소가 되는 것이지요.&lt;/p&gt;
 
-&lt;p&gt;이처럼 메세지를 받아 적절한 동작을 수행 할 수 있는곳에 핸들러를 부착해 놓고, 여러 다른 스레드에서는 부착된 핸들러로 메세지를 보내도록 설정하기만 하면 됩니다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">1. 핸들러(Handler) 란 무엇인가? 핸들러란 무엇이고 왜 필요한 것일까요? 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다.</summary></entry><entry><title type="html">[nodejs] 쿠키 실습</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs] 쿠키 실습" /><published>2020-05-20T00:00:00+09:00</published><updated>2020-05-20T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;로그인 상태체크&lt;/p&gt;
+&lt;p&gt;이처럼 메세지를 받아 적절한 동작을 수행 할 수 있는곳에 핸들러를 부착해 놓고, 여러 다른 스레드에서는 부착된 핸들러로 메세지를 보내도록 설정하기만 하면 됩니다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">1. 핸들러(Handler) 란 무엇인가? 핸들러란 무엇이고 왜 필요한 것일까요? 앞서 배웠던 스레드(Thread) 는 사용자에게 보이지 않는 Background 에서 실행 되기 때문에 하나의 프로그램에서 여러가지 작업을 동시에 진행되도록 만들어 주는 유용한 개념이었는데요, 이런 스레드에게도 한계점은 있습니다. 바로 ‘View 자원들에 직접 접근이 불가’ 하다는 점입니다.</summary></entry><entry><title type="html">[React] component 생성</title><link href="http://localhost:4000/react-component/" rel="alternate" type="text/html" title="[React] component 생성" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>http://localhost:4000/react-component</id><content type="html" xml:base="http://localhost:4000/react-component/"></content><author><name>동센</name></author><summary type="html"></summary></entry><entry><title type="html">[React] component</title><link href="http://localhost:4000/react/" rel="alternate" type="text/html" title="[React] component" /><published>2020-07-21T00:00:00+09:00</published><updated>2020-07-21T00:00:00+09:00</updated><id>http://localhost:4000/react</id><content type="html" xml:base="http://localhost:4000/react/">&lt;p&gt;component 는 HTML 을 반환하는 함수다.
+사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나
+사용자가 정의 해서 만드는걸 컨포넌트라 함&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;가독성을 높힘&lt;/li&gt;
+  &lt;li&gt;재사용성이 좋음&lt;/li&gt;
+  &lt;li&gt;유지보수가 좋아짐&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;리액트는 항상 파일 위에다가 import React from ‘react’; &amp;lt;- 써줘야함 아니면 JSX 인식못함&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐</summary></entry><entry><title type="html">Parsing &amp;amp; Parser</title><link href="http://localhost:4000/parsing-parser/" rel="alternate" type="text/html" title="Parsing &amp; Parser" /><published>2020-06-11T00:00:00+09:00</published><updated>2020-06-11T00:00:00+09:00</updated><id>http://localhost:4000/parsing-parser</id><content type="html" xml:base="http://localhost:4000/parsing-parser/">&lt;p&gt;Parsing
+parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;Parser
+Parser란 Compiler의 일부로서 원시 프로그램의 명령문이나 온라인 명령문, HTML 문서 등에서 Markup Tag 등을 입력으로 받아들여서 구분을 해석 할 수 있는 단위로 여러 부분으로 해석해 w는 역할을 한다. 즉 Compiler나 Interpreter에서 원시 프로그램을 읽어 들여, 그 문장이 구조를 알아내는 Parsing을 행하여 주는 프로그램이다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">Parsing parsing은 구문 분석이라고 합니다. 문장이 이루고 있는 구성 성분을 분해하고 분해된 성분의 위계 관계를 분석하여 구조를 결정하는 것입니다. 즉 데이터를 분해 분석하여 원하는 형태로 조립하고 다시 빼내는 프로그램을 말합니다. 웹상에서 주어진 정보를 내가 원하는 형태로 가공하여 서버에서 불러들이는 것입니다.</summary></entry><entry><title type="html">[nodejs] 쿠키 실습</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs] 쿠키 실습" /><published>2020-05-20T00:00:00+09:00</published><updated>2020-05-20T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;로그인 상태체크&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;authIsOwner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//쿠키 체크 &lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isOwner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//기본으로 false&lt;/span&gt;
    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//쿠키 값 유무 체크&lt;/span&gt;
@@ -160,44 +166,4 @@ npm start //그다음 타이핑 하게 되면 package.json에 start는 실행하
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i nsp -g
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">express 를 항상 최신버전으로 유지. https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에. 단골손님같은 보안이슈를 자동으로 해결해준다. npm install -save helmet 쿠키를 올바르게 사용해라(누가들어왓는지 확인하는용도?) 웹애플리케이션이 쓰고있는 모듈들을 잘 관리해라 npm i nsp -g</summary></entry><entry><title type="html">[nodejs]라우터-주소체계변경</title><link href="http://localhost:4000/nodejs3/" rel="alternate" type="text/html" title="[nodejs]라우터-주소체계변경" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs3</id><content type="html" xml:base="http://localhost:4000/nodejs3/">&lt;pre&gt;&lt;code class=&quot;language-javacript&quot;&gt;app.use('/topic',topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.
-
-
-router.get('/create',function(request,response){
-var title = 'WEB - create';
-        var list = template.list(request.list);//미들웨어 
-        var html = template.HTML(title, list, `
-          &amp;lt;form action=&quot;/topic/create_process&quot; method=&quot;post&quot;&amp;gt;
-            &amp;lt;p&amp;gt;&amp;lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;title&quot;&amp;gt;&amp;lt;/p&amp;gt;
-            &amp;lt;p&amp;gt;
-              &amp;lt;textarea name=&quot;description&quot; placeholder=&quot;description&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
-            &amp;lt;/p&amp;gt;
-            &amp;lt;p&amp;gt;
-              &amp;lt;input type=&quot;submit&quot;&amp;gt;
-            &amp;lt;/p&amp;gt;
-          &amp;lt;/form&amp;gt;
-        `, '');
-        response.send(html);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;routers 에 위치한 topic.js 를 만든뒤 path 하는 메소드 들을 전부다 이주 시켜주었다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;router&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Router&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;기본 모듈은 이렇게 써준다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">```javacript app.use(‘/topic’,topicRouter) //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.</summary></entry><entry><title type="html">[nodejs]에러처리</title><link href="http://localhost:4000/nodejs2/" rel="alternate" type="text/html" title="[nodejs]에러처리" /><published>2020-05-15T00:00:00+09:00</published><updated>2020-05-15T00:00:00+09:00</updated><id>http://localhost:4000/nodejs2</id><content type="html" xml:base="http://localhost:4000/nodejs2/">&lt;p&gt;존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
-express 기준&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app.use(function(req, res, next){
-  res.status(404).send('Sorry cant find that!');
-}) //추가해준다
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;페이지에 에러가 있을 경우(서버에러 500)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.
- 
- 
- app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고
-  res.status(500).send('Something broke!');
-})
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">express 를 항상 최신버전으로 유지. https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에. 단골손님같은 보안이슈를 자동으로 해결해준다. npm install -save helmet 쿠키를 올바르게 사용해라(누가들어왓는지 확인하는용도?) 웹애플리케이션이 쓰고있는 모듈들을 잘 관리해라 npm i nsp -g</summary></entry></feed>

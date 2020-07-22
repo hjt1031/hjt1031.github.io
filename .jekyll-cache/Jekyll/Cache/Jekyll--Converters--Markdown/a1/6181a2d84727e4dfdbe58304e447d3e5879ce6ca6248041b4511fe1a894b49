@@ -1,4 +1,0 @@
-I"�<p>component 는 HTML 을 반환하는 함수다.</p>
-
-<p>리액트는 항상 파일 위에다가 import React from ‘react’; &lt;- 써줘야함 아니면 JSX 인식못함</p>
-:ET

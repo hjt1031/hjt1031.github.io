@@ -238,4 +238,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react/",
         "teaser": null
+      },{
+        "title": "[React] 컨포넌트",
+        "excerpt":"component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐   사이드바,로그인창,게시판테이불 같은게 하나하나가 컴포넌트   그리고 이걸 원하는데로 페이지의 목적에 맞게 조합해서 하나의 화면  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react/",
+        "teaser": null
       }]

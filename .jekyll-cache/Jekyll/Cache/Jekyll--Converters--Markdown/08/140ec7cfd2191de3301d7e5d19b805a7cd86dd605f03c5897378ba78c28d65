@@ -1,0 +1,12 @@
+I"1<p>```javascript
+class Subject extends Component {
+  render(){ //반드시 있어야함 class 안에 function 생략
+    return( //하나의 최상위 태그만 써야한다.
+        &lt;header&gt; 
+            &lt;h1&gt;WEB&lt;/h1&gt;
+            world wide web!
+        &lt;/header&gt;
+    );
+  }
+}</p>
+:ET

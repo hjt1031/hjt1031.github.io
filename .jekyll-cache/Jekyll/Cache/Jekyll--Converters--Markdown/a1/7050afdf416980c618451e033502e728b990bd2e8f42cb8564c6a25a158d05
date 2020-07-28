@@ -1,0 +1,27 @@
+I"�<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,{</span><span class="nx">Component</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다</span>
+</code></pre></div></div>
+<p>src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,{</span><span class="nx">Component</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">TOC</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">(){</span>
+    <span class="k">return</span><span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">nav</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">ui</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">1.html</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">HTML</span><span class="o">&lt;</span><span class="sr">/a&gt;&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">2.html</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">CSS</span><span class="o">&lt;</span><span class="sr">/a&gt;&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">3.html</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Javascript</span><span class="o">&lt;</span><span class="sr">/a&gt;&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="sr">/ui</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/nav</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">TOC</span><span class="p">;</span> <span class="c1">//TOC라는 파일안에 여러가지 변수나 함수나 존재 할 수 있음. 그많은 것 들 중에 외부에서 어떤 것을 사용 할 수 있게 해주는 것 TOC.js 를 가져다 쓰는 쪽에서 TOC 라는 클래스를 쓸 수 있음.</span>
+</code></pre></div></div>
+
+<p>main.js 에서</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">TOC</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./components/TOC</span><span class="dl">"</span>
+</code></pre></div></div>
+:ET

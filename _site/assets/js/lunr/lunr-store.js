@@ -245,12 +245,6 @@ var store = [{
         "url": "http://localhost:4000/react-1/",
         "teaser": null
       },{
-        "title": "[React] component 생성",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/react-component/",
-        "teaser": null
-      },{
         "title": "[React] 컨포넌트",
         "excerpt":"component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐   사이드바,로그인창,게시판테이불 같은게 하나하나가 컴포넌트   그리고 이걸 원하는데로 페이지의 목적에 맞게 조합해서 하나의 화면  ","categories": [],
         "tags": [],
@@ -261,5 +255,29 @@ var store = [{
         "excerpt":"JSX : 페이북에서 만든 컴퓨터 언어 우리가 JSX 로 코드를 작성하면 create-react-app 이 알아서 javascript 의 언어로 컨버팅 해준다. 컨포넌트 생성방법 class Subject extends Component { render(){ //반드시 있어야함 class 안에 function 생략 return( //하나의 최상위 태그만 써야한다. &lt;header&gt; &lt;h1&gt;WEB&lt;/h1&gt; world wide web! &lt;/header&gt; ); } } class App extends...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/react/",
+        "teaser": null
+      },{
+        "title": "[React] props (프로퍼티)",
+        "excerpt":"상위(부모) 컴포넌트에서 하위(자식) 컴포넌트에게 데이터를 전달 할때 사용 class Subject extends Component { render(){ //반드시 있어야함 class 안에 function 생략 return( //하나의 최상위 태그만 써야한다. &lt;header&gt; &lt;h1&gt;{this.props.title}&lt;/h1&gt; {this.props.sub} &lt;/header&gt; ); } } class App extends Component { render() { return ( &lt;div className=\"App\"&gt; &lt;Subject title=\"WEB\" sub=\"world wide web!\"&gt;&lt;/Subject&gt; &lt;Subject title=\"React\"...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-props/",
+        "teaser": null
+      },{
+        "title": "[React] state 사용법 (key)",
+        "excerpt":"//App.js class App extends Component { constructor(props){ //컨포넌트 초기화 super(props); this.state = { //스테이트 값 초기화 subject:{title:'WEB', sub:'world wide Web'} } } render() { return ( &lt;div className=\"App\"&gt; &lt;Subject title={this.state.subject.title} sub={this.state.subject.sub}&gt; &lt;/Subject&gt; &lt;Subject&gt;&lt;/Subject&gt; &lt;TOC&gt;&lt;/TOC&gt; &lt;Content title=\"HTML\" desc=\"HTML is HyperText Markup Language.\"&gt;&lt;/Content&gt; &lt;/div&gt; ); } } //TOC.js import React,{Component} from 'react';...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-stat/",
+        "teaser": null
+      },{
+        "title": "[React] state props",
+        "excerpt":"props 는 사용자가 컨포넌트를 사용하는 입장에서 중요한 것 (외부) 사용하는 쪽 state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내부) 구현하는 쪽   사용자한테는 알필요도없고 알수도없는 컨포넌트 내부적으로 사용되는 것들이 state 라고 함   철저하게 props 랑 state 랑 분리되어있어야 한다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-state/",
+        "teaser": null
+      },{
+        "title": "[React]component 파일로분리",
+        "excerpt":"import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다 src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다. import React,{Component} from 'react'; class TOC extends Component { render(){ return( &lt;nav&gt; &lt;ui&gt; &lt;li&gt;&lt;a href=\"1.html\"&gt;HTML&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=\"2.html\"&gt;CSS&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=\"3.html\"&gt;Javascript&lt;/a&gt;&lt;/li&gt; &lt;/ui&gt; &lt;/nav&gt; ); } } export default TOC;...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/reactcomponent/",
         "teaser": null
       }]

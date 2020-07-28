@@ -1,0 +1,23 @@
+I"�<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//App.js</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span> <span class="c1">//컨포넌트 초기화</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">//스테이트 값 초기화</span>
+      <span class="na">subject</span><span class="p">:{</span><span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">WEB</span><span class="dl">'</span><span class="p">,</span> <span class="na">sub</span><span class="p">:</span><span class="dl">'</span><span class="s1">world wide Web</span><span class="dl">'</span><span class="p">}</span>
+    <span class="p">}</span> 
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Subject</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">subject</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span>
+      <span class="nx">sub</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">subject</span><span class="p">.</span><span class="nx">sub</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/Subject</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Subject</span><span class="o">&gt;&lt;</span><span class="sr">/Subject</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">TOC</span><span class="o">&gt;&lt;</span><span class="sr">/TOC</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Content</span> <span class="nx">title</span><span class="o">=</span><span class="dl">"</span><span class="s2">HTML</span><span class="dl">"</span> <span class="nx">desc</span><span class="o">=</span><span class="dl">"</span><span class="s2">HTML is HyperText Markup Language.</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/Content</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

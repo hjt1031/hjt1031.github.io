@@ -1,0 +1,3 @@
+I"�<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
+</code></pre></div></div>
+:ET

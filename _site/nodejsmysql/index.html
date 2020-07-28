@@ -355,7 +355,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react/" rel="permalink">[React] 컨포넌트생성 / JSX
+        <a href="/reactcomponent/" rel="permalink">[React]component 파일로분리
 </a>
       
     </h2>
@@ -369,8 +369,9 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">JSX : 페이북에서 만든 컴퓨터 언어 
-우리가 JSX 로 코드를 작성하면 create-react-app 이 알아서 javascript 의 언어로 컨버팅 해준다.
+    <p class="archive__item-excerpt" itemprop="description">import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
+
+src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
 </p>
   </article>
 </div>
@@ -385,7 +386,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react/" rel="permalink">[React] 컨포넌트
+        <a href="/react-state/" rel="permalink">[React] state props
 </a>
       
     </h2>
@@ -399,7 +400,8 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함 가독성을 높힘 재사용성이 좋음 유지보수가 좋아짐
+    <p class="archive__item-excerpt" itemprop="description">props 는 사용자가 컨포넌트를 사용하는 입장에서 중요한 것 (외부) 사용하는 쪽
+state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내부) 구현하는 쪽
 </p>
   </article>
 </div>
@@ -414,7 +416,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react-component/" rel="permalink">[React] component 생성
+        <a href="/react-stat/" rel="permalink">[React] state 사용법 (key)
 </a>
       
     </h2>
@@ -428,8 +430,12 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
+    <p class="archive__item-excerpt" itemprop="description">//App.js
+class App extends Component {
+  constructor(props){ //컨포넌트 초기화
+    super(props); 
+    this.state = { //스테이트 값 초기화
+      subject:{title:'WEB', sub:'w...</p>
   </article>
 </div>
 
@@ -443,7 +449,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react-1/" rel="permalink">[React]생활코딩 기초
+        <a href="/react-props/" rel="permalink">[React] props (프로퍼티)
 </a>
       
     </h2>
@@ -457,13 +463,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">ReactDOM.render(
-  &lt;React.StrictMode&gt;
-    &lt;App /&gt; //사용자 정의에 의한 컨포넌트
-  &lt;/React.StrictMode&gt;,
-  document.getElementById('root')
-);
-
+    <p class="archive__item-excerpt" itemprop="description">상위(부모) 컴포넌트에서 하위(자식) 컴포넌트에게 데이터를 전달 할때 사용
 </p>
   </article>
 </div>

@@ -1,4 +1,0 @@
-I"7<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
-</code></pre></div></div>
-<p>src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.</p>
-:ET

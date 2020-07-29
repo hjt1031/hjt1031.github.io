@@ -275,9 +275,21 @@ var store = [{
         "url": "http://localhost:4000/react-state/",
         "teaser": null
       },{
+        "title": "[React] 이벤트 (bind)",
+        "excerpt":"class App extends Component { constructor(props){ //컨포넌트 초기화 super(props); this.state = { //스테이트 값 초기화 mode:'read', subject:{title:'WEB', sub:'world wide Web'}, welcome:{title:'Welcome', desc:\"Hello, React!!!\"}, contents:[ {id:1, title:'HTML', desc:'HTML is for information'}, {id:2, title:'CSS', desc:'CSS is for design'}, {id:3, title:'JavaScript', desc:'JavaScript is for interactive'} ] } } render() { var _title, _desc...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react/",
+        "teaser": null
+      },{
         "title": "[React]component 파일로분리",
         "excerpt":"import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다 src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다. import React,{Component} from 'react'; class TOC extends Component { render(){ return( &lt;nav&gt; &lt;ui&gt; &lt;li&gt;&lt;a href=\"1.html\"&gt;HTML&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=\"2.html\"&gt;CSS&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=\"3.html\"&gt;Javascript&lt;/a&gt;&lt;/li&gt; &lt;/ui&gt; &lt;/nav&gt; ); } } export default TOC;...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/reactcomponent/",
+        "teaser": null
+      },{
+        "title": "[React] 컨포넌트 이벤트",
+        "excerpt":"//App.js &lt;Subject title={this.state.subject.title} sub={this.state.subject.sub} onChangePage = {function(){ this.setState({mode : 'welcome'}); }.bind(this)} &gt; &lt;/Subject&gt; onChangePage 라는 이벤트를 생성 //Subject.js import React,{Component} from 'react'; class Subject extends Component { render(){ //반드시 있어야함 class 안에 function 생략 return( //하나의 최상위 태그만 써야한다. &lt;header&gt; &lt;h1&gt;&lt;a href=\"/\" onClick={function(e){ e.preventDefault(); this.props.onChangePage(); }.bind(this)}&gt;{this.props.title}&lt;/a&gt;&lt;/h1&gt; {this.props.sub} &lt;/header&gt; ); }...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react/",
         "teaser": null
       }]

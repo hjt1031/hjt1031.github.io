@@ -1,0 +1,70 @@
+I",<p>//createContent.js</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,{</span><span class="nx">Component</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">class</span> <span class="nx">CreateContent</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="p">{</span>
+  <span class="nx">render</span><span class="p">(){</span>
+    <span class="k">return</span><span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">article</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Create</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">action</span><span class="o">=</span><span class="dl">"</span><span class="s2">/create_process</span><span class="dl">"</span> <span class="nx">method</span><span class="o">=</span><span class="dl">"</span><span class="s2">post</span><span class="dl">"</span>
+             <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+               <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+               <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onSubmit</span><span class="p">(</span>
+                 <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+                 <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">desc</span><span class="p">.</span><span class="nx">value</span>
+               <span class="p">);</span>
+             <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span> <span class="c1">//submit 이 실행되면 실행되게 하는 이벤트임</span>
+            <span class="o">&gt;</span>
+              <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/input&gt;&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+              <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">textarea</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">desc</span><span class="dl">"</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">description</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/textarea</span><span class="err">&gt;
+</span>              <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>              <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">submit</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/input</span><span class="err">&gt;
+</span>              <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/article</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">CreateContent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>//ReadContent.js</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,{</span><span class="nx">Component</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">class</span> <span class="nx">ReadContent</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="p">{</span>
+  <span class="nx">render</span><span class="p">(){</span>
+    <span class="k">return</span><span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">article</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>            <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">desc</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/article</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">ReadContent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>배열에 값을 넣을떄</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [1,2];
+arr.push(3);
+arr = [1,2,3] //이 된다.
+
+var arr2 = [1,2];
+var result = arr2.concat(3);
+result = [1,2,3];
+arr2 = [1,2];
+
+//push 는 원래 값에 영향을 미치지만 
+//concat 은 미치지 않음.
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">_article</span> <span class="o">=</span> <span class="kc">null</span>
+<span class="nx">_article</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">ReadContent</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">_title</span><span class="p">}</span> <span class="nx">desc</span><span class="o">=</span><span class="p">{</span><span class="nx">_desc</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="sr">/ReadContent</span><span class="err">&gt;
+</span>
+<span class="k">return</span><span class="p">(</span>
+<span class="p">{</span><span class="nx">_article</span><span class="p">}</span>
+<span class="p">}</span> <span class="c1">//이렇게 변수에 담아서 해줘도된다.</span>
+</code></pre></div></div>
+:ET

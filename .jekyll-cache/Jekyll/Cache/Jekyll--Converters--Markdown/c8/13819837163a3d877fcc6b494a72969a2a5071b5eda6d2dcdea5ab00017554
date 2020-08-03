@@ -1,0 +1,30 @@
+I"�<p>//createContent.js
+```javascript
+import React,{Component} from ‘react’;
+class CreateContent extends Component{
+  render(){
+    return(
+      &lt;article&gt;
+            &lt;h2&gt;Create&lt;/h2&gt;
+            &lt;form action=”/create_process” method=”post”
+             onSubmit={function(e){
+               e.preventDefault();
+               this.props.onSubmit(
+                 e.target.title.value,
+                 e.target.desc.value
+               );
+             }.bind(this)} //submit 이 실행되면 실행되게 하는 이벤트임
+            &gt;
+              &lt;p&gt;<input type="text" name="title" placeholder="title" />&lt;/input&gt;&lt;/p&gt;
+              &lt;p&gt;
+                <textarea name="desc" placeholder="description"></textarea>
+              &lt;/p&gt;
+              &lt;p&gt;
+                <input type="submit" />&lt;/input&gt;
+              &lt;/p&gt;
+            &lt;/form&gt;
+      &lt;/article&gt;
+    );
+  }
+}</p>
+:ET

@@ -292,4 +292,22 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react/",
         "teaser": null
+      },{
+        "title": "[React]CRUD (배열)",
+        "excerpt":"//createContent.js import React,{Component} from 'react'; class CreateContent extends Component{ render(){ return( &lt;article&gt; &lt;h2&gt;Create&lt;/h2&gt; &lt;form action=\"/create_process\" method=\"post\" onSubmit={function(e){ e.preventDefault(); this.props.onSubmit( e.target.title.value, e.target.desc.value ); }.bind(this)} //submit 이 실행되면 실행되게 하는 이벤트임 &gt; &lt;p&gt;&lt;input type=\"text\" name=\"title\" placeholder=\"title\"&gt;&lt;/input&gt;&lt;/p&gt; &lt;p&gt; &lt;textarea name=\"desc\" placeholder=\"description\"&gt;&lt;/textarea&gt; &lt;/p&gt; &lt;p&gt; &lt;input type=\"submit\"&gt;&lt;/input&gt; &lt;/p&gt; &lt;/form&gt; &lt;/article&gt; ); } } export default...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react/",
+        "teaser": null
+      },{
+        "title": "[React] shouldComponentUpdate",
+        "excerpt":"shouldComponentUpdate(newProps, newState){ \t \tif(this.props.data === newProps.data){ \t\t\treturn false; \t} \treturn true; }   render(){  }  shouldComponentUpdate 는 return 값이 true 이면 return 를 실행시키고 false 면 실행시키지 않는다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-shouldcomponentupdate/",
+        "teaser": null
+      },{
+        "title": "[React]",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react/",
+        "teaser": null
       }]

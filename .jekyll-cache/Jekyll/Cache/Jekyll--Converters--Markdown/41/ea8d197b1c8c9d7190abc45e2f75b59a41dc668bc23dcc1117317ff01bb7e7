@@ -1,0 +1,30 @@
+I"V<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const friends = ["dal","mark","lynn","japan guy"]
+
+friend.map(function(current) {
+console.log(current);
+return 0
+})
+
+result :
+dal
+mark
+lynn
+japan guy
+
+</code></pre></div></div>
+
+<p>return 값에 item 을 각각 매칭 시켜준다</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const friends = ["dal","mark","lynn","japan guy"]
+
+friend.map(function(current) {
+console.log(current);
+return current + "10"
+})
+
+result :
+dal10
+mark10
+lynn10
+japan guy10
+</code></pre></div></div>
+:ET

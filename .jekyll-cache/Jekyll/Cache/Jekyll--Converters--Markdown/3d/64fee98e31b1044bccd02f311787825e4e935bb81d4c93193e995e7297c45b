@@ -1,0 +1,11 @@
+I"�<p>JSX : HTML + javascript
+(javascript 안의 HTML 이라 생각하면 됨)
+```
+ReactDOM.render(</p>
+<React.StrictMode>
+    <App /><Potato />
+  </React.StrictMode>
+<p>,
+  document.getElementById(‘root’)
+);</p>
+:ET

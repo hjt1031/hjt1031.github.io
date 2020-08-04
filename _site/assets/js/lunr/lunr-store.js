@@ -305,9 +305,15 @@ var store = [{
         "url": "http://localhost:4000/react-shouldcomponentupdate/",
         "teaser": null
       },{
-        "title": "[React]",
-        "excerpt":" ","categories": [],
+        "title": "[React]JSX, Component",
+        "excerpt":"JSX : HTML + javascript (javascript 안의 HTML 이라 생각하면 됨) ReactDOM.render( &lt;React.StrictMode&gt; &lt;App /&gt;&lt;Potato /&gt; &lt;/React.StrictMode&gt;, document.getElementById('root') ); 에러가 발생한다 wh? react aaplication이 하나의 component 만을 rendering 해야 하기 때문이다. function Potato (){ return &lt;h1&gt;I like Potato&lt;/h1&gt; } function App() { return ( &lt;div&gt; &lt;h1&gt;Hello&lt;/h1&gt; &lt;Potato /&gt; &lt;/div&gt; );...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/react/",
+        "teaser": null
+      },{
+        "title": "[React Nomad] 웹사이트에 동적 데이터 추가",
+        "excerpt":"const friends = [\"dal\",\"mark\",\"lynn\",\"japan guy\"] friend.map(function(current) { console.log(current); return 0 }) result : dal mark lynn japan guy return 값에 item 을 각각 매칭 시켜준다 const friends = [\"dal\",\"mark\",\"lynn\",\"japan guy\"] friend.map(function(current) { console.log(current); return current + \"10\" }) result : dal10 mark10 lynn10 japan guy10 import React from 'react'; function...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomad/",
         "teaser": null
       }]

@@ -355,7 +355,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react/" rel="permalink">[React]
+        <a href="/react-nomad/" rel="permalink">[React Nomad] 웹사이트에 동적 데이터 추가
 </a>
       
     </h2>
@@ -369,7 +369,46 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">```javascript
+const friends = [“dal”,”mark”,”lynn”,”japan guy”]
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react/" rel="permalink">[React]JSX, Component
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">JSX : HTML + javascript
+(javascript 안의 HTML 이라 생각하면 됨)
+```
+ReactDOM.render(
+
+    
+  
+,
+  document.getElementById(‘root’)
+);
 </p>
   </article>
 </div>
@@ -442,39 +481,6 @@ class CreateContent extends Component{
     return(
       &lt;article&gt;
 ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/react/" rel="permalink">[React] 컨포넌트 이벤트
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">//App.js
- &lt;Subject 
-      title={this.state.subject.title}
-      sub={this.state.subject.sub}
-      onChangePage = {function(){
-       this.setState({mode...</p>
   </article>
 </div>
 

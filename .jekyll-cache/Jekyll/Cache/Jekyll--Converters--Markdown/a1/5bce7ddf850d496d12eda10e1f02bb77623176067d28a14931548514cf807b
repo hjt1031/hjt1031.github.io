@@ -1,0 +1,9 @@
+I"<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add = () =&gt; {
+    this.state.count = 1;
+  };
+  minus = () =&gt; {
+    this.state.count = -1;
+  };
+	//react 는 render function 을 refresh 하지 않는다.
+</code></pre></div></div>
+:ET

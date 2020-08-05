@@ -316,4 +316,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react-nomad/",
         "teaser": null
+      },{
+        "title": "[React Nomad]State",
+        "excerpt":"state 는 보통 우리가 동적 데이터와 함께 작업할때 만들어진다. 변하는 데이터, 존재하지 않는 데이터 class App export React.Component //컨포넌트를 만들때 마다 모든 것을 다 구현하고 싶지 않아서. state ={ } //state는 object이고 component의 data를 넣을 공간이 있고 이 데이터는 변한다. render(){ //기본적으로 render 메소드를 갖고있음react 는 자동적으로 나의 class component의...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomad/",
+        "teaser": null
+      },{
+        "title": "[React Nomad]State 2",
+        "excerpt":"state = { count: 0 } add = () =&gt; { this.state.count = 1; }; minus = () =&gt; { this.state.count = -1; }; //동작하지 않음. react 는 render function 을 refresh 하지 않는다. state = { count: 0 } add = () =&gt; { this.setState({count : this.state.count + 1});...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomadstate-2/",
+        "teaser": null
       }]

@@ -328,4 +328,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react-nomadstate-2/",
         "teaser": null
+      },{
+        "title": "[React Nomad] Component Life Cycle",
+        "excerpt":"Mountig constructor() : javascript 에서 class를 만들 때 호출되는것. constructor(props){ super(props) console.log(\"hello\"); } componentDidMount(){ console.log(\"component rendered\") } render(){ console.log(\"I m rendering\") } //constructor() 가 가장먼저 실행 그다음 render() 그다음 componentDidMount Update 내가 Add 혹은 Minus를 클릭해서 state를 변경할때 그때가 update componentDidUpdate(){ console.log('I just update') } render(){ console.log(\"I m rendering\") }...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomad-coder-component-life-cycle/",
+        "teaser": null
+      },{
+        "title": "[React Nomad]axios",
+        "excerpt":"axios는 node.js와 브라우저를 위한 http통신 javascript 라이브러리이다.   getMovies = async () =&gt; {     const {        data :{         data:{movies}         }      } = await axios.get(\"https://yts-proxy.now.sh/list_movies.json?sort_by=rating\");       this.setState({movies,isLoading : false})     console.log(movies)   }   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomadaxios/",
+        "teaser": null
       }]

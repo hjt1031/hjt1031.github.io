@@ -221,6 +221,14 @@
 <lastmod>2020-08-05T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/react-nomad-coder-component-life-cycle/</loc>
+<lastmod>2020-08-10T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/react-nomadaxios/</loc>
+<lastmod>2020-08-11T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -252,5 +260,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page11/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page12/</loc>
 </url>
 </urlset>

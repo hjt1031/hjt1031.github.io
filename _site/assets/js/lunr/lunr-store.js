@@ -340,4 +340,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react-nomadaxios/",
         "teaser": null
+      },{
+        "title": "[React Nomad]Style the movie",
+        "excerpt":"App.js import \"./App.css\"; render() { const { isLoading, movies } = this.state; return ( &lt;section class=\"container\"&gt; {isLoading ? ( &lt;div class=\"loader\"&gt; &lt;span class=\"loader__text\"&gt;Loading...&lt;/span&gt; &lt;/div&gt; ) : ( &lt;div class=\"movies\"&gt; {movies.map(movie =&gt; ( &lt;Movie key={movie.id} id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} poster={movie.medium_cover_image} /&gt; ))} &lt;/div&gt; )} &lt;/section&gt; ); } movie.js import \"./Movie.css\"; function...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomadstyle-the-movie/",
+        "teaser": null
       }]

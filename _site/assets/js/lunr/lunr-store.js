@@ -346,4 +346,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react-nomadstyle-the-movie/",
         "teaser": null
+      },{
+        "title": "[React Nomad]Map &크롤링 스크래핑 차이",
+        "excerpt":"아래는 map()함수를 이용하여 numbers 배열의 값을 두배로 만든 후 map()에서 반환하는 새 배열을 doubled 변수에 할당하고 로그를 확인하는 코드입니다. const numbers = [1, 2, 3, 4, 5]; const doubled = numbers.map((number) =&gt; number * 2); console.log(doubled); 이 코드는 콘솔에 [2, 4, 6, 8, 10]을 출력합니다. React에서 배열을 엘리먼트 리스트로 만드는...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomadmap/",
+        "teaser": null
       }]

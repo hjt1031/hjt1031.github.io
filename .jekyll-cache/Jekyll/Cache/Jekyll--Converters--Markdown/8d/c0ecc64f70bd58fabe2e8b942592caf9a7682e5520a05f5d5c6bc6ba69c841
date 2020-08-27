@@ -1,0 +1,34 @@
+I"<<p>함수형 컴포넌트는</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">test</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">test</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>클래스형 컴포넌트의 형태는</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+
+  <span class="nx">render</span><span class="p">(){</span>
+
+    <span class="kd">const</span> <span class="nx">test</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">test</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>함수형 컴포넌트의 장점</p>
+
+<ul>
+  <li>클래스형 컴포넌트에 비해 선언하기가 편하다.</li>
+  <li>메모리 자원을 클래스형 컴포넌트에 비해서 덜 차지한다.</li>
+  <li>빌드 후 배포시에 결과물의 크기가 작다.</li>
+</ul>
+:ET

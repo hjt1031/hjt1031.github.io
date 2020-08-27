@@ -358,4 +358,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react-nomadreact-router-dom/",
         "teaser": null
+      },{
+        "title": "[React Nomad]네비게이션",
+        "excerpt":"//App.js function App(){ //함수형 컨포넌트 생성 return &lt;HashRouter&gt; &lt;Navigation /&gt; &lt;Route path=\"/\" component={Home}/&gt; &lt;Route path=\"/about\" component={About}/&gt; &lt;/HashRouter&gt; } function Navigation(){ return &lt;div&gt; &lt;Link to=\"/\"&gt;HOme&lt;/Link&gt; &lt;Link to=\"/about\"&gt;About&lt;/Link&gt; &lt;/div&gt; } Link 는 반드시 route 안에 있어야한다. 밖에 있으면 동작이 안됨. function App(){ //함수형 컨포넌트 생성 return &lt;HashRouter&gt; &lt;Navigation /&gt; &lt;Route path=\"/\" component={Home}/&gt;...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomad/",
+        "teaser": null
+      },{
+        "title": "[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트",
+        "excerpt":"함수형 컴포넌트는 function App() { const test = \"\"; return &lt;div&gt;{test}&lt;/div&gt; } 클래스형 컴포넌트의 형태는 class App extends Component { render(){ const test = \"\"; return &lt;div&gt;{test}&lt;/div&gt;; } } 함수형 컴포넌트의 장점 클래스형 컴포넌트에 비해 선언하기가 편하다. 메모리 자원을 클래스형 컴포넌트에 비해서 덜 차지한다. 빌드 후 배포시에 결과물의 크기가 작다....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-nomad/",
+        "teaser": null
       }]

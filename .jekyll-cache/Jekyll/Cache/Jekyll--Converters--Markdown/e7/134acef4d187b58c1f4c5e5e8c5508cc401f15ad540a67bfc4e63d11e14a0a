@@ -1,0 +1,10 @@
+I"<pre><code class="language-Javascript">//App.js
+function App(){ //함수형 컨포넌트 생성
+  return &lt;HashRouter&gt;
+    &lt;Navigation /&gt;
+    &lt;Route path="/" component={Home}/&gt;
+    &lt;Route path="/about" component={About}/&gt;
+  &lt;/HashRouter&gt;
+}
+</code></pre>
+:ET

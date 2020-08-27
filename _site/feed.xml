@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-20T22:40:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[React Nomad]react-router-dom</title><link href="http://localhost:4000/react-nomadreact-router-dom/" rel="alternate" type="text/html" title="[React Nomad]react-router-dom" /><published>2020-08-20T00:00:00+09:00</published><updated>2020-08-20T00:00:00+09:00</updated><id>http://localhost:4000/react-nomadreact-router-dom</id><content type="html" xml:base="http://localhost:4000/react-nomadreact-router-dom/">&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HashRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//react-router-dom은 다른 종류의 라우터가 있다 그중에 하나가 HashRouter,Route&lt;/span&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-27T22:34:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트</title><link href="http://localhost:4000/react-nomad/" rel="alternate" type="text/html" title="[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트" /><published>2020-08-27T00:00:00+09:00</published><updated>2020-08-27T00:00:00+09:00</updated><id>http://localhost:4000/react-nomad</id><content type="html" xml:base="http://localhost:4000/react-nomad/">&lt;p&gt;함수형 컴포넌트는&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;클래스형 컴포넌트의 형태는&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;
+&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;함수형 컴포넌트의 장점&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;클래스형 컴포넌트에 비해 선언하기가 편하다.&lt;/li&gt;
+  &lt;li&gt;메모리 자원을 클래스형 컴포넌트에 비해서 덜 차지한다.&lt;/li&gt;
+  &lt;li&gt;빌드 후 배포시에 결과물의 크기가 작다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;클래스형 컴포넌트의 장점&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;render 함수가 반드시 존재해야 한다.&lt;/li&gt;
+  &lt;li&gt;state 의 사용이 가능하다.&lt;/li&gt;
+  &lt;li&gt;라이프 사이클 API의 사용이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>동센</name></author><summary type="html">함수형 컴포넌트는</summary></entry><entry><title type="html">[React Nomad]네비게이션</title><link href="http://localhost:4000/react-nomad/" rel="alternate" type="text/html" title="[React Nomad]네비게이션" /><published>2020-08-21T00:00:00+09:00</published><updated>2020-08-21T00:00:00+09:00</updated><id>http://localhost:4000/react-nomad</id><content type="html" xml:base="http://localhost:4000/react-nomad/">&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;//App.js
+function App(){ //함수형 컨포넌트 생성
+  return &amp;lt;HashRouter&amp;gt;
+    &amp;lt;Navigation /&amp;gt;
+    &amp;lt;Route path=&quot;/&quot; component={Home}/&amp;gt;
+    &amp;lt;Route path=&quot;/about&quot; component={About}/&amp;gt;
+  &amp;lt;/HashRouter&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Navigation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HOme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Link&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/about&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;About&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Link&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Link 는 반드시 route 안에 있어야한다.
+밖에 있으면 동작이 안됨.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function App(){ //함수형 컨포넌트 생성
+  return &amp;lt;HashRouter&amp;gt;
+    &amp;lt;Navigation /&amp;gt;
+    &amp;lt;Route path=&quot;/&quot; component={Home}/&amp;gt;
+    &amp;lt;Route path=&quot;/about&quot; component={About}/&amp;gt;
+  &amp;lt;/HashRouter&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;HashRouter 대신 BrowserRouter 을 바꾸면 http 사이트에 /#/ 가없어짐 하지만 git에 설정하기가 짜증남.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">//App.js function App(){ //함수형 컨포넌트 생성 return &amp;lt;HashRouter&amp;gt; &amp;lt;Navigation /&amp;gt; &amp;lt;Route path=&quot;/&quot; component={Home}/&amp;gt; &amp;lt;Route path=&quot;/about&quot; component={About}/&amp;gt; &amp;lt;/HashRouter&amp;gt; }</summary></entry><entry><title type="html">[React Nomad]react-router-dom</title><link href="http://localhost:4000/react-nomadreact-router-dom/" rel="alternate" type="text/html" title="[React Nomad]react-router-dom" /><published>2020-08-20T00:00:00+09:00</published><updated>2020-08-20T00:00:00+09:00</updated><id>http://localhost:4000/react-nomadreact-router-dom</id><content type="html" xml:base="http://localhost:4000/react-nomadreact-router-dom/">&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HashRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//react-router-dom은 다른 종류의 라우터가 있다 그중에 하나가 HashRouter,Route&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//함수형 컨포넌트 생성&lt;/span&gt;
@@ -251,45 +320,4 @@ add = () =&amp;gt; {
  
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">```javascript const friends = [“dal”,”mark”,”lynn”,”japan guy”]</summary></entry><entry><title type="html">[React]JSX, Component</title><link href="http://localhost:4000/react/" rel="alternate" type="text/html" title="[React]JSX, Component" /><published>2020-08-03T00:00:00+09:00</published><updated>2020-08-03T00:00:00+09:00</updated><id>http://localhost:4000/react</id><content type="html" xml:base="http://localhost:4000/react/">&lt;p&gt;JSX : HTML + javascript
-(javascript 안의 HTML 이라 생각하면 됨)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ReactDOM.render(
-  &amp;lt;React.StrictMode&amp;gt;
-    &amp;lt;App /&amp;gt;&amp;lt;Potato /&amp;gt;
-  &amp;lt;/React.StrictMode&amp;gt;,
-  document.getElementById('root')
-);
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;에러가 발생한다 
-wh? react aaplication이 하나의 component 만을 rendering 해야 하기 때문이다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Potato (){
-    return &amp;lt;h1&amp;gt;I like Potato&amp;lt;/h1&amp;gt;
-}
-
-function App() {  
-    return (
-    &amp;lt;div&amp;gt;
-        &amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;
-        &amp;lt;Potato /&amp;gt;
-        &amp;lt;/div&amp;gt;
-    );
-
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;정상적으로 잘 작동한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">JSX : HTML + javascript (javascript 안의 HTML 이라 생각하면 됨) ``` ReactDOM.render( , document.getElementById(‘root’) );</summary></entry><entry><title type="html">[React] shouldComponentUpdate</title><link href="http://localhost:4000/react-shouldcomponentupdate/" rel="alternate" type="text/html" title="[React] shouldComponentUpdate" /><published>2020-08-03T00:00:00+09:00</published><updated>2020-08-03T00:00:00+09:00</updated><id>http://localhost:4000/react-shouldcomponentupdate</id><content type="html" xml:base="http://localhost:4000/react-shouldcomponentupdate/">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;shouldComponentUpdate(newProps, newState){
-	
-	if(this.props.data === newProps.data){
-			return false;
-	}
-	return true;
-}
-
-
-render(){
-
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;shouldComponentUpdate 는 return 값이 true 이면 return 를 실행시키고
-false 면 실행시키지 않는다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">``` shouldComponentUpdate(newProps, newState){ if(this.props.data === newProps.data){ return false; } return true; }</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">```javascript const friends = [“dal”,”mark”,”lynn”,”japan guy”]</summary></entry></feed>

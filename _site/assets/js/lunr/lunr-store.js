@@ -372,7 +372,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[얄코]Scope(let, const, var)",
-        "excerpt":"각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함. 예를들어 전역번수로 선언된 함수를 스코프 안쪽에 if(), for() 안 쪽에 선언을 하면 안쪽에 있는 변수로 접근하게 된다. const mouse_1 = '서울쥐'; mouse_1 '귀촌쥐; // 값 을 바꿀수없는 상수 const 에서 바로 선언을 해주고 값도 바로 넣어줘야함 / ES6 ECMA 2015...","categories": [],
+        "excerpt":"각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함. 예를들어 전역번수로 선언된 함수를 스코프 안쪽에 if(), for() 안 쪽에 선언을 하면 안쪽에 있는 변수로 접근하게 된다. const mouse_1 = '서울쥐'; mouse_1 '귀촌쥐'; // 값 을 바꿀수없는 상수 const 에서 바로 선언을 해주고 값도 바로 넣어줘야함 / ES6 ECMA 2015...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/",
         "teaser": null

@@ -370,4 +370,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/react-nomad/",
         "teaser": null
+      },{
+        "title": "[얄코]Scope(let, const, var)",
+        "excerpt":"각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함. 예를들어 전역번수로 선언된 함수를 스코프 안쪽에 if(), for() 안 쪽에 선언을 하면 안쪽에 있는 변수로 접근하게 된다. const mouse_1 = '서울쥐'; mouse_1 '귀촌쥐; // 값 을 바꿀수없는 상수 const 에서 바로 선언을 해주고 값도 바로 넣어줘야함 / ES6 ECMA 2015...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/",
+        "teaser": null
+      },{
+        "title": "[Nodejs] 용어 1",
+        "excerpt":"인터프리터 : 한 줄씩 해석하면서 실행하는 방식 바인딩 : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 객체가 실행됩니다. 즉, 사용자가 버튼을 클릭하면 이 함수가 실행됩니다. 모듈 :...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-1/",
+        "teaser": null
       }]

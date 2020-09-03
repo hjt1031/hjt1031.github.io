@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs] 쿠키 실습 - juntae</title>
-<meta name="description" content="로그인 상태체크 ```javascript function authIsOwner(request,response){ //쿠키 체크      var isOwner = false;//기본으로 false    if(request.headers.cookie){//쿠키 값 유무 체크         cookies = cookie.parse(request.headers.cookie);     }     if(cookies.email === ‘egoing777@gmail.com’ &amp;&amp; cookies.password === ‘11111’){       isOwner = true;     }     console.log(cookies)     return isOwner; } ">
+<!-- begin _includes/seo.html --><title>[Nodejs] 프로토타입 객체 - juntae</title>
+<meta name="description" content="자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문 ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[nodejs] 쿠키 실습">
+<meta property="og:title" content="[Nodejs] 프로토타입 객체">
 <meta property="og:url" content="http://localhost:4000/nodejs/">
 
 
-  <meta property="og:description" content="로그인 상태체크 ```javascript function authIsOwner(request,response){ //쿠키 체크      var isOwner = false;//기본으로 false    if(request.headers.cookie){//쿠키 값 유무 체크         cookies = cookie.parse(request.headers.cookie);     }     if(cookies.email === ‘egoing777@gmail.com’ &amp;&amp; cookies.password === ‘11111’){       isOwner = true;     }     console.log(cookies)     return isOwner; } ">
+  <meta property="og:description" content="자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문 ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-05-20T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-09-03T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[nodejs] 쿠키 실습">
-    <meta itemprop="description" content="로그인 상태체크```javascriptfunction authIsOwner(request,response){ //쿠키 체크     var isOwner = false;//기본으로 false   if(request.headers.cookie){//쿠키 값 유무 체크        cookies = cookie.parse(request.headers.cookie);    }    if(cookies.email === ‘egoing777@gmail.com’ &amp;&amp; cookies.password === ‘11111’){      isOwner = true;    }    console.log(cookies)    return isOwner;}">
-    <meta itemprop="datePublished" content="2020-05-20T00:00:00+09:00">
+    <meta itemprop="headline" content="[Nodejs] 프로토타입 객체">
+    <meta itemprop="description" content="자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문">
+    <meta itemprop="datePublished" content="2020-09-03T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] 쿠키 실습
+          <h1 id="page-title" class="page__title" itemprop="headline">[Nodejs] 프로토타입 객체
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,46 +287,30 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>로그인 상태체크</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">authIsOwner</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span> <span class="c1">//쿠키 체크 </span>
-    <span class="kd">var</span> <span class="nx">isOwner</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span><span class="c1">//기본으로 false</span>
-   <span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">cookie</span><span class="p">){</span><span class="c1">//쿠키 값 유무 체크</span>
-        <span class="nx">cookies</span> <span class="o">=</span> <span class="nx">cookie</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span>  
-    <span class="p">}</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">cookies</span><span class="p">.</span><span class="nx">email</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">egoing777@gmail.com</span><span class="dl">'</span> <span class="o">&amp;&amp;</span> <span class="nx">cookies</span><span class="p">.</span><span class="nx">password</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">11111</span><span class="dl">'</span><span class="p">){</span>
-      <span class="nx">isOwner</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cookies</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">isOwner</span><span class="p">;</span>
-<span class="p">}</span>   
+        <p>자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Person(name,age){
+	this.name = name;
+	this.age = age;
+}
 
-<span class="err">ㅎ</span>
+Person.prototype.walk = function(speed){
+	console.log(speed + 'km 속도로 걸어갑니다.');
+}
 
-<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span>
+var person01 = new Person('소녀시대',20); //생성자
+var person02 = new Person('걸스데이',22);
 
+console.log(person01.name + '객체의 walk(10)을 호출합니다.');
+person01.walk(10);
 
-<span class="kd">var</span> <span class="nx">isOwner</span> <span class="o">=</span> <span class="nx">authIsOwner</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">);</span> 
-<span class="p">}</span>
+//
+소녀시대 객체의 walk(10)을 호출합니다.
+10km 속도로 걸어갑니다.
 </code></pre></div></div>
 
-<p>로그인 상태를 UI에 반영</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>template.js
-module.exports = {
-  HTML:function(title, list, body, control, authStatusUI = '&lt;a href="/login"&gt;login&lt;/a&gt;'){//authStatusUI에 값이 없으면 &lt;a href="/login"&gt;login&lt;/a&gt; 이게 들어간다.
-	}
-</code></pre></div></div>
-
-<p>접근금직(접근권한)
-로그인된 사용자만 insert, create, delete 되도록</p>
-
-<p>else if(pathname === ‘/create_process’){
-      if(authIsOwner(request,response) === false){
-        response.end(‘Login required!!’);</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    return false;
-  }
-</code></pre></div></div>
+<p>이 객체에 walk 함수를 속성으로 추가 할려면
+Person.prototype.walk = function(){} 으로 생성해야한다.</p>
 
         
       </section>
@@ -337,7 +321,7 @@ module.exports = {
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-20T00:00:00+09:00">May 20, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-09-03T00:00:00+09:00">September 3, 2020</time></p>
         
       </footer>
 
@@ -346,7 +330,7 @@ module.exports = {
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+%EC%BF%A0%ED%82%A4+%EC%8B%A4%EC%8A%B5%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BNodejs%5D+%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85+%EA%B0%9D%EC%B2%B4%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -357,12 +341,11 @@ module.exports = {
       
   <nav class="pagination">
     
-      <a href="/nodejs/" class="pagination--pager" title="[nodejs]쿠키
+      <a href="/nodejs2/" class="pagination--pager" title="[Nodejs]용어2
 ">이전</a>
     
     
-      <a href="/parsing-parser/" class="pagination--pager" title="Parsing &amp; Parser
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -376,6 +359,38 @@ module.exports = {
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs2/" rel="permalink">[Nodejs]용어2
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">exports : 모듈을 만들어 주는 대표적인 방식
+```javascript
+//정의
+exports.함수이름 = 함수정의;
+</p>
+  </article>
+</div>
+
         
           
 
@@ -461,39 +476,6 @@ module.exports = {
     
     <p class="archive__item-excerpt" itemprop="description">함수형 컴포넌트는
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/react-nomad/" rel="permalink">[React Nomad]네비게이션
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">//App.js
-function App(){ //함수형 컨포넌트 생성
-  return &lt;HashRouter&gt;
-    &lt;Navigation /&gt;
-    &lt;Route path="/" component={Home}/&gt;
-    &lt;Route path="...</p>
   </article>
 </div>
 

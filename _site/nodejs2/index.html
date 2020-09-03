@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs]에러처리 - juntae</title>
-<meta name="description" content="존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준 ">
+<!-- begin _includes/seo.html --><title>[Nodejs]용어2 - juntae</title>
+<meta name="description" content="exports : 모듈을 만들어 주는 대표적인 방식 ```javascript //정의 exports.함수이름 = 함수정의; ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[nodejs]에러처리">
+<meta property="og:title" content="[Nodejs]용어2">
 <meta property="og:url" content="http://localhost:4000/nodejs2/">
 
 
-  <meta property="og:description" content="존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준 ">
+  <meta property="og:description" content="exports : 모듈을 만들어 주는 대표적인 방식 ```javascript //정의 exports.함수이름 = 함수정의; ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-05-15T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-09-02T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[nodejs]에러처리">
-    <meta itemprop="description" content="존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.express 기준">
-    <meta itemprop="datePublished" content="2020-05-15T00:00:00+09:00">
+    <meta itemprop="headline" content="[Nodejs]용어2">
+    <meta itemprop="description" content="exports : 모듈을 만들어 주는 대표적인 방식```javascript//정의exports.함수이름 = 함수정의;">
+    <meta itemprop="datePublished" content="2020-09-02T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs]에러처리
+          <h1 id="page-title" class="page__title" itemprop="headline">[Nodejs]용어2
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,21 +287,30 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
-express 기준</p>
+        <p>exports : 모듈을 만들어 주는 대표적인 방식</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//정의</span>
+<span class="nx">exports</span><span class="p">.</span><span class="err">함수이름</span> <span class="o">=</span> <span class="err">함수정의</span><span class="p">;</span>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.use(function(req, res, next){
-  res.status(404).send('Sorry cant find that!');
-}) //추가해준다
+<span class="c1">//쓰는법</span>
+<span class="kd">var</span> <span class="nx">modeule</span> <span class="o">=</span> <span class="nx">require</span><span class="o">=</span><span class="p">(</span><span class="dl">'</span><span class="s1">module</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">module</span><span class="p">.</span><span class="err">함수이름</span><span class="p">();</span>
 </code></pre></div></div>
-<p>페이지에 에러가 있을 경우(서버에러 500)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.
- 
- 
- app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고
-  res.status(500).send('Something broke!');
-})
+<p>자바스크립트는  함수라는 것을 명시적으로 구별하기 위해 function 키워드를 함수 이름 앞에 붙여줌</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//같은의미이다.</span>
+<span class="nx">fucntion</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+<span class="k">return</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+	<span class="k">return</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>배열요소 삭제</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Users</span> <span class="o">=</span> <span class="p">[{</span><span class="mi">1</span><span class="p">},{</span><span class="mi">2</span><span class="p">},{</span><span class="mi">3</span><span class="p">}];</span> 
+
+<span class="k">delete</span> <span class="nx">Users</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// 하면 {2} 지워짐 하지만 객체만 지워진거라 배열 길이는 그대로 3개</span>
 </code></pre></div></div>
 
         
@@ -313,7 +322,7 @@ express 기준</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-15T00:00:00+09:00">May 15, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-09-02T00:00:00+09:00">September 2, 2020</time></p>
         
       </footer>
 
@@ -322,7 +331,7 @@ express 기준</p>
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D%EC%97%90%EB%9F%AC%EC%B2%98%EB%A6%AC%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BNodejs%5D%EC%9A%A9%EC%96%B42%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -333,11 +342,11 @@ express 기준</p>
       
   <nav class="pagination">
     
-      <a href="/nodejs/" class="pagination--pager" title="[nodejs]정적파일 서비스
+      <a href="/nodejs-1/" class="pagination--pager" title="[Nodejs] 용어 1
 ">이전</a>
     
     
-      <a href="/nodejs3/" class="pagination--pager" title="[nodejs]라우터-주소체계변경
+      <a href="/nodejs/" class="pagination--pager" title="[Nodejs] 프로토타입 객체
 ">다음</a>
     
   </nav>
@@ -352,6 +361,35 @@ express 기준</p>
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[Nodejs] 프로토타입 객체
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문
+</p>
+  </article>
+</div>
+
         
           
 
@@ -437,39 +475,6 @@ express 기준</p>
     
     <p class="archive__item-excerpt" itemprop="description">함수형 컴포넌트는
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/react-nomad/" rel="permalink">[React Nomad]네비게이션
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">//App.js
-function App(){ //함수형 컨포넌트 생성
-  return &lt;HashRouter&gt;
-    &lt;Navigation /&gt;
-    &lt;Route path="/" component={Home}/&gt;
-    &lt;Route path="...</p>
   </article>
 </div>
 

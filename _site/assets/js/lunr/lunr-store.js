@@ -382,4 +382,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs-1/",
         "teaser": null
+      },{
+        "title": "[Nodejs]용어2",
+        "excerpt":"exports : 모듈을 만들어 주는 대표적인 방식 //정의 exports.함수이름 = 함수정의; //쓰는법 var modeule = require=('module'); module.함수이름(); 자바스크립트는 함수라는 것을 명시적으로 구별하기 위해 function 키워드를 함수 이름 앞에 붙여줌 //같은의미이다. fucntion add(a,b){ return a+b; } var add = function(a,b){ return a+b; } 배열요소 삭제 var Users = [{1},{2},{3}]; delete Users[1]...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs2/",
+        "teaser": null
+      },{
+        "title": "[Nodejs] 프로토타입 객체",
+        "excerpt":"자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문 function Person(name,age){ this.name = name; this.age = age; } Person.prototype.walk = function(speed){ console.log(speed + 'km 속도로 걸어갑니다.'); } var person01 = new Person('소녀시대',20); //생성자 var person02 = new Person('걸스데이',22); console.log(person01.name + '객체의 walk(10)을 호출합니다.'); person01.walk(10); // 소녀시대 객체의 walk(10)을...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
       }]

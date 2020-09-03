@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-01T22:58:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[얄코]Scope (let, const, var)</title><link href="http://localhost:4000/ffa/" rel="alternate" type="text/html" title="[얄코]Scope (let, const, var)" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/ffa</id><content type="html" xml:base="http://localhost:4000/ffa/">&lt;p&gt;각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T22:05:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[Nodejs] 프로토타입 객체</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[Nodejs] 프로토타입 객체" /><published>2020-09-03T00:00:00+09:00</published><updated>2020-09-03T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Person(name,age){
+	this.name = name;
+	this.age = age;
+}
+
+Person.prototype.walk = function(speed){
+	console.log(speed + 'km 속도로 걸어갑니다.');
+}
+
+var person01 = new Person('소녀시대',20); //생성자
+var person02 = new Person('걸스데이',22);
+
+console.log(person01.name + '객체의 walk(10)을 호출합니다.');
+person01.walk(10);
+
+//
+소녀시대 객체의 walk(10)을 호출합니다.
+10km 속도로 걸어갑니다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 객체에 walk 함수를 속성으로 추가 할려면
+Person.prototype.walk = function(){} 으로 생성해야한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문</summary></entry><entry><title type="html">[Nodejs]용어2</title><link href="http://localhost:4000/nodejs2/" rel="alternate" type="text/html" title="[Nodejs]용어2" /><published>2020-09-02T00:00:00+09:00</published><updated>2020-09-02T00:00:00+09:00</updated><id>http://localhost:4000/nodejs2</id><content type="html" xml:base="http://localhost:4000/nodejs2/">&lt;p&gt;exports : 모듈을 만들어 주는 대표적인 방식&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//정의&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;함수이름&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;함수정의&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//쓰는법&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;modeule&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;함수이름&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;자바스크립트는  함수라는 것을 명시적으로 구별하기 위해 function 키워드를 함수 이름 앞에 붙여줌&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//같은의미이다.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;fucntion&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;배열요소 삭제&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt; 
+
+&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 하면 {2} 지워짐 하지만 객체만 지워진거라 배열 길이는 그대로 3개&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">exports : 모듈을 만들어 주는 대표적인 방식 ```javascript //정의 exports.함수이름 = 함수정의;</summary></entry><entry><title type="html">[얄코]Scope (let, const, var)</title><link href="http://localhost:4000/ffa/" rel="alternate" type="text/html" title="[얄코]Scope (let, const, var)" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/ffa</id><content type="html" xml:base="http://localhost:4000/ffa/">&lt;p&gt;각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.&lt;/p&gt;
 
 &lt;p&gt;예를들어 전역번수로 선언된 함수를&lt;/p&gt;
 
@@ -218,54 +265,4 @@ why? 리액트는 쉽게 말해 자신이 찾는 문자가 속해 했으면 그�
     console.log(movies)
   }
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">axios는 node.js와 브라우저를 위한 http통신 javascript 라이브러리이다.</summary></entry><entry><title type="html">[React Nomad] Component Life Cycle</title><link href="http://localhost:4000/react-nomad-coder-component-life-cycle/" rel="alternate" type="text/html" title="[React Nomad] Component Life Cycle" /><published>2020-08-10T00:00:00+09:00</published><updated>2020-08-10T00:00:00+09:00</updated><id>http://localhost:4000/react-nomad-coder-component-life-cycle</id><content type="html" xml:base="http://localhost:4000/react-nomad-coder-component-life-cycle/">&lt;h1 id=&quot;mountig&quot;&gt;&lt;strong&gt;Mountig&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;constructor() : javascript 에서 class를 만들 때 호출되는것.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;constructor(props){
-    super(props)
-    console.log(&quot;hello&quot;);
-  }
-	
-	componentDidMount(){
-    console.log(&quot;component rendered&quot;)
-  }
-	
-	render(){
-    console.log(&quot;I m rendering&quot;)
-		} //constructor() 가 가장먼저 실행 그다음 render() 그다음  componentDidMount
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;update&quot;&gt;&lt;strong&gt;Update&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;내가 Add 혹은 Minus를 클릭해서 state를 변경할때 그때가 update&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;componentDidUpdate(){
-    console.log('I just update')
-  }
-  render(){
-    console.log(&quot;I m rendering&quot;)
-	} //render() 가 먼저 실행되고 componentDidUpdate() 실행
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">Mountig</summary></entry><entry><title type="html">[React Nomad]State 2</title><link href="http://localhost:4000/react-nomadstate-2/" rel="alternate" type="text/html" title="[React Nomad]State 2" /><published>2020-08-05T00:00:00+09:00</published><updated>2020-08-05T00:00:00+09:00</updated><id>http://localhost:4000/react-nomadstate-2</id><content type="html" xml:base="http://localhost:4000/react-nomadstate-2/">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;state = {
-    count: 0
-  }
-add = () =&amp;gt; {
-    this.state.count = 1;
-  };
-  minus = () =&amp;gt; {
-    this.state.count = -1;
-  };
-	//동작하지 않음. react 는 render function 을 refresh 하지 않는다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;state = {
-    count: 0
-  }
-  add = () =&amp;gt; {
-    this.setState({count : this.state.count + 1});
-  };
-  minus = () =&amp;gt; {
-    this.setState({count : this.state.count - 1});
-  };
-	//잘동작한다. state 값을 바꿔줄때는 setState를 사용해야한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">state = { count: 0 } add = () =&amp;gt; { this.state.count = 1; }; minus = () =&amp;gt; { this.state.count = -1; }; //동작하지 않음. react 는 render function 을 refresh 하지 않는다.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">axios는 node.js와 브라우저를 위한 http통신 javascript 라이브러리이다.</summary></entry></feed>

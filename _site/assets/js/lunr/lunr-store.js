@@ -394,4 +394,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[Nodejs]주소 문자열을 URL 객체로 변환 & 이벤트 & 파일 다루기",
+        "excerpt":"주소 문자열을 URL 객체로 변환 var url = require('url'); //모듈호출 //parse() 와 format() 메소드를 호출 할 수 있음 parse() : https:// 로 시작하는 주소 문자열을 URL 객체로 만들어줌 (요청 파라미터 문자열을 파싱하여 요청 파라미터 객체로 만들어 줌) format() : 원래의 주소 문자열로 돌려놓음(요청 파라미터 객체를 문자열로 변환) 이벤트 이벤트 :...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-url/",
+        "teaser": null
       }]

@@ -400,4 +400,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs-url/",
         "teaser": null
+      },{
+        "title": "[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 & stream",
+        "excerpt":"웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다. connection : 클라이언트가 접속하여 연결이 만들어질 때 발생하는 이벤트입니다. request : 클라이언트가 요청할 때 발생하는 이벤트입니다. close : 서버를 종료할 때 발생하는 이벤트입니다. stream이란 일종의 추상적인 개념인데 입출력 기기나 프로세스, 파일...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodej/",
+        "teaser": null
+      },{
+        "title": "[Nodejs] 간단한 웹 서버",
+        "excerpt":"노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다. var http = require('http'); var server = http.createServer(); //웹서버 객체 만들기 var port = 3000; server.listen(port, function(){ console.log('웹서버가 시작되었습니다',port); }); //list(port,[hostname],[backlog],[callback]) 서버를 실행하여 대기시킵니다 //close([callback]) 서버를 종료합니다 웹 서버는 일반저그올 웹 브라우저라고 하는 클라이언트에서 HTTP...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
       }]

@@ -1,0 +1,4 @@
+I"�<p>노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다.
+```javascript
+var http = require(‘http’);</p>
+:ET

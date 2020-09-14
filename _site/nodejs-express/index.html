@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs] Express 미들웨어 - juntae</title>
-<meta name="description" content="Express 의 중요 기능 2가지    라우터   미들웨어  ">
+<!-- begin _includes/seo.html --><title>[Nodejs] Express 모듈 (get,post) - juntae</title>
+<meta name="description" content="http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다. ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[nodejs] Express 미들웨어">
+<meta property="og:title" content="[Nodejs] Express 모듈 (get,post)">
 <meta property="og:url" content="http://localhost:4000/nodejs-express/">
 
 
-  <meta property="og:description" content="Express 의 중요 기능 2가지    라우터   미들웨어  ">
+  <meta property="og:description" content="http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다. ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-05-07T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-09-14T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[nodejs] Express 미들웨어">
-    <meta itemprop="description" content="Express 의 중요 기능 2가지  라우터  미들웨어">
-    <meta itemprop="datePublished" content="2020-05-07T00:00:00+09:00">
+    <meta itemprop="headline" content="[Nodejs] Express 모듈 (get,post)">
+    <meta itemprop="description" content="http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다.이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.">
+    <meta itemprop="datePublished" content="2020-09-14T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] Express 미들웨어
+          <h1 id="page-title" class="page__title" itemprop="headline">[Nodejs] Express 모듈 (get,post)
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,45 +287,16 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Express 의 중요 기능 2가지</p>
-<ol>
-  <li>라우터</li>
-  <li>미들웨어</li>
-</ol>
+        <p>http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다.
+이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.</p>
 
-<p>소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다.
-다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다.</p>
+<p><em>express 모듈은 웹 서버를 위해 만들어진 것으로 http 모듈 위에서 동작한다. 따라서 express 모듈을 사용할 때는 항상 http 모듈도 함께 불러들여야 한다.</em></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">body</span><span class="o">-</span><span class="nx">parser</span> <span class="c1">//로설치</span>
-</code></pre></div></div>
+<p>라우팅 : 라우터는 클라이언트의 요청 패스를 보고 이 요청 정보를 처리할 수 있는 곳으로 기능을 전달해 주는 역할.</p>
 
-<p>body 는 웹브라우저에서 요청한 정보 본체를 뜻한다.</p>
-
-<p>parser 는 분석</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">body-parser</span><span class="dl">'</span><span class="p">);</span> <span class="c1">//맨위에 선언</span>
-
-<span class="kd">var</span> <span class="nx">post</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">body</span> <span class="c1">//로고쳐서 실행시켜준다.</span>
-</code></pre></div></div>
-
-<p>압축하기(데이터가 너무많으면 압축을 해야한다.)</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">compression</span>
-
-<span class="kd">var</span> <span class="nx">compression</span> <span class="o">=</span> <span class="nx">requrie</span><span class="p">(</span><span class="dl">'</span><span class="s1">compression</span><span class="dl">'</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">compression</span><span class="p">());</span>
-</code></pre></div></div>
-<p>미들웨어 만들기.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">,</span><span class="nx">next</span><span class="p">){</span>
-<span class="c1">//공통으로 된 함수 </span>
-<span class="c1">//ex)</span>
-<span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="dl">'</span><span class="s1">./data</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">filelist</span><span class="p">){</span> <span class="c1">//글목록을 표현해주는 기능</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">list</span> <span class="o">=</span> <span class="nx">filelist</span><span class="p">;</span>
-    <span class="nx">next</span><span class="p">();</span> <span class="c1">//그다음에 호출되어야 할 미들웨어가 담겨있다.</span>
-  <span class="p">});</span>
-<span class="p">});</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>query : 클라이언트에서 get 방식으로 전송한 요청 파라미터를 확인합니다. ex) req.query.name
+body : 클라이언트에서 post 방식으로 전송한 요청 파라미터를 확인합니다. 단, body-parser와 같은 외장 모듈 사용해야함 ex)req.body.name
+header(name) : 헤더를 확인
 </code></pre></div></div>
 
         
@@ -337,7 +308,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-07T00:00:00+09:00">May 7, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-09-14T00:00:00+09:00">September 14, 2020</time></p>
         
       </footer>
 
@@ -346,7 +317,7 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+Express+%EB%AF%B8%EB%93%A4%EC%9B%A8%EC%96%B4%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BNodejs%5D+Express+%EB%AA%A8%EB%93%88+%28get%2Cpost%29%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -357,12 +328,11 @@
       
   <nav class="pagination">
     
-      <a href="/nodejs-2/" class="pagination--pager" title="[nodejs] 페이지 생성 구현2
+      <a href="/nodejs/" class="pagination--pager" title="[Nodejs] 간단한 웹 서버
 ">이전</a>
     
     
-      <a href="/nodejs/" class="pagination--pager" title="[nodejs]express(Hello World!)
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 

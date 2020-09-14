@@ -412,4 +412,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[Nodejs] Express 모듈 (get,post)",
+        "excerpt":"http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다. express 모듈은 웹 서버를 위해 만들어진 것으로 http 모듈 위에서 동작한다. 따라서 express 모듈을 사용할 때는 항상...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-express/",
+        "teaser": null
       }]

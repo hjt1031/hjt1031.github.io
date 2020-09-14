@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-10T21:55:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp;amp; stream</title><link href="http://localhost:4000/nodej/" rel="alternate" type="text/html" title="[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp; stream" /><published>2020-09-10T00:00:00+09:00</published><updated>2020-09-10T00:00:00+09:00</updated><id>http://localhost:4000/nodej</id><content type="html" xml:base="http://localhost:4000/nodej/">&lt;p&gt;웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-14T20:54:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[Nodejs] Express 모듈 (get,post)</title><link href="http://localhost:4000/nodejs-express/" rel="alternate" type="text/html" title="[Nodejs] Express 모듈 (get,post)" /><published>2020-09-14T00:00:00+09:00</published><updated>2020-09-14T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-express</id><content type="html" xml:base="http://localhost:4000/nodejs-express/">&lt;p&gt;http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다.
+이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;express 모듈은 웹 서버를 위해 만들어진 것으로 http 모듈 위에서 동작한다. 따라서 express 모듈을 사용할 때는 항상 http 모듈도 함께 불러들여야 한다.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;라우팅 : 라우터는 클라이언트의 요청 패스를 보고 이 요청 정보를 처리할 수 있는 곳으로 기능을 전달해 주는 역할.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;query : 클라이언트에서 get 방식으로 전송한 요청 파라미터를 확인합니다. ex) req.query.name
+body : 클라이언트에서 post 방식으로 전송한 요청 파라미터를 확인합니다. 단, body-parser와 같은 외장 모듈 사용해야함 ex)req.body.name
+header(name) : 헤더를 확인
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.</summary></entry><entry><title type="html">[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp;amp; stream</title><link href="http://localhost:4000/nodej/" rel="alternate" type="text/html" title="[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp; stream" /><published>2020-09-10T00:00:00+09:00</published><updated>2020-09-10T00:00:00+09:00</updated><id>http://localhost:4000/nodej</id><content type="html" xml:base="http://localhost:4000/nodej/">&lt;p&gt;웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.&lt;/p&gt;
 
 &lt;p&gt;connection : 클라이언트가 접속하여 연결이 만들어질 때 발생하는 이벤트입니다.
 request : 클라이언트가 요청할 때 발생하는 이벤트입니다.
@@ -99,7 +109,37 @@ Person.prototype.walk = function(){} 으로 생성해야한다.&lt;/p&gt;</conte
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt; 
 
 &lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 하면 {2} 지워짐 하지만 객체만 지워진거라 배열 길이는 그대로 3개&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">exports : 모듈을 만들어 주는 대표적인 방식 ```javascript //정의 exports.함수이름 = 함수정의;</summary></entry><entry><title type="html">[얄코]Scope (let, const, var)</title><link href="http://localhost:4000/ffa/" rel="alternate" type="text/html" title="[얄코]Scope (let, const, var)" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/ffa</id><content type="html" xml:base="http://localhost:4000/ffa/">&lt;p&gt;각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">exports : 모듈을 만들어 주는 대표적인 방식 ```javascript //정의 exports.함수이름 = 함수정의;</summary></entry><entry><title type="html">[Nodejs] 용어 1</title><link href="http://localhost:4000/nodejs-1/" rel="alternate" type="text/html" title="[Nodejs] 용어 1" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-1</id><content type="html" xml:base="http://localhost:4000/nodejs-1/">&lt;p&gt;&lt;strong&gt;인터프리터&lt;/strong&gt; : 한 줄씩 해석하면서 실행하는 방식&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;바인딩&lt;/strong&gt; : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 객체가 실행됩니다. 즉, 사용자가 버튼을 클릭하면 이 함수가 실행됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;모듈&lt;/strong&gt; : 자바스크립트 파일의 일부 코드를 떼어 별도의 파일로 만들 수 있음.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;패키지&lt;/strong&gt; : 여러개의 모듈을 합친 것.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;전역 객체&lt;/strong&gt; : 함수 안과 밖에서 모두 사용할 수 있도록 범위를 제한하지 않는 객체입니다.
+													- console : 콘솔 창에 결과를 보여주는 객체
+													- process : 프로세스의 실행에 대한 정보를 다루는 객체
+													- exports : 모듈을 다루는 객체&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;undefined&lt;/strong&gt; : 정의되어 있지 않은 함수.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TCP&lt;/strong&gt;(Transmission Control Protocol)
+두 호스트가 교환하는 데이터와 승인 메세지의 형식을 정의하여, 서버와 클라이언트간의 데이터를 신뢰성있게 전달하기 위해 만들어진 규약이다.
+컴퓨터와 컴퓨터를 이어주는 네트워크는 네트워크 선로를 통해 전달되는데, 이 선로는 광케이블일수도, 구리선일수도, 인공위성 일수도 있다. 어떤 선로인지에 따라 데이터를 전달하는 속도와 손실되는 데이터의 양이 달라지는데, 이는 데이터를 전달하는 과정에서 그 순서가 의도하지 않게 뒤바뀌거나 손실이 되어 전달될 수 있음을 뜻한다.&lt;/p&gt;
+
+&lt;p&gt;TCP는 데이터 패킷에 일련의 번호를 부여함으로써, 데이터 손실을 찾아내서 교정하고, 순서를 재조합하여 클라이언트에게 전달할 수 있게 해준다.&lt;/p&gt;
+
+&lt;p&gt;TCP의 장점은 복잡해서 신뢰성이 높다는 점이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IP&lt;/strong&gt;(Internet Protocol)
+컴퓨터와 컴퓨터간에 데이터를 전송하기 위해서, 각 컴퓨터의 주소가 필요하다. Internet Protocol은 4바이트로 이루어진 컴퓨터의 주소이며, 192.168.9.255와 같이 3개의 마침표로 나뉘어진 숫자로 표시된다. IP는 TCP와는 달리 데이터의 재조합이나 손실여부 확인이 불가능하며, 단지 데이터를 전달하는 역할만을 담당한다.&lt;/p&gt;
+
+&lt;p&gt;참고로 IP주소는 하드웨어 고유의 식별번호인 MAC주소와 다르게 임시적으로 다른 주체(통신사)에게 받는 주소이므로, 바뀔수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TCP/IP&lt;/strong&gt;
+IP기반에 TCP가 사용되서 이렇게 불린다고 한다.
+TCP가 데이터의 추적을, IP가 배달을 처리한다고 보면 된다(출처: 개발자의취미생활)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">인터프리터 : 한 줄씩 해석하면서 실행하는 방식 바인딩 : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 객체가 실행됩니다. 즉, 사용자가 버튼을 클릭하면 이 함수가 실행됩니다. 모듈 : 자바스크립트 파일의 일부 코드를 떼어 별도의 파일로 만들 수 있음. 패키지 : 여러개의 모듈을 합친 것. 전역 객체 : 함수 안과 밖에서 모두 사용할 수 있도록 범위를 제한하지 않는 객체입니다. - console : 콘솔 창에 결과를 보여주는 객체 - process : 프로세스의 실행에 대한 정보를 다루는 객체 - exports : 모듈을 다루는 객체 undefined : 정의되어 있지 않은 함수. TCP(Transmission Control Protocol) 두 호스트가 교환하는 데이터와 승인 메세지의 형식을 정의하여, 서버와 클라이언트간의 데이터를 신뢰성있게 전달하기 위해 만들어진 규약이다. 컴퓨터와 컴퓨터를 이어주는 네트워크는 네트워크 선로를 통해 전달되는데, 이 선로는 광케이블일수도, 구리선일수도, 인공위성 일수도 있다. 어떤 선로인지에 따라 데이터를 전달하는 속도와 손실되는 데이터의 양이 달라지는데, 이는 데이터를 전달하는 과정에서 그 순서가 의도하지 않게 뒤바뀌거나 손실이 되어 전달될 수 있음을 뜻한다.</summary></entry><entry><title type="html">[얄코]Scope (let, const, var)</title><link href="http://localhost:4000/ffa/" rel="alternate" type="text/html" title="[얄코]Scope (let, const, var)" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/ffa</id><content type="html" xml:base="http://localhost:4000/ffa/">&lt;p&gt;각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.&lt;/p&gt;
 
 &lt;p&gt;예를들어 전역번수로 선언된 함수를&lt;/p&gt;
 
@@ -132,37 +172,7 @@ Person.prototype.walk = function(){} 으로 생성해야한다.&lt;/p&gt;</conte
 
 
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.</summary></entry><entry><title type="html">[Nodejs] 용어 1</title><link href="http://localhost:4000/nodejs-1/" rel="alternate" type="text/html" title="[Nodejs] 용어 1" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-1</id><content type="html" xml:base="http://localhost:4000/nodejs-1/">&lt;p&gt;&lt;strong&gt;인터프리터&lt;/strong&gt; : 한 줄씩 해석하면서 실행하는 방식&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;바인딩&lt;/strong&gt; : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 객체가 실행됩니다. 즉, 사용자가 버튼을 클릭하면 이 함수가 실행됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;모듈&lt;/strong&gt; : 자바스크립트 파일의 일부 코드를 떼어 별도의 파일로 만들 수 있음.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;패키지&lt;/strong&gt; : 여러개의 모듈을 합친 것.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;전역 객체&lt;/strong&gt; : 함수 안과 밖에서 모두 사용할 수 있도록 범위를 제한하지 않는 객체입니다.
-													- console : 콘솔 창에 결과를 보여주는 객체
-													- process : 프로세스의 실행에 대한 정보를 다루는 객체
-													- exports : 모듈을 다루는 객체&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;undefined&lt;/strong&gt; : 정의되어 있지 않은 함수.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;TCP&lt;/strong&gt;(Transmission Control Protocol)
-두 호스트가 교환하는 데이터와 승인 메세지의 형식을 정의하여, 서버와 클라이언트간의 데이터를 신뢰성있게 전달하기 위해 만들어진 규약이다.
-컴퓨터와 컴퓨터를 이어주는 네트워크는 네트워크 선로를 통해 전달되는데, 이 선로는 광케이블일수도, 구리선일수도, 인공위성 일수도 있다. 어떤 선로인지에 따라 데이터를 전달하는 속도와 손실되는 데이터의 양이 달라지는데, 이는 데이터를 전달하는 과정에서 그 순서가 의도하지 않게 뒤바뀌거나 손실이 되어 전달될 수 있음을 뜻한다.&lt;/p&gt;
-
-&lt;p&gt;TCP는 데이터 패킷에 일련의 번호를 부여함으로써, 데이터 손실을 찾아내서 교정하고, 순서를 재조합하여 클라이언트에게 전달할 수 있게 해준다.&lt;/p&gt;
-
-&lt;p&gt;TCP의 장점은 복잡해서 신뢰성이 높다는 점이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;IP&lt;/strong&gt;(Internet Protocol)
-컴퓨터와 컴퓨터간에 데이터를 전송하기 위해서, 각 컴퓨터의 주소가 필요하다. Internet Protocol은 4바이트로 이루어진 컴퓨터의 주소이며, 192.168.9.255와 같이 3개의 마침표로 나뉘어진 숫자로 표시된다. IP는 TCP와는 달리 데이터의 재조합이나 손실여부 확인이 불가능하며, 단지 데이터를 전달하는 역할만을 담당한다.&lt;/p&gt;
-
-&lt;p&gt;참고로 IP주소는 하드웨어 고유의 식별번호인 MAC주소와 다르게 임시적으로 다른 주체(통신사)에게 받는 주소이므로, 바뀔수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;TCP/IP&lt;/strong&gt;
-IP기반에 TCP가 사용되서 이렇게 불린다고 한다.
-TCP가 데이터의 추적을, IP가 배달을 처리한다고 보면 된다(출처: 개발자의취미생활)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">인터프리터 : 한 줄씩 해석하면서 실행하는 방식 바인딩 : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 객체가 실행됩니다. 즉, 사용자가 버튼을 클릭하면 이 함수가 실행됩니다. 모듈 : 자바스크립트 파일의 일부 코드를 떼어 별도의 파일로 만들 수 있음. 패키지 : 여러개의 모듈을 합친 것. 전역 객체 : 함수 안과 밖에서 모두 사용할 수 있도록 범위를 제한하지 않는 객체입니다. - console : 콘솔 창에 결과를 보여주는 객체 - process : 프로세스의 실행에 대한 정보를 다루는 객체 - exports : 모듈을 다루는 객체 undefined : 정의되어 있지 않은 함수. TCP(Transmission Control Protocol) 두 호스트가 교환하는 데이터와 승인 메세지의 형식을 정의하여, 서버와 클라이언트간의 데이터를 신뢰성있게 전달하기 위해 만들어진 규약이다. 컴퓨터와 컴퓨터를 이어주는 네트워크는 네트워크 선로를 통해 전달되는데, 이 선로는 광케이블일수도, 구리선일수도, 인공위성 일수도 있다. 어떤 선로인지에 따라 데이터를 전달하는 속도와 손실되는 데이터의 양이 달라지는데, 이는 데이터를 전달하는 과정에서 그 순서가 의도하지 않게 뒤바뀌거나 손실이 되어 전달될 수 있음을 뜻한다.</summary></entry><entry><title type="html">[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트</title><link href="http://localhost:4000/react-nomad/" rel="alternate" type="text/html" title="[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트" /><published>2020-08-27T00:00:00+09:00</published><updated>2020-08-27T00:00:00+09:00</updated><id>http://localhost:4000/react-nomad</id><content type="html" xml:base="http://localhost:4000/react-nomad/">&lt;p&gt;함수형 컴포넌트는&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.</summary></entry><entry><title type="html">[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트</title><link href="http://localhost:4000/react-nomad/" rel="alternate" type="text/html" title="[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트" /><published>2020-08-27T00:00:00+09:00</published><updated>2020-08-27T00:00:00+09:00</updated><id>http://localhost:4000/react-nomad</id><content type="html" xml:base="http://localhost:4000/react-nomad/">&lt;p&gt;함수형 컴포넌트는&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 
@@ -231,21 +241,4 @@ function App(){ //함수형 컨포넌트 생성
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;HashRouter 대신 BrowserRouter 을 바꾸면 http 사이트에 /#/ 가없어짐 하지만 git에 설정하기가 짜증남.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">//App.js function App(){ //함수형 컨포넌트 생성 return &amp;lt;HashRouter&amp;gt; &amp;lt;Navigation /&amp;gt; &amp;lt;Route path=&quot;/&quot; component={Home}/&amp;gt; &amp;lt;Route path=&quot;/about&quot; component={About}/&amp;gt; &amp;lt;/HashRouter&amp;gt; }</summary></entry><entry><title type="html">[React Nomad]react-router-dom</title><link href="http://localhost:4000/react-nomadreact-router-dom/" rel="alternate" type="text/html" title="[React Nomad]react-router-dom" /><published>2020-08-20T00:00:00+09:00</published><updated>2020-08-20T00:00:00+09:00</updated><id>http://localhost:4000/react-nomadreact-router-dom</id><content type="html" xml:base="http://localhost:4000/react-nomadreact-router-dom/">&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HashRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//react-router-dom은 다른 종류의 라우터가 있다 그중에 하나가 HashRouter,Route&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//함수형 컨포넌트 생성&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HashRouter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/about&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;About&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/HashRouter&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;2개의 컨포넌트가 같이 렌더링이 된다.
-why? 리액트는 쉽게 말해 자신이 찾는 문자가 속해 했으면 그것도 렌더링을 해버리기 때문?
-그래서 path=”/” 을 먼저 렌더링 한뒤,  path=”/about” 도 렌더링을 해버린다.&lt;/p&gt;
-
-&lt;p&gt;이것을 고치기 위해선&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;Route path=&quot;/&quot; exact={true} component={Home}/&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;exact={true}를 붙여주면 렌더링을 할때 only  path=”/” 인 것만 렌더링 한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">import {HashRouter, Route} from &quot;react-router-dom&quot;; //react-router-dom은 다른 종류의 라우터가 있다 그중에 하나가 HashRouter,Route</summary></entry></feed>
+&lt;p&gt;HashRouter 대신 BrowserRouter 을 바꾸면 http 사이트에 /#/ 가없어짐 하지만 git에 설정하기가 짜증남.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">//App.js function App(){ //함수형 컨포넌트 생성 return &amp;lt;HashRouter&amp;gt; &amp;lt;Navigation /&amp;gt; &amp;lt;Route path=&quot;/&quot; component={Home}/&amp;gt; &amp;lt;Route path=&quot;/about&quot; component={About}/&amp;gt; &amp;lt;/HashRouter&amp;gt; }</summary></entry></feed>

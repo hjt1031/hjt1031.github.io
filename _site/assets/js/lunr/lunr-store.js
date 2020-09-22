@@ -418,4 +418,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs-express/",
         "teaser": null
+      },{
+        "title": "[Nodejs] 미들웨어 , 토큰",
+        "excerpt":"static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다. body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으로 요청할 때는 본문인 본문 영역(BODY 영역)에 요청 파라미터가 들어 있게 되므로 요청 파라미터를...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
       }]

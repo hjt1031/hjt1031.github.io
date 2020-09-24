@@ -1,0 +1,17 @@
+I"R<h1 id="쿠키-와-세션">쿠키 와 세션</h1>
+<p><strong>쿠키 :  클라이언트 웹 브라우저에 저장되는 정보</strong><br />
+<strong>세션 : 웹 서버에 저장되는 정보</strong></p>
+
+<p>익스프레스 에서는<br />
+cookie-parser 미들웨어를 사용하면 쿠키를 설정하거나 확인 할 수 있다.
+세션은 쿠키와 달리 서버 쪽에 저장 대표적인 예 : 로그인</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">cookieParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cookie-parser</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 쿠키 모듈</span>
+<span class="kd">var</span> <span class="nx">expressSession</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express-session</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 세션 모듈</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cookieParser</span><span class="p">());</span>
+
+</code></pre></div></div>
+
+<h1 id="파일-업로드">파일 업로드</h1>
+:ET

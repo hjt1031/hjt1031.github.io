@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Nodejs] 미들웨어 , 토큰 - juntae</title>
-<meta name="description" content="static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다.  body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으로 요청할 때는 본문인 본문 영역(BODY 영역)에 요청 파라미터가 들어 있게 되므로 요청 파라미터를 파싱하는 방법이 GET 방식과 달라집니다. ">
+<!-- begin _includes/seo.html --><title>[nodejs]쿠키와 세션 &amp; 파일업로드 - juntae</title>
+<meta name="description" content="쿠키 와 세션 쿠키 :  클라이언트 웹 브라우저에 저장되는 정보 세션 : 웹 서버에 저장되는 정보 ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[Nodejs] 미들웨어 , 토큰">
+<meta property="og:title" content="[nodejs]쿠키와 세션 &amp; 파일업로드">
 <meta property="og:url" content="http://localhost:4000/nodejs/">
 
 
-  <meta property="og:description" content="static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다.  body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으로 요청할 때는 본문인 본문 영역(BODY 영역)에 요청 파라미터가 들어 있게 되므로 요청 파라미터를 파싱하는 방법이 GET 방식과 달라집니다. ">
+  <meta property="og:description" content="쿠키 와 세션 쿠키 :  클라이언트 웹 브라우저에 저장되는 정보 세션 : 웹 서버에 저장되는 정보 ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-09-22T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-09-24T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Nodejs] 미들웨어 , 토큰">
-    <meta itemprop="description" content="static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다. body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으로 요청할 때는 본문인 본문 영역(BODY 영역)에 요청 파라미터가 들어 있게 되므로 요청 파라미터를 파싱하는 방법이 GET 방식과 달라집니다.">
-    <meta itemprop="datePublished" content="2020-09-22T00:00:00+09:00">
+    <meta itemprop="headline" content="[nodejs]쿠키와 세션 &amp; 파일업로드">
+    <meta itemprop="description" content="쿠키 와 세션쿠키 :  클라이언트 웹 브라우저에 저장되는 정보세션 : 웹 서버에 저장되는 정보">
+    <meta itemprop="datePublished" content="2020-09-24T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[Nodejs] 미들웨어 , 토큰
+          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs]쿠키와 세션 &amp; 파일업로드
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,39 +287,28 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다. 
-body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으로 요청할 때는 본문인 본문 영역(BODY 영역)에 요청 파라미터가 들어 있게 되므로 요청 파라미터를 파싱하는 방법이 GET 방식과 달라집니다.</p>
+        <h1 id="쿠키-와-세션">쿠키 와 세션</h1>
+<p><strong>쿠키 :  클라이언트 웹 브라우저에 저장되는 정보</strong><br />
+<strong>세션 : 웹 서버에 저장되는 정보</strong></p>
 
-<p><strong>라우터 미들웨어</strong></p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//라우터 객체 참조</span>
-<span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
+<p>익스프레스 에서는<br />
+cookie-parser 미들웨어를 사용하면 쿠키를 설정하거나 확인 할 수 있다.
+세션은 쿠키와 달리 서버 쪽에 저장 대표적인 예 : 로그인</p>
 
-<span class="c1">//라우팅 함수 등록</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="dl">'</span><span class="s1">/process/login</span><span class="dl">'</span><span class="p">).</span><span class="kd">get</span><span class="p">(...);</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="dl">'</span><span class="s1">/process/login</span><span class="dl">'</span><span class="p">).</span><span class="nx">post</span><span class="p">(...);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">cookieParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cookie-parser</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 쿠키 모듈</span>
+<span class="kd">var</span> <span class="nx">expressSession</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express-session</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 세션 모듈</span>
 
-<span class="c1">//라우터 객체를 app 객체에 등록</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">ues</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">.</span><span class="nx">router</span><span class="p">);</span>
-
-<span class="c1">//함수등록방법</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="err">요청</span> <span class="err">패스</span><span class="p">).</span><span class="kd">get</span><span class="p">(</span><span class="err">실행될</span> <span class="err">함수</span><span class="p">);</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="err">요청</span> <span class="err">패스</span><span class="p">).</span><span class="nx">post</span><span class="p">(</span><span class="err">실행될</span> <span class="err">함수</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cookieParser</span><span class="p">());</span>
 
 </code></pre></div></div>
 
-<p><strong>토큰</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>router.route('/process/user/:id').get(function(req,res){
-console.log('/process/user/:id' 처리함);
+<h1 id="파일-업로드">파일 업로드</h1>
+<p><strong>멀티 파트 포멧</strong> 음악이나 이미지 파일 등을 일반 데이터와 함께 웹 서버로 보내려고 만든 표준. 따라서 일반적으로 웹 서버에서 파일을 업로드할 때 사용</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var multer = require('multer');
 
-//URL 파라미터 확인
-var paramID = req.params.id;
-
-}
+var cors = require('cors') // 다중 서버 접속 지원  
+//보통 웹브라우저에 로딩된 웹페이지는 이 페이지가 로딩된 서버로만 접근할 수 있지만 cors 기능을 사용하면 페이지가 로딩된 서버 이외의 서버에도 접근가능
 </code></pre></div></div>
-
-<p>get() 메소드를 호출하면서 동시에 ‘/process/user/:id’ 패스를 처리하도록 코드를 입력 
-콜론(:) 을 붙인 id 값이 토큰
-req.params.id 코드를 사용하면 id속성에 접근가능</p>
 
         
       </section>
@@ -330,7 +319,7 @@ req.params.id 코드를 사용하면 id속성에 접근가능</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-09-22T00:00:00+09:00">September 22, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-09-24T00:00:00+09:00">September 24, 2020</time></p>
         
       </footer>
 
@@ -339,7 +328,7 @@ req.params.id 코드를 사용하면 id속성에 접근가능</p>
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BNodejs%5D+%EB%AF%B8%EB%93%A4%EC%9B%A8%EC%96%B4+%2C+%ED%86%A0%ED%81%B0%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D%EC%BF%A0%ED%82%A4%EC%99%80+%EC%84%B8%EC%85%98+%26+%ED%8C%8C%EC%9D%BC%EC%97%85%EB%A1%9C%EB%93%9C%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -350,7 +339,7 @@ req.params.id 코드를 사용하면 id속성에 접근가능</p>
       
   <nav class="pagination">
     
-      <a href="/nodejs-express/" class="pagination--pager" title="[Nodejs] Express 모듈 (get,post)
+      <a href="/nodejs/" class="pagination--pager" title="[Nodejs] 미들웨어 , 토큰
 ">이전</a>
     
     
@@ -368,6 +357,35 @@ req.params.id 코드를 사용하면 id속성에 접근가능</p>
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[Nodejs] 미들웨어 , 토큰
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다. 
+body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으...</p>
+  </article>
+</div>
+
         
           
 
@@ -455,37 +473,6 @@ var http = require(‘http’);
     
     <p class="archive__item-excerpt" itemprop="description">웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs-url/" rel="permalink">[Nodejs]주소 문자열을 URL 객체로 변환 &amp; 이벤트 &amp; 파일 다루기
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">주소 문자열을 URL 객체로 변환
-var url = require('url'); //모듈호출
-//parse() 와 format() 메소드를 호출 할 수 있음
-parse() : https:// 로 시작하는 주소 문자열을 URL 객체로 만들어줌 (요청 파라미터 문자열을 파싱하여 요청 ...</p>
   </article>
 </div>
 

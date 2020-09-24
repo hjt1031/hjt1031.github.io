@@ -424,4 +424,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[nodejs]쿠키와 세션 & 파일업로드",
+        "excerpt":"쿠키 와 세션 쿠키 : 클라이언트 웹 브라우저에 저장되는 정보 세션 : 웹 서버에 저장되는 정보 익스프레스 에서는 cookie-parser 미들웨어를 사용하면 쿠키를 설정하거나 확인 할 수 있다. 세션은 쿠키와 달리 서버 쪽에 저장 대표적인 예 : 로그인 var cookieParser = require('cookie-parser') // 쿠키 모듈 var expressSession = require('express-session') // 세션...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
       }]

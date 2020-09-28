@@ -430,4 +430,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[Nodejs]몽고디비",
+        "excerpt":"몽고디비 : 비관계형 데이터베이스(Nosql : Not Only Sql) 이라고한다. 관계형 데이터베이스는 시스템의 신뢰도를 높이는 데 필요한 장치를 많이 가지고 있습니다. 또 SQL문을 읽어 들이고 실행하는 데 많은 리소스를 사용하며 이 때 문에 성능이 떨어지는 경우가 많습니다. 이에반해 NoSQL 데이터베이스는 성능을 최우선으로 생각하기 때문에 실시간으로 처리해야 하는 경우나 대용량 트래픽을 감당할...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
       }]

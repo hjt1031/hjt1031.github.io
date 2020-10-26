@@ -436,4 +436,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[JAVA]기본",
+        "excerpt":"자바 동작원리 Java Source code(.java) —-Compile—-&gt; Java Application(.class) —–Run——&gt; Java Virtual Machine ———-Run——–&gt; computer 자바파일을 저장버튼을 눌렀을 때 .class 란 확장자를 가진 파일이 만들어진다. 그것이 Java Application 그다음 우리가 실행 버튼(run) 을 누르게되면 Java Virtual Machine이 확장자가 class 를 가진 파일을 읽어서 컴퓨터를 동작시키게 된다. Operator System.out.println(Math.PI); //3.141592653589793 System.out.println(Math.floor(Math.PI)); //내림...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
       }]

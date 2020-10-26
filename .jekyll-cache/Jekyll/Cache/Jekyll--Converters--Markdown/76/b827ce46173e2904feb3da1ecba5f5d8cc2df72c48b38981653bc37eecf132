@@ -1,0 +1,12 @@
+I"�<h1 id="자바-동작원리">자바 동작원리</h1>
+<p>Java Source code(.java) —-Compile—-&gt; Java Application(.class) —–Run——&gt;Java Virtual Machine ———-Run——–&gt; computer</p>
+
+<p>자바파일을 저장버튼을 눌렀을 때 .class 란 확장자를 가진 파일이 만들어진다. 그게 Java Application 
+그다음 우리가 실행 버튼(run) 을 누르게되면 Java Virtual Machine이 확장자가 class 를 가진 파일을 읽어서 컴퓨터를 동작시키게 된다.</p>
+
+<h1 id="operator">Operator</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">PI</span><span class="o">);</span> <span class="c1">//3.141592653589793</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">PI</span><span class="o">));</span> <span class="c1">//내림 3.0</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">PI</span><span class="o">));</span> <span class="c1">//올림 4.0</span>
+</code></pre></div></div>
+:ET

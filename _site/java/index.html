@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JAVA]기본 - juntae</title>
-<meta name="description" content="자바 동작원리 Java Source code(.java) —-Compile—-&gt;  Java Application(.class) —–Run——&gt; Java Virtual Machine ———-Run——–&gt;  computer ">
+<!-- begin _includes/seo.html --><title>[JAVA] 기본 코딩 &amp; 디버깅 - juntae</title>
+<meta name="description" content="public class OkJavaGoInHome {       public static void main(String[] args) {                   String id = &quot;JAVA APT 507&quot;;                   // Elevator call          Elevator myElevator = new Elevator(id);         myElevator.callForUp(1);                   // Security off          Security mySecurity = new Security(id);         mySecurity.off();                   // Light on         Lighting hallLamp = new Lighting(id+&quot; / Hall Lamp&quot;);         hallLamp.on();                   Lighting floorLamp = new Lighting(id+&quot; / floorLamp&quot;);         floorLamp.on();       }   }  ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[JAVA]기본">
+<meta property="og:title" content="[JAVA] 기본 코딩 &amp; 디버깅">
 <meta property="og:url" content="http://localhost:4000/java/">
 
 
-  <meta property="og:description" content="자바 동작원리 Java Source code(.java) —-Compile—-&gt;  Java Application(.class) —–Run——&gt; Java Virtual Machine ———-Run——–&gt;  computer ">
+  <meta property="og:description" content="public class OkJavaGoInHome {       public static void main(String[] args) {                   String id = &quot;JAVA APT 507&quot;;                   // Elevator call          Elevator myElevator = new Elevator(id);         myElevator.callForUp(1);                   // Security off          Security mySecurity = new Security(id);         mySecurity.off();                   // Light on         Lighting hallLamp = new Lighting(id+&quot; / Hall Lamp&quot;);         hallLamp.on();                   Lighting floorLamp = new Lighting(id+&quot; / floorLamp&quot;);         floorLamp.on();       }   }  ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-10-26T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-10-27T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[JAVA]기본">
-    <meta itemprop="description" content="자바 동작원리Java Source code(.java) —-Compile—-&gt; Java Application(.class) —–Run——&gt;Java Virtual Machine ———-Run——–&gt; computer">
-    <meta itemprop="datePublished" content="2020-10-26T00:00:00+09:00">
+    <meta itemprop="headline" content="[JAVA] 기본 코딩 &amp; 디버깅">
+    <meta itemprop="description" content="public class OkJavaGoInHome {     public static void main(String[] args) {                 String id = &quot;JAVA APT 507&quot;;                 // Elevator call         Elevator myElevator = new Elevator(id);        myElevator.callForUp(1);                 // Security off         Security mySecurity = new Security(id);        mySecurity.off();                 // Light on        Lighting hallLamp = new Lighting(id+&quot; / Hall Lamp&quot;);        hallLamp.on();                 Lighting floorLamp = new Lighting(id+&quot; / floorLamp&quot;);        floorLamp.on();     } }">
+    <meta itemprop="datePublished" content="2020-10-27T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[JAVA]기본
+          <h1 id="page-title" class="page__title" itemprop="headline">[JAVA] 기본 코딩 &amp; 디버깅
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,39 +287,53 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="자바-동작원리">자바 동작원리</h1>
-<p>Java Source code(.java) —-Compile—-&gt; <br />
-Java Application(.class) —–Run——&gt;<br />
-Java Virtual Machine ———-Run——–&gt; <br />
-computer</p>
-
-<p>자바파일을 저장버튼을 눌렀을 때 .class 란 확장자를 가진 파일이 만들어진다. <br />
-그것이 Java Application <br />
-그다음 우리가 실행 버튼(run) 을 누르게되면 Java Virtual Machine이 확장자가 class 를 가진 파일을 읽어서 컴퓨터를 동작시키게 된다.</p>
-
-<h1 id="operator">Operator</h1>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">PI</span><span class="o">);</span> <span class="c1">//3.141592653589793</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">PI</span><span class="o">));</span> <span class="c1">//내림 3.0</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">PI</span><span class="o">));</span> <span class="c1">//올림 4.0</span>
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OkJavaGoInHome</span> <span class="o">{</span>
+ 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+         
+        <span class="nc">String</span> <span class="n">id</span> <span class="o">=</span> <span class="s">"JAVA APT 507"</span><span class="o">;</span>
+         
+        <span class="c1">// Elevator call </span>
+        <span class="nc">Elevator</span> <span class="n">myElevator</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Elevator</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+        <span class="n">myElevator</span><span class="o">.</span><span class="na">callForUp</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+         
+        <span class="c1">// Security off </span>
+        <span class="nc">Security</span> <span class="n">mySecurity</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Security</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+        <span class="n">mySecurity</span><span class="o">.</span><span class="na">off</span><span class="o">();</span>
+         
+        <span class="c1">// Light on</span>
+        <span class="nc">Lighting</span> <span class="n">hallLamp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lighting</span><span class="o">(</span><span class="n">id</span><span class="o">+</span><span class="s">" / Hall Lamp"</span><span class="o">);</span>
+        <span class="n">hallLamp</span><span class="o">.</span><span class="na">on</span><span class="o">();</span>
+         
+        <span class="nc">Lighting</span> <span class="n">floorLamp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lighting</span><span class="o">(</span><span class="n">id</span><span class="o">+</span><span class="s">" / floorLamp"</span><span class="o">);</span>
+        <span class="n">floorLamp</span><span class="o">.</span><span class="na">on</span><span class="o">();</span>
+ 
+    <span class="o">}</span>
+ 
+<span class="o">}</span>
 </code></pre></div></div>
 
-<h1 id="string">String</h1>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello World"</span><span class="o">);</span> <span class="c1">//String</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="sc">'H'</span><span class="o">);</span> <span class="c1">//Character 작은따옴표와 큰따음표 차이</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello \nWorld"</span><span class="o">);</span> <span class="c1">// \n : new line</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello \"World\""</span><span class="o">);</span> <span class="c1">//escape</span>
-</code></pre></div></div>
+<h1 id="디버깅">디버깅</h1>
+<p>버그를잡는걸 디버깅
+버그를 잡는도구 디버거</p>
 
-<h1 id="변수">변수</h1>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">// Number -&gt; integer .. -2, -1, 0, 1, 2</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
-		
-<span class="kt">double</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">1.1</span><span class="o">;</span> <span class="c1">// real number ... -2.0, -1.0, 0, 1.0, 2.0</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">b</span><span class="o">);</span>
-		
-<span class="nc">String</span> <span class="n">c</span> <span class="o">=</span> <span class="s">"Hello World"</span><span class="o">;</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
-</code></pre></div></div>
+<p>옆에 토글 해당 숫자 부분 더블클릭!!하면 , breakpointer 생김.</p>
+
+<p>Resume : breakpointer 토글한 부분을 디버깅 실행.<br />
+Terminate: 디버깅모드를 종료<br />
+Step into: 해당 코드가 구체적으로 어떻게 이루어져 있는지 알 수 있음. (특히 메소드 구성원리 알때) 구체적인 실행과정을 보고 싶을때 쓰자.<br />
+Step over: 한줄씩 실행가능.(step into 모드에서도 가능)<br />
+Step return: step into 모드에서 다시 돌아옴<br />
+Use Step filters : 단계별로 통크게 디버깅 할때, 부분적으로 디버깅. 필요하지 않은 부분 걸러낼 수 있다. (그래서 필터인듯)</p>
+
+<p>** 검색 결과
+단계 필터링 기본 설정 페이지에서는 디버깅 중에 ‘단계별’/ 표시되지 않는 특정 리소스 / 파일 패턴을 선택할 수 있습니다.
+이 기능은 디버깅 중에 검사하고 싶지 않은 파일이있을 때 사용해야합니다. 이는 큰 외부 리소스 (예 : 프레임 워크 또는 라이브러리)를 포함하는 경우 특히 유용합니다.</p>
+
+<p>풍뎅이(debug): 디버깅 하는 모드 돌입!</p>
+
+<p>Java: 자바모드로 돌아가기
+Debug : 디버그 모드에서 보기</p>
 
         
       </section>
@@ -330,7 +344,7 @@ computer</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-10-26T00:00:00+09:00">October 26, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-10-27T00:00:00+09:00">October 27, 2020</time></p>
         
       </footer>
 
@@ -339,7 +353,7 @@ computer</p>
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BJAVA%5D%EA%B8%B0%EB%B3%B8%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BJAVA%5D+%EA%B8%B0%EB%B3%B8+%EC%BD%94%EB%94%A9+%26+%EB%94%94%EB%B2%84%EA%B9%85%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjava%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -350,7 +364,7 @@ computer</p>
       
   <nav class="pagination">
     
-      <a href="/nodejs/" class="pagination--pager" title="[Nodejs]몽고디비
+      <a href="/java/" class="pagination--pager" title="[JAVA]기본
 ">이전</a>
     
     
@@ -368,6 +382,39 @@ computer</p>
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java/" rel="permalink">[JAVA]기본
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">자바 동작원리
+Java Source code(.java) —-Compile—-&gt; 
+Java Application(.class) —–Run——&gt;
+Java Virtual Machine ———-Run——–&gt; 
+computer
+</p>
+  </article>
+</div>
+
         
           
 
@@ -454,36 +501,6 @@ computer</p>
     
     <p class="archive__item-excerpt" itemprop="description">static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다. 
 body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs-express/" rel="permalink">[Nodejs] Express 모듈 (get,post)
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다.
-이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.
-</p>
   </article>
 </div>
 

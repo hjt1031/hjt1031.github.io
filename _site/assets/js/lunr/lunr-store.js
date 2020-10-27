@@ -442,4 +442,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java/",
         "teaser": null
+      },{
+        "title": "[JAVA] 기본 코딩 & 디버깅",
+        "excerpt":"public class OkJavaGoInHome { public static void main(String[] args) { String id = \"JAVA APT 507\"; // Elevator call Elevator myElevator = new Elevator(id); myElevator.callForUp(1); // Security off Security mySecurity = new Security(id); mySecurity.off(); // Light on Lighting hallLamp = new Lighting(id+\" / Hall Lamp\"); hallLamp.on(); Lighting floorLamp = new...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
       }]

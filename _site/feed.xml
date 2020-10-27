@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-26T21:26:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[JAVA]기본</title><link href="http://localhost:4000/java/" rel="alternate" type="text/html" title="[JAVA]기본" /><published>2020-10-26T00:00:00+09:00</published><updated>2020-10-26T00:00:00+09:00</updated><id>http://localhost:4000/java</id><content type="html" xml:base="http://localhost:4000/java/">&lt;h1 id=&quot;자바-동작원리&quot;&gt;자바 동작원리&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-27T21:50:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[JAVA] 기본 코딩 &amp;amp; 디버깅</title><link href="http://localhost:4000/java/" rel="alternate" type="text/html" title="[JAVA] 기본 코딩 &amp; 디버깅" /><published>2020-10-27T00:00:00+09:00</published><updated>2020-10-27T00:00:00+09:00</updated><id>http://localhost:4000/java</id><content type="html" xml:base="http://localhost:4000/java/">&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OkJavaGoInHome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+ 
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         
+        &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;JAVA APT 507&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+         
+        &lt;span class=&quot;c1&quot;&gt;// Elevator call &lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Elevator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myElevator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Elevator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;myElevator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;callForUp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         
+        &lt;span class=&quot;c1&quot;&gt;// Security off &lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Security&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mySecurity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Security&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mySecurity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+         
+        &lt;span class=&quot;c1&quot;&gt;// Light on&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Lighting&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hallLamp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Lighting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; / Hall Lamp&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;hallLamp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+         
+        &lt;span class=&quot;nc&quot;&gt;Lighting&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;floorLamp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Lighting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; / floorLamp&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;floorLamp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+ 
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;디버깅&quot;&gt;디버깅&lt;/h1&gt;
+&lt;p&gt;버그를잡는걸 디버깅
+버그를 잡는도구 디버거&lt;/p&gt;
+
+&lt;p&gt;옆에 토글 해당 숫자 부분 더블클릭!!하면 , breakpointer 생김.&lt;/p&gt;
+
+&lt;p&gt;Resume : breakpointer 토글한 부분을 디버깅 실행.&lt;br /&gt;
+Terminate: 디버깅모드를 종료&lt;br /&gt;
+Step into: 해당 코드가 구체적으로 어떻게 이루어져 있는지 알 수 있음. (특히 메소드 구성원리 알때) 구체적인 실행과정을 보고 싶을때 쓰자.&lt;br /&gt;
+Step over: 한줄씩 실행가능.(step into 모드에서도 가능)&lt;br /&gt;
+Step return: step into 모드에서 다시 돌아옴&lt;br /&gt;
+Use Step filters : 단계별로 통크게 디버깅 할때, 부분적으로 디버깅. 필요하지 않은 부분 걸러낼 수 있다. (그래서 필터인듯)&lt;/p&gt;
+
+&lt;p&gt;** 검색 결과
+단계 필터링 기본 설정 페이지에서는 디버깅 중에 ‘단계별’/ 표시되지 않는 특정 리소스 / 파일 패턴을 선택할 수 있습니다.
+이 기능은 디버깅 중에 검사하고 싶지 않은 파일이있을 때 사용해야합니다. 이는 큰 외부 리소스 (예 : 프레임 워크 또는 라이브러리)를 포함하는 경우 특히 유용합니다.&lt;/p&gt;
+
+&lt;p&gt;풍뎅이(debug): 디버깅 하는 모드 돌입!&lt;/p&gt;
+
+&lt;p&gt;Java: 자바모드로 돌아가기
+Debug : 디버그 모드에서 보기&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">public class OkJavaGoInHome { public static void main(String[] args) { String id = &quot;JAVA APT 507&quot;; // Elevator call Elevator myElevator = new Elevator(id); myElevator.callForUp(1); // Security off Security mySecurity = new Security(id); mySecurity.off(); // Light on Lighting hallLamp = new Lighting(id+&quot; / Hall Lamp&quot;); hallLamp.on(); Lighting floorLamp = new Lighting(id+&quot; / floorLamp&quot;); floorLamp.on(); } }</summary></entry><entry><title type="html">[JAVA]기본</title><link href="http://localhost:4000/java/" rel="alternate" type="text/html" title="[JAVA]기본" /><published>2020-10-26T00:00:00+09:00</published><updated>2020-10-26T00:00:00+09:00</updated><id>http://localhost:4000/java</id><content type="html" xml:base="http://localhost:4000/java/">&lt;h1 id=&quot;자바-동작원리&quot;&gt;자바 동작원리&lt;/h1&gt;
 &lt;p&gt;Java Source code(.java) —-Compile—-&amp;gt; &lt;br /&gt;
 Java Application(.class) —–Run——&amp;gt;&lt;br /&gt;
 Java Virtual Machine ———-Run——–&amp;gt; &lt;br /&gt;
@@ -96,19 +142,7 @@ req.params.id 코드를 사용하면 id속성에 접근가능&lt;/p&gt;</content
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;query : 클라이언트에서 get 방식으로 전송한 요청 파라미터를 확인합니다. ex) req.query.name
 body : 클라이언트에서 post 방식으로 전송한 요청 파라미터를 확인합니다. 단, body-parser와 같은 외장 모듈 사용해야함 ex)req.body.name
 header(name) : 헤더를 확인
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.</summary></entry><entry><title type="html">[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp;amp; stream</title><link href="http://localhost:4000/nodej/" rel="alternate" type="text/html" title="[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp; stream" /><published>2020-09-10T00:00:00+09:00</published><updated>2020-09-10T00:00:00+09:00</updated><id>http://localhost:4000/nodej</id><content type="html" xml:base="http://localhost:4000/nodej/">&lt;p&gt;웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.&lt;/p&gt;
-
-&lt;p&gt;connection : 클라이언트가 접속하여 연결이 만들어질 때 발생하는 이벤트입니다.
-request : 클라이언트가 요청할 때 발생하는 이벤트입니다.
-close : 서버를 종료할 때 발생하는 이벤트입니다.&lt;/p&gt;
-
-&lt;p&gt;stream이란 일종의 추상적인 개념인데 입출력 기기나 프로세스, 파일 등 어디로 가는 지, 어디로 나왔는 지 상관없이 통일된 방식으로 데이터를 다루기 위한 가상의 개념이다.&lt;/p&gt;
-
-&lt;p&gt;Node.js에서 많은 Object들이 stream Object 이다. 예를 들어서 http 서버의 request나 process.stdout도 stream 인스턴스이다.&lt;/p&gt;
-
-&lt;p&gt;stream들은 읽을 수 있거나(readable), 쓸 수 있거나(writable) 혹은 둘 다(both)가 될 수 있다.&lt;/p&gt;
-
-&lt;p&gt;모든 stream들은 EventEmitter의 인스턴스이다. 따라서 이벤트 핸들러를 작성할 수 있다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.</summary></entry><entry><title type="html">[Nodejs] 간단한 웹 서버</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[Nodejs] 간단한 웹 서버" /><published>2020-09-10T00:00:00+09:00</published><updated>2020-09-10T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.</summary></entry><entry><title type="html">[Nodejs] 간단한 웹 서버</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[Nodejs] 간단한 웹 서버" /><published>2020-09-10T00:00:00+09:00</published><updated>2020-09-10T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다.&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//웹서버 객체 만들기&lt;/span&gt;
@@ -125,7 +159,19 @@ close : 서버를 종료할 때 발생하는 이벤트입니다.&lt;/p&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;웹 서버는 일반저그올 웹 브라우저라고 하는 클라이언트에서 HTTP 프로토콜로 요청한 정보를 처리 한 후 응답을 보내주는 역할을 한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다. ```javascript var http = require(‘http’);</summary></entry><entry><title type="html">[Nodejs]주소 문자열을 URL 객체로 변환 &amp;amp; 이벤트 &amp;amp; 파일 다루기</title><link href="http://localhost:4000/nodejs-url/" rel="alternate" type="text/html" title="[Nodejs]주소 문자열을 URL 객체로 변환 &amp; 이벤트 &amp; 파일 다루기" /><published>2020-09-08T00:00:00+09:00</published><updated>2020-09-08T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-url</id><content type="html" xml:base="http://localhost:4000/nodejs-url/">&lt;p&gt;&lt;strong&gt;주소 문자열을 URL 객체로 변환&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;웹 서버는 일반저그올 웹 브라우저라고 하는 클라이언트에서 HTTP 프로토콜로 요청한 정보를 처리 한 후 응답을 보내주는 역할을 한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다. ```javascript var http = require(‘http’);</summary></entry><entry><title type="html">[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp;amp; stream</title><link href="http://localhost:4000/nodej/" rel="alternate" type="text/html" title="[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp; stream" /><published>2020-09-10T00:00:00+09:00</published><updated>2020-09-10T00:00:00+09:00</updated><id>http://localhost:4000/nodej</id><content type="html" xml:base="http://localhost:4000/nodej/">&lt;p&gt;웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.&lt;/p&gt;
+
+&lt;p&gt;connection : 클라이언트가 접속하여 연결이 만들어질 때 발생하는 이벤트입니다.
+request : 클라이언트가 요청할 때 발생하는 이벤트입니다.
+close : 서버를 종료할 때 발생하는 이벤트입니다.&lt;/p&gt;
+
+&lt;p&gt;stream이란 일종의 추상적인 개념인데 입출력 기기나 프로세스, 파일 등 어디로 가는 지, 어디로 나왔는 지 상관없이 통일된 방식으로 데이터를 다루기 위한 가상의 개념이다.&lt;/p&gt;
+
+&lt;p&gt;Node.js에서 많은 Object들이 stream Object 이다. 예를 들어서 http 서버의 request나 process.stdout도 stream 인스턴스이다.&lt;/p&gt;
+
+&lt;p&gt;stream들은 읽을 수 있거나(readable), 쓸 수 있거나(writable) 혹은 둘 다(both)가 될 수 있다.&lt;/p&gt;
+
+&lt;p&gt;모든 stream들은 EventEmitter의 인스턴스이다. 따라서 이벤트 핸들러를 작성할 수 있다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.</summary></entry><entry><title type="html">[Nodejs]주소 문자열을 URL 객체로 변환 &amp;amp; 이벤트 &amp;amp; 파일 다루기</title><link href="http://localhost:4000/nodejs-url/" rel="alternate" type="text/html" title="[Nodejs]주소 문자열을 URL 객체로 변환 &amp; 이벤트 &amp; 파일 다루기" /><published>2020-09-08T00:00:00+09:00</published><updated>2020-09-08T00:00:00+09:00</updated><id>http://localhost:4000/nodejs-url</id><content type="html" xml:base="http://localhost:4000/nodejs-url/">&lt;p&gt;&lt;strong&gt;주소 문자열을 URL 객체로 변환&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모듈호출&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//parse() 와 format() 메소드를 호출 할 수 있음&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 로 시작하는 주소 문자열을 URL 객체로 만들어줌 (요청 파라미터 문자열을 파싱하여 요청 파라미터 객체로 만들어 줌)&lt;/span&gt;
@@ -173,28 +219,4 @@ person01.walk(10);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;이 객체에 walk 함수를 속성으로 추가 할려면
-Person.prototype.walk = function(){} 으로 생성해야한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문</summary></entry><entry><title type="html">[Nodejs]용어2</title><link href="http://localhost:4000/nodejs2/" rel="alternate" type="text/html" title="[Nodejs]용어2" /><published>2020-09-02T00:00:00+09:00</published><updated>2020-09-02T00:00:00+09:00</updated><id>http://localhost:4000/nodejs2</id><content type="html" xml:base="http://localhost:4000/nodejs2/">&lt;p&gt;exports : 모듈을 만들어 주는 대표적인 방식&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//정의&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;함수이름&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;함수정의&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//쓰는법&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;modeule&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;함수이름&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;자바스크립트는  함수라는 것을 명시적으로 구별하기 위해 function 키워드를 함수 이름 앞에 붙여줌&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//같은의미이다.&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;fucntion&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;배열요소 삭제&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt; 
-
-&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 하면 {2} 지워짐 하지만 객체만 지워진거라 배열 길이는 그대로 3개&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">exports : 모듈을 만들어 주는 대표적인 방식 ```javascript //정의 exports.함수이름 = 함수정의;</summary></entry></feed>
+Person.prototype.walk = function(){} 으로 생성해야한다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문</summary></entry></feed>

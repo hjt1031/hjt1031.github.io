@@ -449,6 +449,18 @@ var store = [{
         "url": "http://localhost:4000/java/",
         "teaser": null
       },{
+        "title": "[JAVA] 기초",
+        "excerpt":"자바 동작원리 Java Source code(.java) —-Compile—-&gt; Java Application(.class) —–Run——&gt; Java Virtual Machine ———-Run——–&gt; computer 자바파일을 저장버튼을 눌렀을 때 .class 란 확장자를 가진 파일이 만들어진다. 그것이 Java Application 그다음 우리가 실행 버튼(run) 을 누르게되면 Java Virtual Machine이 확장자가 class 를 가진 파일을 읽어서 컴퓨터를 동작시키게 된다. Operator System.out.println(Math.PI); //3.141592653589793 System.out.println(Math.floor(Math.PI)); //내림...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-1/",
+        "teaser": null
+      },{
+        "title": "[JAVA]기본 코딩 & 디버깅",
+        "excerpt":"public class OkJavaGoInHome { public static void main(String[] args) { String id = \"JAVA APT 507\"; // Elevator call Elevator myElevator = new Elevator(id); myElevator.callForUp(1); // Security off Security mySecurity = new Security(id); mySecurity.off(); // Light on Lighting hallLamp = new Lighting(id+\" / Hall Lamp\"); hallLamp.on(); Lighting floorLamp = new...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-12/",
+        "teaser": null
+      },{
         "title": "[JAVA] 제어문",
         "excerpt":"제어문(조건문, 반복문) 1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음 System.out.println(foo.contains(\"world\")); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 return 해줌 1-2 . Comparison Operator(비교연산자) System.out.println(1&gt;1); // false System.out.println(1 == 1); //true System.out.println(1 &lt; 1); //false System.out.println(1 &gt;= 1); // true 1-3 conditional statement : 조건문...","categories": [],
         "tags": [],

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JAVA] 기본 코딩 &amp; 디버깅 - juntae</title>
-<meta name="description" content="public class OkJavaGoInHome {       public static void main(String[] args) {                   String id = &quot;JAVA APT 507&quot;;                   // Elevator call          Elevator myElevator = new Elevator(id);         myElevator.callForUp(1);                   // Security off          Security mySecurity = new Security(id);         mySecurity.off();                   // Light on         Lighting hallLamp = new Lighting(id+&quot; / Hall Lamp&quot;);         hallLamp.on();                   Lighting floorLamp = new Lighting(id+&quot; / floorLamp&quot;);         floorLamp.on();       }   }  ">
+<!-- begin _includes/seo.html --><title>[JAVA] 제어문 - juntae</title>
+<meta name="description" content="제어문(조건문, 반복문) 1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음 System.out.println(foo.contains(&quot;world&quot;)); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 return 해줌   ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[JAVA] 기본 코딩 &amp; 디버깅">
+<meta property="og:title" content="[JAVA] 제어문">
 <meta property="og:url" content="http://localhost:4000/java/">
 
 
-  <meta property="og:description" content="public class OkJavaGoInHome {       public static void main(String[] args) {                   String id = &quot;JAVA APT 507&quot;;                   // Elevator call          Elevator myElevator = new Elevator(id);         myElevator.callForUp(1);                   // Security off          Security mySecurity = new Security(id);         mySecurity.off();                   // Light on         Lighting hallLamp = new Lighting(id+&quot; / Hall Lamp&quot;);         hallLamp.on();                   Lighting floorLamp = new Lighting(id+&quot; / floorLamp&quot;);         floorLamp.on();       }   }  ">
+  <meta property="og:description" content="제어문(조건문, 반복문) 1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음 System.out.println(foo.contains(&quot;world&quot;)); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 return 해줌   ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-10-27T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-10-30T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[JAVA] 기본 코딩 &amp; 디버깅">
-    <meta itemprop="description" content="public class OkJavaGoInHome {     public static void main(String[] args) {                 String id = &quot;JAVA APT 507&quot;;                 // Elevator call         Elevator myElevator = new Elevator(id);        myElevator.callForUp(1);                 // Security off         Security mySecurity = new Security(id);        mySecurity.off();                 // Light on        Lighting hallLamp = new Lighting(id+&quot; / Hall Lamp&quot;);        hallLamp.on();                 Lighting floorLamp = new Lighting(id+&quot; / floorLamp&quot;);        floorLamp.on();     } }">
-    <meta itemprop="datePublished" content="2020-10-27T00:00:00+09:00">
+    <meta itemprop="headline" content="[JAVA] 제어문">
+    <meta itemprop="description" content="제어문(조건문, 반복문)1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음System.out.println(foo.contains(&quot;world&quot;)); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 return 해줌 ">
+    <meta itemprop="datePublished" content="2020-10-30T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[JAVA] 기본 코딩 &amp; 디버깅
+          <h1 id="page-title" class="page__title" itemprop="headline">[JAVA] 제어문
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -278,7 +278,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 
 </p>
           
@@ -287,53 +287,96 @@
 
       <section class="page__content" itemprop="text">
         
-        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OkJavaGoInHome</span> <span class="o">{</span>
- 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-         
-        <span class="nc">String</span> <span class="n">id</span> <span class="o">=</span> <span class="s">"JAVA APT 507"</span><span class="o">;</span>
-         
-        <span class="c1">// Elevator call </span>
-        <span class="nc">Elevator</span> <span class="n">myElevator</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Elevator</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-        <span class="n">myElevator</span><span class="o">.</span><span class="na">callForUp</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
-         
-        <span class="c1">// Security off </span>
-        <span class="nc">Security</span> <span class="n">mySecurity</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Security</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-        <span class="n">mySecurity</span><span class="o">.</span><span class="na">off</span><span class="o">();</span>
-         
-        <span class="c1">// Light on</span>
-        <span class="nc">Lighting</span> <span class="n">hallLamp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lighting</span><span class="o">(</span><span class="n">id</span><span class="o">+</span><span class="s">" / Hall Lamp"</span><span class="o">);</span>
-        <span class="n">hallLamp</span><span class="o">.</span><span class="na">on</span><span class="o">();</span>
-         
-        <span class="nc">Lighting</span> <span class="n">floorLamp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lighting</span><span class="o">(</span><span class="n">id</span><span class="o">+</span><span class="s">" / floorLamp"</span><span class="o">);</span>
-        <span class="n">floorLamp</span><span class="o">.</span><span class="na">on</span><span class="o">();</span>
- 
-    <span class="o">}</span>
- 
-<span class="o">}</span>
+        <h1 id="제어문조건문-반복문"><strong>제어문(조건문, 반복문)</strong></h1>
+<p>1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">foo</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"world"</span><span class="o">));</span> <span class="c1">//해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 return 해줌 </span>
 </code></pre></div></div>
 
-<h1 id="디버깅">디버깅</h1>
-<p>버그를잡는걸 디버깅
-버그를 잡는도구 디버거</p>
+<h1 id="1-2--comparison-operator비교연산자">1-2 . Comparison Operator(비교연산자)</h1>
 
-<p>옆에 토글 해당 숫자 부분 더블클릭!!하면 , breakpointer 생김.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">);</span> <span class="c1">// false</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="o">);</span> <span class="c1">//true</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">);</span> <span class="c1">//false</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="o">);</span> <span class="c1">// true</span>
+</code></pre></div></div>
 
-<p>Resume : breakpointer 토글한 부분을 디버깅 실행.<br />
-Terminate: 디버깅모드를 종료<br />
-Step into: 해당 코드가 구체적으로 어떻게 이루어져 있는지 알 수 있음. (특히 메소드 구성원리 알때) 구체적인 실행과정을 보고 싶을때 쓰자.<br />
-Step over: 한줄씩 실행가능.(step into 모드에서도 가능)<br />
-Step return: step into 모드에서 다시 돌아옴<br />
-Use Step filters : 단계별로 통크게 디버깅 할때, 부분적으로 디버깅. 필요하지 않은 부분 걸러낼 수 있다. (그래서 필터인듯)</p>
+<h1 id="1-3-conditional-statement--조건문">1-3 conditional statement : 조건문</h1>
 
-<p>** 검색 결과
-단계 필터링 기본 설정 페이지에서는 디버깅 중에 ‘단계별’/ 표시되지 않는 특정 리소스 / 파일 패턴을 선택할 수 있습니다.
-이 기능은 디버깅 중에 검사하고 싶지 않은 파일이있을 때 사용해야합니다. 이는 큰 외부 리소스 (예 : 프레임 워크 또는 라이브러리)를 포함하는 경우 특히 유용합니다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a"</span><span class="o">);</span>
+      <span class="k">if</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>         
+      <span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+         <span class="k">if</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+         <span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+         <span class="o">}</span>
+      <span class="o">}</span>
+      <span class="c1">//둘이 똑같은 코드 1차원적으로 밑에께 가독성이 좋음</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a"</span><span class="o">);</span>
+      <span class="k">if</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>         
+      <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+      <span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+      <span class="o">}</span>
+      
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b"</span><span class="o">);</span>
+   <span class="o">}</span>
+</code></pre></div></div>
 
-<p>풍뎅이(debug): 디버깅 하는 모드 돌입!</p>
+<h1 id="1-3-1-조건문-응용">1-3-1 조건문 응용</h1>
 
-<p>Java: 자바모드로 돌아가기
-Debug : 디버그 모드에서 보기</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+      
+<span class="nc">String</span> <span class="n">id</span> <span class="o">=</span> <span class="s">"egoing"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">inputId</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+      
+<span class="nc">String</span> <span class="n">pass</span> <span class="o">=</span> <span class="s">"1111"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">inputPass</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">];</span>
+      
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hi ,"</span><span class="o">);</span>
+<span class="c1">//      if(inputId == id) { //false 가 return</span>
+<span class="k">if</span><span class="o">(</span><span class="n">inputId</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">id</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">inputPass</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">pass</span><span class="o">))</span> <span class="o">{</span> <span class="c1">//boolean type 으로 반환해준다.</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Masr!"</span><span class="o">);</span>            
+      <span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Who are you?"</span><span class="o">);</span>
+      <span class="o">}</span>
+</code></pre></div></div>
+
+<h1 id="14--vs-equals">1.4 == VS equals</h1>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">p1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kt">int</span> <span class="n">p2</span> <span class="o">=</span> <span class="mi">2</span>  
+<span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span> <span class="c1">// true</span>
+
+<span class="nc">String</span> <span class="n">o1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"java"</span><span class="o">)</span>
+<span class="nc">String</span> <span class="n">o2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"java"</span><span class="o">)</span> 
+<span class="n">o1</span> <span class="o">==</span> <span class="n">o2</span> <span class="c1">// false</span>
+</code></pre></div></div>
+
+<p>원시데이터와 비원시데이터가 있다.<br />
+원시데이터는 값이 같다면 같은 곳에 저장이 되어있기 때문에 비교연산자 사용이 가능하다.<br />
+a = 1, b = 1, a==b (true)<br />
+비원시 데이터, 객체나 문자를 비교할 때는 값이 같아도 저장된 장소가 다르기 때문에 다른 곳을 가리키고 있다.<br />
+원시 데이터 : 더이상 쪼갤 수 없는 자료형<br />
+비원시 데이터 : new 를 선언해 서로다른 주소를 사용하기에 .equals() 사용해야함.<br />
+동등연산자(==) : 메모리 상에서 주소를 가리키고 있냐 라는 물음이기 떄문에 원시데이터 타입 경우 값이 동일하면 ture가 반환한다.</p>
+
+<p>*그냥 String 은 .equals() 로 사용하면 됨. 맘편하게  *</p>
+
+<h1 id="2메소드"><strong>2.메소드</strong></h1>
+<p>메소드는 입력 값이 있고, 그것을 처리해서 출력을 해준다. <br />
+출력해주는 핵심적인 키워드는 return 이다.<br />
+return 을 사용할 때 인자를 어떤 데이터 타입으로 출력 시킬 것인지 입력해 주어야함.<br />
+void  : 실행결과가 return 이 없을때 사용한다.<br />
+public static String twoTimes(String text, String delimiter) : String 을 return 한다.</p>
+
+<p>*static : 변수나 메소드는 프로그램이 켜질때 부터 처음에 메모리를 할당한다.  *</p>
+
+<p>3.생성자<br />
+실질적인 메모리를 할당해서 객체를 사용함.</p>
 
         
       </section>
@@ -344,7 +387,7 @@ Debug : 디버그 모드에서 보기</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-10-27T00:00:00+09:00">October 27, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-10-30T00:00:00+09:00">October 30, 2020</time></p>
         
       </footer>
 
@@ -353,7 +396,7 @@ Debug : 디버그 모드에서 보기</p>
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BJAVA%5D+%EA%B8%B0%EB%B3%B8+%EC%BD%94%EB%94%A9+%26+%EB%94%94%EB%B2%84%EA%B9%85%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BJAVA%5D+%EC%A0%9C%EC%96%B4%EB%AC%B8%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjava%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -364,7 +407,7 @@ Debug : 디버그 모드에서 보기</p>
       
   <nav class="pagination">
     
-      <a href="/java/" class="pagination--pager" title="[JAVA]기본
+      <a href="/java/" class="pagination--pager" title="[JAVA] 기본 코딩 &amp; 디버깅
 ">이전</a>
     
     
@@ -382,6 +425,40 @@ Debug : 디버그 모드에서 보기</p>
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java/" rel="permalink">[JAVA] 기본 코딩 &amp; 디버깅
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">public class OkJavaGoInHome {
+ 
+    public static void main(String[] args) {
+         
+        String id = "JAVA APT 507";
+         
+        // Elevator call...</p>
+  </article>
+</div>
+
         
           
 
@@ -472,35 +549,6 @@ computer
 쿠키 :  클라이언트 웹 브라우저에 저장되는 정보
 세션 : 웹 서버에 저장되는 정보
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs/" rel="permalink">[Nodejs] 미들웨어 , 토큰
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다. 
-body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으...</p>
   </article>
 </div>
 

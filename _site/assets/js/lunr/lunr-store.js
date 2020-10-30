@@ -448,4 +448,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java/",
         "teaser": null
+      },{
+        "title": "[JAVA] 제어문",
+        "excerpt":"제어문(조건문, 반복문) 1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음 System.out.println(foo.contains(\"world\")); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 return 해줌 1-2 . Comparison Operator(비교연산자) System.out.println(1&gt;1); // false System.out.println(1 == 1); //true System.out.println(1 &lt; 1); //false System.out.println(1 &gt;= 1); // true 1-3 conditional statement : 조건문...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
       }]

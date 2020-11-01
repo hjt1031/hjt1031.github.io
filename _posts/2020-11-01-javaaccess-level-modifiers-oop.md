@@ -2,7 +2,7 @@
 title: "[JAVA]access level modifiers & OOP"
 ---
 
-# access level modifiers : 외부에서 접근 할 수 있는 레벨을 정해 주는 것.
+# access level modifiers : 외부에서 접근 할 수 있는 레벨을 정해 주는 것. 
 public : 어느 클래스에서도 접근이 가능 할 수 있다.
 protected : 
 default : 

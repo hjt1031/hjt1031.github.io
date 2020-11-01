@@ -1,0 +1,26 @@
+I"Ñ	<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OkJavaGoInHome</span> <span class="o">{</span>
+ 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+         
+        <span class="nc">String</span> <span class="n">id</span> <span class="o">=</span> <span class="s">"JAVA APT 507"</span><span class="o">;</span>
+         
+        <span class="c1">// Elevator call </span>
+        <span class="nc">Elevator</span> <span class="n">myElevator</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Elevator</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+        <span class="n">myElevator</span><span class="o">.</span><span class="na">callForUp</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+         
+        <span class="c1">// Security off </span>
+        <span class="nc">Security</span> <span class="n">mySecurity</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Security</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+        <span class="n">mySecurity</span><span class="o">.</span><span class="na">off</span><span class="o">();</span>
+         
+        <span class="c1">// Light on</span>
+        <span class="nc">Lighting</span> <span class="n">hallLamp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lighting</span><span class="o">(</span><span class="n">id</span><span class="o">+</span><span class="s">" / Hall Lamp"</span><span class="o">);</span>
+        <span class="n">hallLamp</span><span class="o">.</span><span class="na">on</span><span class="o">();</span>
+         
+        <span class="nc">Lighting</span> <span class="n">floorLamp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lighting</span><span class="o">(</span><span class="n">id</span><span class="o">+</span><span class="s">" / floorLamp"</span><span class="o">);</span>
+        <span class="n">floorLamp</span><span class="o">.</span><span class="na">on</span><span class="o">();</span>
+ 
+    <span class="o">}</span>
+ 
+<span class="o">}</span>
+</code></pre></div></div>
+:ET

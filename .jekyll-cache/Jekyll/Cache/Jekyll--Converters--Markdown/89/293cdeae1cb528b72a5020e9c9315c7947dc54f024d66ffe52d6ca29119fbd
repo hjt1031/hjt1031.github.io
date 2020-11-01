@@ -1,0 +1,13 @@
+I"�<p><strong>access level modifiers : 외부에서 접근 할 수 있는 레벨을 정해 주는 것.</strong>
+public : 어느 클래스에서도 접근이 가능 할 수 있다.
+protected : 
+default : 
+ private : 같은 클래스 안 에서만 사용할 수 있다. but public 을 사용하면 된다.(내부적인 메소드)</p>
+
+<p>static - class method ( 클래스 소속이다.)
+no static - instance method (인스턴스 소속이다.)</p>
+
+<p>Object Oriented Programming : 객제지향 프로그래밍
+class는 변수와 메소드를 정리해서 묶어놓은 상자 (System, Math, FileWriter)
+instance는 class를 새로 복제해서 이름을 붙인 상자 (f1, f2)</p>
+:ET

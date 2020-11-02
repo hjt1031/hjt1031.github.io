@@ -472,4 +472,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/javaaccess-level-modifiers-oop/",
         "teaser": null
+      },{
+        "title": "[JAVA]인스턴스 & static & 생성자",
+        "excerpt":"인스턴스 class Print { .... } public static void main(String[] args){ Print p1 = new Print(); // print 클래스를 복제한다. (print 라는 데이터 타입(클래스) 이다) .... } static :정적이다. class Foo{ public static String classVar = \"I class var\"; public String instanceVar = \"I instance var\"; public static void classMethod()...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-static/",
+        "teaser": null
       }]

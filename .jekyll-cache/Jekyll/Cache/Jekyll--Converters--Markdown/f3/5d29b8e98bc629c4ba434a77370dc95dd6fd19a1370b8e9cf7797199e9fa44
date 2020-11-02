@@ -1,0 +1,68 @@
+I"�<h1 id="인스턴스">인스턴스</h1>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Print</span> <span class="o">{</span>
+<span class="o">....</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+<span class="nc">Print</span> <span class="n">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Print</span><span class="o">();</span> <span class="c1">// print 클래스를 복제한다. (print 라는 데이터 타입(클래스) 이다)</span>
+<span class="o">....</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+<h1 id="static-정적이다">static :정적이다.</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nc">Foo</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="n">classVar</span> <span class="o">=</span> <span class="s">"I class var"</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="n">instanceVar</span> <span class="o">=</span> <span class="s">"I instance var"</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">classMethod</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">classVar</span><span class="o">);</span> <span class="c1">// Ok</span>
+<span class="c1">//      System.out.println(instanceVar); // Error</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">instanceMethod</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">classVar</span><span class="o">);</span> <span class="c1">// Ok</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">instanceVar</span><span class="o">);</span> <span class="c1">// Ok</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StaticApp</span> <span class="o">{</span>
+ 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">classVar</span><span class="o">);</span> <span class="c1">// OK</span>
+<span class="c1">//      System.out.println(Foo.instanceVar); // Error</span>
+        <span class="nc">Foo</span><span class="o">.</span><span class="na">classMethod</span><span class="o">();</span>
+<span class="c1">//      Foo.instanceMethod();</span>
+         
+        <span class="nc">Foo</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">();</span>
+        <span class="nc">Foo</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">();</span>
+<span class="c1">//      </span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">f1</span><span class="o">.</span><span class="na">classVar</span><span class="o">);</span> <span class="c1">// I class var</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">f1</span><span class="o">.</span><span class="na">instanceVar</span><span class="o">);</span> <span class="c1">// I instance var</span>
+<span class="c1">//      </span>
+        <span class="n">f1</span><span class="o">.</span><span class="na">classVar</span> <span class="o">=</span> <span class="s">"changed by f1"</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">classVar</span><span class="o">);</span> <span class="c1">// changed by f1</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">f2</span><span class="o">.</span><span class="na">classVar</span><span class="o">);</span>  <span class="c1">// changed by f1</span>
+<span class="c1">//      </span>
+        <span class="n">f1</span><span class="o">.</span><span class="na">instanceVar</span> <span class="o">=</span> <span class="s">"changed by f1"</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">f1</span><span class="o">.</span><span class="na">instanceVar</span><span class="o">);</span> <span class="c1">// changed by f1</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">f2</span><span class="o">.</span><span class="na">instanceVar</span><span class="o">);</span> <span class="c1">// I instance var</span>
+    <span class="o">}</span>
+ 
+<span class="o">}</span>
+</code></pre></div></div>
+<p>static 
+static 공유메모리 저장, 링크 -&gt; 누적<br />
+접근법 : 클래스.클래스<static>멤버</static></p>
+
+<p>instance 독립메모리 저장 -&gt; 매번 초기화<br />
+접근법 : 클래스명 인스턴스명 = new 클래스();<br />
+복제되었다고 생각하면 된다.</p>
+
+<p>생성자  : 인스턴스가 생성될 때 최초로 실행 되어야 할 작업이 있으면 사용한다. (초기화 작업)<br />
+Print p1 = new Print(“—-“);</p>
+
+<p>public String delimiter = “”<br />
+public Print(String delimiter) {<br />
+   this.delimiter = delimiter;<br />
+}
+this 를 붙여주는 이유는 클래스의 인스턴스 변수인지 아니면 매개변수로 들어오는 변수인지 구분지어 주기 위해 사용한다.</p>
+:ET

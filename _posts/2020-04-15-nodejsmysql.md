@@ -2,7 +2,7 @@
 title: "[nodejs]Mysql Module"
 ---
 
-기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다.
+기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. 
 pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  소스코드를 나중에 복제하고 사용할때 편리하기 위해
 
 

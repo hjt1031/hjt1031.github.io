@@ -2,7 +2,7 @@
 title: "[nodejs] web server, 변수, Template literals,URL"
 ---
 
-web browser 가 web server 한테 정보를 요청하면 web server 그정보를 찾아서 web browser에게 응답해준다.
+web browser 가 web server 한테 정보를 요청하면 web server 그정보를 찾아서 web browser에게 응답해준다. 
 
 # **DataType**
 String

@@ -478,4 +478,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java-static/",
         "teaser": null
+      },{
+        "title": "[JAVA]상속 & 차장님 기본개념",
+        "excerpt":"상속 상속(Interitance): 부모 클래스의 메소드 및 필드를 가져옴으로써 코드 중복을 줄일 수 있는 장점 오버라이딩 : 부모 클래스에 있었던 메소드를 자식 클래스에서 재정의(덮어쓰기)하면서 코드 변경 가능 오버로딩 : 부모클래스가 갖고 있는 메소드의 형태를 자식클래스에서 조금 바꿔 “이름을 같게” 사용할 수 있다. (메소드의 매개변수 타입, 개수변화 등등) 원래 메소드란 이름이 같을...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
       }]

@@ -1,0 +1,96 @@
+I"�<h1 id="상속">상속</h1>
+<p>상속(Interitance): 부모 클래스의 메소드 및 필드를 가져옴으로써 코드 중복을 줄일 수 있는 장점<br />
+오버라이딩 : 부모 클래스에 있었던 메소드를 자식 클래스에서 재정의(덮어쓰기)하면서 코드 변경 가능<br />
+오버로딩 : 부모클래스가 갖고 있는 메소드의 형태를<br />
+자식클래스에서 조금 바꿔 “이름을 같게” 사용할 수 있다. (메소드의 매개변수 타입, 개수변화 등등)<br />
+원래 메소드란 이름이 같을 수 없는데 이 경우 가능하다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Cal{  
+    public int sum(int v1, int v2){
+        return v1+v2;
+    }
+    // Overloading
+    public int sum(int v1, int v2, int v3){
+        return v1+v2+v3;
+    }
+}
+class Cal3 extends Cal{
+    public int minus(int v1, int v2){
+        return v1-v2;
+    }
+    // Overriding
+    public int sum(int v1, int v2){
+        System.out.println("Cal3!!");
+        return v1+v2;
+    }
+ 
+}
+public class InheritanceApp {
+    public static void main(String[] args) {
+        Cal c = new Cal();
+        System.out.println(c.sum(2,1));
+        System.out.println(c.sum(2,1,1));
+ 
+        Cal3 c3 = new Cal3();
+        System.out.println(c3.sum(2,1));
+        System.out.println(c3.minus(2,1));
+        System.out.println(c3.sum(2,1));
+    }
+}
+class Cal2{
+    public int sum(int v1, int v2){
+        return v1+v2;
+    }
+    public int minus(int v1, int v2){
+        return v1-v2;
+    }
+}
+
+this &amp; super
+this: 자신 클래스 내의 메서드, 필드를 지칭할 때 사용
+super: 부모 클래스 내의 메서드, 필드를 지칭할 때 사용
+class Cal{
+    public int sum(int v1, int v2){
+        return v1+v2;
+    }
+    // Overloading
+    public int sum(int v1, int v2, int v3){
+        return this.sum(v1,v2)+v3; //위에 sum 파라미터로 전달됨
+    }
+}
+class Cal3 extends Cal{
+    public int minus(int v1, int v2){
+        return v1-v2;
+    }
+    // Overriding
+    public int sum(int v1, int v2){
+        System.out.println("Cal3!!");
+        return super.sum(v1,v2); //부모클래스인 Cal의  sum메소드로 리턴해준다.
+    }
+ 
+}
+</code></pre></div></div>
+
+<h1 id="차장님">차장님</h1>
+<p>public static void main(String [] args)<br />
+사용법은 Test.main()<br />
+new를 사용하지 않고 바로 연결해서 사용 가능 한 메소드이다.<br />
+반복적으로 계속 사용 하는 메소드의 경우 공통 같은 곳에서 사용한다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isNull</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+   <span class="k">if</span><span class="o">(</span><span class="n">obj</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> 
+      <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>null을 체크해서 boolean 값을 반환 하는데 많이 사용 됨</p>
+
+<p>메모리<br />
+ArrayList, Map 인스턴스는 메모리의 저장<br />
+long(8byte), int(4byte) 는 stack메모리의 저장.<br />
+1byte = 8bit 사용가능범위 -127 ~ 128 = 256<br />
+2byte = 256 * 256<br />
+ex) int i = 0; 이면 stack메모리 에 4byte 만큼 할당이 된다.<br />
+ex) Test t1 = new Test(); 은 Test는 인스턴스 및 object는  메모리의 저장됨 (=heap메모리,) , t1 은 stack 메모리에 저장(변수도 statck)
+static 은 static 메모리에 저장된다.</p>
+:ET

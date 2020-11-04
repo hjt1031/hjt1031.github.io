@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[React] shouldComponentUpdate - juntae</title>
-<meta name="description" content="``` shouldComponentUpdate(newProps, newState){  if(this.props.data === newProps.data){ 		return false; } return true; }  ">
+<!-- begin _includes/seo.html --><title>[Spring] 개념 - juntae</title>
+<meta name="description" content="Spring 이란? ">
 
 
   <meta name="author" content="동센">
@@ -19,30 +19,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[React] shouldComponentUpdate">
-<meta property="og:url" content="http://localhost:4000/react-shouldcomponentupdate/">
+<meta property="og:title" content="[Spring] 개념">
+<meta property="og:url" content="http://localhost:4000/spring/">
 
 
-  <meta property="og:description" content="``` shouldComponentUpdate(newProps, newState){  if(this.props.data === newProps.data){ 		return false; } return true; }  ">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2020-08-03T00:00:00+09:00">
+  <meta property="og:description" content="Spring 이란? ">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2020-11-04T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/react-shouldcomponentupdate/">
+
+<link rel="canonical" href="http://localhost:4000/spring/">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[React] shouldComponentUpdate">
-    <meta itemprop="description" content="```shouldComponentUpdate(newProps, newState){if(this.props.data === newProps.data){		return false;}return true; }">
-    <meta itemprop="datePublished" content="2020-08-03T00:00:00+09:00">
+    <meta itemprop="headline" content="[Spring] 개념">
+    <meta itemprop="description" content="Spring 이란?">
+    <meta itemprop="datePublished" content="2020-11-04T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[React] shouldComponentUpdate
+          <h1 id="page-title" class="page__title" itemprop="headline">[Spring] 개념
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -278,7 +278,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 
 </p>
           
@@ -287,21 +287,62 @@
 
       <section class="page__content" itemprop="text">
         
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shouldComponentUpdate(newProps, newState){
-	
-	if(this.props.data === newProps.data){
-			return false;
-	}
-	return true;
-}
+        <h3 id="spring-이란">Spring 이란?</h3>
 
+<ul>
+  <li>자바 엔터프라이즈 개발을 편리하게 해주는 <strong>오픈소스 경량급 애플리케이션 프레임워크</strong>이다.</li>
+</ul>
 
-render(){
+<h3 id="spring의-특징">Spring의 특징</h3>
 
-}
-</code></pre></div></div>
-<p>shouldComponentUpdate 는 return 값이 true 이면 return 를 실행시키고
-false 면 실행시키지 않는다.</p>
+<ul>
+  <li><strong>경량 컨테이너</strong>로서 자바의 객체를 Spring이 직접 관리함
+    <ul>
+      <li>각각의 객체 생성, 소멸과 같은 라이프 사이클을 스프링이 대신 관리해주며, 스프링으로부터 객체를 얻어올 수 있다.</li>
+    </ul>
+  </li>
+  <li><strong>제어 역행</strong>(<strong>IOC</strong> : Inversion of Control)
+    <ul>
+      <li>애플리케이션 간의 느슨한 결합을 도모</li>
+      <li>컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어 필요에 따라 스프링에서 사용자의 코드를 호출한다.</li>
+    </ul>
+  </li>
+  <li><strong>의존성 주입</strong>(<strong>DI</strong> : Dependency Injection)
+    <ul>
+      <li>각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜준다.</li>
+      <li>객체에 객체가 필요로하는 다른 객체를 생성자, 새터를 통해서 주입하는 것</li>
+      <li>배터리일체형 핸드폰과 분리형 핸드폰의 차이 -&gt; 분리형이 훨씬 유지보수가 쉽다.</li>
+    </ul>
+  </li>
+  <li><strong>관점지향 프로그래밍</strong>(<strong>AOP</strong> : Aspect-Oriented Programming)
+    <ul>
+      <li>트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 <strong>공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리할 수 있다.</strong></li>
+      <li>Interceptor, Filter와 비슷</li>
+      <li>Interceptor : 특정 URI로 요청시 Controller로 가능 요청을 가로채는 역할.</li>
+    </ul>
+  </li>
+  <li>애플리케이션 객체의 생명 주기와 설정을 포함하고 관리한다는 점에서 일종의 “컨테이너”라고 할 수 있다.
+    <ul>
+      <li>iBatis, myBatis나 Hibernate 등 완성도가 높은 데이터베이스처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.</li>
+    </ul>
+  </li>
+  <li>트랜잭션 관리 프레임워크
+    <ul>
+      <li>추상화된 트랜잭션 관리를 지원하며 설정파일(xml, java, properties 등)을 이용한 선언적인 방식 및 프로그래밍을 통한 방식을 모두 지원한다.</li>
+    </ul>
+  </li>
+  <li>모델-뷰-컨트롤러 패턴(MVC 패턴)
+    <ul>
+      <li>웹 프로그래밍 개발 시 거의 표준적인 방식인 “<strong>Spring MVC</strong>“라 불리는 <strong>MVC</strong>패턴을 사용한다.</li>
+      <li><strong>DispatcherServlet</strong>이 <strong>Controller</strong> 역할을 담당하고 각종 요청을 적절한 서비스에 분산시켜주며 이를 각 서비스들이 처리를 하여 결과를 생성하고 그 결과는 다양한 <strong>View</strong>를 통해서 사용자에게 보여진다.</li>
+    </ul>
+  </li>
+  <li>배치 프레임워크
+    <ul>
+      <li>스프링은 특정 시간대에 실행하거나 대용량의 자료를 처리하는데 쓰이는 <strong>일괄 처리(Batch Processing)</strong>을 지원하는 배치 프레임워크를 제공한다. 기본적으로 스프링 배치는 <strong>Quartz</strong> 기반으로 동작한다.</li>
+    </ul>
+  </li>
+</ul>
 
         
       </section>
@@ -312,7 +353,7 @@ false 면 실행시키지 않는다.</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-08-03T00:00:00+09:00">August 3, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-04T00:00:00+09:00">November 4, 2020</time></p>
         
       </footer>
 
@@ -321,23 +362,22 @@ false 면 실행시키지 않는다.</p>
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BReact%5D+shouldComponentUpdate%20http%3A%2F%2Flocalhost%3A4000%2Freact-shouldcomponentupdate%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BSpring%5D+%EA%B0%9C%EB%85%90%20http%3A%2F%2Flocalhost%3A4000%2Fspring%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Freact-shouldcomponentupdate%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fspring%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Freact-shouldcomponentupdate%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fspring%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/react/" class="pagination--pager" title="[React]CRUD (배열)
+      <a href="/nodejs/" class="pagination--pager" title="[nodejs] 파일생성, 리다이렉션, 파일삭제
 ">이전</a>
     
     
-      <a href="/react/" class="pagination--pager" title="[React]JSX, Component
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -351,35 +391,6 @@ false 면 실행시키지 않는다.</p>
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/spring/" rel="permalink">[Spring] 개념
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Spring 이란?
-</p>
-  </article>
-</div>
-
         
           
 
@@ -470,6 +481,38 @@ false 면 실행시키지 않는다.</p>
     
     <p class="archive__item-excerpt" itemprop="description">인스턴스
 </p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/javaaccess-level-modifiers-oop/" rel="permalink">[JAVA]access level modifiers &amp; OOP
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">access level modifiers : 외부에서 접근 할 수 있는 레벨을 정해 주는 것.
+public : 어느 클래스에서도 접근이 가능 할 수 있다.
+protected : 
+default : 
+ private : 같은 클래스 안 에서만 사용할 수 있다. but public 을...</p>
   </article>
 </div>
 

@@ -490,4 +490,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[Spring] 개념",
+        "excerpt":"Spring 이란? 자바 엔터프라이즈 개발을 편리하게 해주는 오픈소스 경량급 애플리케이션 프레임워크이다. Spring의 특징 경량 컨테이너로서 자바의 객체를 Spring이 직접 관리함 각각의 객체 생성, 소멸과 같은 라이프 사이클을 스프링이 대신 관리해주며, 스프링으로부터 객체를 얻어올 수 있다. 제어 역행(IOC : Inversion of Control) 애플리케이션 간의 느슨한 결합을 도모 컨트롤의 제어권이 사용자가 아니라...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/spring/",
+        "teaser": null
       }]

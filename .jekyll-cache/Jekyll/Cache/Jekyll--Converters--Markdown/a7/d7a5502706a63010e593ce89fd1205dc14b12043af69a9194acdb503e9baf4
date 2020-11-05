@@ -1,4 +1,4 @@
-I"E<h3 id="spring-이란">Spring 이란?</h3>
+I"<h3 id="spring-이란">Spring 이란?</h3>
 
 <ul>
   <li>자바 엔터프라이즈 개발을 편리하게 해주는 <strong>오픈소스 경량급 애플리케이션 프레임워크</strong>이다.</li>
@@ -54,4 +54,40 @@
     </ul>
   </li>
 </ul>
+
+<h3 id="제어역전ioc">제어역전(IoC)</h3>
+
+<h4 id="객체-간의-결합도coupling">객체 간의 결합도(Coupling)</h4>
+
+<p>결합도 응집도 가 있다.</p>
+
+<p>응집도 : 기능이 얼마나 효율적으로 잘 나눠져 있는지,  높을 수록 좋다.</p>
+
+<p>결합도 : 낮을 수록좋다.</p>
+
+<p>DTO : 디비에서 가져온 데이터 저장 ?</p>
+
+<p>DAO :데이터의 접근하는 객체</p>
+
+<ul>
+  <li>어떤 특정 객체가 존재하거나 기능하기 위해 반드시 존재해야하는 것을 결합도라고 한다.</li>
+  <li>Java에서 이러한 의존성은 <strong>new</strong>나 <strong>setter</strong>를 통해서 이루어지게 됩니다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Player {
+	private Weapon weapon;
+	
+	Player(){
+	
+	}
+	
+	void setWeapon(){
+		this.weapon = new Weapon();
+	}
+}
+</code></pre></div></div>
+
+<p>그리고 이러한 방식은 강결합(Tightly Coupled)로 묶여지면서 코드의 유연성을 떨어트리고 코드의 중복 및 가독성을 떨어뜨리는 원인이 됩니다. 예를 들어 만약 무기가 칼,총,창 등 여러가지의 무기가 있다면, 프로그래머는 이러한 무기들을 if else를 통해서 중복된 코드를 작성하게 됩니다.</p>
+
+<p>그렇기 때문에 결합도를 낮추고 중복을 낮추며, 유지보수를 편하게 하기 위해서 아래와 같은 방식으로 코드를 짜야합니다.</p>
 :ET

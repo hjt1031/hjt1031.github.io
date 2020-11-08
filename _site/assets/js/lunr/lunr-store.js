@@ -497,7 +497,7 @@ var store = [{
         "url": "http://localhost:4000/spring/",
         "teaser": null
       },{
-        "title": "[JAVA]프로그래머스(값 뒤집기)",
+        "title": "[JAVA]프로그래머스(값 뒤집기),타입",
         "excerpt":"import java.util.Arrays; class SolutionCoding { public static int[] solution(long n) { String input = \"\" + n; int size = input.length(); int[] answer = new int[size]; for (int i = size - 1; i &gt;= 0; i--) { answer[i] = input.charAt(size - i - 1) - '0'; } return answer;...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java/",

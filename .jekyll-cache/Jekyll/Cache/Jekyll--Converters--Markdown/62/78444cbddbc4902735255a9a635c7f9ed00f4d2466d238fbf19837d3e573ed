@@ -1,0 +1,36 @@
+I"�<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<span class="kd">class</span> <span class="nc">SolutionCoding</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">solution</span><span class="o">(</span><span class="kt">long</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">""</span> <span class="o">+</span> <span class="n">n</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">answer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">size</span><span class="o">];</span>
+      
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span>
+			<span class="n">answer</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">-</span> <span class="sc">'0'</span><span class="o">;</span>
+		<span class="o">}</span>
+      
+		<span class="k">return</span> <span class="n">answer</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// TODO Auto-generated method stub</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="nc">SolutionCoding</span><span class="o">.</span><span class="na">solution</span><span class="o">(</span><span class="mi">12345</span><span class="o">)));</span>
+		
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>배열을 선언할때는 항상 new 를 붙여서 선언해줘야한다. (배열은 레퍼런스형) 이라 그렇다.<br />
+System.out.println(Arrays.toString(SolutionCoding.solution(12345))); 에서
+System.out.println(SolutionCoding.solution(12345)); 을 쓰면 배열의 주소 값이 나와서<br />
+import 를 해줘야 한다.</p>
+
+<h1 id="java-타입">JAVA 타입</h1>
+<p>정수 : byte, shot, int ,long (1byte ,2byte, 4byte, 8byte)
+문자형 : char ( 2byte)
+실수형 : float, double (4byte, 8byte)</p>
+:ET

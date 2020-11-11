@@ -1,5 +1,5 @@
 ---
-title: "[JAVA]ArrayList선언"
+title: "[JAVA]ArrayList"
 ---
 
 # ArrayList란?

@@ -1,0 +1,41 @@
+I"x	<h1 id="access-level-modifiers--외부에서-접근-할-수-있는-레벨을-정해-주는-것">access level modifiers : 외부에서 접근 할 수 있는 레벨을 정해 주는 것.</h1>
+<p>public : 어느 클래스에서도 접근이 가능 할 수 있다.
+protected : 
+default : 
+ private : 같은 클래스 안 에서만 사용할 수 있다. but public 을 사용하면 된다.(내부적인 메소드)</p>
+
+<p>static - class method ( 클래스 소속이다.)
+no static - instance method (인스턴스 소속이다.)</p>
+
+<h1 id="object-oriented-programming--객제지향-프로그래밍">Object Oriented Programming : 객제지향 프로그래밍</h1>
+<p>class는 변수와 메소드를 정리해서 묶어놓은 상자 (System, Math, FileWriter)
+instance는 class를 새로 복제해서 이름을 붙인 상자 (f1, f2)</p>
+
+<p><em>OOP의 특징</em></p>
+
+<p><strong>1.추상화</strong><br />
+목적과 관련이 없는 부분을 제거하여 필요한 부분만을 표현하기 위한 개념.
+지도에는 위성지도, 등고선지도 등 여러가지 지도가 있다 but 목적이 다르다.</p>
+<ul>
+  <li>위성지도
+그 지형의 정확한 실제 모습을 담기 위한 목적의 지도</li>
+  <li>등고선 지도
+지형의 높낮이를 표현하기 위한 목적의 지도</li>
+</ul>
+
+<p>이를 객체와 클래스 관점에서 보면 객체들은 실제 그 모습이지만, 클래스는 객체들이 어떤 특징들이 있어야 한다고 정의하는게  추상화된 개념이다.</p>
+
+<p><em>결론 : 추상화는 객체들의 공통된 특징을 파악해 정의해 놓은 설계 기법</em></p>
+
+<p><strong>2.캡슐화</strong><br />
+클래스의 입장에서 캡슐화를 살펴보면<br />
+자바에서 접근 제어자 (public, protected 등) 이 있다.<br />
+그중 private으로 정의된 속성은 알약의 실제 내용물이라고 생각하면 된다.<br />
+private 속성은 외부에 알려줄 필요가 없으므로,<br />
+<em>정보은닉</em>을 할 수 있다.</p>
+
+<p>캡슐화 !=  정보은닉<br />
+둘이 동일한 개념이 아니라 캡슐화를 하면 정보은닉을 할 수 있다는 특징이 있다는 것이다.<br />
+예를 들어, TV의 리모콘을 사용하는데 리모콘의 내부 회로(private으로 정의된 속성)를 알 필요가 있느냐,
+사용자 입장에서는 리모콘의 조작 기능, 즉 public으로 정의된 속성만 알면 됩니다.</p>
+:ET

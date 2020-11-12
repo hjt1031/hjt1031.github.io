@@ -508,4 +508,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/javaarraylist/",
         "teaser": null
+      },{
+        "title": "[JAVA]시험",
+        "excerpt":"ㅇㅇ  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
       }]

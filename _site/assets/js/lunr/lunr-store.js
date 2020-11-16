@@ -509,8 +509,8 @@ var store = [{
         "url": "http://localhost:4000/javaarraylist/",
         "teaser": null
       },{
-        "title": "[JAVA]시험",
-        "excerpt":"ㅇㅇ  ","categories": [],
+        "title": "[JAVA]객체, 클래스",
+        "excerpt":"객체 대상을 나타내는 단어. 예를 들어, 사람 개인 한 명 한 명을 모두 객체라 할 수 있고, 책 한 권 한 권을 객체라 할 수 있습니다. 사람은 생김새와 성격이 똑같을 수는 없기 때문에 개개인을 객체라 할 수 있으며, 책도 내용이 같을지라도 한 권의 책에 흠집을 낸다고 해서 모든 책들이 전부...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java/",
         "teaser": null

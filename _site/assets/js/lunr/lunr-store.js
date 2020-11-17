@@ -514,4 +514,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java/",
         "teaser": null
+      },{
+        "title": "[JAVA]알고리즘chap01",
+        "excerpt":"chap01 : 세 값의 대소 관계와 중앙값 구하기 package chap01; import java.util.Scanner; public class Median { static int med3(int a, int b, int c) { if(a &gt;= b) if(b &gt;= c) return b; else if( a &lt;= c) return a; else return c; else if(a &gt; c) return a; else...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/javachap01/",
+        "teaser": null
       }]

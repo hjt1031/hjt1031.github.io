@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JAVA]알고리즘chap01 - juntae - 페이지 15</title>
+<!-- begin _includes/seo.html --><title>[JAVA]알고리즘 chap02 - juntae - 페이지 15</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/angular-react-vue/" rel="permalink">[얄코] Angular, React, Vue
+        <a href="/react-nomad/" rel="permalink">[React Nomad] 웹사이트에 동적 데이터 추가
 </a>
       
     </h2>
@@ -297,9 +297,8 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">SPA 프레임워크
-
-“재료는 우리가 주는데 요리는 너네가 알아서해” 라고 역할을 맡겨버리는 것.
+    <p class="archive__item-excerpt" itemprop="description">```javascript
+const friends = [“dal”,”mark”,”lynn”,”japan guy”]
 </p>
   </article>
 </div>
@@ -314,7 +313,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/fe/" rel="permalink">[얄코]객체지향 프로그래밍
+        <a href="/react-nomad/" rel="permalink">[React Nomad] 웹사이트에 동적 데이터 추가
 </a>
       
     </h2>
@@ -328,7 +327,8 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">객체지향이랑 어떤 프로그래밍 방식, 방법론이다. ( 객체지향 언어는 복잡한 코드를 간결하게? 해주는 것이라 생각하면 됨.)
+    <p class="archive__item-excerpt" itemprop="description">```javascript
+const friends = [“dal”,”mark”,”lynn”,”japan guy”]
 </p>
   </article>
 </div>
@@ -343,37 +343,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/cookie-session-cache/" rel="permalink">[얄코]Cookie, Session, Cache
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">쿠키 :
-브라우저에 저장되는 내용들  , 내컴퓨터에 있으닌깐 내가 갖고 있는 정보들 하지만 쿠키는 한계가 있다 내가임의로 고치거나 고칠 수 있고 남이 쉽게 볼 수 도있다.
-( 로그인자동완성, 오늘 하루 안보기, 쇼핑을 하는데 로그인을 하지않고 물건을 장바구니에 담는 등 지워지거나,...</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/aws-scale-out/" rel="permalink">[AWS] Scale Out
+        <a href="/react/" rel="permalink">[React]JSX, Component
 </a>
       
     </h2>
@@ -387,7 +357,16 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">여러대의 컴퓨터가 협력해서 어떤 동일한 목표를 달성하는 컴퓨터들의 사회를 만든다 라고 할 수 있다.
+    <p class="archive__item-excerpt" itemprop="description">JSX : HTML + javascript
+(javascript 안의 HTML 이라 생각하면 됨)
+```
+ReactDOM.render(
+
+    
+  
+,
+  document.getElementById(‘root’)
+);
 </p>
   </article>
 </div>
@@ -402,7 +381,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs-web-server/" rel="permalink">[nodejs] web server, 변수, Template literals,URL
+        <a href="/react/" rel="permalink">[React]JSX, Component
 </a>
       
     </h2>
@@ -412,11 +391,56 @@
 
 
 
-  1 분 소요
+  최대 1 분 소요
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">web browser 가 web server 한테 정보를 요청하면 web server 그정보를 찾아서 web browser에게 응답해준다.
+    <p class="archive__item-excerpt" itemprop="description">JSX : HTML + javascript
+(javascript 안의 HTML 이라 생각하면 됨)
+```
+ReactDOM.render(
+
+    
+  
+,
+  document.getElementById(‘root’)
+);
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react-shouldcomponentupdate/" rel="permalink">[React] shouldComponentUpdate
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">```
+shouldComponentUpdate(newProps, newState){
+
+if(this.props.data === newProps.data){
+		return false;
+}
+return true; }
+
 </p>
   </article>
 </div>
@@ -486,9 +510,11 @@
 
     
     
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    
 
     
-      <li><a href="/page18/">18</a></li>
+      <li><a href="/page36/">36</a></li>
     
 
     

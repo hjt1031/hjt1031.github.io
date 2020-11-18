@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JAVA]알고리즘chap01 - juntae - 페이지 16</title>
+<!-- begin _includes/seo.html --><title>[JAVA]알고리즘 chap02 - juntae - 페이지 16</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/aws-elastic-ips/" rel="permalink">[AWS] Elastic Ips &amp; Scale Up
+        <a href="/react-shouldcomponentupdate/" rel="permalink">[React] shouldComponentUpdate
 </a>
       
     </h2>
@@ -297,39 +297,14 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Elastic Ips(탄력적 IP) 
-instances 를 다시 껏다가 키면 Public IP 가 달라진다. why? 
-ip의 고갈현상이랑 밀접한 관계가 있다. 00.000.00.000 부터 255.255.255.255 까지 IP가 존재할 수 있다 약 (40억개) 
-이세상에 40억...</p>
-  </article>
-</div>
+    <p class="archive__item-excerpt" itemprop="description">```
+shouldComponentUpdate(newProps, newState){
 
+if(this.props.data === newProps.data){
+		return false;
+}
+return true; }
 
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejsmysql/" rel="permalink">[nodejs]Mysql Module
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. 
-pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  소스코드를 나중에 복제하고 사용할때 편리하기 위해
 </p>
   </article>
 </div>
@@ -344,38 +319,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/aws/" rel="permalink">[AWS]스트래스 테스트(ab test)
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip
-컴퓨터의 CPU 점유율 보기 : top 
-ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171
-sudo apt-get update : 컴퓨터에 프로그램 목록을...</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejsapi/" rel="permalink">[nodejs]API &amp; Mysql
+        <a href="/react/" rel="permalink">[React]CRUD (배열)
 </a>
       
     </h2>
@@ -389,9 +333,14 @@ sudo apt-get update : 컴퓨터에 프로그램 목록을...</p>
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">API : Application Programming interface 
-개발자와 함수를 사용하는 개발자 들의 약속된 조작장치
-</p>
+    <p class="archive__item-excerpt" itemprop="description">//createContent.js
+```javascript
+import React,{Component} from ‘react’;
+class CreateContent extends Component{
+  render(){
+    return(
+      &lt;article&gt;
+...</p>
   </article>
 </div>
 
@@ -405,7 +354,7 @@ sudo apt-get update : 컴퓨터에 프로그램 목록을...</p>
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/awsscalability/" rel="permalink">[AWS]Scalability
+        <a href="/react/" rel="permalink">[React]CRUD (배열)
 </a>
       
     </h2>
@@ -419,8 +368,80 @@ sudo apt-get update : 컴퓨터에 프로그램 목록을...</p>
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅
+    <p class="archive__item-excerpt" itemprop="description">//createContent.js
+```javascript
+import React,{Component} from ‘react’;
+class CreateContent extends Component{
+  render(){
+    return(
+      &lt;article&gt;
+...</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react/" rel="permalink">[React] 컨포넌트 이벤트
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
 </p>
+    
+    <p class="archive__item-excerpt" itemprop="description">//App.js
+ &lt;Subject 
+      title={this.state.subject.title}
+      sub={this.state.subject.sub}
+      onChangePage = {function(){
+       this.setState({mode...</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react/" rel="permalink">[React] 컨포넌트 이벤트
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">//App.js
+ &lt;Subject 
+      title={this.state.subject.title}
+      sub={this.state.subject.sub}
+      onChangePage = {function(){
+       this.setState({mode...</p>
   </article>
 </div>
 
@@ -479,12 +500,21 @@ sudo apt-get update : 컴퓨터에 프로그램 목록을...</p>
         <li><a href="/page17/">17</a></li>
       
     
+      
+        
+        
+        
+        <li><a href="/page18/">18</a></li>
+      
+    
 
     
     
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    
 
     
-      <li><a href="/page18/">18</a></li>
+      <li><a href="/page36/">36</a></li>
     
 
     

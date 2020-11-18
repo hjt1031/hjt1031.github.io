@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JAVA]알고리즘chap01 - juntae - 페이지 17</title>
+<!-- begin _includes/seo.html --><title>[JAVA]알고리즘 chap02 - juntae - 페이지 17</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/awsami/" rel="permalink">[AWS]AMI &amp; WordPress 설치
+        <a href="/reactcomponent/" rel="permalink">[React]component 파일로분리
 </a>
       
     </h2>
@@ -297,10 +297,9 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
-  Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등)
-백업 기능이라 생각하면 된다
+    <p class="archive__item-excerpt" itemprop="description">import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
 
+src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
 </p>
   </article>
 </div>
@@ -315,7 +314,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/aws/" rel="permalink">[AWS]인스턴스 에서 웹서버 사용
+        <a href="/reactcomponent/" rel="permalink">[React]component 파일로분리
 </a>
       
     </h2>
@@ -329,11 +328,9 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
-  홈페이지로 로그인해 연결을 눌러 키를 터미널에 복사 붙여넣기 를 해서 접속한다.
-  아마존 EC2 인스턴스에 퍼블릭 DNS(IPv4)에 있는 주소를 복사해 주소창에 붙여넣기를 한다.
-  홈페이지에 우분투 라고 나오면 제대로 접속한게 맞는것이다.
+    <p class="archive__item-excerpt" itemprop="description">import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
 
+src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
 </p>
   </article>
 </div>
@@ -348,7 +345,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs/" rel="permalink">[nodejs] 객체화, 모듈사용법,  경로보안, 출력정보 보안
+        <a href="/react/" rel="permalink">[React] 이벤트 (bind)
 </a>
       
     </h2>
@@ -362,12 +359,12 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함
-```javascript
-var template = { //template 라는 객체를 생성
-  HTML:function(title, list, body, control){
-    return `
-    &lt;!...</p>
+    <p class="archive__item-excerpt" itemprop="description">class App extends Component {
+  constructor(props){ //컨포넌트 초기화
+    super(props); 
+    this.state = { //스테이트 값 초기화
+      mode:'read',
+      subject:{title:'WE...</p>
   </article>
 </div>
 
@@ -381,7 +378,7 @@ var template = { //template 라는 객체를 생성
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/aws-osx-aws/" rel="permalink">[AWS] OSX로 AWS연결
+        <a href="/react/" rel="permalink">[React] 이벤트 (bind)
 </a>
       
     </h2>
@@ -395,13 +392,12 @@ var template = { //template 라는 객체를 생성
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">터미널로 접속 server 켜기
-
-  ssh key 를 받아 안전한 폴더에 저장
-  aws 홈페이지 EC2 에 나의 인스턴스를 우클릭 후 연결을 누르면 접속 방법이 나온다
-  인스터스를 킨다.
-  ssh 키를 안전한 폴더(그냥 디렉토리를 만들면 된다.)로 이동 시킨다.
-  ssh ...</p>
+    <p class="archive__item-excerpt" itemprop="description">class App extends Component {
+  constructor(props){ //컨포넌트 초기화
+    super(props); 
+    this.state = { //스테이트 값 초기화
+      mode:'read',
+      subject:{title:'WE...</p>
   </article>
 </div>
 
@@ -415,7 +411,7 @@ var template = { //template 라는 객체를 생성
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/node-js/" rel="permalink">[node js] 객체
+        <a href="/react-state/" rel="permalink">[React] state props
 </a>
       
     </h2>
@@ -429,10 +425,8 @@ var template = { //template 라는 객체를 생성
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Object 와 Array
-```javascript
-var members = [‘egoging’,’k8805’,’hoya’];
-console.log(members[1]);
+    <p class="archive__item-excerpt" itemprop="description">props 는 사용자가 컨포넌트를 사용하는 입장에서 중요한 것 (외부) 사용하는 쪽
+state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내부) 구현하는 쪽
 </p>
   </article>
 </div>
@@ -485,12 +479,28 @@ console.log(members[1]);
         <li><a href="/page17/" class="disabled current">17</a></li>
       
     
+      
+        
+        
+        
+        <li><a href="/page18/">18</a></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="/page19/">19</a></li>
+      
+    
 
     
     
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    
 
     
-      <li><a href="/page18/">18</a></li>
+      <li><a href="/page36/">36</a></li>
     
 
     

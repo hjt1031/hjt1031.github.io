@@ -526,4 +526,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java-chap2/",
         "teaser": null
+      },{
+        "title": "[JAVA] 재귀함수",
+        "excerpt":"package test;  public class Step1Test { \tstatic int sum = 0; \t \tstatic int sum(int param) { \t\tif(param != 0) { \t\t\tsum += param; \t\t\tparam--; \t\t\tsum(param); \t\t} \t\treturn sum; \t} \tpublic static void main(String[] args) { \t\tSystem.out.println(sum(Integer.parseInt(args[0]))); \t}  }   interface 는 private 를 못쓴다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
       }]

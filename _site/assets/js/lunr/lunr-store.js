@@ -521,7 +521,7 @@ var store = [{
         "url": "http://localhost:4000/javachap01/",
         "teaser": null
       },{
-        "title": "[JAVA]알고리즘 chap02",
+        "title": "[JAVA]알고리즘 chap02 - 1",
         "excerpt":"배열의 특성 확인 package chap02; class IntArray { public static void main(String []args) { int[] a = new int[5]; //배열의 선언 a[1] = 37; a[2] = 51; a[4] = a[1] * 2; for(int i = 0; i&lt;a.length; i++) System.out.println(\"a[\" + i + \"] = \" + a[i]); } } 배열의...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java-chap2/",
@@ -531,5 +531,11 @@ var store = [{
         "excerpt":"package test;  public class Step1Test { \tstatic int sum = 0; \t \tstatic int sum(int param) { \t\tif(param != 0) { \t\t\tsum += param; \t\t\tparam--; \t\t\tsum(param); \t\t} \t\treturn sum; \t} \tpublic static void main(String[] args) { \t\tSystem.out.println(sum(Integer.parseInt(args[0]))); \t}  }   interface 는 private 를 못쓴다.  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java/",
+        "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap02 - 2 & String class",
+        "excerpt":"String class 문자열을 나타내는 것이 java.lang 패키지에 소속된 String 클래스 이다. (기본형 int, double 형이 아니다) String s = \"ABC\"; 초기자의 “ABC”는 문자열 리터럴입니다. 문자열 리터럴은 단순히 문자가 늘어서 있는 것이 아니라 String형 인스턴스에 대한 참조입니다. String클래스는 문자열을 넣어두기 위한 문자 배열, 문자 수를 나타내는 필드 등을 갖고 있는 클래스입니다....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-chap02-2/",
         "teaser": null
       }]

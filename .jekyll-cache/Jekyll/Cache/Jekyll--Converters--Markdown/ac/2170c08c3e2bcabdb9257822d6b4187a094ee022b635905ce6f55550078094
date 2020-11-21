@@ -1,0 +1,62 @@
+I"W<p>String class 
+문자열을 나타내는 것이 java.lang 패키지에 소속된 String  클래스 이다. (기본형 int, double 형이 아니다)</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"ABC"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>초기자의 “ABC”는 문자열 리터럴입니다. 문자열 리터럴은 단순히 문자가 늘어서 있는 것이 아니라 String형 인스턴스에 대한 참조입니다.
+String클래스는 문자열을 넣어두기 위한 문자 배열, 문자 수를 나타내는 필드 등을 갖고 있는 클래스입니다.</p>
+
+<p>String클래스는 많은 생성자와 메서드를 제공한다.</p>
+
+<p>#기수 변환을 수행하는 프로그램</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap02</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CardConvRev</span> <span class="o">{</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">cardConvR</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">r</span><span class="o">,</span> <span class="kt">char</span><span class="o">[]</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">digits</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="nc">String</span> <span class="n">dchar</span> <span class="o">=</span> <span class="s">"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span><span class="o">;</span>
+		
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="n">d</span><span class="o">[</span><span class="n">digits</span><span class="o">++]</span> <span class="o">=</span> <span class="n">dchar</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">r</span><span class="o">);</span>
+			<span class="n">x</span> <span class="o">/=</span> <span class="n">r</span><span class="o">;</span>
+		<span class="o">}</span><span class="k">while</span> <span class="o">(</span><span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">digits</span><span class="o">;</span>
+	<span class="o">}</span>
+
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">Scanner</span> <span class="n">stdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+	<span class="kt">int</span> <span class="n">no</span><span class="o">;</span> <span class="c1">//변환하는 정수</span>
+	<span class="kt">int</span> <span class="n">cd</span><span class="o">;</span> <span class="c1">//기수</span>
+	<span class="kt">int</span> <span class="n">dno</span><span class="o">;</span> <span class="c1">//변환 후의 자릿수</span>
+	<span class="kt">int</span> <span class="n">retry</span><span class="o">;</span> <span class="c1">//다시 한번?</span>
+	<span class="kt">char</span><span class="o">[]</span> <span class="n">cno</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="mi">32</span><span class="o">];</span> <span class="c1">//변환 후 각 자리의 숫자를 넣어두는 문자의 배열</span>
+	
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"10진수를 기수 변환합니다."</span><span class="o">);</span>
+	<span class="k">do</span> <span class="o">{</span>
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"변환하는 음이 아닌 정수 :"</span><span class="o">);</span>
+			<span class="n">no</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">no</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+<span class="o">;</span>
+		
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"어떤 진수로 변환할까요? (2~36) :"</span><span class="o">);</span>
+			<span class="n">cd</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">cd</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">cd</span> <span class="o">&gt;</span> <span class="mi">36</span><span class="o">);</span>
+		
+		<span class="n">dno</span> <span class="o">=</span> <span class="n">cardConvR</span><span class="o">(</span><span class="n">no</span><span class="o">,</span> <span class="n">cd</span><span class="o">,</span> <span class="n">cno</span><span class="o">);</span> <span class="c1">//no를 cd진수로 변환</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">cd</span> <span class="o">+</span> <span class="s">"진수로는"</span><span class="o">);</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">dno</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">cno</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"입니다."</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"한 번 더 할까요? (1.예/0.아니요) :"</span><span class="o">);</span>
+		<span class="n">retry</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">retry</span> <span class="o">==</span> <span class="mi">1</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+:ET

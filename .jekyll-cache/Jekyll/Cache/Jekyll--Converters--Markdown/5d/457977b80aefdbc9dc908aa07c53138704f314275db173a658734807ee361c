@@ -1,0 +1,121 @@
+I"Z1<p>String class 
+문자열을 나타내는 것이 java.lang 패키지에 소속된 String  클래스 이다. (기본형 int, double 형이 아니다)</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"ABC"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>초기자의 “ABC”는 문자열 리터럴입니다. 문자열 리터럴은 단순히 문자가 늘어서 있는 것이 아니라 String형 인스턴스에 대한 참조입니다.
+String클래스는 문자열을 넣어두기 위한 문자 배열, 문자 수를 나타내는 필드 등을 갖고 있는 클래스입니다.</p>
+
+<p>String클래스는 많은 생성자와 메서드를 제공한다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span> <span class="nf">charAt</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="c1">//인덱스가 i인 곳의 문자를 가져옵니다.</span>
+<span class="kt">int</span> <span class="nf">length</span><span class="o">()</span> <span class="c1">//문자열의 문자 수를 가져옵니다.</span>
+<span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">)</span> <span class="c1">//문자열 s와 같은가를 조사합니다.</span>
+</code></pre></div></div>
+
+<p>#기수 변환을 수행하는 프로그램</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap02</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CardConvRev</span> <span class="o">{</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">cardConvR</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">r</span><span class="o">,</span> <span class="kt">char</span><span class="o">[]</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">digits</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="nc">String</span> <span class="n">dchar</span> <span class="o">=</span> <span class="s">"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span><span class="o">;</span>
+		
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="n">d</span><span class="o">[</span><span class="n">digits</span><span class="o">++]</span> <span class="o">=</span> <span class="n">dchar</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">r</span><span class="o">);</span>
+			<span class="n">x</span> <span class="o">/=</span> <span class="n">r</span><span class="o">;</span>
+		<span class="o">}</span><span class="k">while</span> <span class="o">(</span><span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">digits</span><span class="o">;</span>
+	<span class="o">}</span>
+
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">Scanner</span> <span class="n">stdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+	<span class="kt">int</span> <span class="n">no</span><span class="o">;</span> <span class="c1">//변환하는 정수</span>
+	<span class="kt">int</span> <span class="n">cd</span><span class="o">;</span> <span class="c1">//기수</span>
+	<span class="kt">int</span> <span class="n">dno</span><span class="o">;</span> <span class="c1">//변환 후의 자릿수</span>
+	<span class="kt">int</span> <span class="n">retry</span><span class="o">;</span> <span class="c1">//다시 한번?</span>
+	<span class="kt">char</span><span class="o">[]</span> <span class="n">cno</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="mi">32</span><span class="o">];</span> <span class="c1">//변환 후 각 자리의 숫자를 넣어두는 문자의 배열</span>
+	
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"10진수를 기수 변환합니다."</span><span class="o">);</span>
+	<span class="k">do</span> <span class="o">{</span>
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"변환하는 음이 아닌 정수 :"</span><span class="o">);</span>
+			<span class="n">no</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">no</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+<span class="o">;</span>
+		
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"어떤 진수로 변환할까요? (2~36) :"</span><span class="o">);</span>
+			<span class="n">cd</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">cd</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">cd</span> <span class="o">&gt;</span> <span class="mi">36</span><span class="o">);</span>
+		
+		<span class="n">dno</span> <span class="o">=</span> <span class="n">cardConvR</span><span class="o">(</span><span class="n">no</span><span class="o">,</span> <span class="n">cd</span><span class="o">,</span> <span class="n">cno</span><span class="o">);</span> <span class="c1">//no를 cd진수로 변환</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">cd</span> <span class="o">+</span> <span class="s">"진수로는"</span><span class="o">);</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">dno</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">cno</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"입니다."</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"한 번 더 할까요? (1.예/0.아니요) :"</span><span class="o">);</span>
+		<span class="n">retry</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">retry</span> <span class="o">==</span> <span class="mi">1</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>#1000 이하의 소수를 열거</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap02</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimeNumber1</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">//나눗셈의 횟수</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1000</span><span class="o">;</span> <span class="n">n</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
+			<span class="k">for</span><span class="o">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="n">counter</span><span class="o">++;</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="c1">//나누어 떨어지면 소수가 아님</span>
+					<span class="k">break</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="n">i</span><span class="o">)</span>	<span class="c1">//마지막까지 나누어떨어지지 않음</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
+		<span class="o">}</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"나눗셈을 수행한 횟수 : "</span> <span class="o">+</span> <span class="n">counter</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>package chap02;
+//1000 이하의 소수를 열거(버전3)
+public class PrimeNumber3 {
+ public static void main(String []args) {
+	 int counter = 0; //곱셈과 나눗셈의 횟수
+	 int ptr = 0; //찾은 소수의 개수
+	 int[] prime = new int[500]; //소수를 저장하는 배열</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> prime[ptr++] = 2; //2는 소수임
+ prime[ptr++] = 3; //3은 소수임
+ 
+ for(int n = 5; n &lt;= 1000; n+= 2) { //대상은 홀수만
+	 boolean flag = false;
+	 for(int i = 1; prime[i] * prime[i] &lt;= n; i++) {
+		 counter += 2;
+		 if(n % prime[i] == 0) { //나누어 떨어지면 소수가아님
+			 flag = true;
+			 break; //더 이상의 반복은 불필요
+		 }
+	 }
+	 if(!flag) {
+		 prime[ptr++] = n;
+		 counter++;
+	 }
+ }
+ 
+ for(int i = 0; i &lt; ptr; i++)	//찾은 ptr개의 소수를 출력
+	 System.out.println(prime[i]);
+ 
+ System.out.println("곱셈과 나눗셈을 수행한 횟수 : " + counter);  } }
+</code></pre></div></div>
+:ET

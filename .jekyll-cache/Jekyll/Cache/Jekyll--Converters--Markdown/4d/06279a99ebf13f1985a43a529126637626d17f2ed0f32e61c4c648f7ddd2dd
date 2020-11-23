@@ -1,0 +1,5 @@
+I"�<p>String class 
+문자열을 나타내는 것이 java.lang 패키지에 소속된 String  클래스 이다. (기본형 int, double 형이 아니다)</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"ABC"</span><span class="o">;</span>
+</code></pre></div></div>
+:ET

@@ -490,4 +490,52 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/nodejs/",
         "teaser": null
+      },{
+        "title": "[Spring] 개념",
+        "excerpt":"Spring 이란? 자바 엔터프라이즈 개발을 편리하게 해주는 오픈소스 경량급 애플리케이션 프레임워크이다. Spring의 특징 경량 컨테이너로서 자바의 객체를 Spring이 직접 관리함 각각의 객체 생성, 소멸과 같은 라이프 사이클을 스프링이 대신 관리해주며, 스프링으로부터 객체를 얻어올 수 있다. 제어 역행(IOC : Inversion of Control) 애플리케이션 간의 느슨한 결합을 도모 컨트롤의 제어권이 사용자가 아니라...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/spring/",
+        "teaser": null
+      },{
+        "title": "[JAVA]프로그래머스(값 뒤집기),타입",
+        "excerpt":"import java.util.Arrays; class SolutionCoding { public static int[] solution(long n) { String input = \"\" + n; int size = input.length(); int[] answer = new int[size]; for (int i = size - 1; i &gt;= 0; i--) { answer[i] = input.charAt(size - i - 1) - '0'; } return answer;...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
+      },{
+        "title": "[JAVA]ArrayList",
+        "excerpt":"ArrayList란? ArrayList는 List 인터페이스를 상속받은 클래스로 크기가 가변적으로 변하는 선형리스트입니다. 일반적인 배열과 같은 순차리스트이며 인덱스로 내부의 객체를 관리한다는점등이 유사하지만 한번 생성되면 크기가 변하지 않는 배열과는 달리 ArrayList는 객체들이 추가되어 저장 용량(capacity)을 초과한다면 자동으로 부족한 크기만큼 저장 용량(capacity)이 늘어난다는 특징을 가지고 있습니다. ArrayList list = new ArrayList();//타입 미설정 Object로 선언된다. ArrayList&lt;Student&gt;...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/javaarraylist/",
+        "teaser": null
+      },{
+        "title": "[JAVA]객체, 클래스",
+        "excerpt":"객체 대상을 나타내는 단어. 예를 들어, 사람 개인 한 명 한 명을 모두 객체라 할 수 있고, 책 한 권 한 권을 객체라 할 수 있습니다. 사람은 생김새와 성격이 똑같을 수는 없기 때문에 개개인을 객체라 할 수 있으며, 책도 내용이 같을지라도 한 권의 책에 흠집을 낸다고 해서 모든 책들이 전부...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
+      },{
+        "title": "[JAVA]알고리즘chap01",
+        "excerpt":"chap01 : 세 값의 대소 관계와 중앙값 구하기 package chap01; import java.util.Scanner; public class Median { static int med3(int a, int b, int c) { if(a &gt;= b) if(b &gt;= c) return b; else if( a &lt;= c) return a; else return c; else if(a &gt; c) return a; else...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/javachap01/",
+        "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap02 - 1",
+        "excerpt":"배열의 특성 확인 package chap02; class IntArray { public static void main(String []args) { int[] a = new int[5]; //배열의 선언 a[1] = 37; a[2] = 51; a[4] = a[1] * 2; for(int i = 0; i&lt;a.length; i++) System.out.println(\"a[\" + i + \"] = \" + a[i]); } } 배열의...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-chap2/",
+        "teaser": null
+      },{
+        "title": "[JAVA] 재귀함수",
+        "excerpt":"package test;  public class Step1Test { \tstatic int sum = 0; \t \tstatic int sum(int param) { \t\tif(param != 0) { \t\t\tsum += param; \t\t\tparam--; \t\t\tsum(param); \t\t} \t\treturn sum; \t} \tpublic static void main(String[] args) { \t\tSystem.out.println(sum(Integer.parseInt(args[0]))); \t}  }   interface 는 private 를 못쓴다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap02 - 2 & String class",
+        "excerpt":"String class 문자열을 나타내는 것이 java.lang 패키지에 소속된 String 클래스 이다. (기본형 int, double 형이 아니다) String s = \"ABC\"; 초기자의 “ABC”는 문자열 리터럴입니다. 문자열 리터럴은 단순히 문자가 늘어서 있는 것이 아니라 String형 인스턴스에 대한 참조입니다. String클래스는 문자열을 넣어두기 위한 문자 배열, 문자 수를 나타내는 필드 등을 갖고 있는 클래스입니다....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-chap02-2/",
+        "teaser": null
       }]

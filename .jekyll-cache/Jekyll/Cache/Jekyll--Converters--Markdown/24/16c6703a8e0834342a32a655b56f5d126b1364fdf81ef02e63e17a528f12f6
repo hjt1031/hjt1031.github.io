@@ -1,0 +1,66 @@
+I"}*<h1 id="2행-4열의-2차원-배열">2행 4열의 2차원 배열</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//2행 4열의 2차원 배열</span>
+<span class="kn">package</span> <span class="nn">chap2</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Int2DArray</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span><span class="o">[][]</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">4</span><span class="o">];</span> <span class="c1">//2차원 배열 선언</span>
+		
+		<span class="n">x</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">37</span><span class="o">;</span>
+		<span class="n">x</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">54</span><span class="o">;</span>
+		<span class="n">x</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">65</span><span class="o">;</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"x["</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">"]["</span> <span class="o">+</span> <span class="n">j</span> <span class="o">+</span> <span class="s">"]="</span> <span class="o">+</span> <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+				
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h1 id="한-해의-경과-일-수를-계산하는-프로그램">한 해의 경과 일 수를 계산하는 프로그램</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap2</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DayOfYear</span> <span class="o">{</span>
+	
+	<span class="kd">static</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">mdays</span> <span class="o">=</span> <span class="o">{</span>
+			<span class="o">{</span><span class="mi">31</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">},</span> 	<span class="c1">//평년</span>
+			<span class="o">{</span><span class="mi">31</span><span class="o">,</span> <span class="mi">29</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">},</span> 	<span class="c1">//윤년</span>
+	<span class="o">};</span>
+	
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">isLeap</span><span class="o">(</span><span class="kt">int</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="o">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">// 서기 y년 m월 d일의 그 해 경과 일 수를 구함</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfYear</span><span class="o">(</span><span class="kt">int</span> <span class="n">y</span><span class="o">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">,</span> <span class="kt">int</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//1월 ~ (m-1)월의 일 수를 더</span>
+		<span class="kt">int</span> <span class="n">days</span> <span class="o">=</span> <span class="n">d</span><span class="o">;</span>		<span class="c1">//일수</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="n">days</span> <span class="o">+=</span> <span class="n">mdays</span><span class="o">[</span><span class="n">isLeap</span><span class="o">(</span><span class="n">y</span><span class="o">)][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">];</span> <span class="c1">//윤년이면 1 평년이면 0</span>
+		<span class="k">return</span> <span class="n">days</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Scanner</span> <span class="n">stdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">retry</span><span class="o">;</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"그 해 경과 일수를 구합니다."</span><span class="o">);</span>
+		
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"년 : "</span><span class="o">);</span> <span class="kt">int</span> <span class="n">year</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"월 : "</span><span class="o">);</span> <span class="kt">int</span> <span class="n">month</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"일 : "</span><span class="o">);</span> <span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span> 
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"그 해 %d일째 입니다.\n"</span><span class="o">,</span><span class="n">dayOfYear</span><span class="o">(</span><span class="n">year</span><span class="o">,</span> <span class="n">month</span><span class="o">,</span> <span class="n">day</span><span class="o">));</span>
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"한 번 더 할까요? (1.예 / 2.아니요) : "</span><span class="o">);</span>
+			<span class="n">retry</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">retry</span> <span class="o">==</span> <span class="mi">1</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h1 id="확장-for문배열의-모든-요소의-합계를-구하기">확장 for문(배열의 모든 요소의 합계를 구하기)</h1>
+:ET

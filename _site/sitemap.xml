@@ -361,6 +361,10 @@
 <lastmod>2020-11-21T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/java/</loc>
+<lastmod>2020-11-23T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -413,5 +417,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page18/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page19/</loc>
 </url>
 </urlset>

@@ -538,4 +538,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java-chap02-2/",
         "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap02 - 3 & Class",
+        "excerpt":"2행 4열의 2차원 배열 //2행 4열의 2차원 배열 package chap2; public class Int2DArray { public static void main(String[] args) { int[][] x = new int[2][4]; //2차원 배열 선언 x[0][1] = 37; x[0][3] = 54; x[1][2] = 65; for(int i = 0; i &lt; 2; i++) for(int j = 0; j...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java/",
+        "teaser": null
       }]

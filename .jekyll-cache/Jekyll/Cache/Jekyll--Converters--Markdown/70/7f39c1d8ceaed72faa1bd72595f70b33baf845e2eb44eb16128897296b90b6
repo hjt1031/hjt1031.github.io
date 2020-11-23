@@ -1,0 +1,212 @@
+I"�w<h1 id="2행-4열의-2차원-배열">2행 4열의 2차원 배열</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//2행 4열의 2차원 배열</span>
+<span class="kn">package</span> <span class="nn">chap2</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Int2DArray</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span><span class="o">[][]</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">4</span><span class="o">];</span> <span class="c1">//2차원 배열 선언</span>
+		
+		<span class="n">x</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">37</span><span class="o">;</span>
+		<span class="n">x</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">54</span><span class="o">;</span>
+		<span class="n">x</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">65</span><span class="o">;</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"x["</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">"]["</span> <span class="o">+</span> <span class="n">j</span> <span class="o">+</span> <span class="s">"]="</span> <span class="o">+</span> <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+				
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h1 id="한-해의-경과-일-수를-계산하는-프로그램">한 해의 경과 일 수를 계산하는 프로그램</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap2</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DayOfYear</span> <span class="o">{</span>
+	
+	<span class="kd">static</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">mdays</span> <span class="o">=</span> <span class="o">{</span>
+			<span class="o">{</span><span class="mi">31</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">},</span> 	<span class="c1">//평년</span>
+			<span class="o">{</span><span class="mi">31</span><span class="o">,</span> <span class="mi">29</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">31</span><span class="o">},</span> 	<span class="c1">//윤년</span>
+	<span class="o">};</span>
+	
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">isLeap</span><span class="o">(</span><span class="kt">int</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="o">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">// 서기 y년 m월 d일의 그 해 경과 일 수를 구함</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfYear</span><span class="o">(</span><span class="kt">int</span> <span class="n">y</span><span class="o">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">,</span> <span class="kt">int</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//1월 ~ (m-1)월의 일 수를 더</span>
+		<span class="kt">int</span> <span class="n">days</span> <span class="o">=</span> <span class="n">d</span><span class="o">;</span>		<span class="c1">//일수</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="n">days</span> <span class="o">+=</span> <span class="n">mdays</span><span class="o">[</span><span class="n">isLeap</span><span class="o">(</span><span class="n">y</span><span class="o">)][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">];</span> <span class="c1">//윤년이면 1 평년이면 0</span>
+		<span class="k">return</span> <span class="n">days</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Scanner</span> <span class="n">stdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">retry</span><span class="o">;</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"그 해 경과 일수를 구합니다."</span><span class="o">);</span>
+		
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"년 : "</span><span class="o">);</span> <span class="kt">int</span> <span class="n">year</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"월 : "</span><span class="o">);</span> <span class="kt">int</span> <span class="n">month</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"일 : "</span><span class="o">);</span> <span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span> 
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"그 해 %d일째 입니다.\n"</span><span class="o">,</span><span class="n">dayOfYear</span><span class="o">(</span><span class="n">year</span><span class="o">,</span> <span class="n">month</span><span class="o">,</span> <span class="n">day</span><span class="o">));</span>
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"한 번 더 할까요? (1.예 / 2.아니요) : "</span><span class="o">);</span>
+			<span class="n">retry</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">retry</span> <span class="o">==</span> <span class="mi">1</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h1 id="확장-for문배열의-모든-요소의-합계를-구하기">확장 for문(배열의 모든 요소의 합계를 구하기)</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">chap2</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="n">class</span> <span class="n">SumForIn</span> <span class="p">{</span>
+	<span class="k">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="k">String</span> <span class="p">[]</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">double</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span> <span class="p">{</span><span class="m">1.0</span><span class="p">,</span> <span class="m">2.0</span><span class="p">,</span> <span class="m">3.0</span><span class="p">,</span> <span class="m">4.0</span><span class="p">,</span> <span class="m">5.0</span> <span class="p">};</span>
+		
+		<span class="n">for</span><span class="p">(</span><span class="n">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+			<span class="nf">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"a["</span> <span class="p">+</span> <span class="n">i</span> <span class="p">+</span> <span class="s2">"]="</span> <span class="p">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+		
+		<span class="n">double</span> <span class="k">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="p">//</span><span class="err">합계</span>
+		
+		<span class="n">for</span><span class="p">(</span><span class="n">double</span> <span class="n">i</span> <span class="p">:</span> <span class="n">a</span><span class="p">)</span> <span class="p">//</span><span class="err">확장</span> <span class="n">for</span><span class="err">문</span> <span class="err">배열</span> <span class="n">a</span><span class="err">의</span> <span class="err">처음부터</span> <span class="err">끝까지</span> <span class="err">모든</span> <span class="err">요소를</span> <span class="err">한개</span> <span class="err">씩</span> <span class="err">스캔</span>
+			<span class="k">sum</span> <span class="p">+=</span> <span class="n">i</span><span class="p">;</span>
+		
+		<span class="nf">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"모든 요소의 합은"</span> <span class="p">+</span> <span class="k">sum</span> <span class="p">+</span><span class="s2">"입니다"</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="클래스">클래스</h1>
+<p><em>클래스는 임의의 데이터형을 자유로이 조합하여 만들 수 있는 자료구조입니다.</em></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class XYZ{
+	int x;
+	long y;
+	double z;
+}
+
+XYZ a; //XYZ형의 클래스형 변수 a 선언
+a = new XYZ(); //XYZ형의 클래스 인스턴스(실체)를 생성
+
+XYZ a = new XYZ(); //변수와 인스턴스를 한꺼번에 생성
+</code></pre></div></div>
+
+<h1 id="클래스의-예시">클래스의 예시</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap2</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Classexample</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">f1</span><span class="o">;</span> 	<span class="c1">//	비공개 필드</span>
+	<span class="kd">protected</span> <span class="kt">int</span> <span class="n">f2</span><span class="o">;</span>	<span class="c1">//한정 공개 필드</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="n">f3</span><span class="o">;</span> 	<span class="c1">//공개 필드</span>
+	
+	<span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">S1</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> 	<span class="c1">//정적 상수 필드</span>
+	
+	<span class="kd">public</span> <span class="nf">Classexample</span><span class="o">()</span> <span class="o">{</span>		<span class="c1">//생성자</span>
+		<span class="n">f1</span> <span class="o">=</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f3</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="nf">Classexample</span><span class="o">(</span><span class="kt">int</span> <span class="n">f1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">f2</span><span class="o">,</span> <span class="kt">int</span> <span class="n">f3</span><span class="o">)</span> <span class="o">{</span>		<span class="c1">//생성자</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">f1</span> <span class="o">=</span> <span class="n">f1</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">f2</span> <span class="o">=</span> <span class="n">f2</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">f3</span> <span class="o">=</span> <span class="n">f3</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setF1</span><span class="o">(</span><span class="kt">int</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>	<span class="c1">//메서드 F1의 setter</span>
+		<span class="n">f1</span> <span class="o">=</span> <span class="n">f</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getF1</span><span class="o">()</span> <span class="o">{</span> 	<span class="c1">//메서드 F1의 getter</span>
+		<span class="k">return</span> <span class="n">f1</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h1 id="신체검사-데이터의-알람표">신체검사 데이터의 알람표</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap2</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PhysicalExamination</span> <span class="o">{</span>
+
+		<span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">VMAX</span> <span class="o">=</span> <span class="mi">21</span><span class="o">;</span> <span class="c1">//시력 분포(0.0에서 0,1 단위로 21개</span>
+		
+		<span class="kd">static</span> <span class="kd">class</span> <span class="nc">PhyscData</span><span class="o">{</span>
+			<span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+			<span class="kt">int</span> <span class="n">height</span><span class="o">;</span>
+			<span class="kt">double</span> <span class="n">vision</span><span class="o">;</span>
+			<span class="c1">//생성자</span>
+			<span class="nc">PhyscData</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">,</span> <span class="kt">double</span> <span class="n">vision</span><span class="o">){</span>
+				<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+				<span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
+				<span class="k">this</span><span class="o">.</span><span class="na">vision</span> <span class="o">=</span> <span class="n">vision</span><span class="o">;</span>
+				
+			<span class="o">}</span>
+		<span class="o">}</span>
+		
+		<span class="c1">//키의 평균값을 구함</span>
+		<span class="kd">static</span> <span class="kt">double</span> <span class="nf">aveHeight</span><span class="o">(</span><span class="nc">PhyscData</span><span class="o">[]</span> <span class="n">dat</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span><span class="n">dat</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+				<span class="n">sum</span> <span class="o">+=</span> <span class="n">dat</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">height</span><span class="o">;</span>
+			
+			<span class="k">return</span> <span class="n">sum</span> <span class="o">/</span> <span class="n">dat</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+		<span class="c1">//시력 분포를 구함</span>
+		<span class="kd">static</span> <span class="kt">void</span> <span class="nf">distVision</span><span class="o">(</span><span class="nc">PhyscData</span><span class="o">[]</span> <span class="n">dat</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">dist</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			
+			<span class="n">dist</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			<span class="k">for</span><span class="o">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dat</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">dat</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">vision</span> <span class="o">&gt;=</span> <span class="mf">0.0</span> <span class="o">&amp;&amp;</span> <span class="n">dat</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">vision</span> <span class="o">&lt;=</span> <span class="no">VMAX</span> <span class="o">/</span> <span class="mf">10.0</span><span class="o">)</span>
+					<span class="n">dist</span><span class="o">[(</span><span class="kt">int</span><span class="o">)(</span><span class="n">dat</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">vision</span> <span class="o">*</span> <span class="mi">10</span><span class="o">)]++;</span>
+		<span class="o">}</span>
+		
+		<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">Scanner</span> <span class="nc">StdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+			
+			<span class="nc">PhyscData</span><span class="o">[]</span> <span class="n">x</span> <span class="o">=</span> <span class="o">{</span>
+					<span class="k">new</span> <span class="nf">PhyscData</span><span class="o">(</span><span class="s">"박현규"</span><span class="o">,</span><span class="mi">162</span><span class="o">,</span> <span class="mf">0.3</span><span class="o">),</span>
+					<span class="k">new</span> <span class="nf">PhyscData</span><span class="o">(</span><span class="s">"함진아"</span><span class="o">,</span><span class="mi">173</span><span class="o">,</span> <span class="mf">0.7</span><span class="o">),</span>
+					<span class="k">new</span> <span class="nf">PhyscData</span><span class="o">(</span><span class="s">"최윤미"</span><span class="o">,</span><span class="mi">175</span><span class="o">,</span> <span class="mf">2.0</span><span class="o">),</span>
+					<span class="k">new</span> <span class="nf">PhyscData</span><span class="o">(</span><span class="s">"홍연의"</span><span class="o">,</span><span class="mi">171</span><span class="o">,</span> <span class="mf">1.5</span><span class="o">),</span>
+					<span class="k">new</span> <span class="nf">PhyscData</span><span class="o">(</span><span class="s">"이수진"</span><span class="o">,</span><span class="mi">168</span><span class="o">,</span> <span class="mf">0.4</span><span class="o">),</span>
+					<span class="k">new</span> <span class="nf">PhyscData</span><span class="o">(</span><span class="s">"김영준"</span><span class="o">,</span><span class="mi">174</span><span class="o">,</span> <span class="mf">1.2</span><span class="o">),</span>
+					<span class="k">new</span> <span class="nf">PhyscData</span><span class="o">(</span><span class="s">"박용규"</span><span class="o">,</span><span class="mi">169</span><span class="o">,</span> <span class="mf">0.8</span><span class="o">),</span>
+			<span class="o">};</span>
+			<span class="kt">int</span><span class="o">[]</span> <span class="n">vdist</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">VMAX</span><span class="o">];</span> <span class="c1">//시력분포</span>
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"신체 검사 리스트"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이름      키    시력"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"------------------"</span><span class="o">);</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">x</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%-8s%3d%5.1f\n"</span><span class="o">,</span> <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">name</span><span class="o">,</span> <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">height</span><span class="o">,</span> <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">vision</span><span class="o">);</span>
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"\n평균 키 : %5.1fcm\n"</span><span class="o">,</span> <span class="n">aveHeight</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+			
+			<span class="n">distVision</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">vdist</span><span class="o">);</span>
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\n시력 분포"</span><span class="o">);</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="no">VMAX</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%3.1f~:%2d명\n"</span><span class="o">,</span><span class="n">i</span><span class="o">/</span><span class="mf">10.0</span><span class="o">,</span> <span class="n">vdist</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+		<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p><strong>공개 클래스</strong> : 클래스 접근 제한자 public을 붙여 선언한 클래스로, 다른 패키지에서 사용할 수 있는 공개 클래스 입니다.<br />
+<strong>final 클래스</strong> : 클래스 접근 제한자 final을 붙여 선언한 클래스로, 서브 클래스를 가질 수 없습니다.(새로운 클래스를 상속할 수 없습니다.) 파이널 클래스가 됩니다.<br />
+<strong>파생 클래스</strong> : 클래스 A를 직접 상위 클래스로 선언할 때 extends A를 추가해야 합니다. 이 때 선언한 클래스는 클래스 A의 직접 서브 클래스가 됩니다. 클래스 선언에 extends가 없는 클래스의 상위 클래스는 Object 클래스가 됩니다.
+<strong>추상클래스</strong> : 클래스 접근 제한자 abstract를 붙여 클래스를 선언하면 추상 메서드를 가질 수 있는 추상 클래스가 됩니다. 추상 클래스형은 불완전한 클래스이므로 인스턴스를 만들 수 없습니다.
+<strong>중첩클래스</strong> : 클래스 또는 인터페이스 안에 선언한 클래스는 중첩 클래스가 됩니다. &lt;/br&gt;
+		- 멤버 클래스 : 선언이 다른 클래스 또는 인터페이스 선언에 둘러싸인 클래스입니다
+		- 내부 클래스 : 명시적으로도 암묵적으로도 정적으로 선언되지 않는 중첩클래스 입니다. 정적 초기화나 멤버 인터페이스 선언을 할 수 없습니다. 그리고 컴파일을 할 때 상수 필드가 아닌 한 정적 멤버를 선언할 수 없습니다.
+		-지역 클래스 : 이름이 주어진 중첩 클래스인 내부 클래스입니다. 어떤 클래스의 멤버도 될 수 없습니다.</p>
+:ET

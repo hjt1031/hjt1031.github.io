@@ -53,10 +53,6 @@
 <lastmod>2020-05-07T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/nodejs/</loc>
-<lastmod>2020-05-07T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/nodejsexpresshello-world1/</loc>
 <lastmod>2020-05-12T00:00:00+09:00</lastmod>
 </url>
@@ -357,6 +353,10 @@
 <lastmod>2020-11-24T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/nodejs-expresshello-world/</loc>
+<lastmod>2020-11-24T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/nodejs/</loc>
 <lastmod>2020-11-24T00:00:00+09:00</lastmod>
 </url>
@@ -366,6 +366,10 @@
 </url>
 <url>
 <loc>http://localhost:4000/nodejsexpress/</loc>
+<lastmod>2020-11-24T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/nodejsexpresshello-world/</loc>
 <lastmod>2020-11-24T00:00:00+09:00</lastmod>
 </url>
 <url>

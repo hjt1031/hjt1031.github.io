@@ -9,29 +9,27 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[얄코]비동기 프로그래밍 - juntae</title>
-<meta name="description" content="동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다. ">
+<!-- begin _includes/seo.html --><title>[nodejs]Mysql Module - juntae</title>
+<meta name="description" content="JavaScript And Node.js ">
 
 
   <meta name="author" content="동센">
 
 
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[얄코]비동기 프로그래밍">
+<meta property="og:title" content="juntae">
 <meta property="og:url" content="http://localhost:4000/">
 
 
-  <meta property="og:description" content="동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다. ">
+  <meta property="og:description" content="JavaScript And Node.js ">
 
 
 
 
 
 
-
-  <meta property="article:published_time" content="2020-11-24T00:00:00+09:00">
 
 
 
@@ -45,6 +43,8 @@
 <link rel="canonical" href="http://localhost:4000/">
 
 
+
+  <link rel="next" href="http://localhost:4000/page2/">
 
 
 <script type="application/ld+json">
@@ -103,7 +103,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--home">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -128,12 +128,10 @@
           Developer
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
-            </li></ul>
+        <ul class="visible-links"></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">토글 메뉴</span>
+          <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -171,7 +169,7 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">팔로우</button>
+    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
@@ -261,109 +259,22 @@
 
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[얄코]비동기 프로그래밍">
-    <meta itemprop="description" content="동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.">
-    <meta itemprop="datePublished" content="2020-11-24T00:00:00+09:00">
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title"></h1>
+    
     
 
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[얄코]비동기 프로그래밍
-</h1>
-          
-            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+<h3 class="archive__subtitle">Recent Posts</h3>
 
 
 
 
-  최대 1 분 소요
-
-</p>
-          
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <p>동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
-비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.</p>
-
-<p>비동기 함수 call back 이라 생각하면 된다.</p>
-
-<p>만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게
-콜백 지옥이다.</p>
-
-<p>콜백 지옥을 해결하기위해 나온게 
-Promise (체이닝 방식 .then 사용) 를 사용하게 되면 순차적으로 처리 가능
-하지만 Promise 는 polyfill 등의 라이브러리 없이는 익스플로러에서는 동작하지 않으니 주의해야함!</p>
-
-<p>그리고
-asyme await 도 비동기방식의 한 종류이며 동기 작업처럼 작성 할 수 있다.</p>
-
-<p>await를 붙여주면 이 함수가 끝나기 전에 다음 작업으로 넘어갈 수 없다.
-```java
-async function a (학생_학번){
-let 학생_정보 = await 학생정보_조회_Promise(학생_학번) //원래라면 그냥 바로 밑으로 흘러가는 비동기 처리가 되겠지만 await 를 써주면 동기처럼 사용가능</p>
-
-<p>let 고교_DB_주소 = 고교_DB_주소_조회_Promise(학생_정보[“고교명”]);
-}</p>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-24T00:00:00+09:00">November 24, 2020</time></p>
-        
-      </footer>
-
-      <section class="page__share">
-  
-    <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5B%EC%96%84%EC%BD%94%5D%EB%B9%84%EB%8F%99%EA%B8%B0+%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20http%3A%2F%2Flocalhost%3A4000%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
 
 
-      
-  <nav class="pagination">
-    
-      <a href="/java/" class="pagination--pager" title="[JAVA]알고리즘 chap02 - 3 &amp; Class
-">이전</a>
-    
-    
-      <a href="/a/" class="pagination--pager" title="[aws]스트래스테스트
-">다음</a>
-    
-  </nav>
-
-    </div>
-
-    
-  </article>
-
-  
-  
-    <div class="page__related">
-      <h4 class="page__related-title">참고</h4>
-      <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
+<div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -378,7 +289,7 @@ let 학생_정보 = await 학생정보_조회_Promise(학생_학번) //원래라
 
 
 
-  최대 1 분 소요
+  less than 1 minute read
 
 </p>
     
@@ -388,12 +299,12 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
   </article>
 </div>
 
-        
-          
+
+  
 
 
 
-<div class="grid__item">
+<div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -408,7 +319,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 
 
-  최대 1 분 소요
+  less than 1 minute read
 
 </p>
     
@@ -417,12 +328,12 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
   </article>
 </div>
 
-        
-          
+
+  
 
 
 
-<div class="grid__item">
+<div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -437,7 +348,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 
 
-  최대 1 분 소요
+  less than 1 minute read
 
 </p>
     
@@ -450,12 +361,12 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
   </article>
 </div>
 
-        
-          
+
+  
 
 
 
-<div class="grid__item">
+<div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -470,7 +381,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 
 
-  최대 1 분 소요
+  less than 1 minute read
 
 </p>
     
@@ -480,13 +391,97 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
   </article>
 </div>
 
-        
-      </div>
-    </div>
+
   
-  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[Nodejs]객체
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Object 와 Array
+```java
+var members = [‘egoging’,’k8805’,’hoya’];
+console.log(members[1]);
+</p>
+  </article>
 </div>
 
+
+
+
+<nav class="pagination">
+  
+  <ul>
+    
+    
+    <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
+    
+
+    
+    
+      <li><a href="#" class="disabled current">1</a></li>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+        
+        
+        
+        <li><a href="/page2/">2</a></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="/page3/">3</a></li>
+      
+    
+
+    
+    
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    
+
+    
+      <li><a href="/page19/">19</a></li>
+    
+
+    
+    
+      <li><a href="/page2/">Next</a></li>
+    
+  </ul>
+</nav>
+
+
+
+  </div>
+</div>
     </div>
 
     
@@ -499,8 +494,6 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
         <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>팔로우:</strong></li>
-    
 
     
       
@@ -518,7 +511,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
       
     
 
-    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 

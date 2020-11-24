@@ -302,13 +302,13 @@ Promise (체이닝 방식 .then 사용) 를 사용하게 되면 순차적으로 
 <p>그리고
 asyme await 도 비동기방식의 한 종류이며 동기 작업처럼 작성 할 수 있다.</p>
 
-<p>await를 붙여주면 이 함수가 끝나기 전에 다음 작업으로 넘어갈 수 없다.</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">async</span> <span class="n">function</span> <span class="nf">a</span> <span class="o">(</span><span class="n">학생_학번</span><span class="o">){</span>
-<span class="n">let</span> <span class="n">학생_정보</span> <span class="o">=</span> <span class="n">await</span> <span class="n">학생정보_조회_Promise</span><span class="o">(</span><span class="n">학생_학번</span><span class="o">)</span> <span class="c1">//원래라면 그냥 바로 밑으로 흘러가는 비동기 처리가 되겠지만 await 를 써주면 동기처럼 사용가능</span>
+<p>await를 붙여주면 이 함수가 끝나기 전에 다음 작업으로 넘어갈 수 없다.
+```java
+async function a (학생_학번){
+let 학생_정보 = await 학생정보_조회_Promise(학생_학번) //원래라면 그냥 바로 밑으로 흘러가는 비동기 처리가 되겠지만 await 를 써주면 동기처럼 사용가능</p>
 
-<span class="n">let</span> <span class="n">고교_DB_주소</span> <span class="o">=</span> <span class="n">고교_DB_주소_조회_Promise</span><span class="o">(</span><span class="n">학생_정보</span><span class="o">[</span><span class="s">"고교명"</span><span class="o">]);</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<p>let 고교_DB_주소 = 고교_DB_주소_조회_Promise(학생_정보[“고교명”]);
+}</p>
 
         
       </section>

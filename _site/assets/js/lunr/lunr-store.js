@@ -71,12 +71,6 @@ var store = [{
         "url": "http://localhost:4000/po/",
         "teaser": null
       },{
-        "title": "[AWS]Auto Scaling (오토스케일링)",
-        "excerpt":"컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능) AUTO SCALING 목록에 보면 시작구성과, Auto Scaling group 이 있다. 먼저 Auto Scaling group에 먼저 생성을 해준다. 그러면 오토스케일의 이미지를 선택한다 이미지화 시켯던 내AMI를 선택한다. 인스턴스 성능 선택한다. name 정하고 스토리지 정하고 시큐리티 그룹을 만든다. 그다음 오토스케일 그룹을 만드는...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/aws/",
-        "teaser": null
-      },{
         "title": "[nodejs] 페이지 생성 구현2",
         "excerpt":"app.get('/create',function(request,response){ //get방식일떄  app.post('/create_process',function(request,response){ //post방식   쿼리 스트링이 아닌 방식으로 바꿀려면   &lt;a href=\"/update/?id=${sanitizedTitle}\"&gt;update&lt;/a&gt; 에서 &lt;a href=\"/update/${sanitizedTitle}\"&gt;update&lt;/a&gt;   삭제기능  &lt;form action=\"/delete_process\" method=\"post\"&gt; //action 에 delete 앞에 /를 주게되면 최상위 path 바로밑으로 감   express 는 리다이렉션 기능을 편리하게 제공하고 있다.   response.redirect //를 사용하면 된다  ","categories": [],
         "tags": [],
@@ -507,6 +501,12 @@ var store = [{
         "excerpt":"EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품 Instance : Instance 한개당 한대의 컴퓨터라 생각하면 된다 온디맨드 인스턴스 : 필요할때 키고 필요없을땐 끊다. 우리가 컴퓨터를 필요할 때마다 켜고 끄고 할 수 있는 인스턴스를 의미 예약 인스턴스 : 서버를 키는데 365일 동안 끄지 않는 경우면 예약 인스턴스를 사용하는게...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/aws/",
+        "teaser": null
+      },{
+        "title": "[AWS]Auto Scaling (오토스케일링)",
+        "excerpt":"컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능) AUTO SCALING 목록에 보면 시작구성과, Auto Scaling group 이 있다. 먼저 Auto Scaling group에 먼저 생성을 해준다. 그러면 오토스케일의 이미지를 선택한다 이미지화 시켯던 내AMI를 선택한다. 인스턴스 성능 선택한다. name 정하고 스토리지 정하고 시큐리티 그룹을 만든다. 그다음 오토스케일 그룹을 만드는...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/awsauto-scaling/",
         "teaser": null
       },{
         "title": "[AWS]Scalability",

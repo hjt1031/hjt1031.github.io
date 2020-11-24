@@ -461,6 +461,12 @@ var store = [{
         "url": "http://localhost:4000/java/",
         "teaser": null
       },{
+        "title": "[얄코]비동기 프로그래밍",
+        "excerpt":"동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다. 비동기 함수 call back 이라 생각하면 된다. 만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게 콜백 지옥이다. 콜백 지옥을 해결하기위해...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/",
+        "teaser": null
+      },{
         "title": "[aws]스트래스테스트",
         "excerpt":"인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip 컴퓨터의 CPU 점유율 보기 : top ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171 sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐...","categories": [],
         "tags": [],

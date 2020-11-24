@@ -95,12 +95,6 @@ var store = [{
         "url": "http://localhost:4000/awss3-simple-storage-service/",
         "teaser": null
       },{
-        "title": "[nodejs]정적파일 서비스",
-        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs/",
-        "teaser": null
-      },{
         "title": "[nodejs]에러처리",
         "excerpt":"존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준   app.use(function(req, res, next){   res.status(404).send('Sorry cant find that!'); }) //추가해준다  페이지에 에러가 있을 경우(서버에러 500)    next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.      app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고   res.status(500).send('Something broke!'); })  ","categories": [],
         "tags": [],
@@ -461,8 +455,8 @@ var store = [{
         "url": "http://localhost:4000/java/",
         "teaser": null
       },{
-        "title": "[얄코]비동기 프로그래밍",
-        "excerpt":"동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다. 비동기 함수 call back 이라 생각하면 된다. 만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게 콜백 지옥이다. 콜백 지옥을 해결하기위해...","categories": [],
+        "title": "[nodejs]정적파일 서비스",
+        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/",
         "teaser": null
@@ -515,10 +509,22 @@ var store = [{
         "url": "http://localhost:4000/node-js-1/",
         "teaser": null
       },{
+        "title": "[node]정적파일 서비스",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/node/",
+        "teaser": null
+      },{
         "title": "[Nodejs]파일생성, 리다이렉션, 파일삭제",
         "excerpt":"파일생성과 리다이렉션 리다이렉션 : 출력의 방향을 바꾼다. response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom}); response.end(); writeHead(200) 은 성공시켰다. writeHead(302) 페이지를 다른데로 리다이렉션 시킨다. ex) fs.writeFile(`data/${title}`, description, 'utf8', function(err){ response.writeHead(302, {Location: `/?id=${title}`}); response.end(); }) fs.unlink(path, callback) =&gt; 파일삭제 ex) fs.unlink(`data/${id}`, function(error){ response.writeHead(302, {Location: `/`}); response.end(); }) 삭제가 되고 홈으로 이동한다. Get 방식 QueryString...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejs-1/",
+        "teaser": null
+      },{
+        "title": "[nodejs] asas",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-asas/",
         "teaser": null
       },{
         "title": "[nodejs] express 홈페이지 구현",

@@ -65,18 +65,6 @@ var store = [{
         "url": "http://localhost:4000/nodejs-escaping/",
         "teaser": null
       },{
-        "title": "[얄코]비동기 프로그래밍",
-        "excerpt":"동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다. 비동기 함수 call back 이라 생각하면 된다. 만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게 콜백 지옥이다. 콜백 지옥을 해결하기위해...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/dad/",
-        "teaser": null
-      },{
-        "title": "[nodejs] express 홈페이지 구현",
-        "excerpt":"기존 라우팅 방식은  var app = http.createServer(function(request,response){}   많은 부분에서 공유하고 사용했다. 어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.   express 방식의 라우팅 방식으로 하면  request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.   path 방식 url 파라미터 처리방법  app.get('/page/:pageId/:chapterId', function(request, response){   return response.send(request.params);   //{\"pageId\":\"HTML\",\"chapterId\":\"css\"} })   ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs-express/",
-        "teaser": null
-      },{
         "title": "[얄코]포인터",
         "excerpt":"철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐 교과서의 페이지만 알려준다 이것이 포인터 char language = 'c'; int thisYear = 2019; double pi = 3.14; 이러한 변수에 입력된 값들은 메모리 어딘가에 저장 되어 있다. 메모리는 어떠한 값들이 나란히 정렬되어 있지 않음. (배열을...","categories": [],
         "tags": [],
@@ -543,6 +531,12 @@ var store = [{
         "excerpt":"파일생성과 리다이렉션 리다이렉션 : 출력의 방향을 바꾼다. response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom}); response.end(); writeHead(200) 은 성공시켰다. writeHead(302) 페이지를 다른데로 리다이렉션 시킨다. ex) fs.writeFile(`data/${title}`, description, 'utf8', function(err){ response.writeHead(302, {Location: `/?id=${title}`}); response.end(); }) fs.unlink(path, callback) =&gt; 파일삭제 ex) fs.unlink(`data/${id}`, function(error){ response.writeHead(302, {Location: `/`}); response.end(); }) 삭제가 되고 홈으로 이동한다. Get 방식 QueryString...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejs-1/",
+        "teaser": null
+      },{
+        "title": "[nodejs] express 홈페이지 구현",
+        "excerpt":"기존 라우팅 방식은  var app = http.createServer(function(request,response){}   많은 부분에서 공유하고 사용했다. 어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.   express 방식의 라우팅 방식으로 하면  request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.   path 방식 url 파라미터 처리방법  app.get('/page/:pageId/:chapterId', function(request, response){   return response.send(request.params);   //{\"pageId\":\"HTML\",\"chapterId\":\"css\"} })   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-express/",
         "teaser": null
       },{
         "title": "[Nodejs]객체",

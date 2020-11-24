@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Nodejs] Express 모듈 (get,post) - juntae</title>
-<meta name="description" content="http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다. ">
+<!-- begin _includes/seo.html --><title>[nodejs] express 홈페이지 구현 - juntae</title>
+<meta name="description" content="기존 라우팅 방식은 var app = http.createServer(function(request,response){}  ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[Nodejs] Express 모듈 (get,post)">
+<meta property="og:title" content="[nodejs] express 홈페이지 구현">
 <meta property="og:url" content="http://localhost:4000/nodejs-express/">
 
 
-  <meta property="og:description" content="http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다. 이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다. ">
+  <meta property="og:description" content="기존 라우팅 방식은 var app = http.createServer(function(request,response){}  ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-09-14T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-11-24T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Nodejs] Express 모듈 (get,post)">
-    <meta itemprop="description" content="http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다.이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.">
-    <meta itemprop="datePublished" content="2020-09-14T00:00:00+09:00">
+    <meta itemprop="headline" content="[nodejs] express 홈페이지 구현">
+    <meta itemprop="description" content="기존 라우팅 방식은var app = http.createServer(function(request,response){}">
+    <meta itemprop="datePublished" content="2020-11-24T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[Nodejs] Express 모듈 (get,post)
+          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] express 홈페이지 구현
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,16 +287,21 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>http 모듈만 사용해 웹 서버를 구성할 때는 많은 것들을 직접 만들어야 한다 . 하지만 직접 만들어야 하는 코드가 많다면 시간과 노력도 많이 든다는 문제점이 있다.
-이 문제를 해결하기 위해 만들어진 것이 익스프레스(express) 이다.</p>
+        <p>기존 라우팅 방식은</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">app</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="na">createServer</span><span class="o">(</span><span class="n">function</span><span class="o">(</span><span class="n">request</span><span class="o">,</span><span class="n">response</span><span class="o">){}</span>
+</code></pre></div></div>
 
-<p><em>express 모듈은 웹 서버를 위해 만들어진 것으로 http 모듈 위에서 동작한다. 따라서 express 모듈을 사용할 때는 항상 http 모듈도 함께 불러들여야 한다.</em></p>
+<p>많은 부분에서 공유하고 사용했다.
+어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.</p>
 
-<p>라우팅 : 라우터는 클라이언트의 요청 패스를 보고 이 요청 정보를 처리할 수 있는 곳으로 기능을 전달해 주는 역할.</p>
+<p>express 방식의 라우팅 방식으로 하면 
+request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>query : 클라이언트에서 get 방식으로 전송한 요청 파라미터를 확인합니다. ex) req.query.name
-body : 클라이언트에서 post 방식으로 전송한 요청 파라미터를 확인합니다. 단, body-parser와 같은 외장 모듈 사용해야함 ex)req.body.name
-header(name) : 헤더를 확인
+<p>path 방식 url 파라미터 처리방법</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">app</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">page</span><span class="o">/:</span><span class="n">pageId</span><span class="o">/:</span><span class="n">chapterId</span><span class="err">'</span><span class="o">,</span> <span class="n">function</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">){</span>
+  <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">params</span><span class="o">);</span>
+  <span class="c1">//{"pageId":"HTML","chapterId":"css"}</span>
+<span class="o">})</span> 
 </code></pre></div></div>
 
         
@@ -308,7 +313,7 @@ header(name) : 헤더를 확인
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-09-14T00:00:00+09:00">September 14, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-24T00:00:00+09:00">November 24, 2020</time></p>
         
       </footer>
 
@@ -317,7 +322,7 @@ header(name) : 헤더를 확인
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BNodejs%5D+Express+%EB%AA%A8%EB%93%88+%28get%2Cpost%29%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+express+%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80+%EA%B5%AC%ED%98%84%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs-express%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -328,11 +333,11 @@ header(name) : 헤더를 확인
       
   <nav class="pagination">
     
-      <a href="/nodejs/" class="pagination--pager" title="[Nodejs] 간단한 웹 서버
+      <a href="/nodejs-1/" class="pagination--pager" title="[Nodejs]파일생성, 리다이렉션, 파일삭제
 ">이전</a>
     
     
-      <a href="/nodejs/" class="pagination--pager" title="[Nodejs] 미들웨어 , 토큰
+      <a href="/nodejs/" class="pagination--pager" title="[Nodejs]객체
 ">다음</a>
     
   </nav>

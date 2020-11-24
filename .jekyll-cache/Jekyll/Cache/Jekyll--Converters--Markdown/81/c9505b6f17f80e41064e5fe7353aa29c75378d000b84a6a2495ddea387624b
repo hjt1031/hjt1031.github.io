@@ -1,0 +1,5 @@
+I"�<h1 id="object-와-array">Object 와 Array</h1>
+<p>```java
+var members = [‘egoging’,’k8805’,’hoya’];
+console.log(members[1]);</p>
+:ET

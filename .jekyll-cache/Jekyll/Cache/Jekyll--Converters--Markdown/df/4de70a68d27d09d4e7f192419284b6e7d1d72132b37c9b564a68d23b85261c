@@ -1,0 +1,34 @@
+I"�<p><strong>파일생성과 리다이렉션</strong></p>
+<blockquote>
+  <p>리다이렉션 : 출력의 방향을 바꾼다.</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">response</span><span class="o">.</span><span class="na">writeHead</span><span class="o">(</span><span class="mi">302</span><span class="o">,</span> <span class="o">{</span><span class="nc">Location</span> <span class="o">:</span> <span class="err">'</span><span class="nl">http:</span><span class="c1">//whateverhostthiswillbe:8675/' +newRoom});</span>
+<span class="n">response</span><span class="o">.</span><span class="na">end</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>writeHead(200) 은 성공시켰다.
+writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
+
+<p>ex)</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fs</span><span class="o">.</span><span class="na">writeFile</span><span class="o">(</span><span class="err">`</span><span class="n">data</span><span class="o">/</span><span class="err">$</span><span class="o">{</span><span class="n">title</span><span class="o">}</span><span class="err">`</span><span class="o">,</span> <span class="n">description</span><span class="o">,</span> <span class="err">'</span><span class="n">utf8</span><span class="err">'</span><span class="o">,</span> <span class="n">function</span><span class="o">(</span><span class="n">err</span><span class="o">){</span>
+            <span class="n">response</span><span class="o">.</span><span class="na">writeHead</span><span class="o">(</span><span class="mi">302</span><span class="o">,</span> <span class="o">{</span><span class="nl">Location:</span> <span class="err">`</span><span class="o">/?</span><span class="n">id</span><span class="o">=</span><span class="err">$</span><span class="o">{</span><span class="n">title</span><span class="o">}</span><span class="err">`</span><span class="o">});</span>
+            <span class="n">response</span><span class="o">.</span><span class="na">end</span><span class="o">();</span>
+          <span class="o">})</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>fs.unlink(path, callback) =&gt; 파일삭제</p>
+</blockquote>
+
+<p>ex)</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fs</span><span class="o">.</span><span class="na">unlink</span><span class="o">(</span><span class="err">`</span><span class="n">data</span><span class="o">/</span><span class="err">$</span><span class="o">{</span><span class="n">id</span><span class="o">}</span><span class="err">`</span><span class="o">,</span> <span class="n">function</span><span class="o">(</span><span class="n">error</span><span class="o">){</span>
+            <span class="n">response</span><span class="o">.</span><span class="na">writeHead</span><span class="o">(</span><span class="mi">302</span><span class="o">,</span> <span class="o">{</span><span class="nl">Location:</span> <span class="err">`</span><span class="o">/</span><span class="err">`</span><span class="o">});</span>
+            <span class="n">response</span><span class="o">.</span><span class="na">end</span><span class="o">();</span>
+          <span class="o">})</span>
+</code></pre></div></div>
+<p>삭제가 되고 홈으로 이동한다.</p>
+
+<h1 id="get-방식"><em>Get 방식</em></h1>
+<p>QueryString 이 있는 것</p>
+:ET

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JAVA]알고리즘 chap02 - 3 &amp; Class - juntae - 페이지 14</title>
+<!-- begin _includes/seo.html --><title>[nodejs]Mysql Module - juntae - 페이지 14</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs-express/" rel="permalink">[nodejs] Express 미들웨어
+        <a href="/nodejs/" rel="permalink">[nodejs] 쿠키 실습
 </a>
       
     </h2>
@@ -297,11 +297,41 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Express 의 중요 기능 2가지
+    <p class="archive__item-excerpt" itemprop="description">로그인 상태체크
+```javascript
+function authIsOwner(request,response){ //쿠키 체크 
+    var isOwner = false;//기본으로 false
+   if(request.headers.cookie){//쿠키 값 유무 체크
+     ...</p>
+  </article>
+</div>
 
-  라우터
-  미들웨어
 
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs]쿠키
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">웹브라우저가 서로 주고받는 데이터
+http 프로토콜에 포함되어있는 기술
 </p>
   </article>
 </div>
@@ -316,7 +346,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs-2/" rel="permalink">[nodejs] 페이지 생성 구현2
+        <a href="/nodejsexpress-generator/" rel="permalink">[nodejs]express generator
 </a>
       
     </h2>
@@ -331,7 +361,7 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">```
-app.get(‘/create’,function(request,response){ //get방식일떄
+npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다
 </p>
   </article>
 </div>
@@ -346,7 +376,7 @@ app.get(‘/create’,function(request,response){ //get방식일떄
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/aws/" rel="permalink">[AWS]Auto Scaling (오토스케일링)
+        <a href="/nodejs/" rel="permalink">[nodejs]보안
 </a>
       
     </h2>
@@ -360,8 +390,14 @@ app.get(‘/create’,function(request,response){ //get방식일떄
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)
-</p>
+    <p class="archive__item-excerpt" itemprop="description">
+  express 를 항상 최신버전으로 유지.
+  https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에.
+  단골손님같은 보안이슈를 자동으로 해결해준다.
+    npm install -save helmet
+    
+  
+  쿠키를 올바르게 사용해라(누가들...</p>
   </article>
 </div>
 
@@ -375,7 +411,7 @@ app.get(‘/create’,function(request,response){ //get방식일떄
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/po/" rel="permalink">[얄코]포인터
+        <a href="/nodejs3/" rel="permalink">[nodejs]라우터-주소체계변경
 </a>
       
     </h2>
@@ -389,41 +425,8 @@ app.get(‘/create’,function(request,response){ //get방식일떄
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">철수와 영희가 있는데 철수가 팀프로젝트에서 필요한 교과서에 페이지를 알고있다 이거를 영희에게 알려줄려하는데 종이로 베껴서 보여주면 종이낭비닌깐
-교과서의 페이지만 알려준다 이것이 포인터
-char language = 'c';
-int thisYear = 2019;
-double pi = ...</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs-express/" rel="permalink">[nodejs] express 홈페이지 구현
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">기존 라우팅 방식은
-var app = http.createServer(function(request,response){}
-
+    <p class="archive__item-excerpt" itemprop="description">```javacript
+app.use(‘/topic’,topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.
 </p>
   </article>
 </div>

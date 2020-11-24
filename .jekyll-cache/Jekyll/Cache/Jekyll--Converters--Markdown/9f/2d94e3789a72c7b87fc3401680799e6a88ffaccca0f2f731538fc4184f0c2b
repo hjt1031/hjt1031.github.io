@@ -1,0 +1,3 @@
+I"X<p>```java
+app.get(‘/create’,function(request,response){ //get방식일떄</p>
+:ET

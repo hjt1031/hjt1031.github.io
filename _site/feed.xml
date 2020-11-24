@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-24T22:44:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[nodejs]Mysql Module</title><link href="http://localhost:4000/nodejsmysql-module/" rel="alternate" type="text/html" title="[nodejs]Mysql Module" /><published>2020-11-24T00:00:00+09:00</published><updated>2020-11-24T00:00:00+09:00</updated><id>http://localhost:4000/nodejsmysql-module</id><content type="html" xml:base="http://localhost:4000/nodejsmysql-module/">&lt;p&gt;기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-24T22:46:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[nodejs]Mysql Module</title><link href="http://localhost:4000/nodejsmysql-module/" rel="alternate" type="text/html" title="[nodejs]Mysql Module" /><published>2020-11-24T00:00:00+09:00</published><updated>2020-11-24T00:00:00+09:00</updated><id>http://localhost:4000/nodejsmysql-module</id><content type="html" xml:base="http://localhost:4000/nodejsmysql-module/">&lt;p&gt;기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. 
 pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  소스코드를 나중에 복제하고 사용할때 편리하기 위해&lt;/p&gt;
 
 &lt;p&gt;```java
@@ -6,7 +6,46 @@ db.query(SELECT * FROM topic WHERE id=${query.id}`,function(error2,topic){ //이
 
 &lt;p&gt;db.query(&lt;code class=&quot;highlighter-rouge&quot;&gt;SELECT * FROM topic WHERE id=?&lt;/code&gt;,[queryData.id],function(error2,topic){ //id에 ? 에 두번쨰 인자가 치환되서 들어간다.보안성이좋음&lt;/p&gt;
 
-&lt;p&gt;response.writeHead(302, {Location: &lt;code class=&quot;highlighter-rouge&quot;&gt;/?id=${result.insertId}&lt;/code&gt;}); //추가된 id 을 가져오는 방법 (바로 추가된 id로 리다이렉션이 됨)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다. 소스코드를 나중에 복제하고 사용할때 편리하기 위해</summary></entry><entry><title type="html">[nodejs]API &amp;amp; Mysql</title><link href="http://localhost:4000/nodejsapi-mysql/" rel="alternate" type="text/html" title="[nodejs]API &amp; Mysql" /><published>2020-11-24T00:00:00+09:00</published><updated>2020-11-24T00:00:00+09:00</updated><id>http://localhost:4000/nodejsapi-mysql</id><content type="html" xml:base="http://localhost:4000/nodejsapi-mysql/">&lt;p&gt;API : Application Programming interface &lt;br /&gt;
+&lt;p&gt;response.writeHead(302, {Location: &lt;code class=&quot;highlighter-rouge&quot;&gt;/?id=${result.insertId}&lt;/code&gt;}); //추가된 id 을 가져오는 방법 (바로 추가된 id로 리다이렉션이 됨)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다. 소스코드를 나중에 복제하고 사용할때 편리하기 위해</summary></entry><entry><title type="html">[nodejs] Express 미들웨어</title><link href="http://localhost:4000/nodejsexpress/" rel="alternate" type="text/html" title="[nodejs] Express 미들웨어" /><published>2020-11-24T00:00:00+09:00</published><updated>2020-11-24T00:00:00+09:00</updated><id>http://localhost:4000/nodejsexpress</id><content type="html" xml:base="http://localhost:4000/nodejsexpress/">&lt;p&gt;Express 의 중요 기능 2가지&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;라우터&lt;/li&gt;
+  &lt;li&gt;미들웨어&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다.
+다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//로설치&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;body 는 웹브라우저에서 요청한 정보 본체를 뜻한다.&lt;/p&gt;
+
+&lt;p&gt;parser 는 분석&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;body-parser&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//맨위에 선언&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//로고쳐서 실행시켜준다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;압축하기(데이터가 너무많으면 압축을 해야한다.)&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;compression&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;compression&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requrie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;compression&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;compression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;미들웨어 만들기.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//공통으로 된 함수 &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//ex)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filelist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//글목록을 표현해주는 기능&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;filelist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//그다음에 호출되어야 할 미들웨어가 담겨있다.&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">Express 의 중요 기능 2가지 라우터 미들웨어</summary></entry><entry><title type="html">[nodejs]API &amp;amp; Mysql</title><link href="http://localhost:4000/nodejsapi-mysql/" rel="alternate" type="text/html" title="[nodejs]API &amp; Mysql" /><published>2020-11-24T00:00:00+09:00</published><updated>2020-11-24T00:00:00+09:00</updated><id>http://localhost:4000/nodejsapi-mysql</id><content type="html" xml:base="http://localhost:4000/nodejsapi-mysql/">&lt;p&gt;API : Application Programming interface &lt;br /&gt;
 개발자와 함수를 사용하는 개발자 들의 약속된 조작장치&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">API : Application Programming interface 개발자와 함수를 사용하는 개발자 들의 약속된 조작장치</summary></entry><entry><title type="html">[Nodejs]객체</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[Nodejs]객체" /><published>2020-11-24T00:00:00+09:00</published><updated>2020-11-24T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;h1 id=&quot;object-와-array&quot;&gt;Object 와 Array&lt;/h1&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;members&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;egoging&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k8805&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hoya&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
@@ -251,12 +290,4 @@ writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.&lt;/p&gt;
   &lt;li&gt;1번탭에 몇개의 인스턴스로 지정하는지 로드밸런싱 연결할건지 등등..&lt;/li&gt;
   &lt;li&gt;2번탭의(Confilgure scaling pollcles:조정 정책 구성)   첫번째 (이 그룹을 초기 크기로 유지) 가있는데 이건 1번탭에서 예를 들어 10개를 생성했다고 치고 그 10개중에서 4개의 인스턴스가 죽었다고 가정하면 그 죽은 인스턴스를 자동생성해준다.
 두번째는 (조정 정책을 사용하여 이 그룹의 용량 조정)최대와 최소의 인스턴스를 설정해준다. 예를들어 각각의 input 박스에 1과 3을 입력하면 최대1개이상과 3개이하의 인스턴스를 생성한다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)</summary></entry><entry><title type="html">[aws]기초용어</title><link href="http://localhost:4000/aws/" rel="alternate" type="text/html" title="[aws]기초용어" /><published>2020-11-24T00:00:00+09:00</published><updated>2020-11-24T00:00:00+09:00</updated><id>http://localhost:4000/aws</id><content type="html" xml:base="http://localhost:4000/aws/">&lt;p&gt;EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품&lt;/p&gt;
-
-&lt;p&gt;Instance : Instance 한개당 한대의 컴퓨터라 생각하면 된다&lt;/p&gt;
-
-&lt;p&gt;온디맨드 인스턴스 : 필요할때 키고 필요없을땐 끊다. 우리가 컴퓨터를 필요할 때마다 켜고 끄고 할 수 있는 인스턴스를 의미&lt;/p&gt;
-
-&lt;p&gt;예약 인스턴스 : 서버를 키는데 365일 동안 끄지 않는 경우면 예약 인스턴스를 사용하는게 훨씬 저렴하다. (3년치를 한꺼번에 사면 더 저렴하게 구매할 수 있다.)&lt;/p&gt;
-
-&lt;p&gt;스팟 인스턴스 : 노는 컴퓨터를 많을 수록 많을 수록 저렴하다. 반대로 노는 컴퓨터가 없으면 일반 인스턴스 보다 더 가격이 많이 측정된다. 주로 데이터 분석, 백그라운드 작업, 배치 작업에 적합(가변적인 가격 정책을 갖고 있다.)&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>동센</name></author><summary type="html">컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)</summary></entry></feed>

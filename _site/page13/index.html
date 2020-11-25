@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[얄코]비동기 프로그래밍 - juntae - 페이지 13</title>
+<!-- begin _includes/seo.html --><title>[JAVA]시험 복습 - juntae - 페이지 13</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react/" rel="permalink">[React] 컨포넌트 이벤트
+        <a href="/callback/" rel="permalink">[얄코]비동기 프로그래밍
 </a>
       
     </h2>
@@ -297,42 +297,8 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">//App.js
- &lt;Subject 
-      title={this.state.subject.title}
-      sub={this.state.subject.sub}
-      onChangePage = {function(){
-       this.setState({mode...</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/reactcomponent/" rel="permalink">[React]component 파일로분리
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
-
-src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
+    <p class="archive__item-excerpt" itemprop="description">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
+비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.
 </p>
   </article>
 </div>
@@ -347,7 +313,7 @@ src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react/" rel="permalink">[React] 이벤트 (bind)
+        <a href="/nodejs/" rel="permalink">[nodejs] 쿠키 실습
 </a>
       
     </h2>
@@ -361,12 +327,12 @@ src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">class App extends Component {
-  constructor(props){ //컨포넌트 초기화
-    super(props); 
-    this.state = { //스테이트 값 초기화
-      mode:'read',
-      subject:{title:'WE...</p>
+    <p class="archive__item-excerpt" itemprop="description">로그인 상태체크
+```javascript
+function authIsOwner(request,response){ //쿠키 체크 
+    var isOwner = false;//기본으로 false
+   if(request.headers.cookie){//쿠키 값 유무 체크
+     ...</p>
   </article>
 </div>
 
@@ -380,7 +346,7 @@ src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react-state/" rel="permalink">[React] state props
+        <a href="/nodejs/" rel="permalink">[nodejs]쿠키
 </a>
       
     </h2>
@@ -390,12 +356,12 @@ src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
 
 
 
-  최대 1 분 소요
+  1 분 소요
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">props 는 사용자가 컨포넌트를 사용하는 입장에서 중요한 것 (외부) 사용하는 쪽
-state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내부) 구현하는 쪽
+    <p class="archive__item-excerpt" itemprop="description">웹브라우저가 서로 주고받는 데이터
+http 프로토콜에 포함되어있는 기술
 </p>
   </article>
 </div>
@@ -410,7 +376,7 @@ state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react-stat/" rel="permalink">[React] state 사용법 (key)
+        <a href="/nodejsexpress-generator/" rel="permalink">[nodejs]express generator
 </a>
       
     </h2>
@@ -424,12 +390,44 @@ state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내�
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">//App.js
-class App extends Component {
-  constructor(props){ //컨포넌트 초기화
-    super(props); 
-    this.state = { //스테이트 값 초기화
-      subject:{title:'WEB', sub:'w...</p>
+    <p class="archive__item-excerpt" itemprop="description">```
+npm install express-generator -g //다른파일에 설치를 한다 -g 는 글로벌 전역으로 쓸수 있는 것이다
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejs/" rel="permalink">[nodejs]보안
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+  express 를 항상 최신버전으로 유지.
+  https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에.
+  단골손님같은 보안이슈를 자동으로 해결해준다.
+    npm install -save helmet
+    
+  
+  쿠키를 올바르게 사용해라(누가들...</p>
   </article>
 </div>
 

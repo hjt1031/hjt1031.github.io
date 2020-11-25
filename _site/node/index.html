@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[node]정적파일 서비스 - juntae</title>
-<meta name="description" content=" ">
+<meta name="description" content="images 디렉토리 만들어주고 app.use(express.static(&#39;public&#39;));//public 디렉토리 안에서 static 파일을 찾겠다.  ">
 
 
   <meta name="author" content="동센">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/node/">
 
 
-  <meta property="og:description" content=" ">
+  <meta property="og:description" content="images 디렉토리 만들어주고 app.use(express.static(&#39;public&#39;));//public 디렉토리 안에서 static 파일을 찾겠다.  ">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[node]정적파일 서비스">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="images 디렉토리 만들어주고app.use(express.static(&#39;public&#39;));//public 디렉토리 안에서 static 파일을 찾겠다.">
     <meta itemprop="datePublished" content="2020-11-24T00:00:00+09:00">
     
 
@@ -287,7 +287,13 @@
 
       <section class="page__content" itemprop="text">
         
-        
+        <p>images 디렉토리 만들어주고</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="dl">'</span><span class="s1">public</span><span class="dl">'</span><span class="p">));</span><span class="c1">//public 디렉토리 안에서 static 파일을 찾겠다.</span>
+</code></pre></div></div>
+
+<p>그다음 본문 로직에</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">/images/hello.jpg</span><span class="dl">"</span> <span class="nx">style</span><span class="o">=</span><span class="dl">"</span><span class="s2">width:300px; display:block; margin-top:10px;</span><span class="dl">"</span><span class="o">&gt;</span>
+</code></pre></div></div>
 
         
       </section>

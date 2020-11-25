@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-23T20:52:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[JAVA]알고리즘 chap02 - 3 &amp;amp; Class</title><link href="http://localhost:4000/java/" rel="alternate" type="text/html" title="[JAVA]알고리즘 chap02 - 3 &amp; Class" /><published>2020-11-23T00:00:00+09:00</published><updated>2020-11-23T00:00:00+09:00</updated><id>http://localhost:4000/java</id><content type="html" xml:base="http://localhost:4000/java/">&lt;h1 id=&quot;2행-4열의-2차원-배열&quot;&gt;2행 4열의 2차원 배열&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-25T16:14:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[얄코]비동기 프로그래밍</title><link href="http://localhost:4000/q2/" rel="alternate" type="text/html" title="[얄코]비동기 프로그래밍" /><published>2020-11-25T00:00:00+09:00</published><updated>2020-11-25T00:00:00+09:00</updated><id>http://localhost:4000/q2</id><content type="html" xml:base="http://localhost:4000/q2/">&lt;p&gt;동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다.
+비동기는  여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.&lt;/p&gt;
+
+&lt;p&gt;비동기 함수 call back 이라 생각하면 된다.&lt;/p&gt;
+
+&lt;p&gt;만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게
+콜백 지옥이다.&lt;/p&gt;
+
+&lt;p&gt;콜백 지옥을 해결하기위해 나온게 
+Promise (체이닝 방식 .then 사용) 를 사용하게 되면 순차적으로 처리 가능
+하지만 Promise 는 polyfill 등의 라이브러리 없이는 익스플로러에서는 동작하지 않으니 주의해야함!&lt;/p&gt;
+
+&lt;p&gt;그리고
+asyme await 도 비동기방식의 한 종류이며 동기 작업처럼 작성 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;await를 붙여주면 이 함수가 끝나기 전에 다음 작업으로 넘어갈 수 없다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;학생&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;학번&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;학생&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;정보&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;학생정보&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;조회&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;학생&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;학번&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//원래라면 그냥 바로 밑으로 흘러가는 비동기 처리가 되겠지만 await 를 써주면 동기처럼 사용가능&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;고교&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_DB_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;주소&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;고교&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_DB_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;주소&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;조회&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;학생&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;정보&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;고교명&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다.</summary></entry><entry><title type="html">[JAVA]알고리즘 chap02 - 3 &amp;amp; Class</title><link href="http://localhost:4000/java/" rel="alternate" type="text/html" title="[JAVA]알고리즘 chap02 - 3 &amp; Class" /><published>2020-11-23T00:00:00+09:00</published><updated>2020-11-23T00:00:00+09:00</updated><id>http://localhost:4000/java</id><content type="html" xml:base="http://localhost:4000/java/">&lt;h1 id=&quot;2행-4열의-2차원-배열&quot;&gt;2행 4열의 2차원 배열&lt;/h1&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//2행 4열의 2차원 배열&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;chap2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
@@ -912,36 +934,4 @@ Array , Map , String 등등&lt;/p&gt;
 
 &lt;p&gt;그리고 이러한 방식은 강결합(Tightly Coupled)로 묶여지면서 코드의 유연성을 떨어트리고 코드의 중복 및 가독성을 떨어뜨리는 원인이 됩니다. 예를 들어 만약 무기가 칼,총,창 등 여러가지의 무기가 있다면, 프로그래머는 이러한 무기들을 if else를 통해서 중복된 코드를 작성하게 됩니다.&lt;/p&gt;
 
-&lt;p&gt;그렇기 때문에 결합도를 낮추고 중복을 낮추며, 유지보수를 편하게 하기 위해서 아래와 같은 방식으로 코드를 짜야합니다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">Spring 이란?</summary></entry><entry><title type="html">[nodejs] 파일생성, 리다이렉션, 파일삭제</title><link href="http://localhost:4000/nodejs/" rel="alternate" type="text/html" title="[nodejs] 파일생성, 리다이렉션, 파일삭제" /><published>2020-11-03T00:00:00+09:00</published><updated>2020-11-03T00:00:00+09:00</updated><id>http://localhost:4000/nodejs</id><content type="html" xml:base="http://localhost:4000/nodejs/">&lt;p&gt;&lt;strong&gt;파일생성과 리다이렉션&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;리다이렉션 : 출력의 방향을 바꾼다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
-response.end();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;writeHead(200) 은 성공시켰다.
-writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.&lt;/p&gt;
-
-&lt;p&gt;ex)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fs.writeFile(`data/${title}`, description, 'utf8', function(err){
-            response.writeHead(302, {Location: `/?id=${title}`});
-            response.end();
-          })
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;fs.unlink(path, callback) =&amp;gt; 파일삭제&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ex)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fs.unlink(`data/${id}`, function(error){
-            response.writeHead(302, {Location: `/`});
-            response.end();
-          })
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;삭제가 되고 홈으로 이동한다.&lt;/p&gt;
-
-&lt;h1 id=&quot;get-방식&quot;&gt;&lt;em&gt;Get 방식&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;QueryString 이 있는 것&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">파일생성과 리다이렉션 리다이렉션 : 출력의 방향을 바꾼다.</summary></entry></feed>
+&lt;p&gt;그렇기 때문에 결합도를 낮추고 중복을 낮추며, 유지보수를 편하게 하기 위해서 아래와 같은 방식으로 코드를 짜야합니다.&lt;/p&gt;</content><author><name>동센</name></author><summary type="html">Spring 이란?</summary></entry></feed>

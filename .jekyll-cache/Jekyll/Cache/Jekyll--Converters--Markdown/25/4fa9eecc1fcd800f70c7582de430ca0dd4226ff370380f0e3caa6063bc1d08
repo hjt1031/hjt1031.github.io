@@ -1,0 +1,31 @@
+I"2<p>복습</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">){</span>
+        <span class="nc">MyClass</span> <span class="n">my</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyClass</span><span class="o">(</span><span class="s">"jun"</span><span class="o">,</span><span class="s">"28"</span><span class="o">,</span><span class="s">"M"</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">my</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="o">---------------------------------------------------</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span><span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">let</span> <span class="n">age</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">char</span> <span class="n">gender</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">MyClass</span><span class="o">(){</span>
+
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">MyClass</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">,</span> <span class="kt">char</span> <span class="n">gender</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">gender</span> <span class="o">=</span> <span class="n">gender</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@override</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">"저의 이름은"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">+</span> <span class="s">"나이는"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">+</span> <span class="s">"성별은"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">gender</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+:ET

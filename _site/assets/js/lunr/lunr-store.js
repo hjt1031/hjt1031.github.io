@@ -552,7 +552,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[JAVA]시험 복습",
-        "excerpt":"복습  ","categories": [],
+        "excerpt":"복습 public class MainClass{ public static void main(String []args){ MyClass my = new MyClass(\"jun\",\"28\",\"M\"); System.out.println(my); } } --------------------------------------------------- public class MyClass{ private String name; private let age; private char gender; public MyClass(){ } public MyClass(String name, int age, char gender){ this.name = name; this.age = age; this.gender = gender; }...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java-exam/",
         "teaser": null

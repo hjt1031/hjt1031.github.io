@@ -59,6 +59,12 @@ var store = [{
         "url": "http://localhost:4000/aws-elbelastic-load-balancing/",
         "teaser": null
       },{
+        "title": "[node]정적파일 서비스",
+        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/node/",
+        "teaser": null
+      },{
         "title": "[nodejs]정적파일 서비스",
         "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
         "tags": [],
@@ -501,12 +507,6 @@ var store = [{
         "excerpt":"코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함 var template = { //template 라는 객체를 생성 HTML:function(title, list, body, control){ return ` &lt;!doctype html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;WEB1 - ${title}&lt;/title&gt; &lt;meta charset=\"utf-8\"&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;&lt;a href=\"/\"&gt;WEB&lt;/a&gt;&lt;/h1&gt; ${list} ${control} ${body} &lt;/body&gt; &lt;/html&gt; `; },list:function(filelist){ var list = '&lt;ul&gt;'; var i =...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/node-js-1/",
-        "teaser": null
-      },{
-        "title": "[node]정적파일 서비스",
-        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/node/",
         "teaser": null
       },{
         "title": "[Nodejs]파일생성, 리다이렉션, 파일삭제",

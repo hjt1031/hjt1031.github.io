@@ -62,7 +62,7 @@ var store = [{
         "title": "[node]정적파일 서비스",
         "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/node/",
+        "url": "http://localhost:4000/nodejs.-silence/",
         "teaser": null
       },{
         "title": "[nodejs]정적파일 서비스",

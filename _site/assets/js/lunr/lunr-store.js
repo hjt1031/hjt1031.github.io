@@ -59,6 +59,12 @@ var store = [{
         "url": "http://localhost:4000/aws-elbelastic-load-balancing/",
         "teaser": null
       },{
+        "title": "[nodejs]정적파일 서비스",
+        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
+      },{
         "title": "[nodejs] Escaping (탈출)",
         "excerpt":"저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것 (   var sanitizeHtml = require('sanitize-html');  ","categories": [],
         "tags": [],

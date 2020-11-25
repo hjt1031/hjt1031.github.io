@@ -1,0 +1,35 @@
+I"x<p>images 디렉토리 만들어주고</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="dl">'</span><span class="s1">public</span><span class="dl">'</span><span class="p">));</span><span class="c1">//public 디렉토리 안에서 static 파일을 찾겠다.</span>
+</code></pre></div></div>
+
+<p>그다음 본문 로직에</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">/images/hello.jpg</span><span class="dl">"</span> <span class="nx">style</span><span class="o">=</span><span class="dl">"</span><span class="s2">width:300px; display:block; margin-top:10px;</span><span class="dl">"</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>[nodejs]정적파일 서비스
+images 디렉토리 만들어주고</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="dl">'</span><span class="s1">public</span><span class="dl">'</span><span class="p">));</span><span class="c1">//public 디렉토리 안에서 static 파일을 찾겠다.</span>
+</code></pre></div></div>
+
+<p>그다음 본문 로직에</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">/images/hello.jpg</span><span class="dl">"</span> <span class="nx">style</span><span class="o">=</span><span class="dl">"</span><span class="s2">width:300px; display:block; margin-top:10px;</span><span class="dl">"</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>[nodejs]에러처리
+존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
+express 기준</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">404</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">Sorry cant find that!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">})</span> <span class="c1">//추가해준다</span>
+</code></pre></div></div>
+<p>페이지에 에러가 있을 경우(서버에러 500)</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">next</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">//다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.</span>
+ 
+ 
+ <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span> <span class="c1">//첫번째는 next에 담긴 err가 넘어오고</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">Something broke!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">})</span>
+</code></pre></div></div>
+:ET

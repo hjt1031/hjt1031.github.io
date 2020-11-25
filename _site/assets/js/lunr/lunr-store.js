@@ -1,20 +1,8 @@
 var store = [{
-        "title": "[nodejs] 파일생성, 리다이렉션, 파일삭제",
-        "excerpt":"파일생성과 리다이렉션 리다이렉션 : 출력의 방향을 바꾼다. response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom}); response.end(); writeHead(200) 은 성공시켰다. writeHead(302) 페이지를 다른데로 리다이렉션 시킨다. ex) fs.writeFile(`data/${title}`, description, 'utf8', function(err){ response.writeHead(302, {Location: `/?id=${title}`}); response.end(); }) fs.unlink(path, callback) =&gt; 파일삭제 ex) fs.unlink(`data/${id}`, function(error){ response.writeHead(302, {Location: `/`}); response.end(); }) 삭제가 되고 홈으로 이동한다. Get 방식 QueryString...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs/",
-        "teaser": null
-      },{
         "title": "[AWS]기초용어",
         "excerpt":"EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품 Instance : Instance 한개당 한대의 컴퓨터라 생각하면 된다 온디맨드 인스턴스 : 필요할때 키고 필요없을땐 끊다. 우리가 컴퓨터를 필요할 때마다 켜고 끄고 할 수 있는 인스턴스를 의미 예약 인스턴스 : 서버를 키는데 365일 동안 끄지 않는 경우면 예약 인스턴스를 사용하는게...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/aws/",
-        "teaser": null
-      },{
-        "title": "[node js] 객체",
-        "excerpt":"Object 와 Array var members = ['egoging','k8805','hoya']; console.log(members[1]); var i = 0; while (i&lt;members.length) { console.log('array loop',members[i]); i = i+1; } var roles = { 'programmer':'egoing', // key : value 'designer' : 'k8805', 'manager' : 'hoya'} console.log(roles.designer) //객체는 . 을 찍어서 가져온다. console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다. for(var...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/node-js/",
         "teaser": null
       },{
         "title": "[AWS] OSX로 AWS연결",
@@ -23,46 +11,10 @@ var store = [{
         "url": "http://localhost:4000/aws-osx-aws/",
         "teaser": null
       },{
-        "title": "[nodejs] 객체화, 모듈사용법,  경로보안, 출력정보 보안",
-        "excerpt":"코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함 var template = { //template 라는 객체를 생성 HTML:function(title, list, body, control){ return ` &lt;!doctype html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;WEB1 - ${title}&lt;/title&gt; &lt;meta charset=\"utf-8\"&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;&lt;a href=\"/\"&gt;WEB&lt;/a&gt;&lt;/h1&gt; ${list} ${control} ${body} &lt;/body&gt; &lt;/html&gt; `; },list:function(filelist){ var list = '&lt;ul&gt;'; var i =...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs/",
-        "teaser": null
-      },{
-        "title": "[AWS]인스턴스 에서 웹서버 사용",
-        "excerpt":"   홈페이지로 로그인해 연결을 눌러 키를 터미널에 복사 붙여넣기 를 해서 접속한다.   아마존 EC2 인스턴스에 퍼블릭 DNS(IPv4)에 있는 주소를 복사해 주소창에 붙여넣기를 한다.   홈페이지에 우분투 라고 나오면 제대로 접속한게 맞는것이다.  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/aws/",
-        "teaser": null
-      },{
         "title": "[AWS]AMI & WordPress 설치",
         "excerpt":"Amazon machine image : 컴퓨터가 갖고 있는 상태를 그대로 얼려서 나중에 똑같이 복원하는 데이터 (그컴퓨터에 운영체제 ,소프트웨어 설정 ,현재 사용중인 프로그램 등등) 백업 기능이라 생각하면 된다 Wordpress : 가상머신의 형태로 제공된 솔루션을 사고 팔 수 있는 공간이라고 보면 된다.(다른사람이 만든 인스턴스를 사용하는 것) wordpress 설치방법 aws markplace 에서 wordpresss 를...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/awsami/",
-        "teaser": null
-      },{
-        "title": "[AWS]Scalability",
-        "excerpt":"변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅   Scale Up : 웹사이트를 운영하는데 접속자가 계속 많아지면 그 수요에 대해 어떻게 탄력적으로 어떻게 대응할 건지. (수요가 많으면 좋은 컴퓨터로 업그레이드)  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/awsscalability/",
-        "teaser": null
-      },{
-        "title": "[nodejs]API & Mysql",
-        "excerpt":"API : Application Programming interface   개발자와 함수를 사용하는 개발자 들의 약속된 조작장치  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejsapi/",
-        "teaser": null
-      },{
-        "title": "[AWS]스트래스 테스트(ab test)",
-        "excerpt":"인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip 컴퓨터의 CPU 점유율 보기 : top ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171 sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/aws/",
-        "teaser": null
-      },{
-        "title": "[nodejs]Mysql Module",
-        "excerpt":"기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다. 소스코드를 나중에 복제하고 사용할때 편리하기 위해 db.query(SELECT * FROM topic WHERE id=${query.id}`,function(error2,topic){ //이런식으로 쓰면 사용자에게 공격을 당할 수 있다. db.query(`SELECT * FROM topic WHERE id=?`,[queryData.id],function(error2,topic){ //id에 ? 에 두번쨰 인자가 치환되서 들어간다.보안성이좋음 response.writeHead(302, {Location:...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejsmysql/",
         "teaser": null
       },{
         "title": "[AWS] Elastic Ips & Scale Up",
@@ -107,28 +59,10 @@ var store = [{
         "url": "http://localhost:4000/aws-elbelastic-load-balancing/",
         "teaser": null
       },{
-        "title": "[AWS]터미널로 서버접속, ELB 적용(ab 테스터)",
-        "excerpt":"두개의 인스턴스를 생성해준다. $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소 $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다. $ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2 ELB적용 웹서버를 이미지를 만들어준다.(AMI) load balances 를 들어가 웹서버 2개를 save 해준다. DNS...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/aws/",
-        "teaser": null
-      },{
         "title": "[nodejs] Escaping (탈출)",
         "excerpt":"저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것 (   var sanitizeHtml = require('sanitize-html');  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejs-escaping/",
-        "teaser": null
-      },{
-        "title": "[얄코]비동기 프로그래밍",
-        "excerpt":"동기는 한줄인 열차라고 생각하면 된다. 앞에열차가 느리면 뒤에 열차도 덩달아 느리게 가게 된다. 비동기는 여러 선로의 열차에 앞차가 막히면 다른 선로로 배정해 나가는 방식이다. 비동기 함수 call back 이라 생각하면 된다. 만약 여러번에 걸쳐서 무엇을 찾을때 함수안에 함수.. 를 사용하게 된다.. 이런게 여러개 반복되면서 나타나는게 콜백 지옥이다. 콜백 지옥을 해결하기위해...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/dad/",
-        "teaser": null
-      },{
-        "title": "[nodejs] express 홈페이지 구현",
-        "excerpt":"기존 라우팅 방식은  var app = http.createServer(function(request,response){}   많은 부분에서 공유하고 사용했다. 어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.   express 방식의 라우팅 방식으로 하면  request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.   path 방식 url 파라미터 처리방법  app.get('/page/:pageId/:chapterId', function(request, response){   return response.send(request.params);   //{\"pageId\":\"HTML\",\"chapterId\":\"css\"} })   ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs-express/",
         "teaser": null
       },{
         "title": "[얄코]포인터",
@@ -137,28 +71,10 @@ var store = [{
         "url": "http://localhost:4000/po/",
         "teaser": null
       },{
-        "title": "[AWS]Auto Scaling (오토스케일링)",
-        "excerpt":"컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능) AUTO SCALING 목록에 보면 시작구성과, Auto Scaling group 이 있다. 먼저 Auto Scaling group에 먼저 생성을 해준다. 그러면 오토스케일의 이미지를 선택한다 이미지화 시켯던 내AMI를 선택한다. 인스턴스 성능 선택한다. name 정하고 스토리지 정하고 시큐리티 그룹을 만든다. 그다음 오토스케일 그룹을 만드는...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/aws/",
-        "teaser": null
-      },{
         "title": "[nodejs] 페이지 생성 구현2",
         "excerpt":"app.get('/create',function(request,response){ //get방식일떄  app.post('/create_process',function(request,response){ //post방식   쿼리 스트링이 아닌 방식으로 바꿀려면   &lt;a href=\"/update/?id=${sanitizedTitle}\"&gt;update&lt;/a&gt; 에서 &lt;a href=\"/update/${sanitizedTitle}\"&gt;update&lt;/a&gt;   삭제기능  &lt;form action=\"/delete_process\" method=\"post\"&gt; //action 에 delete 앞에 /를 주게되면 최상위 path 바로밑으로 감   express 는 리다이렉션 기능을 편리하게 제공하고 있다.   response.redirect //를 사용하면 된다  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nodejs-2/",
-        "teaser": null
-      },{
-        "title": "[nodejs] Express 미들웨어",
-        "excerpt":"Express 의 중요 기능 2가지 라우터 미들웨어 소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다. 다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다. npm install body-parser //로설치 body 는 웹브라우저에서 요청한 정보 본체를 뜻한다. parser 는 분석 var bodyParser = require('body-parser'); //맨위에 선언 var post = request.body //로고쳐서 실행시켜준다....","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs-express/",
-        "teaser": null
-      },{
-        "title": "[nodejs]express(Hello World!)",
-        "excerpt":"nodejs 에서 가장많이 사용하는 프레임웤 npm install express –save 으로 설치 var express = require('express') //express 모듈을 load 해온다 const 는 상수 바뀌지않음. var app = express() //express 호출 (함수) app.get('/' , (req, res) =&gt; res.send('/'))//첫번째 인자는 경로, 두번째는 접속했을때 호출될 함수가 표현되어있음.(라우터라 생각하면됨) //(라우팅라 생각하면됨(라우팅은 경로 즉 길을가고있는데 갈림길...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs/",
         "teaser": null
       },{
         "title": "[얄코]REST API",
@@ -177,18 +93,6 @@ var store = [{
         "excerpt":"파일을 저장하는 서비스 라고 생각하면 된다.      s3 클릭한뒤 버킷을 생성한다.   버킷생성 뒤 파일을 업로드 해본다.   ex) 를 들어 웹사이트를 운영한다.그러면 그 사이트에서 사용자가 파일을 업로드하면 미들웨어(루비, 파이썬, 자바 등등)가 s3 의 api 를 통해 s3로 전송한다.  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/awss3-simple-storage-service/",
-        "teaser": null
-      },{
-        "title": "[nodejs]정적파일 서비스",
-        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs/",
-        "teaser": null
-      },{
-        "title": "[nodejs]에러처리",
-        "excerpt":"존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준   app.use(function(req, res, next){   res.status(404).send('Sorry cant find that!'); }) //추가해준다  페이지에 에러가 있을 경우(서버에러 500)    next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.      app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고   res.status(500).send('Something broke!'); })  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs2/",
         "teaser": null
       },{
         "title": "[nodejs]라우터-주소체계변경",
@@ -543,6 +447,120 @@ var store = [{
         "excerpt":"2행 4열의 2차원 배열 //2행 4열의 2차원 배열 package chap2; public class Int2DArray { public static void main(String[] args) { int[][] x = new int[2][4]; //2차원 배열 선언 x[0][1] = 37; x[0][3] = 54; x[1][2] = 65; for(int i = 0; i &lt; 2; i++) for(int j = 0; j...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java/",
+        "teaser": null
+      },{
+        "title": "[nodejs]정적파일 서비스",
+        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/",
+        "teaser": null
+      },{
+        "title": "[aws]스트래스테스트",
+        "excerpt":"인스턴스 접속 : ssh -i 키위치/키이름.pem ubuntu@ip 컴퓨터의 CPU 점유율 보기 : top ssh -i Desktop/dev/key/aws_password.pem ubuntu@54.180.2.171 sudo apt-get update : 컴퓨터에 프로그램 목록을 최신버전으로 업그레이드 ab 프로그램 : 아파치에서 만든 부화발생기 (인스턴스 접속 후 ab 타이핑) requests : 어떤 웹서버에 몇번의 접속을 시도하겠냐 concurrency : 동시에 몇번의 접속을 시도하겠냐...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/a/",
+        "teaser": null
+      },{
+        "title": "[aws]인스턴스 에서 웹서버 사용",
+        "excerpt":"   홈페이지로 로그인해 연결을 눌러 키를 터미널에 복사 붙여넣기 를 해서 접속한다.   아마존 EC2 인스턴스에 퍼블릭 DNS(IPv4)에 있는 주소를 복사해 주소창에 붙여넣기를 한다.   홈페이지에 우분투 라고 나오면 제대로 접속한게 맞는것이다.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws-1/",
+        "teaser": null
+      },{
+        "title": "[AWS]터미널로 서버접속, ELB적용(ab 테스터)",
+        "excerpt":"두개의 인스턴스를 생성해준다. $ ssh -i 터미널경로/aws_passward.pem ubuntu@public ip주소 $ sudo apt-get update 타이핑(ab 벤치마킹 테스터기, 업데이트 먼저 해줘야함)패키지 리스트 를 업데이트를 해준다. $ sudo apt-get install apache2-utils 타이핑(ab벤치마킹 설치), 웹서버 설치는 $ sudo apt-get install apache2 ELB적용 웹서버를 이미지를 만들어준다.(AMI) load balances 를 들어가 웹서버 2개를 save 해준다. DNS...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws-elbab/",
+        "teaser": null
+      },{
+        "title": "[aws]기초용어",
+        "excerpt":"EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품 Instance : Instance 한개당 한대의 컴퓨터라 생각하면 된다 온디맨드 인스턴스 : 필요할때 키고 필요없을땐 끊다. 우리가 컴퓨터를 필요할 때마다 켜고 끄고 할 수 있는 인스턴스를 의미 예약 인스턴스 : 서버를 키는데 365일 동안 끄지 않는 경우면 예약 인스턴스를 사용하는게...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/aws/",
+        "teaser": null
+      },{
+        "title": "[AWS]Auto Scaling (오토스케일링)",
+        "excerpt":"컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능) AUTO SCALING 목록에 보면 시작구성과, Auto Scaling group 이 있다. 먼저 Auto Scaling group에 먼저 생성을 해준다. 그러면 오토스케일의 이미지를 선택한다 이미지화 시켯던 내AMI를 선택한다. 인스턴스 성능 선택한다. name 정하고 스토리지 정하고 시큐리티 그룹을 만든다. 그다음 오토스케일 그룹을 만드는...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/awsauto-scaling/",
+        "teaser": null
+      },{
+        "title": "[AWS]Scalability",
+        "excerpt":"변화하는 수요에 얼마나 탄력적으로 공급을 할 수 있는가? 클라우드 컴퓨팅   Scale Up : 웹사이트를 운영하는데 접속자가 계속 많아지면 그 수요에 대해 어떻게 탄력적으로 어떻게 대응할 건지. (수요가 많으면 좋은 컴퓨터로 업그레이드)  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/awsscalability/",
+        "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap03 검색알고리즘",
+        "excerpt":"선형 검색 package chap03; import java.util.*; public class SeqSearch { //요솟수가 n인 배열a에서 key와 같은 요소를 선형 검색합니다. static int seqSearch(int[] a, int n, int key) { int i = 0; while(true) { if(i == n) return -1; //검색실패(-1을 반환) if(a[i] == key) return i; //검색 성공(인덱스를 반환)7 i++; }...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/javachap/",
+        "teaser": null
+      },{
+        "title": "[nodejs] 객체화,모듈사용법,경로보안,출력정보 보안",
+        "excerpt":"코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함 var template = { //template 라는 객체를 생성 HTML:function(title, list, body, control){ return ` &lt;!doctype html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;WEB1 - ${title}&lt;/title&gt; &lt;meta charset=\"utf-8\"&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;&lt;a href=\"/\"&gt;WEB&lt;/a&gt;&lt;/h1&gt; ${list} ${control} ${body} &lt;/body&gt; &lt;/html&gt; `; },list:function(filelist){ var list = '&lt;ul&gt;'; var i =...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/node-js-1/",
+        "teaser": null
+      },{
+        "title": "[node]정적파일 서비스",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/node/",
+        "teaser": null
+      },{
+        "title": "[Nodejs]파일생성, 리다이렉션, 파일삭제",
+        "excerpt":"파일생성과 리다이렉션 리다이렉션 : 출력의 방향을 바꾼다. response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom}); response.end(); writeHead(200) 은 성공시켰다. writeHead(302) 페이지를 다른데로 리다이렉션 시킨다. ex) fs.writeFile(`data/${title}`, description, 'utf8', function(err){ response.writeHead(302, {Location: `/?id=${title}`}); response.end(); }) fs.unlink(path, callback) =&gt; 파일삭제 ex) fs.unlink(`data/${id}`, function(error){ response.writeHead(302, {Location: `/`}); response.end(); }) 삭제가 되고 홈으로 이동한다. Get 방식 QueryString...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-1/",
+        "teaser": null
+      },{
+        "title": "[nodejs] asas",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-asas/",
+        "teaser": null
+      },{
+        "title": "[nodejs] express 홈페이지 구현",
+        "excerpt":"기존 라우팅 방식은  var app = http.createServer(function(request,response){}   많은 부분에서 공유하고 사용했다. 어떻게 공유 되는 부분인지 확인할려면 위로올라서 확인해야하는데.   express 방식의 라우팅 방식으로 하면  request,response의 개발할려는 로직에  필요한 것만 들어있어서 간편하게 사용할 수 있다.   path 방식 url 파라미터 처리방법  app.get('/page/:pageId/:chapterId', function(request, response){   return response.send(request.params);   //{\"pageId\":\"HTML\",\"chapterId\":\"css\"} })   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-express/",
+        "teaser": null
+      },{
+        "title": "[nodejs]express(Hello World!)",
+        "excerpt":"nodejs 에서 가장많이 사용하는 프레임웤 npm install express –save 으로 설치 var express = require('express') //express 모듈을 load 해온다 const 는 상수 바뀌지않음. var app = express() //express 호출 (함수) app.get('/' , (req, res) =&gt; res.send('/'))//첫번째 인자는 경로, 두번째는 접속했을때 호출될 함수가 표현되어있음.(라우터라 생각하면됨) //(라우팅라 생각하면됨(라우팅은 경로 즉 길을가고있는데 갈림길...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs-expresshello-world/",
+        "teaser": null
+      },{
+        "title": "[Nodejs]객체",
+        "excerpt":"Object 와 Array var members = ['egoging','k8805','hoya']; console.log(members[1]); var i = 0; while (i&lt;members.length) { console.log('array loop',members[i]); i = i+1; } var roles = { 'programmer':'egoing', // key : value 'designer' : 'k8805', 'manager' : 'hoya'} console.log(roles.designer) //객체는 . 을 찍어서 가져온다. console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다. for(var...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejs/",
+        "teaser": null
+      },{
+        "title": "[nodejs]API & Mysql",
+        "excerpt":"API : Application Programming interface   개발자와 함수를 사용하는 개발자 들의 약속된 조작장치  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejsapi-mysql/",
+        "teaser": null
+      },{
+        "title": "[nodejs] Express 미들웨어",
+        "excerpt":"Express 의 중요 기능 2가지 라우터 미들웨어 소프트웨어를 만들때 처음부터 끝까지 다만드는 경우는 없다. 다른사람이 만든 소프트웨어를 부품으로 해서 만든다. 이것을 미들웨어라고 생각하면 된다. npm install body-parser //로설치 body 는 웹브라우저에서 요청한 정보 본체를 뜻한다. parser 는 분석 var bodyParser = require('body-parser'); //맨위에 선언 var post = request.body //로고쳐서 실행시켜준다....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejsexpress/",
+        "teaser": null
+      },{
+        "title": "[nodejs]express(Hello World!)",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejsexpresshello-world/",
+        "teaser": null
+      },{
+        "title": "[nodejs]Mysql Module",
+        "excerpt":"기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다. 소스코드를 나중에 복제하고 사용할때 편리하기 위해 ```java db.query(SELECT * FROM topic WHERE id=${query.id}`,function(error2,topic){ //이런식으로 쓰면 사용자에게 공격을 당할 수 있다. db.query(SELECT * FROM topic WHERE id=?,[queryData.id],function(error2,topic){ //id에 ? 에 두번쨰 인자가 치환되서 들어간다.보안성이좋음 response.writeHead(302,...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/nodejsmysql-module/",
         "teaser": null
       },{
         "title": "[얄코]비동기 프로그래밍",

@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[nodejs] 페이지 생성 구현2 - juntae</title>
-<meta name="description" content="``` app.get(‘/create’,function(request,response){ //get방식일떄 ">
+<meta name="description" content="```java app.get(‘/create’,function(request,response){ //get방식일떄 ">
 
 
   <meta name="author" content="동센">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/nodejs-2/">
 
 
-  <meta property="og:description" content="``` app.get(‘/create’,function(request,response){ //get방식일떄 ">
+  <meta property="og:description" content="```java app.get(‘/create’,function(request,response){ //get방식일떄 ">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[nodejs] 페이지 생성 구현2">
-    <meta itemprop="description" content="```app.get(‘/create’,function(request,response){ //get방식일떄">
+    <meta itemprop="description" content="```javaapp.get(‘/create’,function(request,response){ //get방식일떄">
     <meta itemprop="datePublished" content="2020-05-07T00:00:00+09:00">
     
 
@@ -287,25 +287,25 @@
 
       <section class="page__content" itemprop="text">
         
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.get('/create',function(request,response){ //get방식일떄
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">app</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">create</span><span class="err">'</span><span class="o">,</span><span class="n">function</span><span class="o">(</span><span class="n">request</span><span class="o">,</span><span class="n">response</span><span class="o">){</span> <span class="c1">//get방식일떄</span>
 
-app.post('/create_process',function(request,response){ //post방식
+<span class="n">app</span><span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">create_process</span><span class="err">'</span><span class="o">,</span><span class="n">function</span><span class="o">(</span><span class="n">request</span><span class="o">,</span><span class="n">response</span><span class="o">){</span> <span class="c1">//post방식</span>
 </code></pre></div></div>
 
 <p>쿼리 스트링이 아닌 방식으로 바꿀려면</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="/update/?id=${sanitizedTitle}"&gt;update&lt;/a&gt;
-에서
-&lt;a href="/update/${sanitizedTitle}"&gt;update&lt;/a&gt;
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">"/update/?id=${sanitizedTitle}"</span><span class="o">&gt;</span><span class="n">update</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+<span class="n">에서</span>
+<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">"/update/${sanitizedTitle}"</span><span class="o">&gt;</span><span class="n">update</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
 <p>삭제기능</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form action="/delete_process" method="post"&gt; //action 에 delete 앞에 /를 주게되면 최상위 path 바로밑으로 감
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s">"/delete_process"</span> <span class="n">method</span><span class="o">=</span><span class="s">"post"</span><span class="o">&gt;</span> <span class="c1">//action 에 delete 앞에 /를 주게되면 최상위 path 바로밑으로 감</span>
 </code></pre></div></div>
 
 <p>express 는 리다이렉션 기능을 편리하게 제공하고 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.redirect //를 사용하면 된다
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">response</span><span class="o">.</span><span class="na">redirect</span> <span class="c1">//를 사용하면 된다</span>
 </code></pre></div></div>
 
         
@@ -337,11 +337,11 @@ app.post('/create_process',function(request,response){ //post방식
       
   <nav class="pagination">
     
-      <a href="/aws/" class="pagination--pager" title="[AWS]Auto Scaling (오토스케일링)
+      <a href="/po/" class="pagination--pager" title="[얄코]포인터
 ">이전</a>
     
     
-      <a href="/nodejs-express/" class="pagination--pager" title="[nodejs] Express 미들웨어
+      <a href="/nodejsexpresshello-world1/" class="pagination--pager" title="[얄코]REST API
 ">다음</a>
     
   </nav>
@@ -396,71 +396,7 @@ app.post('/create_process',function(request,response){ //post방식
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java/" rel="permalink">[JAVA]알고리즘 chap02 - 3 &amp; Class
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">2행 4열의 2차원 배열
-```java
-//2행 4열의 2차원 배열
-package chap2;
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/java-chap02-2/" rel="permalink">[JAVA]알고리즘 chap02 - 2 &amp; String class
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">String class 
-문자열을 나타내는 것이 java.lang 패키지에 소속된 String  클래스 이다. (기본형 int, double 형이 아니다)
-String s = "ABC";
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/java/" rel="permalink">[JAVA] 재귀함수
+        <a href="/nodejsmysql-module/" rel="permalink">[nodejs]Mysql Module
 </a>
       
     </h2>
@@ -474,8 +410,70 @@ String s = "ABC";
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">```java
-package test;
+    <p class="archive__item-excerpt" itemprop="description">기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. 
+pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  소스코드를 나중에 복제하고 사용할때 편리하기 위해
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejsexpresshello-world/" rel="permalink">[nodejs]express(Hello World!)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejsexpress/" rel="permalink">[nodejs] Express 미들웨어
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Express 의 중요 기능 2가지
+
+  라우터
+  미들웨어
+
 </p>
   </article>
 </div>

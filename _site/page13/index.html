@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs2/" rel="permalink">[nodejs]에러처리
+        <a href="/react-shouldcomponentupdate/" rel="permalink">[React] shouldComponentUpdate
 </a>
       
     </h2>
@@ -297,38 +297,13 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데.
-express 기준
-</p>
-  </article>
-</div>
+    <p class="archive__item-excerpt" itemprop="description">```
+shouldComponentUpdate(newProps, newState){
 
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs/" rel="permalink">[nodejs]정적파일 서비스
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">images 디렉토리 만들어주고
-app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.
+if(this.props.data === newProps.data){
+		return false;
+}
+return true; }
 
 </p>
   </article>
@@ -344,7 +319,7 @@ app.use(express.static('public'));//public 디렉토리 안에서 static 파일�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/awss3-simple-storage-service/" rel="permalink">[AWS]S3 (Simple Storage Service)
+        <a href="/react/" rel="permalink">[React]CRUD (배열)
 </a>
       
     </h2>
@@ -358,7 +333,77 @@ app.use(express.static('public'));//public 디렉토리 안에서 static 파일�
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">파일을 저장하는 서비스 라고 생각하면 된다.
+    <p class="archive__item-excerpt" itemprop="description">//createContent.js
+```javascript
+import React,{Component} from ‘react’;
+class CreateContent extends Component{
+  render(){
+    return(
+      &lt;article&gt;
+...</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react/" rel="permalink">[React] 컨포넌트 이벤트
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">//App.js
+ &lt;Subject 
+      title={this.state.subject.title}
+      sub={this.state.subject.sub}
+      onChangePage = {function(){
+       this.setState({mode...</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/reactcomponent/" rel="permalink">[React]component 파일로분리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
+
+src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
 </p>
   </article>
 </div>
@@ -373,7 +418,7 @@ app.use(express.static('public'));//public 디렉토리 안에서 static 파일�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/graphql/" rel="permalink">[얄코] GraphQL
+        <a href="/react/" rel="permalink">[React] 이벤트 (bind)
 </a>
       
     </h2>
@@ -387,37 +432,12 @@ app.use(express.static('public'));//public 디렉토리 안에서 static 파일�
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">기존 REST API는
-</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejsexpresshello-world1/" rel="permalink">[얄코]REST API
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">REST API는 정보들이 주고받아지는 데 있어서 개발자들 사이에 널리 쓰이는 일종의 형식
-</p>
+    <p class="archive__item-excerpt" itemprop="description">class App extends Component {
+  constructor(props){ //컨포넌트 초기화
+    super(props); 
+    this.state = { //스테이트 값 초기화
+      mode:'read',
+      subject:{title:'WE...</p>
   </article>
 </div>
 

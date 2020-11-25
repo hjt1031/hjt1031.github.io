@@ -11,7 +11,7 @@ title: "[AWS] OSX로 AWS연결"
 6. ssh -i "/aws_password.pem" ........... 복붙하면 된다.
 
 
-# Apache 다운로드
+# Apache 다운로드 
 1. 터미널로 aws 접속 후 
 2. sudo apt-get update; 입력 다운로드 후
 3. sudo apt-get install apache2 입력

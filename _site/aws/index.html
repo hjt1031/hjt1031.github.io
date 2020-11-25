@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[AWS]Auto Scaling (오토스케일링) - juntae</title>
-<meta name="description" content="컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능) ">
+<!-- begin _includes/seo.html --><title>[aws]기초용어 - juntae</title>
+<meta name="description" content="EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품 ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[AWS]Auto Scaling (오토스케일링)">
+<meta property="og:title" content="[aws]기초용어">
 <meta property="og:url" content="http://localhost:4000/aws/">
 
 
-  <meta property="og:description" content="컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능) ">
+  <meta property="og:description" content="EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품 ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-05-07T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-11-24T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[AWS]Auto Scaling (오토스케일링)">
-    <meta itemprop="description" content="컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)">
-    <meta itemprop="datePublished" content="2020-05-07T00:00:00+09:00">
+    <meta itemprop="headline" content="[aws]기초용어">
+    <meta itemprop="description" content="EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품">
+    <meta itemprop="datePublished" content="2020-11-24T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[AWS]Auto Scaling (오토스케일링)
+          <h1 id="page-title" class="page__title" itemprop="headline">[aws]기초용어
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,22 +287,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>컴퓨터가 필요하면 자동으로 생성하고 필요없으면 자동으로 삭제해준다.(과금이 발생하지 않게 해주는 기능)</p>
+        <p>EC2 : Elastic Compute Cloud, 아마존 웹 서비스 중 대표적인 상품</p>
 
-<p>AUTO SCALING 목록에 보면
-시작구성과, Auto Scaling group 이 있다.
-먼저 Auto Scaling group에 먼저 생성을 해준다. 그러면</p>
-<ol>
-  <li>오토스케일의 이미지를 선택한다</li>
-  <li>이미지화 시켯던 내AMI를 선택한다.</li>
-  <li>인스턴스 성능 선택한다.</li>
-  <li>name 정하고 스토리지 정하고</li>
-  <li>시큐리티 그룹을 만든다.</li>
-  <li>그다음 오토스케일 그룹을 만드는 것이 나오는데</li>
-  <li>1번탭에 몇개의 인스턴스로 지정하는지 로드밸런싱 연결할건지 등등..</li>
-  <li>2번탭의(Confilgure scaling pollcles:조정 정책 구성)   첫번째 (이 그룹을 초기 크기로 유지) 가있는데 이건 1번탭에서 예를 들어 10개를 생성했다고 치고 그 10개중에서 4개의 인스턴스가 죽었다고 가정하면 그 죽은 인스턴스를 자동생성해준다.
-두번째는 (조정 정책을 사용하여 이 그룹의 용량 조정)최대와 최소의 인스턴스를 설정해준다. 예를들어 각각의 input 박스에 1과 3을 입력하면 최대1개이상과 3개이하의 인스턴스를 생성한다.</li>
-</ol>
+<p>Instance : Instance 한개당 한대의 컴퓨터라 생각하면 된다</p>
+
+<p>온디맨드 인스턴스 : 필요할때 키고 필요없을땐 끊다. 우리가 컴퓨터를 필요할 때마다 켜고 끄고 할 수 있는 인스턴스를 의미</p>
+
+<p>예약 인스턴스 : 서버를 키는데 365일 동안 끄지 않는 경우면 예약 인스턴스를 사용하는게 훨씬 저렴하다. (3년치를 한꺼번에 사면 더 저렴하게 구매할 수 있다.)</p>
+
+<p>스팟 인스턴스 : 노는 컴퓨터를 많을 수록 많을 수록 저렴하다. 반대로 노는 컴퓨터가 없으면 일반 인스턴스 보다 더 가격이 많이 측정된다. 주로 데이터 분석, 백그라운드 작업, 배치 작업에 적합(가변적인 가격 정책을 갖고 있다.)</p>
 
         
       </section>
@@ -313,7 +306,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-07T00:00:00+09:00">May 7, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-24T00:00:00+09:00">November 24, 2020</time></p>
         
       </footer>
 
@@ -322,7 +315,7 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BAWS%5DAuto+Scaling+%28%EC%98%A4%ED%86%A0%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81%29%20http%3A%2F%2Flocalhost%3A4000%2Faws%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Baws%5D%EA%B8%B0%EC%B4%88%EC%9A%A9%EC%96%B4%20http%3A%2F%2Flocalhost%3A4000%2Faws%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Faws%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -333,11 +326,11 @@
       
   <nav class="pagination">
     
-      <a href="/po/" class="pagination--pager" title="[얄코]포인터
+      <a href="/aws-elbab/" class="pagination--pager" title="[AWS]터미널로 서버접속, ELB적용(ab 테스터)
 ">이전</a>
     
     
-      <a href="/nodejs-2/" class="pagination--pager" title="[nodejs] 페이지 생성 구현2
+      <a href="/awsauto-scaling/" class="pagination--pager" title="[AWS]Auto Scaling (오토스케일링)
 ">다음</a>
     
   </nav>
@@ -392,71 +385,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java/" rel="permalink">[JAVA]알고리즘 chap02 - 3 &amp; Class
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">2행 4열의 2차원 배열
-```java
-//2행 4열의 2차원 배열
-package chap2;
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/java-chap02-2/" rel="permalink">[JAVA]알고리즘 chap02 - 2 &amp; String class
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">String class 
-문자열을 나타내는 것이 java.lang 패키지에 소속된 String  클래스 이다. (기본형 int, double 형이 아니다)
-String s = "ABC";
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/java/" rel="permalink">[JAVA] 재귀함수
+        <a href="/nodejsmysql-module/" rel="permalink">[nodejs]Mysql Module
 </a>
       
     </h2>
@@ -470,8 +399,70 @@ String s = "ABC";
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">```java
-package test;
+    <p class="archive__item-excerpt" itemprop="description">기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. 
+pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  소스코드를 나중에 복제하고 사용할때 편리하기 위해
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejsexpresshello-world/" rel="permalink">[nodejs]express(Hello World!)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nodejsexpress/" rel="permalink">[nodejs] Express 미들웨어
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Express 의 중요 기능 2가지
+
+  라우터
+  미들웨어
+
 </p>
   </article>
 </div>

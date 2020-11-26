@@ -1,4 +1,0 @@
-I"�<p>기존 라우팅 방식은</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var app = http.createServer(function(request,response){}
-</code></pre></div></div>
-:ET

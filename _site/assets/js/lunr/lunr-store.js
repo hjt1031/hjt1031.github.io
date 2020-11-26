@@ -95,12 +95,6 @@ var store = [{
         "url": "http://localhost:4000/awss3-simple-storage-service/",
         "teaser": null
       },{
-        "title": "[nodejs]에러처리",
-        "excerpt":"존재하지 않는 페이지를 찾았을때 404 에러가 나타나는데. express 기준   app.use(function(req, res, next){   res.status(404).send('Sorry cant find that!'); }) //추가해준다  페이지에 에러가 있을 경우(서버에러 500)    next(err); //다음 미들웨어를 호출하는 것 에러를 던진다 생각하면 된다.      app.use(function(err, req, res, next){ //첫번째는 next에 담긴 err가 넘어오고   res.status(500).send('Something broke!'); })  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/nodejs2/",
-        "teaser": null
-      },{
         "title": "[nodejs]라우터-주소체계변경",
         "excerpt":"app.use('/topic',topicRouter) //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다. router.get('/create',function(request,response){ var title = 'WEB - create'; var list = template.list(request.list);//미들웨어 var html = template.HTML(title, list, ` &lt;form action=\"/topic/create_process\" method=\"post\"&gt; &lt;p&gt;&lt;input type=\"text\" name=\"title\" placeholder=\"title\"&gt;&lt;/p&gt; &lt;p&gt; &lt;textarea name=\"description\" placeholder=\"description\"&gt;&lt;/textarea&gt; &lt;/p&gt; &lt;p&gt; &lt;input type=\"submit\"&gt; &lt;/p&gt; &lt;/form&gt; `, ''); response.send(html); } routers 에 위치한 topic.js...","categories": [],
         "tags": [],
@@ -453,12 +447,6 @@ var store = [{
         "excerpt":"2행 4열의 2차원 배열 //2행 4열의 2차원 배열 package chap2; public class Int2DArray { public static void main(String[] args) { int[][] x = new int[2][4]; //2차원 배열 선언 x[0][1] = 37; x[0][3] = 54; x[1][2] = 65; for(int i = 0; i &lt; 2; i++) for(int j = 0; j...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java/",
-        "teaser": null
-      },{
-        "title": "[nodejs]정적파일 서비스",
-        "excerpt":"images 디렉토리 만들어주고  app.use(express.static('public'));//public 디렉토리 안에서 static 파일을 찾겠다.   그다음 본문 로직에  &lt;img src=\"/images/hello.jpg\" style=\"width:300px; display:block; margin-top:10px;\"&gt;  ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/",
         "teaser": null
       },{
         "title": "[aws]스트래스테스트",

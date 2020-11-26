@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs]Mysql Module - juntae - 페이지 9</title>
+<!-- begin _includes/seo.html --><title>[JAVA]Study - juntae - 페이지 9</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs/" rel="permalink">[Nodejs] 간단한 웹 서버
+        <a href="/react-nomadstate-2/" rel="permalink">[React Nomad]State 2
 </a>
       
     </h2>
@@ -297,9 +297,44 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다.
-```javascript
-var http = require(‘http’);
+    <p class="archive__item-excerpt" itemprop="description">state = {
+    count: 0
+  }
+add = () =&gt; {
+    this.state.count = 1;
+  };
+  minus = () =&gt; {
+    this.state.count = -1;
+  };
+	//동작하지 않음. react 는 render fu...</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react-nomad/" rel="permalink">[React Nomad]State
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">state 는 보통 우리가 동적 데이터와 함께 작업할때 만들어진다. 변하는 데이터, 존재하지 않는 데이터
 </p>
   </article>
 </div>
@@ -314,7 +349,7 @@ var http = require(‘http’);
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodej/" rel="permalink">[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 &amp; stream
+        <a href="/react-nomad/" rel="permalink">[React Nomad] 웹사이트에 동적 데이터 추가
 </a>
       
     </h2>
@@ -328,7 +363,8 @@ var http = require(‘http’);
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다.
+    <p class="archive__item-excerpt" itemprop="description">```javascript
+const friends = [“dal”,”mark”,”lynn”,”japan guy”]
 </p>
   </article>
 </div>
@@ -343,7 +379,7 @@ var http = require(‘http’);
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs-url/" rel="permalink">[Nodejs]주소 문자열을 URL 객체로 변환 &amp; 이벤트 &amp; 파일 다루기
+        <a href="/react/" rel="permalink">[React]JSX, Component
 </a>
       
     </h2>
@@ -357,38 +393,16 @@ var http = require(‘http’);
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">주소 문자열을 URL 객체로 변환
-var url = require('url'); //모듈호출
-//parse() 와 format() 메소드를 호출 할 수 있음
-parse() : https:// 로 시작하는 주소 문자열을 URL 객체로 만들어줌 (요청 파라미터 문자열을 파싱하여 요청 ...</p>
-  </article>
-</div>
+    <p class="archive__item-excerpt" itemprop="description">JSX : HTML + javascript
+(javascript 안의 HTML 이라 생각하면 됨)
+```
+ReactDOM.render(
 
-
+    
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejs/" rel="permalink">[Nodejs] 프로토타입 객체
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문
+,
+  document.getElementById(‘root’)
+);
 </p>
   </article>
 </div>
@@ -403,7 +417,7 @@ parse() : https:// 로 시작하는 주소 문자열을 URL 객체로 만들어�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs2/" rel="permalink">[Nodejs]용어2
+        <a href="/react-shouldcomponentupdate/" rel="permalink">[React] shouldComponentUpdate
 </a>
       
     </h2>
@@ -417,10 +431,14 @@ parse() : https:// 로 시작하는 주소 문자열을 URL 객체로 만들어�
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">exports : 모듈을 만들어 주는 대표적인 방식
-```javascript
-//정의
-exports.함수이름 = 함수정의;
+    <p class="archive__item-excerpt" itemprop="description">```
+shouldComponentUpdate(newProps, newState){
+
+if(this.props.data === newProps.data){
+		return false;
+}
+return true; }
+
 </p>
   </article>
 </div>

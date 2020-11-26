@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs]Mysql Module - juntae - 페이지 10</title>
+<!-- begin _includes/seo.html --><title>[JAVA]Study - juntae - 페이지 10</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,37 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejs-1/" rel="permalink">[Nodejs] 용어 1
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">인터프리터 : 한 줄씩 해석하면서 실행하는 방식
-
-바인딩 : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 ...</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/ffa/" rel="permalink">[얄코]Scope (let, const, var)
+        <a href="/react/" rel="permalink">[React]CRUD (배열)
 </a>
       
     </h2>
@@ -327,8 +297,14 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.
-</p>
+    <p class="archive__item-excerpt" itemprop="description">//createContent.js
+```javascript
+import React,{Component} from ‘react’;
+class CreateContent extends Component{
+  render(){
+    return(
+      &lt;article&gt;
+...</p>
   </article>
 </div>
 
@@ -342,36 +318,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react-nomad/" rel="permalink">[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">함수형 컴포넌트는
-</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/react-nomad/" rel="permalink">[React Nomad]네비게이션
+        <a href="/react/" rel="permalink">[React] 컨포넌트 이벤트
 </a>
       
     </h2>
@@ -386,11 +333,11 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">//App.js
-function App(){ //함수형 컨포넌트 생성
-  return &lt;HashRouter&gt;
-    &lt;Navigation /&gt;
-    &lt;Route path="/" component={Home}/&gt;
-    &lt;Route path="...</p>
+ &lt;Subject 
+      title={this.state.subject.title}
+      sub={this.state.subject.sub}
+      onChangePage = {function(){
+       this.setState({mode...</p>
   </article>
 </div>
 
@@ -404,7 +351,7 @@ function App(){ //함수형 컨포넌트 생성
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/react-nomadreact-router-dom/" rel="permalink">[React Nomad]react-router-dom
+        <a href="/reactcomponent/" rel="permalink">[React]component 파일로분리
 </a>
       
     </h2>
@@ -418,8 +365,72 @@ function App(){ //함수형 컨포넌트 생성
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">import {HashRouter, Route} from "react-router-dom"; //react-router-dom은 다른 종류의 라우터가 있다 그중에 하나가 HashRouter,Route
+    <p class="archive__item-excerpt" itemprop="description">import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
 
+src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react/" rel="permalink">[React] 이벤트 (bind)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">class App extends Component {
+  constructor(props){ //컨포넌트 초기화
+    super(props); 
+    this.state = { //스테이트 값 초기화
+      mode:'read',
+      subject:{title:'WE...</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react-state/" rel="permalink">[React] state props
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">props 는 사용자가 컨포넌트를 사용하는 입장에서 중요한 것 (외부) 사용하는 쪽
+state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내부) 구현하는 쪽
 </p>
   </article>
 </div>

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[nodejs]Mysql Module - juntae - 페이지 7</title>
+<!-- begin _includes/seo.html --><title>[JAVA]Study - juntae - 페이지 7</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,7 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/javaaccess-level-modifiers-oop/" rel="permalink">[JAVA]access level modifiers &amp; OOP
+        <a href="/nodejs2/" rel="permalink">[Nodejs]용어2
 </a>
       
     </h2>
@@ -293,15 +293,15 @@
 
 
 
-  3 분 소요
+  최대 1 분 소요
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">access level modifiers : 외부에서 접근 할 수 있는 레벨을 정해 주는 것.
-public : 어느 클래스에서도 접근이 가능 할 수 있다.
-protected : 
-default : 
- private : 같은 클래스 안 에서만 사용할 수 있다. but public 을...</p>
+    <p class="archive__item-excerpt" itemprop="description">exports : 모듈을 만들어 주는 대표적인 방식
+```javascript
+//정의
+exports.함수이름 = 함수정의;
+</p>
   </article>
 </div>
 
@@ -315,7 +315,7 @@ default :
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java/" rel="permalink">[JAVA] 제어문
+        <a href="/nodejs-1/" rel="permalink">[Nodejs] 용어 1
 </a>
       
     </h2>
@@ -329,9 +329,9 @@ default :
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">제어문(조건문, 반복문)
-1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음
-System.out.println(foo.contains("world")); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 ret...</p>
+    <p class="archive__item-excerpt" itemprop="description">인터프리터 : 한 줄씩 해석하면서 실행하는 방식
+
+바인딩 : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 ...</p>
   </article>
 </div>
 
@@ -345,7 +345,7 @@ System.out.println(foo.contains("world")); //해당문자열을 포함 하고 �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java-12/" rel="permalink">[JAVA]기본 코딩 &amp; 디버깅
+        <a href="/ffa/" rel="permalink">[얄코]Scope (let, const, var)
 </a>
       
     </h2>
@@ -359,45 +359,7 @@ System.out.println(foo.contains("world")); //해당문자열을 포함 하고 �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">public class OkJavaGoInHome {
- 
-    public static void main(String[] args) {
-         
-        String id = "JAVA APT 507";
-         
-        // Elevator call...</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/java-1/" rel="permalink">[JAVA] 기초
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">자바 동작원리
-Java Source code(.java) —-Compile—-&gt; 
-Java Application(.class) —–Run——&gt;
-Java Virtual Machine ———-Run——–&gt; 
-computer
+    <p class="archive__item-excerpt" itemprop="description">각 상수나 변수 등의 요소들이 허용된 영역, 범위를 뜻 함.
 </p>
   </article>
 </div>
@@ -412,7 +374,7 @@ computer
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java/" rel="permalink">[JAVA] 기본 코딩 &amp; 디버깅
+        <a href="/react-nomad/" rel="permalink">[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트
 </a>
       
     </h2>
@@ -426,13 +388,41 @@ computer
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">public class OkJavaGoInHome {
- 
-    public static void main(String[] args) {
-         
-        String id = "JAVA APT 507";
-         
-        // Elevator call...</p>
+    <p class="archive__item-excerpt" itemprop="description">함수형 컴포넌트는
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react-nomad/" rel="permalink">[React Nomad]네비게이션
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">//App.js
+function App(){ //함수형 컨포넌트 생성
+  return &lt;HashRouter&gt;
+    &lt;Navigation /&gt;
+    &lt;Route path="/" component={Home}/&gt;
+    &lt;Route path="...</p>
   </article>
 </div>
 

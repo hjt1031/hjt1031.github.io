@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Nodejs]객체 - juntae</title>
-<meta name="description" content="Object 와 Array ```java var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
+<!-- begin _includes/seo.html --><title>[nodejs] 파일생성, 리다이렉션, 파일삭제 - juntae</title>
+<meta name="description" content="파일생성과 리다이렉션    리다이렉션 : 출력의 방향을 바꾼다.  ">
 
 
   <meta name="author" content="동센">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="juntae">
-<meta property="og:title" content="[Nodejs]객체">
+<meta property="og:title" content="[nodejs] 파일생성, 리다이렉션, 파일삭제">
 <meta property="og:url" content="http://localhost:4000/nodejs/">
 
 
-  <meta property="og:description" content="Object 와 Array ```java var members = [‘egoging’,’k8805’,’hoya’]; console.log(members[1]); ">
+  <meta property="og:description" content="파일생성과 리다이렉션    리다이렉션 : 출력의 방향을 바꾼다.  ">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-11-24T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-11-03T00:00:00+09:00">
 
 
 
@@ -262,15 +262,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Nodejs]객체">
-    <meta itemprop="description" content="Object 와 Array```javavar members = [‘egoging’,’k8805’,’hoya’];console.log(members[1]);">
-    <meta itemprop="datePublished" content="2020-11-24T00:00:00+09:00">
+    <meta itemprop="headline" content="[nodejs] 파일생성, 리다이렉션, 파일삭제">
+    <meta itemprop="description" content="파일생성과 리다이렉션  리다이렉션 : 출력의 방향을 바꾼다.">
+    <meta itemprop="datePublished" content="2020-11-03T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[Nodejs]객체
+          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs] 파일생성, 리다이렉션, 파일삭제
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -287,60 +287,39 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="object-와-array">Object 와 Array</h1>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">members</span> <span class="o">=</span> <span class="o">[</span><span class="err">'</span><span class="n">egoging</span><span class="sc">','</span><span class="n">k8805</span><span class="sc">','</span><span class="n">hoya</span><span class="err">'</span><span class="o">];</span>
-<span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">members</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+        <p><strong>파일생성과 리다이렉션</strong></p>
+<blockquote>
+  <p>리다이렉션 : 출력의 방향을 바꾼다.</p>
+</blockquote>
 
-
-<span class="kt">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">members</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="err">'</span><span class="n">array</span> <span class="n">loop</span><span class="err">'</span><span class="o">,</span><span class="n">members</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
-<span class="o">}</span>
-
-<span class="kt">var</span> <span class="n">roles</span> <span class="o">=</span> <span class="o">{</span>
-<span class="err">'</span><span class="n">programmer</span><span class="sc">':'</span><span class="n">egoing</span><span class="err">'</span><span class="o">,</span> <span class="c1">// key : value</span>
-<span class="err">'</span><span class="n">designer</span><span class="err">'</span> <span class="o">:</span> <span class="err">'</span><span class="n">k8805</span><span class="err">'</span><span class="o">,</span>
-<span class="err">'</span><span class="n">manager</span><span class="err">'</span> <span class="o">:</span> <span class="err">'</span><span class="n">hoya</span><span class="err">'</span><span class="o">}</span>
-
-<span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">roles</span><span class="o">.</span><span class="na">designer</span><span class="o">)</span> <span class="c1">//객체는 . 을 찍어서 가져온다.</span>
-<span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">roles</span><span class="o">[</span><span class="err">'</span><span class="n">debugger</span><span class="err">'</span><span class="o">])</span> <span class="c1">//키값을 문자로 전달해도 가져올 수 있다.</span>
-
- <span class="k">for</span><span class="o">(</span><span class="kt">var</span> <span class="n">name</span> <span class="n">in</span> <span class="n">roles</span><span class="o">){</span> <span class="c1">//name 은 아무거나 써도 상관이없다.</span>
-     <span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="err">'</span><span class="n">object</span> <span class="o">=&gt;</span><span class="err">'</span><span class="o">,</span><span class="n">name</span><span class="o">,</span> <span class="err">'</span><span class="n">value</span> <span class="o">=&gt;</span><span class="err">'</span><span class="o">,</span><span class="n">roles</span><span class="o">[</span><span class="n">name</span><span class="o">]);</span>
- <span class="o">}</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.writeHead(302, {Location : 'http://whateverhostthiswillbe:8675/' +newRoom});
+response.end();
 </code></pre></div></div>
 
-<h1 id="objeck-oriented-programming-oop">objeck oriented Programming (OOP)</h1>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//자바스크립트 에게 함수는 값이기도하고 , 그렇기에 배열과 객체에 담을 수 있다.</span>
-<span class="kt">var</span> <span class="n">f</span> <span class="o">=</span> <span class="n">function</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">);</span>
-    <span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="kt">var</span> <span class="n">a</span> <span class="o">=</span> <span class="o">[</span><span class="n">f</span><span class="o">];</span>
-<span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]();</span> <span class="c1">//배열의 함수로서 사용 가능</span>
+<p>writeHead(200) 은 성공시켰다.
+writeHead(302) 페이지를 다른데로 리다이렉션 시킨다.</p>
 
-<span class="kt">var</span> <span class="n">o</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="nl">func:</span><span class="n">f</span> <span class="c1">//프로퍼티</span>
-<span class="o">}</span>
-<span class="n">o</span><span class="o">.</span><span class="na">func</span><span class="o">();</span>
-
+<p>ex)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.writeFile(`data/${title}`, description, 'utf8', function(err){
+            response.writeHead(302, {Location: `/?id=${title}`});
+            response.end();
+          })
 </code></pre></div></div>
 
-<h1 id="객체--코드가-복잡해짐에-따라-코드를-정리정돈-을-해서-복잡성을-낮춘다">객체 : 코드가 복잡해짐에 따라 코드를 정리정돈 을 해서 복잡성을 낮춘다.</h1>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">o</span> <span class="o">=</span> <span class="o">{</span> <span class="c1">//하나의 객체의 정리해놓는다.(폴더의기능?)</span>
-    <span class="nl">v1:</span><span class="err">'</span><span class="n">v1</span><span class="err">'</span><span class="o">,</span>
-    <span class="nl">v2:</span><span class="err">'</span><span class="n">v2</span><span class="err">'</span><span class="o">,</span>
-    <span class="nl">f1:</span><span class="n">function</span> <span class="nf">f1</span><span class="o">(){</span>
-    <span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">v1</span><span class="o">);</span> <span class="c1">//this : 함수가 속해있는 객체를 참조할 수 있다.</span>
-    <span class="o">},</span>
-    <span class="nl">f2:</span><span class="n">function</span> <span class="nf">f2</span> <span class="o">(){</span>
-    <span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">v2</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-<span class="n">o</span><span class="o">.</span><span class="na">f1</span><span class="o">();</span>
-<span class="n">o</span><span class="o">.</span><span class="na">f2</span><span class="o">();</span> 
+<blockquote>
+  <p>fs.unlink(path, callback) =&gt; 파일삭제</p>
+</blockquote>
+
+<p>ex)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs.unlink(`data/${id}`, function(error){
+            response.writeHead(302, {Location: `/`});
+            response.end();
+          })
 </code></pre></div></div>
+<p>삭제가 되고 홈으로 이동한다.</p>
+
+<h1 id="get-방식"><em>Get 방식</em></h1>
+<p>QueryString 이 있는 것</p>
 
         
       </section>
@@ -351,7 +330,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-24T00:00:00+09:00">November 24, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-03T00:00:00+09:00">November 3, 2020</time></p>
         
       </footer>
 
@@ -360,7 +339,7 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BNodejs%5D%EA%B0%9D%EC%B2%B4%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D+%ED%8C%8C%EC%9D%BC%EC%83%9D%EC%84%B1%2C+%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98%2C+%ED%8C%8C%EC%9D%BC%EC%82%AD%EC%A0%9C%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -371,11 +350,11 @@
       
   <nav class="pagination">
     
-      <a href="/nodejs-expresshello-world/" class="pagination--pager" title="[nodejs]express(Hello World!)
+      <a href="/java/" class="pagination--pager" title="[JAVA]상속 &amp; 차장님 기본개념
 ">이전</a>
     
     
-      <a href="/nodejsapi-mysql/" class="pagination--pager" title="[nodejs]API &amp; Mysql
+      <a href="/spring/" class="pagination--pager" title="[Spring] 개념
 ">다음</a>
     
   </nav>
@@ -400,7 +379,41 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejsmysql-module/" rel="permalink">[nodejs]Mysql Module
+        <a href="/javastudy-exam/" rel="permalink">[JAVA]Study
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">201112시험 – JAVA 15문 Spring 5문
+
+  다음 각 변수의 생명 주기를 쓰시오.
+지역 변수 :  메소드 시작 끝까지
+인스턴스 변수 : 객체가 생성되고 가비지 컬렉션이 정리할 때 까지 
+정적 변수(클래스 변수) : 프로그램이 시작 되서 프로그램이 끝날떄 까지
+자바에서...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java-exam/" rel="permalink">[JAVA]시험 복습
 </a>
       
     </h2>
@@ -414,8 +427,7 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">기본적으로 nodejs 모듈에는 mysql를 제어하는 모듈이 없다. 
-pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  소스코드를 나중에 복제하고 사용할때 편리하기 위해
+    <p class="archive__item-excerpt" itemprop="description">복습
 </p>
   </article>
 </div>
@@ -430,7 +442,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejsexpresshello-world/" rel="permalink">[nodejs]express(Hello World!)
+        <a href="/javachap/" rel="permalink">[JAVA]알고리즘 chap03 검색알고리즘
 </a>
       
     </h2>
@@ -444,8 +456,13 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
+    <p class="archive__item-excerpt" itemprop="description">선형 검색
+package chap03;
+import java.util.*;
+public class SeqSearch {
+	//요솟수가 n인 배열a에서 key와 같은 요소를 선형 검색합니다.
+	static int seqSearch(int[] a, int n, int key) {
+		...</p>
   </article>
 </div>
 
@@ -459,7 +476,7 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/nodejsexpress/" rel="permalink">[nodejs] Express 미들웨어
+        <a href="/java/" rel="permalink">[JAVA]알고리즘 chap02 - 3 &amp; Class
 </a>
       
     </h2>
@@ -469,45 +486,14 @@ pm install -S mysql 을 해주면 packson(dependencies) 에 추가가된다.  �
 
 
 
-  최대 1 분 소요
+  1 분 소요
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Express 의 중요 기능 2가지
-
-  라우터
-  미들웨어
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/nodejsapi-mysql/" rel="permalink">[nodejs]API &amp; Mysql
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">API : Application Programming interface 
-개발자와 함수를 사용하는 개발자 들의 약속된 조작장치
+    <p class="archive__item-excerpt" itemprop="description">2행 4열의 2차원 배열
+```java
+//2행 4열의 2차원 배열
+package chap2;
 </p>
   </article>
 </div>

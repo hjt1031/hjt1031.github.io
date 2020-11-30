@@ -1,0 +1,27 @@
+I"�<h1 id="자연정렬">자연정렬</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">chap03</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.*;</span>
+<span class="k">public</span> <span class="n">class</span> <span class="n">StringBinarySearch</span> <span class="p">{</span>
+	<span class="k">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="k">String</span> <span class="p">[]</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">Scanner</span> <span class="n">stdIn</span> <span class="p">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="nf">System</span><span class="p">.</span><span class="k">in</span><span class="p">);</span>
+		
+		<span class="p">//</span><span class="err">자바에서</span> <span class="err">사용하는</span> <span class="err">키워드입니다</span><span class="p">.</span>
+		<span class="k">String</span><span class="p">[]</span> <span class="n">x</span> <span class="p">=</span> <span class="p">{</span>
+				<span class="s2">"abstract"</span><span class="p">,</span> <span class="s2">"assert"</span>
+		<span class="p">};</span>
+		
+		<span class="nf">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"원하는 키워드를 입력하세요:"</span><span class="p">);</span>
+		
+		<span class="k">String</span> <span class="n">ky</span> <span class="p">=</span> <span class="n">stdIn</span><span class="p">.</span><span class="k">next</span><span class="p">();</span>
+		
+		<span class="n">int</span> <span class="n">idx</span> <span class="p">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="n">binarySearch</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ky</span><span class="p">);</span>	<span class="p">//</span><span class="err">배열</span> <span class="n">x</span><span class="err">에서</span> <span class="err">값이</span> <span class="n">ky</span><span class="err">인</span> <span class="err">요소를</span> <span class="err">검색</span>
+		
+		<span class="k">if</span><span class="p">(</span><span class="n">idx</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
+			<span class="nf">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"해당키워드 없음"</span><span class="p">);</span>
+		<span class="k">else</span>
+			<span class="nf">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"해당키워드는 "</span> <span class="p">+</span> <span class="n">idx</span> <span class="p">+</span><span class="s2">"에있음"</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+:ET

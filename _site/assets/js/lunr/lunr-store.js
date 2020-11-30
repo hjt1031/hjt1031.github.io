@@ -562,4 +562,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/javastudy-exam/",
         "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap03 - 이진 검색 & 인스턴스메서드,클래스메서드",
+        "excerpt":"이진검색 package chap03; import java.util.*; public class BinSearch { //요솟수가 n인 배열 a에서 key와 같은 요소를 이진 검색합니다. static int binSearch(int[] a, int n, int key) { int pl = 0; //검색 범위의 첫 인덱스 int pr = n - 1; //검색범위의 끝 인덱스 do { int pc = (pl...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-Binsearch1/",
+        "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap03 - 자연 정렬",
+        "excerpt":"자연정렬 package chap03; import java.util.*; public class StringBinarySearch { public static void main(String []args) { Scanner stdIn = new Scanner(System.in); //자바에서 사용하는 키워드입니다. String[] x = { \"abstract\", \"assert\" }; System.out.println(\"원하는 키워드를 입력하세요:\"); String ky = stdIn.next(); int idx = Arrays.binarySearch(x, ky); //배열 x에서 값이 ky인 요소를 검색 if(idx &lt;...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-chap03-StringBinarySearch1/",
+        "teaser": null
       }]

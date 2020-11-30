@@ -377,6 +377,14 @@
 <lastmod>2020-11-26T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/java-Binsearch1/</loc>
+<lastmod>2020-11-30T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/java-chap03-StringBinarySearch1/</loc>
+<lastmod>2020-11-30T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -432,5 +440,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page19/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page20/</loc>
 </url>
 </urlset>

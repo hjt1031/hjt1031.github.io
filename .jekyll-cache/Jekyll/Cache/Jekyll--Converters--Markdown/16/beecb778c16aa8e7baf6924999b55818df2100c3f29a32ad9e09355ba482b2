@@ -1,0 +1,54 @@
+I"� <h1 id="이진검색">이진검색</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap03</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BinSearch</span> <span class="o">{</span>
+	<span class="c1">//요솟수가 n인 배열 a에서 key와 같은 요소를 이진 검색합니다.</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">binSearch</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">pl</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">//검색 범위의 첫 인덱스</span>
+		<span class="kt">int</span> <span class="n">pr</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">//검색범위의 끝 인덱스</span>
+		
+		<span class="k">do</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">pc</span> <span class="o">=</span> <span class="o">(</span><span class="n">pl</span> <span class="o">+</span> <span class="n">pr</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">//중앙 요소의 인덱스</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">pc</span><span class="o">]</span> <span class="o">==</span> <span class="n">key</span><span class="o">)</span>
+				<span class="k">return</span> <span class="n">pc</span><span class="o">;</span>	<span class="c1">//검색성공</span>
+			<span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">pc</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">key</span><span class="o">)</span>
+				<span class="n">pl</span> <span class="o">=</span> <span class="n">pc</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">//검색 범위를 뒤쪽 절받으로 좁힘</span>
+			<span class="k">else</span>
+				<span class="n">pr</span> <span class="o">=</span> <span class="n">pc</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">//검색 범위를 앞쪽 절받으로 좁힘</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">pl</span> <span class="o">&lt;=</span> <span class="n">pr</span><span class="o">);</span>
+		
+		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span> <span class="c1">//검색실패</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Scanner</span> <span class="n">stdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"요솟수 : "</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">num</span><span class="o">];</span> <span class="c1">//요솟수가 num인 배열</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"오름차순으로 입력하세요"</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"x[0] : "</span><span class="o">);</span> <span class="c1">//첫 요소 입력</span>
+		<span class="n">x</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">do</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"x["</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span><span class="s">"]:"</span><span class="o">);</span>
+				<span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+			<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]);</span> 	<span class="c1">//바로 앞의 요소보다 작으면 다시 입력</span>
+		<span class="o">}</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"검색할 값 : "</span><span class="o">);</span> 	<span class="c1">//키 값을 입력</span>
+		<span class="kt">int</span> <span class="n">ky</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		
+		<span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">binSearch</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">num</span><span class="o">,</span> <span class="n">ky</span><span class="o">);</span> 	<span class="c1">//배열 x에서 키 값이 ky인 요소를 검색</span>
+		
+		<span class="k">if</span><span class="o">(</span><span class="n">idx</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"그 값의 요소가 없습니다."</span><span class="o">);</span>
+		<span class="k">else</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ky</span><span class="o">+</span><span class="s">"은 x["</span> <span class="o">+</span> <span class="n">idx</span> <span class="o">+</span> <span class="s">"]에 있습니다."</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+:ET

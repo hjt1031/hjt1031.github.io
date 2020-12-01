@@ -1,0 +1,641 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[JAVA]알고리즘chap-04 스택 - juntae</title>
+<meta name="description" content="스택이란 ? 데이터를 일시적으로 저장하기 위해 사용하는 자료구조루, 데이터의 입력과 출력 순서는 후입선출(LIFO) 입니다. 스택에 넣는 작업을 push 꺼내는 작업을 pop ">
+
+
+  <meta name="author" content="동센">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="juntae">
+<meta property="og:title" content="[JAVA]알고리즘chap-04 스택">
+<meta property="og:url" content="http://localhost:4000/javachap-04-stack-1/">
+
+
+  <meta property="og:description" content="스택이란 ? 데이터를 일시적으로 저장하기 위해 사용하는 자료구조루, 데이터의 입력과 출력 순서는 후입선출(LIFO) 입니다. 스택에 넣는 작업을 push 꺼내는 작업을 pop ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-12-01T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/javachap-04-stack-1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "JunTae",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="juntae Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">동센</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>One Day One Commit</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">home</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://www.instagram.com/jun_haaaaa" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[JAVA]알고리즘chap-04 스택">
+    <meta itemprop="description" content="스택이란 ?데이터를 일시적으로 저장하기 위해 사용하는 자료구조루, 데이터의 입력과 출력 순서는 후입선출(LIFO) 입니다.스택에 넣는 작업을 push꺼내는 작업을 pop">
+    <meta itemprop="datePublished" content="2020-12-01T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[JAVA]알고리즘chap-04 스택
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><em>스택이란 ?</em><br />
+데이터를 일시적으로 저장하기 위해 사용하는 자료구조루, 데이터의 입력과 출력 순서는 후입선출(LIFO) 입니다.<br />
+스택에 넣는 작업을 push<br />
+꺼내는 작업을 pop</p>
+
+<p><em>메서드종류</em></p>
+<ul>
+  <li>indexOf (검색 메서드) :  스택 본체의 배열 에서 어떤 값의 데이터가 포함되어 있는지, 포함되어 있으면  배열의 어디에 들어 있는지를 조사하는 메서드</li>
+  <li>clear (스택의 모든 요소를 삭제) : 스택에 쌓여 있는 모든 데이터를 삭제하는 메서드</li>
+  <li>capacity (용량 확인) : 스택의 용량(max)을 반환하는 메서드</li>
+  <li>size (데이터 수를 확인) : 현재 스택에 쌓여 있는 데이터 수 를 반환하는 메서드</li>
+  <li>isEmpty(스택이 비어있는지 검사) : 스택이 비어 있는지 검사하는 메서드 이다. 스택이 비어있으면 true, 아니면 false</li>
+  <li>isFull(스택이 가득 찼는지 검사) : 스택이 가득 찼으면 true, 아니면 false</li>
+  <li>dump(스택 안에 모든 데이터를 표시함) : 스택에 쌓여 있는 모든 데이터를 바닥에서 꼭대기 순으로 표시 함</li>
+</ul>
+
+<h1 id="int형-스택">int형 스택</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap04</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">IntStack</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">max</span><span class="o">;</span> <span class="c1">//스택용량</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">ptr</span><span class="o">;</span> <span class="c1">//스택 포인터</span>
+	<span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">stk</span><span class="o">;</span> <span class="c1">//스택본체</span>
+	
+	<span class="c1">//실행시 예외 : 스택이 비어 있음</span>
+	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmptyIntStackException</span> <span class="kd">extends</span> <span class="nc">RuntimeException</span><span class="o">{</span>
+		<span class="kd">public</span> <span class="nf">EmptyIntStackException</span><span class="o">()</span> <span class="o">{}</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//실행시 예외 : 스택이 가득 참</span>
+	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OverflowIntStackException</span> <span class="kd">extends</span> <span class="nc">RuntimeException</span><span class="o">{</span>
+		<span class="kd">public</span> <span class="nf">OverflowIntStackException</span><span class="o">()</span> <span class="o">{}</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//생성자</span>
+	<span class="kd">public</span> <span class="nf">IntStack</span><span class="o">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">ptr</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="n">max</span> <span class="o">=</span> <span class="n">capacity</span><span class="o">;</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="n">stk</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">max</span><span class="o">];</span> <span class="c1">//스택 본체용 배열 생성</span>
+		<span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">OutOfMemoryError</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span><span class="c1">//생성할 수 없음</span>
+			<span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="c1">//스택에 x를 푸시</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">push</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">OverflowIntStackException</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">ptr</span> <span class="o">&gt;=</span> <span class="n">max</span><span class="o">)</span>	<span class="c1">//스택이 가득 참</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="nf">OverflowIntStackException</span><span class="o">();</span>
+		<span class="k">return</span> <span class="n">stk</span><span class="o">[</span><span class="n">ptr</span><span class="o">++]</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택에서 데이터를 팝(정상에 있는 데이터를 꺼냄)</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">pop</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">EmptyIntStackException</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">ptr</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span>	<span class="c1">//스택이 비어있음</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="nf">EmptyIntStackException</span><span class="o">();</span>
+		<span class="k">return</span> <span class="n">stk</span><span class="o">[--</span><span class="n">ptr</span><span class="o">];</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택에서 데이터를 피크(정상에 있는 데이터를 들여다봄)</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">peek</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">EmptyIntStackException</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">ptr</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span>	<span class="c1">//스택이 비어있음</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="nf">EmptyIntStackException</span><span class="o">();</span>
+		<span class="k">return</span> <span class="n">stk</span><span class="o">[</span><span class="n">ptr</span> <span class="o">-</span> <span class="mi">1</span><span class="o">];</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택에서 x를 찾아 인덱스(없으면 -1)을 반환</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">indexOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="c1">//정상 쪽에서 선형 검색</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">stk</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">x</span><span class="o">)</span>
+				<span class="k">return</span> <span class="n">i</span><span class="o">;</span>
+		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택을 비움</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">clear</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">ptr</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택의 용량을 반환</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">capacity</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">max</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택에 쌓여 있는 데이터 수를 반환</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">ptr</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택이 비어 있는가?</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">ptr</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택이 가득 찼는가?</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isFull</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">ptr</span> <span class="o">&gt;=</span> <span class="n">max</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//스택 안의 모든 데이터를 바닥 -&gt; 꼭대기 순서로 출력</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dump</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">ptr</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"스택이 비어 있습니다."</span><span class="o">);</span>
+		<span class="k">else</span> <span class="o">{</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ptr</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">stk</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-12-01T00:00:00+09:00">December 1, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BJAVA%5D%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98chap-04+%EC%8A%A4%ED%83%9D%20http%3A%2F%2Flocalhost%3A4000%2Fjavachap-04-stack-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjavachap-04-stack-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjavachap-04-stack-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/java-chap03-StringBinarySearch1/" class="pagination--pager" title="[JAVA]알고리즘 chap03 - 자연 정렬
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java-chap03-StringBinarySearch1/" rel="permalink">[JAVA]알고리즘 chap03 - 자연 정렬
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">자연정렬
+```java
+package chap03;
+import java.util.*;
+public class StringBinarySearch {
+	public static void main(String []args) {
+		Scanner stdIn = new Scanner(Sy...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java-Binsearch1/" rel="permalink">[JAVA]알고리즘 chap03 - 이진 검색 &amp; 인스턴스메서드,클래스메서드
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">이진검색
+```java
+package chap03;
+import java.util.*;
+public class BinSearch {
+	//요솟수가 n인 배열 a에서 key와 같은 요소를 이진 검색합니다.
+	static int binSearch(int[] a, int n, int k...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/javastudy-exam/" rel="permalink">[JAVA]Study
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">201112시험 – JAVA 15문 Spring 5문
+
+  다음 각 변수의 생명 주기를 쓰시오.
+지역 변수 :  메소드 시작 끝까지  
+인스턴스 변수 : 객체가 생성되고 가비지 컬렉션이 정리할 때 까지 
+정적 변수(클래스 변수) : 프로그램이 시작 되서 프로그램이 끝날떄 까지
+자바...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java-exam/" rel="permalink">[JAVA]시험 복습
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">복습
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 JunTae. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

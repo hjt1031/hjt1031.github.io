@@ -1,0 +1,586 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[React] 이벤트 (bind) - juntae</title>
+<meta name="description" content="class App extends Component {   constructor(props){ //컨포넌트 초기화     super(props);      this.state = { //스테이트 값 초기화       mode:&#39;read&#39;,       subject:{title:&#39;WEB&#39;, sub:&#39;world wide Web&#39;},       welcome:{title:&#39;Welcome&#39;, desc:&quot;Hello, React!!!&quot;},       contents:[         {id:1, title:&#39;HTML&#39;, desc:&#39;HTML is for information&#39;},         {id:2, title:&#39;CSS&#39;, desc:&#39;CSS is for design&#39;},         {id:3, title:&#39;JavaScript&#39;, desc:&#39;JavaScript is for interactive&#39;}         ]     }    }   render() {     var _title, _desc = null;     if(this.state.mode === &#39;welcome&#39;){       _title = this.state.welcome.title;       _desc = this.state.welcome.desc;     }else if(this.state.mode === &#39;read&#39;){       _title = this.state.contents[0].title;       _desc = this.state.contents[0].desc;     }     return (     &lt;div className=&quot;App&quot;&gt;       {/* &lt;Subject title={this.state.subject.title}       sub={this.state.subject.sub}&gt;        &lt;/Subject&gt; */}       &lt;header&gt;         &lt;h1&gt;&lt;a href=&quot;/&quot; onClick={function(e){           console.log(e);           e.preventDefault(); //기본적인 이벤트를 막는다.           //this.state.mode = &#39;welcome&#39;; //리액트는 state 값이 바뀐지 모른다.           this.setState({ //setState라는 함수를 호출해줘야한다.             mode:&#39;welcome&#39;           })         }.bind(this)}&gt;{this.state.subject.title}&lt;/a&gt;&lt;/h1&gt;         {this.state.subject.sub}       &lt;/header&gt;       &lt;TOC data={this.state.contents}&gt;&lt;/TOC&gt;       &lt;Content title={_title} desc={_desc}&gt;&lt;/Content&gt;     &lt;/div&gt;     );   } }     ">
+
+
+  <meta name="author" content="동센">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="juntae">
+<meta property="og:title" content="[React] 이벤트 (bind)">
+<meta property="og:url" content="http://localhost:4000/react-bind/">
+
+
+  <meta property="og:description" content="class App extends Component {   constructor(props){ //컨포넌트 초기화     super(props);      this.state = { //스테이트 값 초기화       mode:&#39;read&#39;,       subject:{title:&#39;WEB&#39;, sub:&#39;world wide Web&#39;},       welcome:{title:&#39;Welcome&#39;, desc:&quot;Hello, React!!!&quot;},       contents:[         {id:1, title:&#39;HTML&#39;, desc:&#39;HTML is for information&#39;},         {id:2, title:&#39;CSS&#39;, desc:&#39;CSS is for design&#39;},         {id:3, title:&#39;JavaScript&#39;, desc:&#39;JavaScript is for interactive&#39;}         ]     }    }   render() {     var _title, _desc = null;     if(this.state.mode === &#39;welcome&#39;){       _title = this.state.welcome.title;       _desc = this.state.welcome.desc;     }else if(this.state.mode === &#39;read&#39;){       _title = this.state.contents[0].title;       _desc = this.state.contents[0].desc;     }     return (     &lt;div className=&quot;App&quot;&gt;       {/* &lt;Subject title={this.state.subject.title}       sub={this.state.subject.sub}&gt;        &lt;/Subject&gt; */}       &lt;header&gt;         &lt;h1&gt;&lt;a href=&quot;/&quot; onClick={function(e){           console.log(e);           e.preventDefault(); //기본적인 이벤트를 막는다.           //this.state.mode = &#39;welcome&#39;; //리액트는 state 값이 바뀐지 모른다.           this.setState({ //setState라는 함수를 호출해줘야한다.             mode:&#39;welcome&#39;           })         }.bind(this)}&gt;{this.state.subject.title}&lt;/a&gt;&lt;/h1&gt;         {this.state.subject.sub}       &lt;/header&gt;       &lt;TOC data={this.state.contents}&gt;&lt;/TOC&gt;       &lt;Content title={_title} desc={_desc}&gt;&lt;/Content&gt;     &lt;/div&gt;     );   } }     ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-07-28T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/react-bind/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "JunTae",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="juntae Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">동센</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>One Day One Commit</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">home</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://www.instagram.com/jun_haaaaa" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[React] 이벤트 (bind)">
+    <meta itemprop="description" content="class App extends Component {  constructor(props){ //컨포넌트 초기화    super(props);     this.state = { //스테이트 값 초기화      mode:&#39;read&#39;,      subject:{title:&#39;WEB&#39;, sub:&#39;world wide Web&#39;},      welcome:{title:&#39;Welcome&#39;, desc:&quot;Hello, React!!!&quot;},      contents:[        {id:1, title:&#39;HTML&#39;, desc:&#39;HTML is for information&#39;},        {id:2, title:&#39;CSS&#39;, desc:&#39;CSS is for design&#39;},        {id:3, title:&#39;JavaScript&#39;, desc:&#39;JavaScript is for interactive&#39;}        ]    }   }  render() {    var _title, _desc = null;    if(this.state.mode === &#39;welcome&#39;){      _title = this.state.welcome.title;      _desc = this.state.welcome.desc;    }else if(this.state.mode === &#39;read&#39;){      _title = this.state.contents[0].title;      _desc = this.state.contents[0].desc;    }    return (    &lt;div className=&quot;App&quot;&gt;      {/* &lt;Subject title={this.state.subject.title}      sub={this.state.subject.sub}&gt;       &lt;/Subject&gt; */}      &lt;header&gt;        &lt;h1&gt;&lt;a href=&quot;/&quot; onClick={function(e){          console.log(e);          e.preventDefault(); //기본적인 이벤트를 막는다.          //this.state.mode = &#39;welcome&#39;; //리액트는 state 값이 바뀐지 모른다.          this.setState({ //setState라는 함수를 호출해줘야한다.            mode:&#39;welcome&#39;          })        }.bind(this)}&gt;{this.state.subject.title}&lt;/a&gt;&lt;/h1&gt;        {this.state.subject.sub}      &lt;/header&gt;      &lt;TOC data={this.state.contents}&gt;&lt;/TOC&gt;      &lt;Content title={_title} desc={_desc}&gt;&lt;/Content&gt;    &lt;/div&gt;    );  }}   ">
+    <meta itemprop="datePublished" content="2020-07-28T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[React] 이벤트 (bind)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span> <span class="c1">//컨포넌트 초기화</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">//스테이트 값 초기화</span>
+      <span class="na">mode</span><span class="p">:</span><span class="dl">'</span><span class="s1">read</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">subject</span><span class="p">:{</span><span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">WEB</span><span class="dl">'</span><span class="p">,</span> <span class="na">sub</span><span class="p">:</span><span class="dl">'</span><span class="s1">world wide Web</span><span class="dl">'</span><span class="p">},</span>
+      <span class="na">welcome</span><span class="p">:{</span><span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">Welcome</span><span class="dl">'</span><span class="p">,</span> <span class="na">desc</span><span class="p">:</span><span class="dl">"</span><span class="s2">Hello, React!!!</span><span class="dl">"</span><span class="p">},</span>
+      <span class="na">contents</span><span class="p">:[</span>
+        <span class="p">{</span><span class="na">id</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">HTML</span><span class="dl">'</span><span class="p">,</span> <span class="na">desc</span><span class="p">:</span><span class="dl">'</span><span class="s1">HTML is for information</span><span class="dl">'</span><span class="p">},</span>
+        <span class="p">{</span><span class="na">id</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">CSS</span><span class="dl">'</span><span class="p">,</span> <span class="na">desc</span><span class="p">:</span><span class="dl">'</span><span class="s1">CSS is for design</span><span class="dl">'</span><span class="p">},</span>
+        <span class="p">{</span><span class="na">id</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">JavaScript</span><span class="dl">'</span><span class="p">,</span> <span class="na">desc</span><span class="p">:</span><span class="dl">'</span><span class="s1">JavaScript is for interactive</span><span class="dl">'</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span> 
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">_title</span><span class="p">,</span> <span class="nx">_desc</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">mode</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">welcome</span><span class="dl">'</span><span class="p">){</span>
+      <span class="nx">_title</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">welcome</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+      <span class="nx">_desc</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">welcome</span><span class="p">.</span><span class="nx">desc</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">mode</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">read</span><span class="dl">'</span><span class="p">){</span>
+      <span class="nx">_title</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">title</span><span class="p">;</span>
+      <span class="nx">_desc</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">desc</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="cm">/* &lt;Subject title={this.state.subject.title}
+      sub={this.state.subject.sub}&gt; 
+      &lt;/Subject&gt; */</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="nx">header</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+          <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">//기본적인 이벤트를 막는다.</span>
+          <span class="c1">//this.state.mode = 'welcome'; //리액트는 state 값이 바뀐지 모른다.</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="c1">//setState라는 함수를 호출해줘야한다.</span>
+            <span class="na">mode</span><span class="p">:</span><span class="dl">'</span><span class="s1">welcome</span><span class="dl">'</span>
+          <span class="p">})</span>
+        <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">subject</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/a&gt;&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">subject</span><span class="p">.</span><span class="nx">sub</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">TOC</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">contents</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="sr">/TOC</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Content</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">_title</span><span class="p">}</span> <span class="nx">desc</span><span class="o">=</span><span class="p">{</span><span class="nx">_desc</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="sr">/Content</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>   
+</code></pre></div></div>
+
+<p>끝에 bind 를 붙여주고
+this.setState 라는 함수를 호출한다.
+why? state 값을 바꿔줄 수 없어서 setState 함수의 형태로 변경해야한다.</p>
+
+<p>but 처음 생성자를 생성할떄는 가능하다.(컨포넌트가 생성된 후 는 안된다.)</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-07-28T00:00:00+09:00">July 28, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BReact%5D+%EC%9D%B4%EB%B2%A4%ED%8A%B8+%28bind%29%20http%3A%2F%2Flocalhost%3A4000%2Freact-bind%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Freact-bind%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Freact-bind%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/react-commponent/" class="pagination--pager" title="[React] 컨포넌트생성 / JSX
+">이전</a>
+    
+    
+      <a href="/react-props/" class="pagination--pager" title="[React] props (프로퍼티)
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/javachap-04-stack-1/" rel="permalink">[JAVA]알고리즘chap-04 스택
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">스택이란 ?
+데이터를 일시적으로 저장하기 위해 사용하는 자료구조루, 데이터의 입력과 출력 순서는 후입선출(LIFO) 입니다.
+스택에 넣는 작업을 push
+꺼내는 작업을 pop
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java-chap03-StringBinarySearch1/" rel="permalink">[JAVA]알고리즘 chap03 - 자연 정렬
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">자연정렬
+```java
+package chap03;
+import java.util.*;
+public class StringBinarySearch {
+	public static void main(String []args) {
+		Scanner stdIn = new Scanner(Sy...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java-Binsearch1/" rel="permalink">[JAVA]알고리즘 chap03 - 이진 검색 &amp; 인스턴스메서드,클래스메서드
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">이진검색
+```java
+package chap03;
+import java.util.*;
+public class BinSearch {
+	//요솟수가 n인 배열 a에서 key와 같은 요소를 이진 검색합니다.
+	static int binSearch(int[] a, int n, int k...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/javastudy-exam/" rel="permalink">[JAVA]Study
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">201112시험 – JAVA 15문 Spring 5문
+
+  다음 각 변수의 생명 주기를 쓰시오.
+지역 변수 :  메소드 시작 끝까지  
+인스턴스 변수 : 객체가 생성되고 가비지 컬렉션이 정리할 때 까지 
+정적 변수(클래스 변수) : 프로그램이 시작 되서 프로그램이 끝날떄 까지
+자바...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 JunTae. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

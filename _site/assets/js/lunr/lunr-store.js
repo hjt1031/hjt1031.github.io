@@ -170,7 +170,7 @@ var store = [{
         "title": "[nodejs]보안",
         "excerpt":"   express 를 항상 최신버전으로 유지.   https 를 써라 why? 웹브라우저와 웹서버가 통신할때 암호화를 하기떄문에.   단골손님같은 보안이슈를 자동으로 해결해준다.     npm install -save helmet           쿠키를 올바르게 사용해라(누가들어왓는지 확인하는용도?)   웹애플리케이션이 쓰고있는 모듈들을 잘 관리해라     npm i nsp -g          ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-security/",
         "teaser": null
       },{
         "title": "[nodejs]express generator",
@@ -182,13 +182,13 @@ var store = [{
         "title": "[nodejs]쿠키",
         "excerpt":"웹브라우저가 서로 주고받는 데이터 http 프로토콜에 포함되어있는 기술 쿠키생성하는방법 var http = require('http'); http.createServer(function(request, response){ // response.writeHead(200, { //성공했다는 가정하에 2번쨰는 객체를 넣어준다. // 'Set-Cookie':['yummy_cookie=choco', 'tasty_cookie=strawberry'] //두개의 쿠키가 생성됨. // }) response.end('Cookie!!!'); }).listen(3000); 쿠키를 서버에 요청하는 법 먼저 npm 을 다운로드한다 npm install -s cookie 그다음 var cookie = require('cookie');...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-cookie/",
         "teaser": null
       },{
         "title": "[nodejs] 쿠키 실습",
         "excerpt":"로그인 상태체크 function authIsOwner(request,response){ //쿠키 체크 var isOwner = false;//기본으로 false if(request.headers.cookie){//쿠키 값 유무 체크 cookies = cookie.parse(request.headers.cookie); } if(cookies.email === 'egoing777@gmail.com' &amp;&amp; cookies.password === '11111'){ isOwner = true; } console.log(cookies) return isOwner; } ㅎ var app = http.createServer(function(request,response){ var isOwner = authIsOwner(request,response); } 로그인 상태를 UI에 반영 template.js module.exports...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-cookie2/",
         "teaser": null
       },{
         "title": "[얄코]비동기 프로그래밍",
@@ -206,7 +206,7 @@ var store = [{
         "title": "[nodejs] 객체화,모듈사용법,경로보안,출력정보 보안",
         "excerpt":"코드를 간결하게 객체화 해서 사용가능 다른말로 리팩토링 이라고도 함 var template = { //template 라는 객체를 생성 HTML:function(title, list, body, control){ return ` &lt;!doctype html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;WEB1 - ${title}&lt;/title&gt; &lt;meta charset=\"utf-8\"&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;&lt;a href=\"/\"&gt;WEB&lt;/a&gt;&lt;/h1&gt; ${list} ${control} ${body} &lt;/body&gt; &lt;/html&gt; `; },list:function(filelist){ var list = '&lt;ul&gt;'; var i =...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/node-js-1/",
+        "url": "http://localhost:4000/node-js-object/",
         "teaser": null
       },{
         "title": "[nodejs]에러처리",
@@ -224,7 +224,7 @@ var store = [{
         "title": "[React] component",
         "excerpt":"component 는 HTML 을 반환하는 함수다. 사용자정의 태그를 만들어주는 여러가지 기술이있는데 리액트 도 그중에 하나 사용자가 정의 해서 만드는걸 컨포넌트라 함     가독성을 높힘   재사용성이 좋음   유지보수가 좋아짐   리액트는 항상 파일 위에다가 import React from ‘react’; &lt;- 써줘야함 아니면 JSX 인식못함  ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react/",
+        "url": "http://localhost:4000/react-component1/",
         "teaser": null
       },{
         "title": "Handler",
@@ -248,7 +248,13 @@ var store = [{
         "title": "[React] 컨포넌트생성 / JSX",
         "excerpt":"JSX : 페이북에서 만든 컴퓨터 언어 우리가 JSX 로 코드를 작성하면 create-react-app 이 알아서 javascript 의 언어로 컨버팅 해준다. 컨포넌트 생성방법 class Subject extends Component { render(){ //반드시 있어야함 class 안에 function 생략 return( //하나의 최상위 태그만 써야한다. &lt;header&gt; &lt;h1&gt;WEB&lt;/h1&gt; world wide web! &lt;/header&gt; ); } } class App extends...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react/",
+        "url": "http://localhost:4000/react-commponent/",
+        "teaser": null
+      },{
+        "title": "[React] 이벤트 (bind)",
+        "excerpt":"class App extends Component { constructor(props){ //컨포넌트 초기화 super(props); this.state = { //스테이트 값 초기화 mode:'read', subject:{title:'WEB', sub:'world wide Web'}, welcome:{title:'Welcome', desc:\"Hello, React!!!\"}, contents:[ {id:1, title:'HTML', desc:'HTML is for information'}, {id:2, title:'CSS', desc:'CSS is for design'}, {id:3, title:'JavaScript', desc:'JavaScript is for interactive'} ] } } render() { var _title, _desc...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-bind/",
         "teaser": null
       },{
         "title": "[React] props (프로퍼티)",
@@ -266,13 +272,7 @@ var store = [{
         "title": "[React] state props",
         "excerpt":"props 는 사용자가 컨포넌트를 사용하는 입장에서 중요한 것 (외부) 사용하는 쪽 state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내부) 구현하는 쪽   사용자한테는 알필요도없고 알수도없는 컨포넌트 내부적으로 사용되는 것들이 state 라고 함   철저하게 props 랑 state 랑 분리되어있어야 한다.  ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react-state/",
-        "teaser": null
-      },{
-        "title": "[React] 이벤트 (bind)",
-        "excerpt":"class App extends Component { constructor(props){ //컨포넌트 초기화 super(props); this.state = { //스테이트 값 초기화 mode:'read', subject:{title:'WEB', sub:'world wide Web'}, welcome:{title:'Welcome', desc:\"Hello, React!!!\"}, contents:[ {id:1, title:'HTML', desc:'HTML is for information'}, {id:2, title:'CSS', desc:'CSS is for design'}, {id:3, title:'JavaScript', desc:'JavaScript is for interactive'} ] } } render() { var _title, _desc...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/react/",
+        "url": "http://localhost:4000/react-state-prop/",
         "teaser": null
       },{
         "title": "[React]component 파일로분리",
@@ -284,13 +284,19 @@ var store = [{
         "title": "[React] 컨포넌트 이벤트",
         "excerpt":"//App.js &lt;Subject title={this.state.subject.title} sub={this.state.subject.sub} onChangePage = {function(){ this.setState({mode : 'welcome'}); }.bind(this)} &gt; &lt;/Subject&gt; onChangePage 라는 이벤트를 생성 //Subject.js import React,{Component} from 'react'; class Subject extends Component { render(){ //반드시 있어야함 class 안에 function 생략 return( //하나의 최상위 태그만 써야한다. &lt;header&gt; &lt;h1&gt;&lt;a href=\"/\" onClick={function(e){ e.preventDefault(); this.props.onChangePage(); }.bind(this)}&gt;{this.props.title}&lt;/a&gt;&lt;/h1&gt; {this.props.sub} &lt;/header&gt; ); }...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react/",
+        "url": "http://localhost:4000/react-event/",
         "teaser": null
       },{
         "title": "[React]CRUD (배열)",
         "excerpt":"//createContent.js import React,{Component} from 'react'; class CreateContent extends Component{ render(){ return( &lt;article&gt; &lt;h2&gt;Create&lt;/h2&gt; &lt;form action=\"/create_process\" method=\"post\" onSubmit={function(e){ e.preventDefault(); this.props.onSubmit( e.target.title.value, e.target.desc.value ); }.bind(this)} //submit 이 실행되면 실행되게 하는 이벤트임 &gt; &lt;p&gt;&lt;input type=\"text\" name=\"title\" placeholder=\"title\"&gt;&lt;/input&gt;&lt;/p&gt; &lt;p&gt; &lt;textarea name=\"desc\" placeholder=\"description\"&gt;&lt;/textarea&gt; &lt;/p&gt; &lt;p&gt; &lt;input type=\"submit\"&gt;&lt;/input&gt; &lt;/p&gt; &lt;/form&gt; &lt;/article&gt; ); } } export default...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react/",
+        "url": "http://localhost:4000/react-CRUD/",
+        "teaser": null
+      },{
+        "title": "[React]JSX, Component",
+        "excerpt":"JSX : HTML + javascript (javascript 안의 HTML 이라 생각하면 됨) ReactDOM.render( &lt;React.StrictMode&gt; &lt;App /&gt;&lt;Potato /&gt; &lt;/React.StrictMode&gt;, document.getElementById('root') ); 에러가 발생한다 wh? react aaplication이 하나의 component 만을 rendering 해야 하기 때문이다. function Potato (){ return &lt;h1&gt;I like Potato&lt;/h1&gt; } function App() { return ( &lt;div&gt; &lt;h1&gt;Hello&lt;/h1&gt; &lt;Potato /&gt; &lt;/div&gt; );...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/react-JSX,/",
         "teaser": null
       },{
         "title": "[React] shouldComponentUpdate",
@@ -299,22 +305,16 @@ var store = [{
         "url": "http://localhost:4000/react-shouldcomponentupdate/",
         "teaser": null
       },{
-        "title": "[React]JSX, Component",
-        "excerpt":"JSX : HTML + javascript (javascript 안의 HTML 이라 생각하면 됨) ReactDOM.render( &lt;React.StrictMode&gt; &lt;App /&gt;&lt;Potato /&gt; &lt;/React.StrictMode&gt;, document.getElementById('root') ); 에러가 발생한다 wh? react aaplication이 하나의 component 만을 rendering 해야 하기 때문이다. function Potato (){ return &lt;h1&gt;I like Potato&lt;/h1&gt; } function App() { return ( &lt;div&gt; &lt;h1&gt;Hello&lt;/h1&gt; &lt;Potato /&gt; &lt;/div&gt; );...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/react/",
-        "teaser": null
-      },{
         "title": "[React Nomad] 웹사이트에 동적 데이터 추가",
         "excerpt":"const friends = [\"dal\",\"mark\",\"lynn\",\"japan guy\"] friend.map(function(current) { console.log(current); return 0 }) result : dal mark lynn japan guy return 값에 item 을 각각 매칭 시켜준다 const friends = [\"dal\",\"mark\",\"lynn\",\"japan guy\"] friend.map(function(current) { console.log(current); return current + \"10\" }) result : dal10 mark10 lynn10 japan guy10 import React from 'react'; function...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react-nomad/",
+        "url": "http://localhost:4000/react-nomad-dynamic/",
         "teaser": null
       },{
         "title": "[React Nomad]State",
         "excerpt":"state 는 보통 우리가 동적 데이터와 함께 작업할때 만들어진다. 변하는 데이터, 존재하지 않는 데이터 class App export React.Component //컨포넌트를 만들때 마다 모든 것을 다 구현하고 싶지 않아서. state ={ } //state는 object이고 component의 data를 넣을 공간이 있고 이 데이터는 변한다. render(){ //기본적으로 render 메소드를 갖고있음react 는 자동적으로 나의 class component의...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react-nomad/",
+        "url": "http://localhost:4000/react-nomad-State/",
         "teaser": null
       },{
         "title": "[React Nomad]State 2",
@@ -356,7 +356,7 @@ var store = [{
         "title": "[React Nomad]네비게이션",
         "excerpt":"//App.js function App(){ //함수형 컨포넌트 생성 return &lt;HashRouter&gt; &lt;Navigation /&gt; &lt;Route path=\"/\" component={Home}/&gt; &lt;Route path=\"/about\" component={About}/&gt; &lt;/HashRouter&gt; } function Navigation(){ return &lt;div&gt; &lt;Link to=\"/\"&gt;HOme&lt;/Link&gt; &lt;Link to=\"/about\"&gt;About&lt;/Link&gt; &lt;/div&gt; } Link 는 반드시 route 안에 있어야한다. 밖에 있으면 동작이 안됨. function App(){ //함수형 컨포넌트 생성 return &lt;HashRouter&gt; &lt;Navigation /&gt; &lt;Route path=\"/\" component={Home}/&gt;...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/react-nomad/",
+        "url": "http://localhost:4000/react-nomad-navigation/",
         "teaser": null
       },{
         "title": "[React Nomad]함수형 컴포넌트와 클래스형 컴포넌트",
@@ -374,19 +374,19 @@ var store = [{
         "title": "[Nodejs] 용어 1",
         "excerpt":"인터프리터 : 한 줄씩 해석하면서 실행하는 방식 바인딩 : 서로 묶어서 연결해 준다는 의미 ex) 버튼 하나 있는데 이 버튼을 클릭했을 때 click 이벤트가 발생한다고 가정합니다. 이떄 click 이벤트를 함수 객체와 바인딩하면 이 click 이벤트가 발생했을 때 등록한 함수 객체가 실행됩니다. 즉, 사용자가 버튼을 클릭하면 이 함수가 실행됩니다. 모듈 :...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs-1/",
+        "url": "http://localhost:4000/nodejs-Terms-1/",
         "teaser": null
       },{
         "title": "[Nodejs]용어2",
         "excerpt":"exports : 모듈을 만들어 주는 대표적인 방식 //정의 exports.함수이름 = 함수정의; //쓰는법 var modeule = require=('module'); module.함수이름(); 자바스크립트는 함수라는 것을 명시적으로 구별하기 위해 function 키워드를 함수 이름 앞에 붙여줌 //같은의미이다. fucntion add(a,b){ return a+b; } var add = function(a,b){ return a+b; } 배열요소 삭제 var Users = [{1},{2},{3}]; delete Users[1]...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs2/",
+        "url": "http://localhost:4000/nodejs-Terms-2/",
         "teaser": null
       },{
         "title": "[Nodejs] 프로토타입 객체",
         "excerpt":"자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문 function Person(name,age){ this.name = name; this.age = age; } Person.prototype.walk = function(speed){ console.log(speed + 'km 속도로 걸어갑니다.'); } var person01 = new Person('소녀시대',20); //생성자 var person02 = new Person('걸스데이',22); console.log(person01.name + '객체의 walk(10)을 호출합니다.'); person01.walk(10); // 소녀시대 객체의 walk(10)을...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-prototype/",
         "teaser": null
       },{
         "title": "[Nodejs]주소 문자열을 URL 객체로 변환 & 이벤트 & 파일 다루기",
@@ -398,19 +398,19 @@ var store = [{
         "title": "[Nodejs]웹 서버에 요청할 때 발생하는 이벤트 & stream",
         "excerpt":"웹 브라우저가 웹 서버에 접속한 후 데이터를 요청하면 그떄마다 적절한 이벤트가 발생하므로 다양한 상황에 맞추어 콜ㄹ백 함수를 각각 등록하면된다. connection : 클라이언트가 접속하여 연결이 만들어질 때 발생하는 이벤트입니다. request : 클라이언트가 요청할 때 발생하는 이벤트입니다. close : 서버를 종료할 때 발생하는 이벤트입니다. stream이란 일종의 추상적인 개념인데 입출력 기기나 프로세스, 파일...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodej/",
+        "url": "http://localhost:4000/nodejs-event&stream/",
         "teaser": null
       },{
         "title": "[Nodejs] 간단한 웹 서버",
         "excerpt":"노드의 기본 모듈인 http 를 사용하면 웹 서버 기능을 담당하는 서버 객체를 만들 수 있습니다. var http = require('http'); var server = http.createServer(); //웹서버 객체 만들기 var port = 3000; server.listen(port, function(){ console.log('웹서버가 시작되었습니다',port); }); //list(port,[hostname],[backlog],[callback]) 서버를 실행하여 대기시킵니다 //close([callback]) 서버를 종료합니다 웹 서버는 일반저그올 웹 브라우저라고 하는 클라이언트에서 HTTP...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-webserver/",
         "teaser": null
       },{
         "title": "[Nodejs]객체",
         "excerpt":"Object 와 Array var members = ['egoging','k8805','hoya']; console.log(members[1]); var i = 0; while (i&lt;members.length) { console.log('array loop',members[i]); i = i+1; } var roles = { 'programmer':'egoing', // key : value 'designer' : 'k8805', 'manager' : 'hoya'} console.log(roles.designer) //객체는 . 을 찍어서 가져온다. console.log(roles['debugger']) //키값을 문자로 전달해도 가져올 수 있다. for(var...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-object/",
         "teaser": null
       },{
         "title": "[Nodejs] Express 모듈 (get,post)",
@@ -422,49 +422,37 @@ var store = [{
         "title": "[Nodejs] 미들웨어 , 토큰",
         "excerpt":"static : 특정 폴더의 파일들을 특정 패스로 접근할 수 있도록 만들어 줍니다. body-parser : POST 요청했을 때 요청 파라미터를 확인할 수 있도록 만들어 둠. GET 방식으로 요청할 때는 주소 문자열에 요청 파라미터가 들어갑니다. 하지만 이와달리 POST 방식으로 요청할 때는 본문인 본문 영역(BODY 영역)에 요청 파라미터가 들어 있게 되므로 요청 파라미터를...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-middleware/",
         "teaser": null
       },{
         "title": "[nodejs]쿠키와 세션 & 파일업로드",
         "excerpt":"쿠키 와 세션 쿠키 : 클라이언트 웹 브라우저에 저장되는 정보 세션 : 웹 서버에 저장되는 정보 익스프레스 에서는 cookie-parser 미들웨어를 사용하면 쿠키를 설정하거나 확인 할 수 있다. 세션은 쿠키와 달리 서버 쪽에 저장 대표적인 예 : 로그인 var cookieParser = require('cookie-parser') // 쿠키 모듈 var expressSession = require('express-session') // 세션...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-cookie&serrsion/",
         "teaser": null
       },{
         "title": "[Nodejs]몽고디비",
         "excerpt":"몽고디비 : 비관계형 데이터베이스(Nosql : Not Only Sql) 이라고한다. 관계형 데이터베이스는 시스템의 신뢰도를 높이는 데 필요한 장치를 많이 가지고 있습니다. 또 SQL문을 읽어 들이고 실행하는 데 많은 리소스를 사용하며 이 때 문에 성능이 떨어지는 경우가 많습니다. 이에반해 NoSQL 데이터베이스는 성능을 최우선으로 생각하기 때문에 실시간으로 처리해야 하는 경우나 대용량 트래픽을 감당할...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/nodejs/",
+        "url": "http://localhost:4000/nodejs-Nosql/",
         "teaser": null
       },{
         "title": "[JAVA]기본",
         "excerpt":"자바 동작원리 Java Source code(.java) —-Compile—-&gt; Java Application(.class) —–Run——&gt; Java Virtual Machine ———-Run——–&gt; computer 자바파일을 저장버튼을 눌렀을 때 .class 란 확장자를 가진 파일이 만들어진다. 그것이 Java Application 그다음 우리가 실행 버튼(run) 을 누르게되면 Java Virtual Machine이 확장자가 class 를 가진 파일을 읽어서 컴퓨터를 동작시키게 된다. Operator System.out.println(Math.PI); //3.141592653589793 System.out.println(Math.floor(Math.PI)); //내림...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/java/",
+        "url": "http://localhost:4000/java-Foundation/",
         "teaser": null
       },{
         "title": "[JAVA] 기본 코딩 & 디버깅",
         "excerpt":"public class OkJavaGoInHome { public static void main(String[] args) { String id = \"JAVA APT 507\"; // Elevator call Elevator myElevator = new Elevator(id); myElevator.callForUp(1); // Security off Security mySecurity = new Security(id); mySecurity.off(); // Light on Lighting hallLamp = new Lighting(id+\" / Hall Lamp\"); hallLamp.on(); Lighting floorLamp = new...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/java/",
-        "teaser": null
-      },{
-        "title": "[JAVA] 기초",
-        "excerpt":"자바 동작원리 Java Source code(.java) —-Compile—-&gt; Java Application(.class) —–Run——&gt; Java Virtual Machine ———-Run——–&gt; computer 자바파일을 저장버튼을 눌렀을 때 .class 란 확장자를 가진 파일이 만들어진다. 그것이 Java Application 그다음 우리가 실행 버튼(run) 을 누르게되면 Java Virtual Machine이 확장자가 class 를 가진 파일을 읽어서 컴퓨터를 동작시키게 된다. Operator System.out.println(Math.PI); //3.141592653589793 System.out.println(Math.floor(Math.PI)); //내림...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/java-1/",
-        "teaser": null
-      },{
-        "title": "[JAVA]기본 코딩 & 디버깅",
-        "excerpt":"public class OkJavaGoInHome { public static void main(String[] args) { String id = \"JAVA APT 507\"; // Elevator call Elevator myElevator = new Elevator(id); myElevator.callForUp(1); // Security off Security mySecurity = new Security(id); mySecurity.off(); // Light on Lighting hallLamp = new Lighting(id+\" / Hall Lamp\"); hallLamp.on(); Lighting floorLamp = new...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/java-12/",
+        "url": "http://localhost:4000/java-coding&debugging/",
         "teaser": null
       },{
         "title": "[JAVA] 제어문",
         "excerpt":"제어문(조건문, 반복문) 1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음 System.out.println(foo.contains(\"world\")); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 return 해줌 1-2 . Comparison Operator(비교연산자) System.out.println(1&gt;1); // false System.out.println(1 == 1); //true System.out.println(1 &lt; 1); //false System.out.println(1 &gt;= 1); // true 1-3 conditional statement : 조건문...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/java/",
+        "url": "http://localhost:4000/java-Control_Statement/",
         "teaser": null
       },{
         "title": "[JAVA]access level modifiers & OOP",
@@ -530,7 +518,7 @@ var store = [{
         "title": "[JAVA] 재귀함수",
         "excerpt":"package test;  public class Step1Test { \tstatic int sum = 0; \t \tstatic int sum(int param) { \t\tif(param != 0) { \t\t\tsum += param; \t\t\tparam--; \t\t\tsum(param); \t\t} \t\treturn sum; \t} \tpublic static void main(String[] args) { \t\tSystem.out.println(sum(Integer.parseInt(args[0]))); \t}  }   interface 는 private 를 못쓴다.  ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/java/",
+        "url": "http://localhost:4000/java-Recursion/",
         "teaser": null
       },{
         "title": "[JAVA]알고리즘 chap02 - 2 & String class",
@@ -573,5 +561,11 @@ var store = [{
         "excerpt":"자연정렬 package chap03; import java.util.*; public class StringBinarySearch { public static void main(String []args) { Scanner stdIn = new Scanner(System.in); //자바에서 사용하는 키워드입니다. String[] x = { \"abstract\", \"assert\" }; System.out.println(\"원하는 키워드를 입력하세요:\"); String ky = stdIn.next(); int idx = Arrays.binarySearch(x, ky); //배열 x에서 값이 ky인 요소를 검색 if(idx &lt;...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java-chap03-StringBinarySearch1/",
+        "teaser": null
+      },{
+        "title": "[JAVA]알고리즘chap-04 스택",
+        "excerpt":"스택이란 ? 데이터를 일시적으로 저장하기 위해 사용하는 자료구조루, 데이터의 입력과 출력 순서는 후입선출(LIFO) 입니다. 스택에 넣는 작업을 push 꺼내는 작업을 pop 메서드종류 indexOf (검색 메서드) : 스택 본체의 배열 에서 어떤 값의 데이터가 포함되어 있는지, 포함되어 있으면 배열의 어디에 들어 있는지를 조사하는 메서드 clear (스택의 모든 요소를 삭제) : 스택에...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/javachap-04-stack-1/",
         "teaser": null
       }]

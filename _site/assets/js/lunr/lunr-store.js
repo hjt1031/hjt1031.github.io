@@ -568,4 +568,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/javachap-04-stack-1/",
         "teaser": null
+      },{
+        "title": "[JAVA]알고리즘 chap-04 queue",
+        "excerpt":"큐란? 스택과 마찬가지로 데이터를 일시적으로 쌓아 두기 위한 자료구조입니다. 선입선출 구조입니다. int형 큐(링 버퍼) package chap04; public class IntQueue { private int max; //큐의 용량 private int front; //첫 번째 요소 커서 private int rear; //마지막 요소 커서 private int num; //현재 데이터 수 private int[] que; //큐 본체 //실행...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-stack-queue/",
+        "teaser": null
       }]

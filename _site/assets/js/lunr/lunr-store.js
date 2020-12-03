@@ -574,4 +574,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java-stack-queue/",
         "teaser": null
+      },{
+        "title": "[JAVA]Study2 (프로그래머스)",
+        "excerpt":"오름 차순 정렬으로 collention.sort() 이용하면 됨. hashset은 순서가 없기 떄문에 순서대로 꺼내기 위해 iterator라는 걸 사용. 데이터의 위치를 바탕으로 순차적으로 데이터를 쌓고 그걸 순차적으로 꺼내온다고 생각하면 된다. package test20201126; import java.util.ArrayList; import java.util.Collections; import java.util.HashSet; import java.util.Iterator; public class Test { public static int[] solution(int[] numbers) { int[] answer =...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/javastudy2/",
+        "teaser": null
       }]

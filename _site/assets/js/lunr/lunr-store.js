@@ -580,4 +580,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/javastudy2/",
         "teaser": null
+      },{
+        "title": "[JAVA]chap05-재귀",
+        "excerpt":"재귀? 어떤 사건이 자기 자신을 포함하고 다시 자기 자신을 사용하여 정의될 때 재귀적이라고 합니다. 대표적으로 팩토리얼을 구하는 프로그램이 있다. package chap05; import java.util.Scanner; public class Factorial { static int factorial(int n) { if(n&gt;0) return n * factorial(n-1); else return 1; } public static void main(String[] args) { Scanner stdIn =...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-Recursion01/",
+        "teaser": null
       }]

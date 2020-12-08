@@ -586,4 +586,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java-Recursion01/",
         "teaser": null
+      },{
+        "title": "[JAVA]chap05-재귀2 &chap06-정렬",
+        "excerpt":"8퀸문제 //8퀸 문제 package chap05; public class QueenB { static int[] pos = new int[8]; //각 열의 퀸의 위치 //각 열의 퀸의 위치를 출력합니다. static void print() { for(int i = 0; i &lt; 8; i++) System.out.printf(\"%2d\",pos[i]); System.out.println(); } //i열의 퀸을 놓습니다 static void set(int i) { for(int j =...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-Recursion02/",
+        "teaser": null
       }]

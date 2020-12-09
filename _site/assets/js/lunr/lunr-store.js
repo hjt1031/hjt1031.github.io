@@ -575,7 +575,7 @@ var store = [{
         "url": "http://localhost:4000/java-stack-queue/",
         "teaser": null
       },{
-        "title": "[JAVA]Study2 (프로그래머스)",
+        "title": "[JAVA]Study2 (프로그래머스)-마라톤",
         "excerpt":"오름 차순 정렬으로 collention.sort() 이용하면 됨. hashset은 순서가 없기 떄문에 순서대로 꺼내기 위해 iterator라는 걸 사용. 데이터의 위치를 바탕으로 순차적으로 데이터를 쌓고 그걸 순차적으로 꺼내온다고 생각하면 된다. package test20201126; import java.util.ArrayList; import java.util.Collections; import java.util.HashSet; import java.util.Iterator; public class Test { public static int[] solution(int[] numbers) { int[] answer =...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/javastudy2/",
@@ -591,5 +591,11 @@ var store = [{
         "excerpt":"8퀸문제 //8퀸 문제 package chap05; public class QueenB { static int[] pos = new int[8]; //각 열의 퀸의 위치 //각 열의 퀸의 위치를 출력합니다. static void print() { for(int i = 0; i &lt; 8; i++) System.out.printf(\"%2d\",pos[i]); System.out.println(); } //i열의 퀸을 놓습니다 static void set(int i) { for(int j =...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/java-Recursion02/",
+        "teaser": null
+      },{
+        "title": "[JAVA]Study3 (프로그래머스)-k번째",
+        "excerpt":"문제 설명 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다. 예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면 array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다. 1에서 나온 배열을 정렬하면 [2, 3, 5,...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-study3_knumber/",
         "teaser": null
       }]

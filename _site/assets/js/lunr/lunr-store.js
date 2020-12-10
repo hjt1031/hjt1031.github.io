@@ -598,4 +598,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/java-study3_knumber/",
         "teaser": null
+      },{
+        "title": "[JAVA]프로그래머스-k번째 풀이",
+        "excerpt":"package test20201209; import java.util.ArrayList; import java.util.Collections; import java.util.List; class Solution2 { public int[] solution(int[] array, int[][] commands) { int[] answer = new int[commands.length]; List&lt;Integer&gt; startList = new ArrayList&lt;&gt;(); List&lt;Integer&gt; endList = new ArrayList&lt;&gt;(); List&lt;Integer&gt; indexList = new ArrayList&lt;&gt;(); //for-each문 한정적 //배열, 리스트에만 사용이 가능해 //순서가 있는, 그리고 인덱스가 있는 어떤...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/java-k/",
+        "teaser": null
       }]

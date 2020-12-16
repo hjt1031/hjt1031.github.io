@@ -600,8 +600,14 @@ var store = [{
         "teaser": null
       },{
         "title": "[JAVA]프로그래머스-k번째 풀이",
-        "excerpt":"package test20201209; import java.util.ArrayList; import java.util.Collections; import java.util.List; class Solution2 { public int[] solution(int[] array, int[][] commands) { int[] answer = new int[commands.length]; List&lt;Integer&gt; startList = new ArrayList&lt;&gt;(); List&lt;Integer&gt; endList = new ArrayList&lt;&gt;(); List&lt;Integer&gt; indexList = new ArrayList&lt;&gt;(); //for-each문 한정적 //배열, 리스트에만 사용이 가능해 //순서가 있는, 그리고 인덱스가 있는 어떤...","categories": [],
+        "excerpt":"첫번째 package test20201209; import java.util.ArrayList; import java.util.Collections; import java.util.List; class Solution2 { public int[] solution(int[] array, int[][] commands) { int[] answer = new int[commands.length]; List&lt;Integer&gt; startList = new ArrayList&lt;&gt;(); List&lt;Integer&gt; endList = new ArrayList&lt;&gt;(); List&lt;Integer&gt; indexList = new ArrayList&lt;&gt;(); //for-each문 한정적 //배열, 리스트에만 사용이 가능해 //순서가 있는, 그리고 인덱스가 있는...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/java-k/",
+        "url": "http://localhost:4000/java-k-update/",
+        "teaser": null
+      },{
+        "title": "[JAVA]chap06-단순삽입정렬",
+        "excerpt":"단순삽입정렬 package chap06; import java.util.*; public class InsertionSort { static void insertionSort(int[] a, int n) { for (int i = 1; i &lt; n; i++) { int j; int tmp = a[i]; for(j = i; j &gt; 0 &amp;&amp; a[j - 1] &gt; tmp; j--) //드모르간 법칙 a[j] = a[j-1];...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/javachap06-InsertionSort/",
         "teaser": null
       }]

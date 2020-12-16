@@ -401,8 +401,12 @@
 <lastmod>2020-12-09T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/java-k/</loc>
+<loc>http://localhost:4000/java-k-update/</loc>
 <lastmod>2020-12-10T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/javachap06-InsertionSort/</loc>
+<lastmod>2020-12-16T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

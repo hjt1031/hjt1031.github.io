@@ -37,7 +37,9 @@ class Solution2 {
     }
     public static void main(String args[]) {
        int[] array = {1, 5, 2, 6, 3, 7, 4};
-       int[][] commands= { %{2, 5, 3}, {4, 4, 1}, {1, 7, 3}% };
+       {% row %}
+       int[][] commands= {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+       {% endrow %}
        Solution2 s = new Solution2();
        int[] answer = s.solution(array, commands);
        for(int a:answer) {
@@ -70,7 +72,9 @@ class Solution {
     }
     public static void main(String args[]) {
        int[] array = {1, 5, 2, 6, 3, 7, 4};
-       int[][] commands= {%{2, 5, 3}, {4, 4, 1}, {1, 7, 3}%};
+       {% row %}
+       int[][] commands= {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+       {% endrow %}
        Solution s = new Solution();
        s.solution(array, commands);
     }

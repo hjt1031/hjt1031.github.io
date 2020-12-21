@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Spring]기초 - juntae - 페이지 12</title>
+<!-- begin _includes/seo.html --><title>[JAVA]chap06-셸정렬 &amp; chap07-집합 - juntae - 페이지 12</title>
 <meta name="description" content="JavaScript And Node.js ">
 
 
@@ -283,37 +283,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java-Control_Statement/" rel="permalink">[JAVA] 제어문
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">제어문(조건문, 반복문)
-1-1 .boolean data type : ‘boolean’ 에는 true, false 가 있음
-System.out.println(foo.contains("world")); //해당문자열을 포함 하고 있는지 확인시켜줌 (true / false) 로 ret...</p>
-  </article>
-</div>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/java-coding&debugging/" rel="permalink">[JAVA] 기본 코딩 &amp; 디버깅
+        <a href="/react-CRUD/" rel="permalink">[React]CRUD (배열)
 </a>
       
     </h2>
@@ -327,13 +297,14 @@ System.out.println(foo.contains("world")); //해당문자열을 포함 하고 �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">public class OkJavaGoInHome {
- 
-    public static void main(String[] args) {
-         
-        String id = "JAVA APT 507";
-         
-        // Elevator call...</p>
+    <p class="archive__item-excerpt" itemprop="description">//createContent.js
+```javascript
+import React,{Component} from ‘react’;
+class CreateContent extends Component{
+  render(){
+    return(
+      &lt;article&gt;
+...</p>
   </article>
 </div>
 
@@ -347,7 +318,7 @@ System.out.println(foo.contains("world")); //해당문자열을 포함 하고 �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java-coding&debugging/" rel="permalink">[JAVA] 기본 코딩 &amp; 디버깅
+        <a href="/react-event/" rel="permalink">[React] 컨포넌트 이벤트
 </a>
       
     </h2>
@@ -361,13 +332,12 @@ System.out.println(foo.contains("world")); //해당문자열을 포함 하고 �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">public class OkJavaGoInHome {
- 
-    public static void main(String[] args) {
-         
-        String id = "JAVA APT 507";
-         
-        // Elevator call...</p>
+    <p class="archive__item-excerpt" itemprop="description">//App.js
+ &lt;Subject 
+      title={this.state.subject.title}
+      sub={this.state.subject.sub}
+      onChangePage = {function(){
+       this.setState({mode...</p>
   </article>
 </div>
 
@@ -381,7 +351,7 @@ System.out.println(foo.contains("world")); //해당문자열을 포함 하고 �
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java-Foundation/" rel="permalink">[JAVA]기본
+        <a href="/reactcomponent/" rel="permalink">[React]component 파일로분리
 </a>
       
     </h2>
@@ -395,11 +365,9 @@ System.out.println(foo.contains("world")); //해당문자열을 포함 하고 �
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">자바 동작원리
-Java Source code(.java) —-Compile—-&gt; 
-Java Application(.class) —–Run——&gt;
-Java Virtual Machine ———-Run——–&gt; 
-computer
+    <p class="archive__item-excerpt" itemprop="description">import React,{Component} from 'react'; // react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다
+
+src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.
 </p>
   </article>
 </div>
@@ -414,7 +382,7 @@ computer
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/java-Foundation/" rel="permalink">[JAVA]기본
+        <a href="/react-state-prop/" rel="permalink">[React] state props
 </a>
       
     </h2>
@@ -428,12 +396,42 @@ computer
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">자바 동작원리
-Java Source code(.java) —-Compile—-&gt; 
-Java Application(.class) —–Run——&gt;
-Java Virtual Machine ———-Run——–&gt; 
-computer
+    <p class="archive__item-excerpt" itemprop="description">props 는 사용자가 컨포넌트를 사용하는 입장에서 중요한 것 (외부) 사용하는 쪽
+state 는 props 의 값에 따라 내부에 구현에 필요한 데이터 (내부) 구현하는 쪽
 </p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/react-stat/" rel="permalink">[React] state 사용법 (key)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">//App.js
+class App extends Component {
+  constructor(props){ //컨포넌트 초기화
+    super(props); 
+    this.state = { //스테이트 값 초기화
+      subject:{title:'WEB', sub:'w...</p>
   </article>
 </div>
 
@@ -506,7 +504,7 @@ computer
     
 
     
-      <li><a href="/page42/">42</a></li>
+      <li><a href="/page21/">21</a></li>
     
 
     

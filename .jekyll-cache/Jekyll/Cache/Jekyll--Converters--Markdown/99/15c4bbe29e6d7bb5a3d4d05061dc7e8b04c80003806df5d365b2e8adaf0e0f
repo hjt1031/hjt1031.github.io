@@ -1,8 +1,0 @@
-I"�<p>Dispatcher Servlet : requset 요청 온 것 을 필터처리 후 핸들링 해준다.</p>
-
-<p>src &gt; main &gt; WEB-INF -&gt; spring -&gt;appServlet 가 있는데 root-context.xml 이 제일 상단의 설정을 고쳐준다.</p>
-
-<p>appservlet 아래 servlet-context파일 은 resouces 가 있다.mapping 은 url / location 은 서버의 폴더 위치</p>
-
-<p>servlet-context 파일에  beans 이 있는데  beans 은 순수객체 라고도 합니다.</p>
-:ET

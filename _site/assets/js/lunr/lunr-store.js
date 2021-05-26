@@ -622,4 +622,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/javachap06-sellsort-&-chap07/",
         "teaser": null
+      },{
+        "title": "[서버셋팅]",
+        "excerpt":"어렵다  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/",
+        "teaser": null
       }]

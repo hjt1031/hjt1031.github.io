@@ -1,0 +1,40 @@
+I"�<h1 id="c언어는-메모리와-하드웨어를-직접-제어할-수-있음">C언어는 메모리와 하드웨어를 직접 제어할 수 있음</h1>
+<blockquote>
+  <p>실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행</p>
+</blockquote>
+
+<p><em>파일의 변화</em>
+	윈도우 기준 : hello.c -&gt; hello.obj -&gt; hello.exe</p>
+
+<h1 id="기초">기초</h1>
+<pre><code class="language-C">#include &lt;stdio.h&gt; //include &lt;= 헤더파일을 포함하는 문법,  stdio.h &lt;= printf 함수를 사용할 때 필요한 헤더파일
+
+int main() //main() &lt;= C 언어 프로그램에서 가장 처음 실행 되는 함수.
+{
+	printf("Hello world!!\n"); // ()가 붙은 단어를 함수라고 한다. ,\&lt;= 제어문자라고 한다.
+	printf("%s\n", "hello world!"); //서식 지정자 hello world 가 %s 인 서식지정자로 들어가게 됨.
+	printf("%s %s\n", "Hello","1234");
+	
+	int num1;
+	int num2;
+	int num3;
+
+	num1 = 10; //변수의 값 할당
+	num2 = 20;
+	num3 = 30;
+
+	printf("%d %d %d\n", num1, num2, num3);
+
+	int num11 = 11;
+	int num22 = 22, num33 = 33;
+
+	printf("%d %d %d\n", num11, num22, num33);
+
+	return 0;
+}
+</code></pre>
+
+<h1 id="기본-문법">기본 문법</h1>
+<pre><code class="language-C">
+</code></pre>
+:ET

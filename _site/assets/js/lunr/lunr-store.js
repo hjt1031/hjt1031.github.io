@@ -624,8 +624,8 @@ var store = [{
         "teaser": null
       },{
         "title": "[c] 기초",
-        "excerpt":"C언어는 메모리와 하드웨어를 직접 제어할 수 있음 실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행 파일의 변화 윈도우 기준 : hello.c -&gt; hello.obj -&gt; hello.exe #include &lt;stdio.h&gt; //include &lt;= 헤더파일을 포함하는 문법, stdio.h &lt;= printf 함수를 사용할 때 필요한 헤더파일 int main() //main() &lt;= C 언어 프로그램에서 가장 처음 실행...","categories": [],
+        "excerpt":"C언어는 메모리와 하드웨어를 직접 제어할 수 있음 실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행 파일의 변화 윈도우 기준 : hello.c -&gt; hello.obj -&gt; hello.exe 기초 #include &lt;stdio.h&gt; //include &lt;= 헤더파일을 포함하는 문법, stdio.h &lt;= printf 함수를 사용할 때 필요한 헤더파일 int main() //main() &lt;= C 언어 프로그램에서 가장 처음...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/c/",
+        "url": "http://localhost:4000/c-start/",
         "teaser": null
       }]

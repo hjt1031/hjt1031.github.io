@@ -1,0 +1,40 @@
+I"�<h1 id="c언어는-메모리와-하드웨어를-직접-제어할-수-있음">C언어는 메모리와 하드웨어를 직접 제어할 수 있음</h1>
+<blockquote>
+  <p>실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행</p>
+</blockquote>
+
+<p><em>파일의 변화</em>
+	윈도우 기준 : hello.c -&gt; hello.obj -&gt; hello.exe</p>
+
+<h1 id="기초">기초</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt; //include &lt;= 헤더파일을 포함하는 문법,  stdio.h &lt;= printf 함수를 사용할 때 필요한 헤더파일
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">//main() &lt;= C 언어 프로그램에서 가장 처음 실행 되는 함수.</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span> <span class="c1">// ()가 붙은 단어를 함수라고 한다. ,\&lt;= 제어문자라고 한다.</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="s">"hello world!"</span><span class="p">);</span> <span class="c1">//서식 지정자 hello world 가 %s 인 서식지정자로 들어가게 됨.</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="s">"Hello"</span><span class="p">,</span><span class="s">"1234"</span><span class="p">);</span>
+	
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span><span class="p">;</span>
+
+	<span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">//변수의 값 할당</span>
+	<span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="n">num3</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">num11</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num22</span> <span class="o">=</span> <span class="mi">22</span><span class="p">,</span> <span class="n">num33</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num11</span><span class="p">,</span> <span class="n">num22</span><span class="p">,</span> <span class="n">num33</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="기본-문법">기본 문법</h1>
+<pre><code class="language-C">
+</code></pre>
+:ET

@@ -1,4 +1,4 @@
-I"�<h1 id="c언어는-메모리와-하드웨어를-직접-제어할-수-있음">C언어는 메모리와 하드웨어를 직접 제어할 수 있음</h1>
+I"O<h1 id="c언어는-메모리와-하드웨어를-직접-제어할-수-있음">C언어는 메모리와 하드웨어를 직접 제어할 수 있음</h1>
 <blockquote>
   <p>실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행</p>
 </blockquote>
@@ -34,7 +34,38 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="기본-문법">기본 문법</h1>
-<pre><code class="language-C">
+<h1 id="부호--정수-자료형">부호 + 정수 자료형</h1>
+<pre><code class="language-C">int main2() {
+	// 부호 + 정수 자료형
+	//singned int = int &lt;= signed 생략 가능(-까지 포함 - 128 ~128) 1바이트, 8비트
+	//unsigned int = &lt;= unsigned 생략 불가(+만 0~255) 1바이트 8비트
+	char num1 = -10; //정수자료형
+	short num2 = 30000;
+	int num3 = -1234567890;
+	long num4 = 1234567890;
+	long long num5 = -12345678901234567890;
+
+	printf("%d %d %d %ld %lld\n", num1, num2, num3, num4, num5); //char, short, int 는 %d를 사용 , long 은 %ld 를 사용
+
+
+	unsigned char num1 = -10; //정수자료형
+	unsigned short num2 = 30000;
+	unsigned int num3 = -1234567890;
+	unsigned long num4 = 1234567890;
+	unsigned long long num5 = -12345678901234567890;
+
+	printf("%u %u %u %lu %llu\n", num1, num2, num3, num4, num5); //char, short, int 는 %u를 사용 , long 은 %lu 를 사용
+
+	return 0;
+}
 </code></pre>
+
+<h1 id="오버플로우-언더플로우">오버플로우 언더플로우</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main4</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span> <span class="c1">//최대값이 127 결과는 -128</span>
+	<span class="kt">unsigned</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span> <span class="c1">//최대값이 255 결과는 0</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 :ET

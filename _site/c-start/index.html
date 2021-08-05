@@ -278,7 +278,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 
 </p>
           
@@ -323,9 +323,40 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="기본-문법">기본 문법</h1>
-<pre><code class="language-C">
-</code></pre>
+<h1 id="부호--정수-자료형">부호 + 정수 자료형</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main2</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// 부호 + 정수 자료형</span>
+	<span class="c1">//singned int = int &lt;= signed 생략 가능(-까지 포함 - 128 ~128) 1바이트, 8비트</span>
+	<span class="c1">//unsigned int = &lt;= unsigned 생략 불가(+만 0~255) 1바이트 8비트</span>
+	<span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">;</span> <span class="c1">//정수자료형</span>
+	<span class="kt">short</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">30000</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="kt">long</span> <span class="n">num5</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345678901234567890</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d %ld %lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num4</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span> <span class="c1">//char, short, int 는 %d를 사용 , long 은 %ld 를 사용</span>
+
+
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">;</span> <span class="c1">//정수자료형</span>
+	<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">30000</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">num5</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345678901234567890</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u %u %u %lu %llu</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num4</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span> <span class="c1">//char, short, int 는 %u를 사용 , long 은 %lu 를 사용</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="오버플로우-언더플로우">오버플로우 언더플로우</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main4</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span> <span class="c1">//최대값이 127 결과는 -128</span>
+	<span class="kt">unsigned</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span> <span class="c1">//최대값이 255 결과는 0</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
         
       </section>

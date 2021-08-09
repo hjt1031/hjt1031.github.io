@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-05T20:40:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[c] 기초</title><link href="http://localhost:4000/c-start/" rel="alternate" type="text/html" title="[c] 기초" /><published>2021-08-03T00:00:00+09:00</published><updated>2021-08-03T00:00:00+09:00</updated><id>http://localhost:4000/c-start</id><content type="html" xml:base="http://localhost:4000/c-start/">&lt;h1 id=&quot;c언어는-메모리와-하드웨어를-직접-제어할-수-있음&quot;&gt;C언어는 메모리와 하드웨어를 직접 제어할 수 있음&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-09T21:13:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">juntae</title><subtitle>JavaScript And Node.js</subtitle><author><name>동센</name></author><entry><title type="html">[c] 기초</title><link href="http://localhost:4000/c-start/" rel="alternate" type="text/html" title="[c] 기초" /><published>2021-08-03T00:00:00+09:00</published><updated>2021-08-03T00:00:00+09:00</updated><id>http://localhost:4000/c-start</id><content type="html" xml:base="http://localhost:4000/c-start/">&lt;h1 id=&quot;c언어는-메모리와-하드웨어를-직접-제어할-수-있음&quot;&gt;C언어는 메모리와 하드웨어를 직접 제어할 수 있음&lt;/h1&gt;
 &lt;blockquote&gt;
   &lt;p&gt;실행 순서 : 소스코드 편집 &amp;gt; 컴파일 &amp;gt;실행&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -67,6 +67,61 @@
 
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;최소값과-최대값-구하기헤더파일을-추가해야한다&quot;&gt;최소값과 최대값 구하기(헤더파일을 추가해야한다)&lt;/h1&gt;
+&lt;p&gt;int main5()
+{
+	char num1 = CHAR_MIN;
+	short num2 = SHRT_MIN;
+	int num3 = INT_MIN;
+	long num4 = LONG_MIN;
+	long long num5 = LLONG_MIN;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//최대값
+char num6 = CHAR_MAX;
+short num7 = SHRT_MAX;
+int num8 = INT_MAX;
+long num9 = LONG_MAX;
+long long num10 = LLONG_MAX;
+
+printf(&quot;%d %d %d %ld %lld\n&quot;, num1, num2, num3, num4, num5);
+
+return 0; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;//실수형 변수 선언
+int main6()
+{
+	float num1 = 0.1f; //소숫점 앞뒤에 0은 생략 가능
+	double num2 = 3867.215820;
+	long double num3 = 9.327513l;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printf(&quot;%f %f %Lf\n&quot;, num1, num2, num3);
+
+return 0; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;//문자 자료형
+int main7()
+{
+	char c1 = ‘a’;
+	char c2 = ‘b’;
+	char c3 = 0;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printf(&quot;%c, %d\n&quot;, c1, c1); //a, 97 &amp;lt;= 아스키코드
+printf(&quot;%c, %d\n&quot;, c2, c2); //b, 98
+printf(&quot;%c, %d\n&quot;, c3, c3); // , 0
+
+//문자로 연산하기
+printf(&quot;%c %d\n&quot;, 'a' + 1, 'a' + 1); //b 98
+printf(&quot;%c %d\n&quot;, 97 + 1, 97 + 1); //b 98
+
+//제어문자 사용하기
+char linefeed = '\n';
+printf(&quot;%c%c%c%c&quot;, c1, linefeed, c2, linefeed); //a 
+												//b 로 출력
+return 0; }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>동센</name></author><summary type="html">C언어는 메모리와 하드웨어를 직접 제어할 수 있음 실행 순서 : 소스코드 편집 &amp;gt; 컴파일 &amp;gt;실행</summary></entry><entry><title type="html">[JAVA]chap06-셸정렬 &amp;amp; chap07-집합</title><link href="http://localhost:4000/javachap06-sellsort-&-chap07/" rel="alternate" type="text/html" title="[JAVA]chap06-셸정렬 &amp; chap07-집합" /><published>2020-12-21T00:00:00+09:00</published><updated>2020-12-21T00:00:00+09:00</updated><id>http://localhost:4000/javachap06-sellsort%20&amp;%20chap07</id><content type="html" xml:base="http://localhost:4000/javachap06-sellsort-&amp;-chap07/">&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;chap06&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShellSort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;

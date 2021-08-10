@@ -628,4 +628,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c-start/",
         "teaser": null
+      },{
+        "title": "[c] 기초2-문자,상수,덧셈 등등",
+        "excerpt":"상수와 리터럴 int main8() { const int con1 = 10; // con1 =&gt; 상수, 10 =&gt; 리터럴:고유의 값 //리터럴 사용하기 printf(\"%d\\n\", 10); //10이 리터럴 값 printf(\"%f\\n\", 01.f); printf(\"%c\\n\", 'a'); //문자는 작은따옴표 printf(\"%s\\n\", \"Hello, world!\"); //문자열은 큰 따옴표를 사용해야함 //상수사용하기 const int con2 = 1; //상수는 항상 선언과 동시에 초기화를 해줘야함...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c-start2/",
+        "teaser": null
       }]

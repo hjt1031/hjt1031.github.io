@@ -1,0 +1,106 @@
+I"= <h1 id="상수와-리터럴">상수와 리터럴</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main8</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">const</span> <span class="kt">int</span> <span class="n">con1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// con1 =&gt; 상수, 10 =&gt; 리터럴:고유의 값</span>
+	<span class="c1">//리터럴 사용하기</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//10이 리터럴 값</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mo">01</span><span class="p">.</span><span class="n">f</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="sc">'a'</span><span class="p">);</span>  <span class="c1">//문자는 작은따옴표</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="s">"Hello, world!"</span><span class="p">);</span> <span class="c1">//문자열은 큰 따옴표를 사용해야함</span>
+
+
+	<span class="c1">//상수사용하기</span>
+	<span class="k">const</span> <span class="kt">int</span> <span class="n">con2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//상수는 항상 선언과 동시에 초기화를 해줘야함 아님 컴파일에러 발생</span>
+	<span class="k">const</span> <span class="kt">float</span> <span class="n">con3</span> <span class="o">=</span> <span class="mo">01</span><span class="p">.</span><span class="n">f</span><span class="p">;</span>
+	<span class="k">const</span> <span class="kt">char</span> <span class="n">con4</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %f %c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">con2</span><span class="p">,</span> <span class="n">con3</span><span class="p">,</span> <span class="n">con4</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="입력-값을-변수의-저장하기">입력 값을 변수의 저장하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main9</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//콘솔에 입력하는 방식이 표준입력(standard input, stdin)</span>
+	<span class="c1">//콘솔에 출력하는 방식이 표준출력(standard output, stdout)</span>
+	<span class="c1">//#define _CRT_SECURE_NO_WARNINGS 를 헤더파일 위에 선언 해줘야함 (비주얼스튜디오에서만 넣으면됨, windows, macos 넣을필요x)</span>
+	<span class="c1">//why? scanf 는 나온지 오래된 함수라 보안에 취약 비주얼스튜디오에서는 경고를 하는거임 선언 안하면 컴파일 오류남</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"정수를 입력하세요 :"</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+
+	<span class="c1">//한번에 정수 두개 받기</span>
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"정수를 두 개 입력하세요 :"</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num3</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+
+
+	<span class="c1">//실수 입력 받기</span>
+	<span class="kt">float</span> <span class="n">num4</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"실수를 입력하세요 :"</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%f"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num4</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span>
+
+
+	<span class="kt">double</span> <span class="n">num5</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="kt">double</span> <span class="n">num6</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"실수를 입력하세요 : "</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num5</span><span class="p">);</span> <span class="c1">//double</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%Lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num6</span><span class="p">);</span> <span class="c1">//long double</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span> <span class="c1">//double</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span> <span class="c1">//long double</span>
+
+	<span class="c1">//문자 입력 받기</span>
+	<span class="kt">char</span> <span class="n">c1</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"문자를 입력하세요 : "</span><span class="p">);</span>
+
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c1</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">c1</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>//덧셈 뺼셈하기
+int main10() {
+	int num1;
+	int num2;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num1 = 1 + 2;
+num2 = 1 - 2;
+
+printf("%d\n", num1);
+printf("%d\n", num2);
+
+//실수
+
+float num3;
+float num4;
+
+num3 = 1.0f + 0.456789f;
+num4 = 1.0f - 0.456789f;
+
+
+printf("%d\n", num3);
+printf("%d\n", num4);
+
+
+//변수 하나에서 값 더하거나 뺴기
+int num5 = 1;
+int num6 = 1;
+
+num5 = num5 + 2;
+num6 = num6 - 2;
+
+printf("%d\n", num5);
+printf("%d\n", num6); }
+</code></pre></div></div>
+:ET

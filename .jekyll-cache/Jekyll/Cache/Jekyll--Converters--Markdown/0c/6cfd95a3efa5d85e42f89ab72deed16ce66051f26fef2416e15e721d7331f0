@@ -1,0 +1,162 @@
+I"PB<h1 id="증감-연산자">증감 연산자</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main11</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+	<span class="n">num1</span><span class="o">++</span><span class="p">;</span> <span class="c1">// num1 = num1 + 1;</span>
+	<span class="n">num2</span><span class="o">--</span><span class="p">;</span> <span class="c1">// num2 = num2 - 1;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span> 
+
+
+	<span class="c1">//실수형</span>
+
+	<span class="kt">float</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="p">;</span>
+
+	<span class="n">num3</span><span class="o">++</span><span class="p">;</span>
+	<span class="n">num4</span><span class="o">--</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f %f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//3.10000000, 1.10000000</span>
+	
+	<span class="c1">//문자 자료형</span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c2</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+
+	<span class="n">c1</span><span class="o">++</span><span class="p">;</span>
+	<span class="n">c2</span><span class="o">--</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c %c"</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">);</span> <span class="c1">// c a</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="곱셈-나눗셈">곱셈 나눗셈</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main12</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+
+	<span class="n">num1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
+	<span class="n">num2</span> <span class="o">=</span>  <span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span> <span class="c1">//6</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">//3 정수끼리 나눗셈하면 정수가 나옴 0으로 나누면 컴파일 에러 발생.</span>
+
+	<span class="n">num1</span> <span class="o">*=</span> <span class="mi">3</span><span class="p">;</span>
+	<span class="n">num2</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
+
+
+	<span class="kt">float</span> <span class="n">num3</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num4</span><span class="p">;</span>
+
+	<span class="n">num3</span> <span class="o">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">73</span><span class="n">f</span> <span class="o">*</span> <span class="mi">3</span><span class="p">.</span><span class="mi">81</span><span class="n">f</span><span class="p">;</span>
+	<span class="n">num4</span> <span class="o">=</span> <span class="mi">7</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span> <span class="o">/</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span> <span class="c1">//10.401299 원래는 10.4013 실수계산 오차가 발생함 동일하게 0으로 나누면 컴파일 에러</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">// 3.500000</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="나머지-연산하기">나머지 연산하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main13</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">1</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">2</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//2</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">3</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">4</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//2</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//0</span>
+
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+	<span class="n">num1</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span> <span class="c1">//1</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="자료형의-확장과-축소-알아보기">자료형의 확장과 축소 알아보기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main14</span><span class="p">()</span> <span class="p">{</span>
+	 <span class="c1">//자료형의 확장</span>
+	<span class="kt">int</span>  <span class="n">num1</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">//15.400000</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 6.600000</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 48.400002</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 2.500000</span>
+
+	<span class="c1">//실수랑 정수를 계산하면 범위가넓은 실수로 자동 변환이 된다.(표현범위가 넓다) =&gt;암시적 형 변환</span>
+
+	<span class="kt">long</span> <span class="kt">long</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">123456789000</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span> <span class="o">+</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//123456789010</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span> <span class="o">-</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//123456788990</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span> <span class="o">*</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//1234567890000</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span> <span class="o">/</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//12345678900</span>
+
+	<span class="c1">//자료형의 축소</span>
+
+	<span class="kt">float</span> <span class="n">num5</span> <span class="o">=</span> <span class="mi">11</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num6</span> <span class="o">=</span> <span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+
+	<span class="kt">int</span> <span class="n">num7</span> <span class="o">=</span> <span class="n">num5</span> <span class="o">/</span> <span class="n">num6</span><span class="p">;</span> <span class="c1">// 2 자료형의 크기가 작은쪽, 표현 범위가 좁은 쪽을 형 축소 라고함. (값의 손실 발생)</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num7</span><span class="p">);</span>
+	<span class="c1">// 문자 =&gt; 정수 =&gt; 실수 로 갈수록 형 확장 반대로는 형 축소</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="if-조건문으로-특정-조건일-때-코드-실행하기">if 조건문으로 특정 조건일 때 코드 실행하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main15</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">//끝에 세미콜론 쓰는 거 주의!</span>
+	<span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10 입니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10입니다"</span><span class="p">);</span> <span class="c1">//실행코드가 한줄이면 중괄호 생략 가능</span>
+
+
+	<span class="c1">//실수와 정수 비교 하기</span>
+	<span class="kt">float</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"0.1 입니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">c1</span> <span class="o">==</span> <span class="sc">'a'</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"a입니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">c1</span> <span class="o">==</span> <span class="mi">97</span><span class="p">)</span> <span class="c1">//아스키 코드</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"a입니다"</span><span class="p">);</span>
+
+
+	<span class="c1">//사용자 값 받아서 비교하기</span>
+	<span class="c1">// #define _CRT_SECURE_NO_WARNINGS </span>
+
+	<span class="kt">int</span> <span class="n">num4</span><span class="p">;</span>
+
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num4</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num4</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10입니다."</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num4</span> <span class="o">==</span> <span class="mi">20</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"20입니다."</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+:ET

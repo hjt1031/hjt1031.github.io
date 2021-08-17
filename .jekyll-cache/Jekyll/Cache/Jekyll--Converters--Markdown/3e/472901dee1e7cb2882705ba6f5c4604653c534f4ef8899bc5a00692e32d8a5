@@ -1,4 +1,4 @@
-I"= <h1 id="상수와-리터럴">상수와 리터럴</h1>
+I"�+<h1 id="상수와-리터럴">상수와 리터럴</h1>
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main8</span><span class="p">()</span> <span class="p">{</span>
 	<span class="k">const</span> <span class="kt">int</span> <span class="n">con1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// con1 =&gt; 상수, 10 =&gt; 리터럴:고유의 값</span>
 	<span class="c1">//리터럴 사용하기</span>
@@ -69,38 +69,39 @@
 
 </code></pre></div></div>
 
-<p>//덧셈 뺼셈하기
-int main10() {
-	int num1;
-	int num2;</p>
+<h1 id="덧셈-뺄셈하기">덧셈 뺄셈하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main10</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num1 = 1 + 2;
-num2 = 1 - 2;
+	<span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="n">num2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
 
-printf("%d\n", num1);
-printf("%d\n", num2);
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
 
-//실수
+	<span class="c1">//실수</span>
 
-float num3;
-float num4;
+	<span class="kt">float</span> <span class="n">num3</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num4</span><span class="p">;</span>
 
-num3 = 1.0f + 0.456789f;
-num4 = 1.0f - 0.456789f;
-
-
-printf("%d\n", num3);
-printf("%d\n", num4);
+	<span class="n">num3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span> <span class="o">+</span> <span class="mi">0</span><span class="p">.</span><span class="mi">456789</span><span class="n">f</span><span class="p">;</span>
+	<span class="n">num4</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span> <span class="o">-</span> <span class="mi">0</span><span class="p">.</span><span class="mi">456789</span><span class="n">f</span><span class="p">;</span>
 
 
-//변수 하나에서 값 더하거나 뺴기
-int num5 = 1;
-int num6 = 1;
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span>
 
-num5 = num5 + 2;
-num6 = num6 - 2;
 
-printf("%d\n", num5);
-printf("%d\n", num6); }
+	<span class="c1">//변수 하나에서 값 더하거나 뺴기</span>
+	<span class="kt">int</span> <span class="n">num5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+	<span class="n">num5</span> <span class="o">=</span> <span class="n">num5</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="n">num6</span> <span class="o">=</span> <span class="n">num6</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num6</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
 :ET

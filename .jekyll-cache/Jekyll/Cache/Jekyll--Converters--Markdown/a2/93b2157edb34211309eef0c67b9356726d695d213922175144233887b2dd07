@@ -1,0 +1,26 @@
+I"�	<p>exports : 모듈을 만들어 주는 대표적인 방식</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//정의</span>
+<span class="nx">exports</span><span class="p">.</span><span class="err">함수이름</span> <span class="o">=</span> <span class="err">함수정의</span><span class="p">;</span>
+
+<span class="c1">//쓰는법</span>
+<span class="kd">var</span> <span class="nx">modeule</span> <span class="o">=</span> <span class="nx">require</span><span class="o">=</span><span class="p">(</span><span class="dl">'</span><span class="s1">module</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">module</span><span class="p">.</span><span class="err">함수이름</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>자바스크립트는  함수라는 것을 명시적으로 구별하기 위해 function 키워드를 함수 이름 앞에 붙여줌</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//같은의미이다.</span>
+<span class="nx">fucntion</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+<span class="k">return</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+	<span class="k">return</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>배열요소 삭제</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Users</span> <span class="o">=</span> <span class="p">[{</span><span class="mi">1</span><span class="p">},{</span><span class="mi">2</span><span class="p">},{</span><span class="mi">3</span><span class="p">}];</span> 
+
+<span class="k">delete</span> <span class="nx">Users</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// 하면 {2} 지워짐 하지만 객체만 지워진거라 배열 길이는 그대로 3개</span>
+</code></pre></div></div>
+:ET

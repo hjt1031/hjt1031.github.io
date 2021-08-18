@@ -1,0 +1,679 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[JAVA]chap06-셸정렬 &amp; chap07-집합 - juntae</title>
+<meta name="description" content="```java package chap06; import java.util.*; public class ShellSort { 	static void shellSort(int[] a, int n) { 		for(int h = n / 2; h &gt; 0; h /= 2) 			for(int i = h; i &lt; n; i++) { 				int j; 				int tmp = a[i]; 				for(j = i - h; j &gt;= 0 &amp;&amp; a[j] &gt; tmp; j -= h) 					a[j + h] = a[j]; 				a[j + h] = tmp; 			} 	}  public static void main(String[] args) { 	Scanner stdIn = new Scanner(System.in); 	 	System.out.println(&quot;셸 정렬 버전1&quot;); 	System.out.print(&quot;요솟수 : &quot;); 	int nx = stdIn.nextInt(); 	int[] x = new int[nx]; 	 	for(int i = 0; i &lt;nx; i++) { 		System.out.print(&quot;x[&quot; + i + &quot;]:&quot;); 		x[i] = stdIn.nextInt(); 	} 	 	shellSort(x, nx);	//배열 x를 셀 정렬 	 	System.out.println(&quot;오름차순으로 정렬 했습니다.&quot;); 	for (int i = 0; i &lt;nx; i++) 		System.out.println(&quot;x[&quot; + i +&quot;]=&quot; + x[i]); } }  ">
+
+
+  <meta name="author" content="동센">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="juntae">
+<meta property="og:title" content="[JAVA]chap06-셸정렬 &amp; chap07-집합">
+<meta property="og:url" content="http://localhost:4000/javachap06-sellsort-&-chap07/">
+
+
+  <meta property="og:description" content="```java package chap06; import java.util.*; public class ShellSort { 	static void shellSort(int[] a, int n) { 		for(int h = n / 2; h &gt; 0; h /= 2) 			for(int i = h; i &lt; n; i++) { 				int j; 				int tmp = a[i]; 				for(j = i - h; j &gt;= 0 &amp;&amp; a[j] &gt; tmp; j -= h) 					a[j + h] = a[j]; 				a[j + h] = tmp; 			} 	}  public static void main(String[] args) { 	Scanner stdIn = new Scanner(System.in); 	 	System.out.println(&quot;셸 정렬 버전1&quot;); 	System.out.print(&quot;요솟수 : &quot;); 	int nx = stdIn.nextInt(); 	int[] x = new int[nx]; 	 	for(int i = 0; i &lt;nx; i++) { 		System.out.print(&quot;x[&quot; + i + &quot;]:&quot;); 		x[i] = stdIn.nextInt(); 	} 	 	shellSort(x, nx);	//배열 x를 셀 정렬 	 	System.out.println(&quot;오름차순으로 정렬 했습니다.&quot;); 	for (int i = 0; i &lt;nx; i++) 		System.out.println(&quot;x[&quot; + i +&quot;]=&quot; + x[i]); } }  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-12-21T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/javachap06-sellsort-&-chap07/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "JunTae",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="juntae Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">동센</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>One Day One Commit</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">home</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://www.instagram.com/jun_haaaaa" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[JAVA]chap06-셸정렬 &amp; chap07-집합">
+    <meta itemprop="description" content="```javapackage chap06;import java.util.*;public class ShellSort {	static void shellSort(int[] a, int n) {		for(int h = n / 2; h &gt; 0; h /= 2)			for(int i = h; i &lt; n; i++) {				int j;				int tmp = a[i];				for(j = i - h; j &gt;= 0 &amp;&amp; a[j] &gt; tmp; j -= h)					a[j + h] = a[j];				a[j + h] = tmp;			}	}public static void main(String[] args) {	Scanner stdIn = new Scanner(System.in);		System.out.println(&quot;셸 정렬 버전1&quot;);	System.out.print(&quot;요솟수 : &quot;);	int nx = stdIn.nextInt();	int[] x = new int[nx];		for(int i = 0; i &lt;nx; i++) {		System.out.print(&quot;x[&quot; + i + &quot;]:&quot;);		x[i] = stdIn.nextInt();	}		shellSort(x, nx);	//배열 x를 셀 정렬		System.out.println(&quot;오름차순으로 정렬 했습니다.&quot;);	for (int i = 0; i &lt;nx; i++)		System.out.println(&quot;x[&quot; + i +&quot;]=&quot; + x[i]);} }">
+    <meta itemprop="datePublished" content="2020-12-21T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[JAVA]chap06-셸정렬 &amp; chap07-집합
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap06</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ShellSort</span> <span class="o">{</span>
+	<span class="kd">static</span> <span class="kt">void</span> <span class="nf">shellSort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span> <span class="n">h</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span> <span class="n">h</span> <span class="o">/=</span> <span class="mi">2</span><span class="o">)</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="kt">int</span> <span class="n">j</span><span class="o">;</span>
+				<span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+				<span class="k">for</span><span class="o">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">h</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">tmp</span><span class="o">;</span> <span class="n">j</span> <span class="o">-=</span> <span class="n">h</span><span class="o">)</span>
+					<span class="n">a</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="n">h</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+				<span class="n">a</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="n">h</span><span class="o">]</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">;</span>
+			<span class="o">}</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Scanner</span> <span class="n">stdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"셸 정렬 버전1"</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"요솟수 : "</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">nx</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">nx</span><span class="o">];</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span><span class="n">nx</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"x["</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">"]:"</span><span class="o">);</span>
+			<span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="o">}</span>
+		
+		<span class="n">shellSort</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">nx</span><span class="o">);</span>	<span class="c1">//배열 x를 셀 정렬</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"오름차순으로 정렬 했습니다."</span><span class="o">);</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span><span class="n">nx</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"x["</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span><span class="s">"]="</span> <span class="o">+</span> <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h1 id="chap07--집합">chap07  집합</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap07</span><span class="o">;</span>
+<span class="c1">//int형 집합</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">IntSet</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">max</span><span class="o">;</span> 	<span class="c1">//집합의 최대 개수</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">num</span><span class="o">;</span>	<span class="c1">//집합의 요소 개수</span>
+	<span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">set</span><span class="o">;</span>	<span class="c1">//집합 본체</span>
+	
+	<span class="c1">//생성자</span>
+	<span class="kd">public</span> <span class="nf">IntSet</span><span class="o">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="n">max</span> <span class="o">=</span> <span class="n">capacity</span><span class="o">;</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">max</span><span class="o">];</span>	<span class="c1">//집합 배열 생성</span>
+		<span class="o">}</span>
+		<span class="k">catch</span><span class="o">(</span><span class="nc">OutOfMemoryError</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>	<span class="c1">//배열 생성 실패</span>
+			<span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합의 최대 개수</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">capacity</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">max</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="c1">//집합의 요소 개수</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">num</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합에서 n을 검색합니다(index 반환).</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">indexOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">set</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">n</span><span class="o">)</span>
+				<span class="k">return</span> <span class="n">i</span><span class="o">;</span>	<span class="c1">//검색 성공</span>
+		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>	<span class="c1">//검색 실패</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합에 n이 있는지 없는지 확인합니다.</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">contains</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="o">(</span><span class="n">indexOf</span><span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합에 n을 추가합니다.</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="n">max</span> <span class="o">||</span> <span class="n">contains</span><span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="o">==</span> <span class="kc">true</span><span class="o">)</span>	<span class="c1">//가득 찼거나 이미 n이 존재합니다.</span>
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="k">else</span> <span class="o">{</span>
+			<span class="n">set</span><span class="o">[</span><span class="n">num</span><span class="o">++]</span> <span class="o">=</span> <span class="n">n</span><span class="o">;</span>		<span class="c1">//가장 마지막 자리에 추가합니다.</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합에서 n을 삭제합니다.</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">remove</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">idx</span><span class="o">;</span>		<span class="c1">//n이 저장된 요소의 인덱스</span>
+		
+		<span class="k">if</span><span class="o">(</span><span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="o">(</span><span class="n">idx</span> <span class="o">=</span> <span class="n">indexOf</span><span class="o">(</span><span class="n">n</span><span class="o">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> 		<span class="c1">//비어 있거나 n이 존재하지 않습니다.</span>
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="k">else</span> <span class="o">{</span>
+			<span class="n">set</span><span class="o">[</span><span class="n">idx</span><span class="o">]</span> <span class="o">=</span> <span class="n">set</span><span class="o">[--</span><span class="n">num</span><span class="o">];</span>	<span class="c1">//마지막 요소를 삭제한 곳으로 옮깁니다.</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합 s에 복사합니다</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">copyTo</span><span class="o">(</span><span class="nc">IntSet</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">max</span> <span class="o">&lt;</span> <span class="n">num</span><span class="o">)</span> <span class="o">?</span> <span class="n">s</span><span class="o">.</span><span class="na">max</span> <span class="o">:</span> <span class="n">num</span><span class="o">;</span> 		<span class="c1">//복사할 요소 개수</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="n">s</span><span class="o">.</span><span class="na">set</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">set</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+		<span class="n">s</span><span class="o">.</span><span class="na">num</span><span class="o">=</span><span class="n">n</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합 s를 복사합니다</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">copyFrom</span><span class="o">(</span><span class="nc">IntSet</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="o">(</span><span class="n">max</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">num</span><span class="o">)</span> <span class="o">?</span> <span class="n">max</span> <span class="o">:</span> <span class="n">s</span><span class="o">.</span><span class="na">num</span><span class="o">;</span>	<span class="c1">//복사할 요소 개수</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="n">set</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">set</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+		<span class="n">num</span> <span class="o">=</span> <span class="n">n</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합 s와 같은지 확인합니다.</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equalTo</span><span class="o">(</span><span class="nc">IntSet</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">num</span> <span class="o">!=</span> <span class="n">s</span><span class="o">.</span><span class="na">num</span><span class="o">)</span>	<span class="c1">//요소 개수가 같지 않으면</span>
+				<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>	<span class="c1">//집합도 같지 않습니다.</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			<span class="k">for</span> <span class="o">(</span> <span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">num</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">set</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="na">set</span><span class="o">[</span><span class="n">j</span><span class="o">])</span>
+					<span class="k">break</span><span class="o">;</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="na">num</span><span class="o">)</span>		<span class="c1">//set[i]는 s에 포함되지 않습니다.</span>
+				<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//집합 s1과 s2의 합집합을 복사합니다.</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">unionOf</span><span class="o">(</span><span class="nc">IntSet</span> <span class="n">s1</span><span class="o">,</span> <span class="nc">IntSet</span> <span class="n">s2</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">copyFrom</span><span class="o">(</span><span class="n">s1</span><span class="o">);</span>		<span class="c1">//집합 s1을 복사합니다.</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s2</span><span class="o">.</span><span class="na">num</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>		<span class="c1">//집합 s2의 요소를 추가합니다.</span>
+			<span class="n">add</span><span class="o">(</span><span class="n">s2</span><span class="o">.</span><span class="na">set</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+	<span class="o">}</span>
+	
+	<span class="c1">//"{a,b,c}" 형식의 문자열로 표현을 바꿉니다.</span>
+	<span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nc">StringBuffer</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">(</span><span class="s">"{"</span><span class="o">);</span>
+		<span class="k">for</span><span class="o">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="n">temp</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">set</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">""</span><span class="o">);</span>
+		<span class="n">temp</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"}"</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">temp</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-12-21T00:00:00+09:00">December 21, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BJAVA%5Dchap06-%EC%85%B8%EC%A0%95%EB%A0%AC+%26+chap07-%EC%A7%91%ED%95%A9%20http%3A%2F%2Flocalhost%3A4000%2Fjavachap06-sellsort-%26-chap07%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjavachap06-sellsort-%26-chap07%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjavachap06-sellsort-%26-chap07%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/spring_base_01/" class="pagination--pager" title="[Spring]기초
+">이전</a>
+    
+    
+      <a href="/c-start/" class="pagination--pager" title="[c] 기초
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c3-if/" rel="permalink">[c]기초3 - if문, 증감연산자
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">증감 연산자
+```c
+int main11() {
+	int num1 = 1;
+	int num2 = 2;
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c-start2/" rel="permalink">[c] 기초2-문자,상수,덧셈 등등
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">상수와 리터럴
+```c
+int main8() {
+	const int con1 = 10; // con1 =&gt; 상수, 10 =&gt; 리터럴:고유의 값
+	//리터럴 사용하기
+	printf(“%d\n”, 10); //10이 리터럴 값
+	printf(“%f\n”, 01.f);
+	pr...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c-start/" rel="permalink">[c] 기초
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">C언어는 메모리와 하드웨어를 직접 제어할 수 있음
+
+  실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/spring_base_01/" rel="permalink">[Spring]기초
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Dispatcher Servlet : requset 요청 온 것 을 필터처리 후 핸들링 해준다. response 도 마찬가지
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 JunTae. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

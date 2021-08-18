@@ -1,4 +1,4 @@
-I"�6<h1 id="증감-연산자">증감 연산자</h1>
+I"�M<h1 id="증감-연산자">증감 연산자</h1>
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main11</span><span class="p">()</span> <span class="p">{</span>
 	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
@@ -117,44 +117,87 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>// if 조건문으로 특정 조건일 때 코드 실행하기
-int main15() {
-	int num1 = 10;
-	if (num1 == 10) //끝에 세미콜론 쓰는 거 주의!
-	{
-		printf(“10 입니다.\n”);
-	}</p>
+<h1 id="if-조건문으로-특정-조건일-때-코드-실행하기">if 조건문으로 특정 조건일 때 코드 실행하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main15</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">//끝에 세미콜론 쓰는 거 주의!</span>
+	<span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10 입니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="p">}</span>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (num1 == 10)
-	printf("10입니다"); //실행코드가 한줄이면 중괄호 생략 가능
-
-
-//실수와 정수 비교 하기
-float num2 = 0.1f;
-char c1 = 'a';
-
-if (num2 == 0.1f)
-	printf("0.1 입니다.\n");
-
-if (c1 == 'a')
-	printf("a입니다.\n");
-
-if (c1 == 97) //아스키 코드
-	printf("a입니다");
+	<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10입니다"</span><span class="p">);</span> <span class="c1">//실행코드가 한줄이면 중괄호 생략 가능</span>
 
 
-//사용자 값 받아서 비교하기
-// #define _CRT_SECURE_NO_WARNINGS 
+	<span class="c1">//실수와 정수 비교 하기</span>
+	<span class="kt">float</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
 
-int num4;
+	<span class="k">if</span> <span class="p">(</span><span class="n">num2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"0.1 입니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 
-scanf("%d", &amp;num4);
+	<span class="k">if</span> <span class="p">(</span><span class="n">c1</span> <span class="o">==</span> <span class="sc">'a'</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"a입니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 
-if (num4 == 10)
-	printf("10입니다.");
+	<span class="k">if</span> <span class="p">(</span><span class="n">c1</span> <span class="o">==</span> <span class="mi">97</span><span class="p">)</span> <span class="c1">//아스키 코드</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"a입니다"</span><span class="p">);</span>
 
-if (num4 == 20)
-	printf("20입니다.");
-return 0; }
+
+	<span class="c1">//사용자 값 받아서 비교하기</span>
+	<span class="c1">// #define _CRT_SECURE_NO_WARNINGS </span>
+
+	<span class="kt">int</span> <span class="n">num4</span><span class="p">;</span>
+
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num4</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num4</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10입니다."</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num4</span> <span class="o">==</span> <span class="mi">20</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"20입니다."</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<h1 id="else-를-사용-하기">else 를 사용 하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main16</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+	<span class="cm">/*if (num1 == 10) {
+		printf("10입니다.\n");
+	}
+	else {
+		printf("10이 아닙니다.\n");
+	}*/</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> 
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10입니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="k">else</span> 
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10이 아닙니다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"참</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"거짓</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span> <span class="c1">//c언어는 0은 거짓 나머지는 모두 참</span>
+
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="else-if-사용">else if 사용</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">amin17</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10입니다"</span><span class="p">);</span>
+	<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">20</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"20 입니다."</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"10도 20도 아닙니다."</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 :ET

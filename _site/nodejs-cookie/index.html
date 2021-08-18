@@ -1,0 +1,600 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[nodejs]쿠키 - juntae</title>
+<meta name="description" content="웹브라우저가 서로 주고받는 데이터 http 프로토콜에 포함되어있는 기술 ">
+
+
+  <meta name="author" content="동센">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="juntae">
+<meta property="og:title" content="[nodejs]쿠키">
+<meta property="og:url" content="http://localhost:4000/nodejs-cookie/">
+
+
+  <meta property="og:description" content="웹브라우저가 서로 주고받는 데이터 http 프로토콜에 포함되어있는 기술 ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-05-19T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/nodejs-cookie/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "JunTae",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="juntae Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">동센</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>One Day One Commit</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">home</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://www.instagram.com/jun_haaaaa" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[nodejs]쿠키">
+    <meta itemprop="description" content="웹브라우저가 서로 주고받는 데이터http 프로토콜에 포함되어있는 기술">
+    <meta itemprop="datePublished" content="2020-05-19T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[nodejs]쿠키
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>웹브라우저가 서로 주고받는 데이터
+http 프로토콜에 포함되어있는 기술</p>
+
+<p>쿠키생성하는방법</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">){</span>
+    <span class="c1">// response.writeHead(200, { //성공했다는 가정하에 2번쨰는 객체를 넣어준다.</span>
+    <span class="c1">//     'Set-Cookie':['yummy_cookie=choco', 'tasty_cookie=strawberry'] //두개의 쿠키가 생성됨.</span>
+    <span class="c1">// })</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="dl">'</span><span class="s1">Cookie!!!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>쿠키를 서버에 요청하는 법
+먼저 npm 을 다운로드한다</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -s cookie
+</code></pre></div></div>
+
+<p>그다음</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var cookie = require('cookie');
+var cookies = {};
+    if(request.headers.cookie !== undefined){
+        cookies = cookie.parse(request.headers.cookie); //쿠키를 전달해 주는 객체
+        //parse 는 값이 없는걸 자동으로 변환을 못해준다.
+    }
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>만약, 크롬으로 홈페이지를 들어가서 외국어 페이지를 로드 하면 (항상 한국어로 보여드릴까요?) 라고하는 문구가 나온다 한국어로 클릭하면 쿠키에서 ex) us =&gt; ko 로 변경이된다.
+
+6. Session cookies VS Permanent cookies
+쿠키를언제까지 살아있게 할 것인가?
+</code></pre></div></div>
+
+<p>Session cookies 는 홈페이지를 껏다 키면 cookies 가 다 날라가지만 Permanent cookies 는 껏다 켜도 살아있다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">Set-Cookie</span><span class="dl">'</span><span class="p">:[</span><span class="s2">`Permanent = cookies; Max-Age=</span><span class="p">${</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="p">}</span><span class="s2">`</span> <span class="c1">//30일 (60초)</span>
+            <span class="p">]</span> 
+</code></pre></div></div>
+<p>를 추가해준다음에 홈페이지를 껏다 키면 permanent 만 살아있다.</p>
+
+<ol>
+  <li>Secure &amp; HttpOnly</li>
+</ol>
+
+<p>보안과 관련됨
+Secure : https 로 접속 할 때만 쿠키를 전송한다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">Set-Cookie</span><span class="dl">'</span><span class="p">:[</span><span class="dl">'</span><span class="s1">Secure = Secure; Secure</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//끝에붙인 Secure가 중요]</span>
+</code></pre></div></div>
+
+<p>HttpOnly: 는 웹브라우저와 웹서버가 통신할때만 쿠키를 생성</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">Set-Cookie</span><span class="dl">'</span><span class="p">:[</span><span class="dl">'</span><span class="s1">HttpOnly=HttpOnly; httpOnly</span><span class="dl">'</span><span class="p">]</span>
+</code></pre></div></div>
+<p>HttpOnly 는 세션을 통해 장난치는 사람들이 많아서? 해킹할려는사람들이 많아서 쓴다.</p>
+
+<p>8.path &amp; domain
+path : 특정디렉토리 안에서만 쿠키를 활성화 하고싶을때 사용하는 기능</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">Set-Cookie</span><span class="dl">'</span><span class="p">:[</span><span class="dl">'</span><span class="s1">Path=Path; Path=/cookie</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// 어느 path 에서 동작하게 할것인가 ]</span>
+</code></pre></div></div>
+
+<p>domain : 어떤 도메인에서만 동작할 것인가.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">Set-Cookie</span><span class="dl">'</span><span class="p">:[</span><span class="dl">'</span><span class="s1">Domain=Domain; Domain=o2.org</span><span class="dl">'</span> <span class="c1">//쿠키에 domain을 보면 전부다 domain만 .o2.org로 되어있고 나머지는 o2.org 로 되어있다. ]</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-05-19T00:00:00+09:00">May 19, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5Bnodejs%5D%EC%BF%A0%ED%82%A4%20http%3A%2F%2Flocalhost%3A4000%2Fnodejs-cookie%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnodejs-cookie%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnodejs-cookie%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/nodejsexpress-generator/" class="pagination--pager" title="[nodejs]express generator
+">이전</a>
+    
+    
+      <a href="/nodejs-cookie2/" class="pagination--pager" title="[nodejs] 쿠키 실습
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c3-if/" rel="permalink">[c]기초3 - if문, 증감연산자
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">증감 연산자
+```c
+int main11() {
+	int num1 = 1;
+	int num2 = 2;
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c-start2/" rel="permalink">[c] 기초2-문자,상수,덧셈 등등
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">상수와 리터럴
+```c
+int main8() {
+	const int con1 = 10; // con1 =&gt; 상수, 10 =&gt; 리터럴:고유의 값
+	//리터럴 사용하기
+	printf(“%d\n”, 10); //10이 리터럴 값
+	printf(“%f\n”, 01.f);
+	pr...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c-start/" rel="permalink">[c] 기초
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">C언어는 메모리와 하드웨어를 직접 제어할 수 있음
+
+  실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/javachap06-sellsort-&-chap07/" rel="permalink">[JAVA]chap06-셸정렬 &amp; chap07-집합
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">```java
+package chap06;
+import java.util.*;
+public class ShellSort {
+	static void shellSort(int[] a, int n) {
+		for(int h = n / 2; h &gt; 0; h /= 2)
+			for(i...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 JunTae. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

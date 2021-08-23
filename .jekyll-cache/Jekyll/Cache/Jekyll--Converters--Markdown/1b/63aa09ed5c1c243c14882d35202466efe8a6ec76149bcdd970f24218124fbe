@@ -1,0 +1,120 @@
+I"�6<h1 id="비교연산자">비교연산자</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main18</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="c1">//c에서는 참이 1 거짓이 0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">==</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">//1</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//0</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//1</span>
+
+	<span class="c1">//삼항 연산자</span>
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span><span class="p">;</span>
+
+	<span class="cm">/*if (num2)
+		num3 = 100;
+	else
+		num3 = 200;*/</span>
+
+	<span class="n">num2</span> <span class="o">=</span> <span class="n">num3</span> <span class="o">?</span> <span class="mi">100</span> <span class="o">:</span> <span class="mi">200</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+
+
+	<span class="c1">//함수 안에서 삼항 연산자 사용하기</span>
+	<span class="kt">int</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num4</span> <span class="o">==</span> <span class="mi">10</span> <span class="o">?</span> <span class="s">"10입니다."</span> <span class="o">:</span> <span class="s">"10이 아닙니다."</span><span class="p">);</span> <span class="c1">//10이 아닙니다.</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="논리연산자">논리연산자</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main19</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span> <span class="o">&amp;&amp;</span> <span class="n">num3</span> <span class="o">&gt;</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span> <span class="o">&amp;&amp;</span> <span class="n">num3</span> <span class="o">&lt;</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//0</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span> <span class="o">||</span> <span class="n">num3</span> <span class="o">&lt;</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="n">num2</span> <span class="o">||</span> <span class="n">num3</span> <span class="o">&lt;</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">//0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span> <span class="p">,</span><span class="o">!</span><span class="p">(</span><span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span><span class="p">));</span> <span class="c1">//0</span>
+
+	<span class="c1">//if조건문과 논리 연산자 사용</span>
+
+	<span class="kt">int</span> <span class="n">num5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num5</span> <span class="o">&amp;&amp;</span> <span class="n">num6</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"참"</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"거짓"</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">num5</span> <span class="o">||</span> <span class="n">num6</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"참"</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"거짓"</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">num5</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"참"</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"거짓"</span><span class="p">);</span>
+
+
+	<span class="c1">//삼항 연산자의 논리 연산자 사용</span>
+	<span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="n">num2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&amp;&amp;</span> <span class="n">num2</span> <span class="o">?</span> <span class="s">"참"</span> <span class="o">:</span> <span class="s">"거짓"</span><span class="p">);</span> <span class="c1">//거짓</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">||</span> <span class="n">num2</span> <span class="o">?</span> <span class="s">"참"</span> <span class="o">:</span> <span class="s">"거짓"</span><span class="p">);</span> <span class="c1">//참</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="stdboolh-헤더파일-사용하기bool자료형">stdbool.h 헤더파일 사용하기(bool자료형)</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main20</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">// #include&lt;stdbool.h&gt;</span>
+	<span class="n">bool</span> <span class="n">b1</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">b1</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"참"</span><span class="p">);</span> <span class="c1">//결과값 : 참</span>
+	<span class="k">else</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"거짓"</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//bool 자료형 크기 알아보기</span>
+<span class="kt">int</span> <span class="nf">main21</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"int의 크기 : %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span> <span class="c1">//4byte</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"bool의 크기 : %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">bool</span><span class="p">));</span> <span class="c1">//1byte</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+<h1 id="불-자료형-논리-연산자-사용">불 자료형 논리 연산자 사용</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main22</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">true</span> <span class="o">&amp;&amp;</span> <span class="nb">true</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">true</span> <span class="o">&amp;&amp;</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">//0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">false</span> <span class="o">&amp;&amp;</span> <span class="nb">true</span><span class="p">);</span> <span class="c1">//0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">false</span> <span class="o">&amp;&amp;</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">//0</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">true</span> <span class="o">||</span> <span class="nb">true</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">true</span> <span class="o">||</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">false</span> <span class="o">||</span> <span class="nb">true</span><span class="p">);</span> <span class="c1">//1 </span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="nb">false</span> <span class="o">||</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">//0</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

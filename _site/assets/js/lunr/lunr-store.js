@@ -640,4 +640,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c3-if/",
         "teaser": null
+      },{
+        "title": "[c]기초 4 - 비교연산자 & 논리연산자",
+        "excerpt":"비교연산자 int main18() { int num1 = 10; //c에서는 참이 1 거짓이 0 printf(\"%d\\n\", num1 == 10); //1 printf(\"%d\\n\", num1 != 5); //1 printf(\"%d\\n\", num1 &gt; 10); //0 printf(\"%d\\n\", num1 &lt; 10); //0 printf(\"%d\\n\", num1 &gt;= 10); //1 printf(\"%d\\n\", num1 &lt;= 10); //1 //삼항 연산자 int num2 = 5; int...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c-4/",
+        "teaser": null
       }]

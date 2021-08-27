@@ -646,4 +646,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c-4/",
         "teaser": null
+      },{
+        "title": "[c]기초 5 -비트연산자",
+        "excerpt":"비트 AND,OR,XOR 연산자 사용 int main() { unsigend char num1 = 1; // 0000 0001 unsigend char num2 = 3; // 0000 0011 unsigend char num3 = 162 // 1010 0010; unsigend char num4; num4 = ~num3; //비트를 뒤집는것 printf(\"%u\\n\", num4); // 0101 1101; printf(\"%d\\n\", num1 &amp; num2); // 0000...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c-5/",
+        "teaser": null
       }]

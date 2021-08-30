@@ -652,4 +652,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c-5/",
         "teaser": null
+      },{
+        "title": "[c]기초 6 - 반복문(switch, for, while)",
+        "excerpt":"switch 분기문으로 다양한 조건 처리하기 // break 생략 응용 switch (num1) { case 1: case 2: printf(\"1또는 2입니다 \\n\"); break; case 3: case 4: printf(\"3또는 4입니다.\\n\"); default: printf(\"default\\n\"); //break 생략 가능 break; } //case 안에서 변수 선언 switch (num1) { case 1: { int num2 = num1; printf(\"%d입니다.\\n\", num2); //중괄호...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c-6/",
+        "teaser": null
       }]

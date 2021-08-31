@@ -1,0 +1,27 @@
+I"<pre><code class="language-javacript">app.use('/topic',topicRouter)   //topic 라우터를 타면 topicRouter 라는 미들웨어를 적용시키겠다.
+
+
+router.get('/create',function(request,response){
+var title = 'WEB - create';
+        var list = template.list(request.list);//미들웨어 
+        var html = template.HTML(title, list, `
+          &lt;form action="/topic/create_process" method="post"&gt;
+            &lt;p&gt;&lt;input type="text" name="title" placeholder="title"&gt;&lt;/p&gt;
+            &lt;p&gt;
+              &lt;textarea name="description" placeholder="description"&gt;&lt;/textarea&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;input type="submit"&gt;
+            &lt;/p&gt;
+          &lt;/form&gt;
+        `, '');
+        response.send(html);
+}
+</code></pre>
+<p>routers 에 위치한 topic.js 를 만든뒤 path 하는 메소드 들을 전부다 이주 시켜주었다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
+</code></pre></div></div>
+<p>기본 모듈은 이렇게 써준다.</p>
+:ET

@@ -1,0 +1,30 @@
+I"�<h1 id="mountig"><strong>Mountig</strong></h1>
+
+<p>constructor() : javascript 에서 class를 만들 때 호출되는것.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(props){
+    super(props)
+    console.log("hello");
+  }
+	
+	componentDidMount(){
+    console.log("component rendered")
+  }
+	
+	render(){
+    console.log("I m rendering")
+		} //constructor() 가 가장먼저 실행 그다음 render() 그다음  componentDidMount
+</code></pre></div></div>
+
+<h1 id="update"><strong>Update</strong></h1>
+
+<p>내가 Add 혹은 Minus를 클릭해서 state를 변경할때 그때가 update</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>componentDidUpdate(){
+    console.log('I just update')
+  }
+  render(){
+    console.log("I m rendering")
+	} //render() 가 먼저 실행되고 componentDidUpdate() 실행
+</code></pre></div></div>
+:ET

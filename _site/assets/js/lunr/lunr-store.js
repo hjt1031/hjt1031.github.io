@@ -658,4 +658,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c-6/",
         "teaser": null
+      },{
+        "title": "[c]기초 7",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c-7/",
+        "teaser": null
       }]

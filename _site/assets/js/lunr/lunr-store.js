@@ -659,8 +659,8 @@ var store = [{
         "url": "http://localhost:4000/c-6/",
         "teaser": null
       },{
-        "title": "[c]기초 7",
-        "excerpt":" ","categories": [],
+        "title": "[c]기초 7 - goto, fizzbuzz",
+        "excerpt":"goto로 프로그램의 흐름을 원하는 대로 바꾸기 int main28() { //define _CRT_SECURES_NO_WARNINGS int num1; scnaf(\"%d\", &amp;num1); if (num1 == 1) goto ONE; else if (num1 == 2) goto TWO; else goto EXIT; ONE: printf(\"1입니다.\"); goto EXIT; TWO: printf(\"2입니다.\"); goto EXIT; EXIT: return 0; //중첩 루프 빠져나오기 //#include &lt;stdbool.h&gt; int num1 =...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/c-7/",
         "teaser": null

@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[c]기초 8 - 포인터 - juntae</title>
-<meta name="description" content=" ">
+<meta name="description" content="포인터(메모리 주소를 할당) ```c int main29() { 	int num1 = 10; ">
 
 
   <meta name="author" content="동센">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/c-8/">
 
 
-  <meta property="og:description" content=" ">
+  <meta property="og:description" content="포인터(메모리 주소를 할당) ```c int main29() { 	int num1 = 10; ">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[c]기초 8 - 포인터">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="포인터(메모리 주소를 할당)```cint main29() {	int num1 = 10;">
     <meta itemprop="datePublished" content="2021-09-06T00:00:00+09:00">
     
 
@@ -278,7 +278,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 
 </p>
           
@@ -287,7 +287,138 @@
 
       <section class="page__content" itemprop="text">
         
-        
+        <h1 id="포인터메모리-주소를-할당">포인터(메모리 주소를 할당)</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main29</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span> <span class="c1">//009FF980 &lt;=메모리 주소 p는 포인터 의 p</span>
+
+	<span class="c1">//포인터 변수 선언하기</span>
+	<span class="kt">int</span> <span class="o">*</span><span class="n">numPtr</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">numPtr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="n">numPtr</span><span class="p">);</span> <span class="c1">//011BF99C</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span>  <span class="c1">//011BF99C</span>
+
+	<span class="c1">//역참조 연산자 사용하기</span>
+
+	<span class="kt">int</span> <span class="o">*</span><span class="n">numPtr</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">numPtr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+
+
+	<span class="o">*</span><span class="n">numPtr</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtr</span><span class="p">);</span> <span class="c1">//역참조 연산자(메모리주소로 가서 값 을 가져옴)</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span> <span class="c1">//20 이 나옴, numPtr에 num1 주소의 저장하고 값 을 저장하면 값 도 바뀐다.</span>
+
+	<span class="c1">//	&amp;num1 =&gt; 10 (주소 연산자는 변수의 메모리 주소만 구함)</span>
+	<span class="c1">//	*numPtr =&gt; 10 역 참조 연산자는 메모리에 저장된 값에 접근 가능(값 변경도 가능)</span>
+	<span class="c1">//	 numPtr 포인터는 변수의 메모리 주소만 가리킨다.</span>
+
+
+	<span class="c1">//다양한 자료형 포인터 선언</span>
+	<span class="kt">long</span> <span class="kt">long</span> <span class="o">*</span><span class="n">numPtr1</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="o">*</span><span class="n">numPtr2</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">cPtr1</span><span class="p">;</span>
+
+	<span class="kt">long</span> <span class="kt">long</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="n">f</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+
+	<span class="n">numPtr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+	<span class="n">numPtr2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">;</span>
+	<span class="n">cPtr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c1</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtr1</span><span class="p">);</span> <span class="c1">//10 | 8바이트</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtr1</span><span class="p">);</span> <span class="c1">//3.5000000 | 4바이트</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="o">*</span><span class="n">cPtr1</span><span class="p">);</span> <span class="c1">//a | 1바이트</span>
+
+	<span class="c1">// void 포인터 선언</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="o">*</span><span class="n">numPtr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">cPtr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c1</span><span class="p">;</span>
+	
+	<span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span> <span class="c1">//어떤 자료형이든 저장 가능함. 역참조 불가능</span>
+
+	<span class="n">ptr</span> <span class="o">=</span> <span class="n">numPtr1</span><span class="p">;</span>
+	<span class="n">ptr</span> <span class="o">=</span> <span class="n">cPtr1</span><span class="p">;</span>
+
+	<span class="n">numPtr1</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
+	<span class="n">cPtr1</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
+
+	<span class="c1">//이중포인터 사용</span>
+
+	<span class="kt">int</span>	<span class="o">*</span><span class="n">numPtr1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="o">**</span><span class="n">numPtr2</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">numPtr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+	<span class="n">numPtr2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">numPtr1</span><span class="p">;</span>
+
+	<span class="n">printtf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">**</span><span class="n">numPtr2</span><span class="p">);</span>
+
+	<span class="c1">//잘못된 포인터 사용</span>
+	<span class="kt">int</span> <span class="o">*</span><span class="n">numPtr</span> <span class="o">=</span> <span class="mh">0x100</span><span class="p">;</span> <span class="c1">//포인터의 직접 주소 값 을 넣으면 오류 발생 (진짜 존재하는 메모리 주소는 가능)</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtr</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="메모리-사용하기">메모리 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main30</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//메모리 사용패턴 : malloc =&gt; 사용 =&gt; free</span>
+
+	<span class="c1">//메모리 할당하기</span>
+	<span class="c1">//#include &lt;stdlib.h&gt;</span>
+
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr1</span><span class="p">;</span>
+
+	<span class="n">numPtr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr2</span><span class="p">;</span>
+	<span class="n">numPtr2</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span> <span class="c1">//int의 크기만큼 메모리 할당(동적메모리 할당)</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtr1</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtr2</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">numPtr2</span><span class="p">);</span>
+
+	<span class="c1">//메모리에 값 저장하기</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr</span><span class="p">;</span>
+
+	<span class="n">numPtr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+
+	<span class="o">*</span><span class="n">numPtr</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">numPtr</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">numPtr</span><span class="p">);</span>
+
+	<span class="c1">//메모리 내용을 한꺼번에 설정하기</span>
+	<span class="c1">//#include &lt;string.h&gt;</span>
+
+	<span class="kt">long</span> <span class="kt">long</span><span class="o">*</span> <span class="n">numPtr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">));</span>
+
+	<span class="n">memset</span><span class="p">(</span><span class="n">numPtr</span><span class="p">,</span> <span class="mh">0x27</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span> <span class="c1">//메모리의 내용을 0으로 할떄 주로 사용</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"0x%llx</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtr</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">numPtr</span><span class="p">);</span>
+
+	<span class="c1">//널 포인터 사용하기</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr1</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtr1</span><span class="p">);</span> <span class="c1">// 00000000</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
         
       </section>
@@ -318,11 +449,12 @@
       
   <nav class="pagination">
     
-      <a href="/c-7/" class="pagination--pager" title="[c]기초 7 - goto
+      <a href="/c-7/" class="pagination--pager" title="[c]기초 7 - goto, fizzbuzz
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/c8/" class="pagination--pager" title="[c]기초8 - 배열
+">다음</a>
     
   </nav>
 
@@ -346,7 +478,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/c-7/" rel="permalink">[c]기초 7 - goto
+        <a href="/c8/" rel="permalink">[c]기초8 - 배열
 </a>
       
     </h2>
@@ -356,7 +488,40 @@
 
 
 
-  최대 1 분 소요
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">배열 사용하기
+```c
+int main31() {
+	//배열 선언 
+	int numArr[10] = { 11,22,33,44,55,66,77,88,99,110 };
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c-7/" rel="permalink">[c]기초 7 - goto, fizzbuzz
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
 
 </p>
     
@@ -437,41 +602,6 @@ int main() {
 	unsigend char num2 = 3; // 0000 0011
 	unsigend char num3 = 162 // 1010 0010;
 	unsige...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/c-4/" rel="permalink">[c]기초 4 - 비교연산자 &amp; 논리연산자
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">비교연산자
-```c
-int main18() {
-	int num1 = 10;
-	//c에서는 참이 1 거짓이 0
-	printf(“%d\n”, num1 == 10); //1
-	printf(“%d\n”, num1 != 5); //1
-</p>
   </article>
 </div>
 

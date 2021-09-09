@@ -659,19 +659,21 @@ var store = [{
         "url": "http://localhost:4000/c-6/",
         "teaser": null
       },{
-<<<<<<< HEAD
-        "title": "[c]기초 7 - goto",
-=======
         "title": "[c]기초 7 - goto, fizzbuzz",
->>>>>>> 24f71d713c0d1138b4dd7cc68facffaa9a5202b9
         "excerpt":"goto로 프로그램의 흐름을 원하는 대로 바꾸기 int main28() { //define _CRT_SECURES_NO_WARNINGS int num1; scnaf(\"%d\", &amp;num1); if (num1 == 1) goto ONE; else if (num1 == 2) goto TWO; else goto EXIT; ONE: printf(\"1입니다.\"); goto EXIT; TWO: printf(\"2입니다.\"); goto EXIT; EXIT: return 0; //중첩 루프 빠져나오기 //#include &lt;stdbool.h&gt; int num1 =...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/c-7/",
         "teaser": null
       },{
         "title": "[c]기초 8 - 포인터",
-        "excerpt":" ","categories": [],
+        "excerpt":"포인터(메모리 주소를 할당) int main29() { int num1 = 10; printf(\"%p\\n\", &amp;num1); //009FF980 &lt;=메모리 주소 p는 포인터 의 p //포인터 변수 선언하기 int *numPtr; int num1 = 10; numPtr = &amp;num1; printf(\"%p\", numPtr); //011BF99C printf(\"%p\", &amp;num1); //011BF99C //역참조 연산자 사용하기 int *numPtr; int num1 = 10; numPtr = &amp;num1; *numPtr...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/c-8/",
+        "teaser": null
+      },{
+        "title": "[c]기초8 - 배열",
+        "excerpt":"배열 사용하기 int main31() { //배열 선언 int numArr[10] = { 11,22,33,44,55,66,77,88,99,110 }; printf(\"%d\\n\", numArr[0]); printf(\"%d\\n\", numArr[5]); printf(\"%d\\n\", numArr[9]); //배열을 0으로 초기화 int numArr[10] = { 0, }; printf(\"%d\\n\", numArr[0]); printf(\"%d\\n\", numArr[5]); printf(\"%d\\n\", numArr[9]); //배열의 요소에 값 할당하기 int numArr[10]; numArr[0] = 11; numArr[1] = 22; numArr[2] = 33; numArr[3]...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c8/",
         "teaser": null
       }]

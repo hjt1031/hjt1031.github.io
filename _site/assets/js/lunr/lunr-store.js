@@ -676,4 +676,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c8/",
         "teaser": null
+      },{
+        "title": "[c]기초9 - 문자열",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c/",
+        "teaser": null
       }]

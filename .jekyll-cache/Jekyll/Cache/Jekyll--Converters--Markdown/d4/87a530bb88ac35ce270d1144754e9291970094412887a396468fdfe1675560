@@ -1,4 +1,0 @@
-I"<p>기존 라우팅 방식은</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">app</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="na">createServer</span><span class="o">(</span><span class="n">function</span><span class="o">(</span><span class="n">request</span><span class="o">,</span><span class="n">response</span><span class="o">){}</span>
-</code></pre></div></div>
-:ET

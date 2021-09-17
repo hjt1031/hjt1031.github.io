@@ -1,5 +1,0 @@
-I"|<p>exports : 모듈을 만들어 주는 대표적인 방식
-```javascript
-//정의
-exports.함수이름 = 함수정의;</p>
-:ET

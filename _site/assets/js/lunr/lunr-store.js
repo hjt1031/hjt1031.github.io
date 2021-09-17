@@ -678,7 +678,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[c]기초9 - 문자열",
-        "excerpt":" ","categories": [],
+        "excerpt":"입력 값을 배열 형태의 문자열에 저장하기 int main32() { //define _CRT_SECURE_NO_WARNINGS char s1[10]; //배열의 크기 -1 로 입력해야함 맨마지막은 null printf(\"문자열을 입력하세요 : \"); scanf(\"%s\", s1); printf(\"%s\", s1); //입력 값을 문자열 포인터에 저장하기 char* s1 = malloc(sizeof(char) * 10); printf(\"문자열을 입력하세요 : \"); scanf(\"%s\", s1); printf(\"%s\", s1); free(s1); //문자열을 여러개...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/c/",
         "teaser": null

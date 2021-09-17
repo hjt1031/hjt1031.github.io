@@ -1,4 +1,0 @@
-I"N<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,{</span><span class="nx">Component</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// react 라는 라이브러리 에서 Component 라는 클래스를 갖고온다</span>
-</code></pre></div></div>
-<p>src 밑에 component 라는 디렉토리 생성 후 TOC.js 를 만든다.</p>
-:ET

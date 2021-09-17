@@ -1,4 +1,0 @@
-I"=<p>images 디렉토리 만들어주고</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="dl">'</span><span class="s1">public</span><span class="dl">'</span><span class="p">));</span><span class="c1">//public 디렉토리 안에서 static 파일을 찾겠다.</span>
-</code></pre></div></div>
-:ET

@@ -1,0 +1,9 @@
+I"ì<p>```
+shouldComponentUpdate(newProps, newState){</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(this.props.data === newProps.data){
+		return false;
+}
+return true; }
+</code></pre></div></div>
+:ET

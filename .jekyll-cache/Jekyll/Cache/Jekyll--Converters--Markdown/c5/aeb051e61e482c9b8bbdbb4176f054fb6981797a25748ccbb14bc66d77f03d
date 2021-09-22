@@ -1,0 +1,35 @@
+I"�<p>단순삽입정렬
+```java
+package chap06;
+import java.util.*;
+public class InsertionSort {
+	static void insertionSort(int[] a, int n) {
+		for (int i = 1; i &lt; n; i++) {
+			int j;
+			int tmp = a[i];
+			for(j = i; j &gt; 0 &amp;&amp; a[j - 1] &gt; tmp; j–)	//드모르간 법칙
+				a[j] = a[j-1];
+			a[j] = tmp;
+		}
+	}</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void main(String[] args) {
+	Scanner stdIn = new Scanner(System.in);
+	System.out.println("단순 삽입 정렬");
+	System.out.print("요솟수 : ");
+	int nx = stdIn.nextInt();
+	int[] x = new int[nx];
+	
+	for(int i = 0; i &lt; nx; i++) {
+		System.out.print("x[" + i + "]:");
+		x[i] = stdIn.nextInt();
+	}
+	
+	insertionSort(x, nx); //배열 x를 단순 삽입 정렬
+	
+	System.out.println("오름차순으로 정렬했습니다.");
+	for(int i = 0; i &lt; nx; i++)
+		System.out.println("x[" + i + "]=" + x[i]);
+} }
+</code></pre></div></div>
+:ET

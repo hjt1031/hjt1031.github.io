@@ -1,0 +1,3 @@
+I"/<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">HashRouter</span><span class="p">,</span> <span class="nx">Route</span><span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span> <span class="c1">//react-router-dom은 다른 종류의 라우터가 있다 그중에 하나가 HashRouter,Route</span>
+</code></pre></div></div>
+:ET

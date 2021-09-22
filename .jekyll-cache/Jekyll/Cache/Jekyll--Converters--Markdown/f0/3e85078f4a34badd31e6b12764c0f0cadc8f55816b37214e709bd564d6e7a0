@@ -1,0 +1,19 @@
+I"�	<h1 id="비트-andorxor-연산자-사용">비트 AND,OR,XOR 연산자 사용</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 0000 0001</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 0000 0011</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">162</span> <span class="c1">// 1010 0010;</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num4</span><span class="p">;</span>
+	
+	<span class="n">num4</span> <span class="o">=</span> <span class="o">~</span><span class="n">num3</span><span class="p">;</span> <span class="c1">//비트를 뒤집는것</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">// 0101 1101;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&amp;</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 0000 0001 :1 </span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">|</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 0000 0011 :3 </span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">^</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 0000 0010 :2 </span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

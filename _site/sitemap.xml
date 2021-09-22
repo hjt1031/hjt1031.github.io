@@ -453,8 +453,12 @@
 <lastmod>2021-09-09T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/c/</loc>
+<loc>http://localhost:4000/c-10/</loc>
 <lastmod>2021-09-14T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/c11/</loc>
+<lastmod>2021-09-22T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

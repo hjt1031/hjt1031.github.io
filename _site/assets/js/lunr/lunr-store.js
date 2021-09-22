@@ -671,15 +671,21 @@ var store = [{
         "url": "http://localhost:4000/c-8/",
         "teaser": null
       },{
-        "title": "[c]기초8 - 배열",
+        "title": "[c]기초9 - 배열",
         "excerpt":"배열 사용하기 int main31() { //배열 선언 int numArr[10] = { 11,22,33,44,55,66,77,88,99,110 }; printf(\"%d\\n\", numArr[0]); printf(\"%d\\n\", numArr[5]); printf(\"%d\\n\", numArr[9]); //배열을 0으로 초기화 int numArr[10] = { 0, }; printf(\"%d\\n\", numArr[0]); printf(\"%d\\n\", numArr[5]); printf(\"%d\\n\", numArr[9]); //배열의 요소에 값 할당하기 int numArr[10]; numArr[0] = 11; numArr[1] = 22; numArr[2] = 33; numArr[3]...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/c8/",
         "teaser": null
       },{
-        "title": "[c]기초9 - 문자열",
+        "title": "[c]기초10 - 문자열",
         "excerpt":"입력 값을 배열 형태의 문자열에 저장하기 int main32() { //define _CRT_SECURE_NO_WARNINGS char s1[10]; //배열의 크기 -1 로 입력해야함 맨마지막은 null printf(\"문자열을 입력하세요 : \"); scanf(\"%s\", s1); printf(\"%s\", s1); //입력 값을 문자열 포인터에 저장하기 char* s1 = malloc(sizeof(char) * 10); printf(\"문자열을 입력하세요 : \"); scanf(\"%s\", s1); printf(\"%s\", s1); free(s1); //문자열을 여러개...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/c/",
+        "url": "http://localhost:4000/c-10/",
+        "teaser": null
+      },{
+        "title": "[c]기초11 - 구조체",
+        "excerpt":"구조체 사용하기 (struct로 정의) //관련 정보를 하나의 의미로 묶을 때 사용 한다. //기본 자료형 (char, int, float)등을 조합하여 만든 자료형을 파생형 이라고 한다. struct Person{ char name[20]; int age; char address[100]; }; //typedef 로 키워드 생략 하기 typedef struct _Person{ char name[20]; int age; char address[100]; } Person //익명 구조체...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c11/",
         "teaser": null
       }]

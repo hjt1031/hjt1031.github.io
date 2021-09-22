@@ -1,0 +1,131 @@
+I"�9<h1 id="c언어는-메모리와-하드웨어를-직접-제어할-수-있음">C언어는 메모리와 하드웨어를 직접 제어할 수 있음</h1>
+<blockquote>
+  <p>실행 순서 : 소스코드 편집 &gt; 컴파일 &gt;실행</p>
+</blockquote>
+
+<p><em>파일의 변화</em>
+	윈도우 기준 : hello.c -&gt; hello.obj -&gt; hello.exe</p>
+
+<h1 id="기초">기초</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt; //include &lt;= 헤더파일을 포함하는 문법,  stdio.h &lt;= printf 함수를 사용할 때 필요한 헤더파일
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">//main() &lt;= C 언어 프로그램에서 가장 처음 실행 되는 함수.</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span> <span class="c1">// ()가 붙은 단어를 함수라고 한다. ,\&lt;= 제어문자라고 한다.</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="s">"hello world!"</span><span class="p">);</span> <span class="c1">//서식 지정자 hello world 가 %s 인 서식지정자로 들어가게 됨.</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="s">"Hello"</span><span class="p">,</span><span class="s">"1234"</span><span class="p">);</span>
+	
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span><span class="p">;</span>
+
+	<span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">//변수의 값 할당</span>
+	<span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="n">num3</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">num11</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num22</span> <span class="o">=</span> <span class="mi">22</span><span class="p">,</span> <span class="n">num33</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num11</span><span class="p">,</span> <span class="n">num22</span><span class="p">,</span> <span class="n">num33</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="부호--정수-자료형">부호 + 정수 자료형</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main2</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// 부호 + 정수 자료형</span>
+	<span class="c1">//singned int = int &lt;= signed 생략 가능(-까지 포함 - 128 ~128) 1바이트, 8비트</span>
+	<span class="c1">//unsigned int = &lt;= unsigned 생략 불가(+만 0~255) 1바이트 8비트</span>
+	<span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">;</span> <span class="c1">//정수자료형</span>
+	<span class="kt">short</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">30000</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="kt">long</span> <span class="n">num5</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345678901234567890</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d %ld %lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num4</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span> <span class="c1">//char, short, int 는 %d를 사용 , long 은 %ld 를 사용</span>
+
+
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">;</span> <span class="c1">//정수자료형</span>
+	<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">30000</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">1234567890</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">num5</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345678901234567890</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u %u %u %lu %llu</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num4</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span> <span class="c1">//char, short, int 는 %u를 사용 , long 은 %lu 를 사용</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="오버플로우-언더플로우">오버플로우 언더플로우</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main4</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span> <span class="c1">//최대값이 127 결과는 -128</span>
+	<span class="kt">unsigned</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span> <span class="c1">//최대값이 255 결과는 0</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="최소값과-최대값-구하기헤더파일을-추가해야한다">최소값과 최대값 구하기(헤더파일을 추가해야한다)</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main5</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="n">CHAR_MIN</span><span class="p">;</span>
+	<span class="kt">short</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">SHRT_MIN</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="n">INT_MIN</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="n">num4</span> <span class="o">=</span> <span class="n">LONG_MIN</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="kt">long</span> <span class="n">num5</span> <span class="o">=</span> <span class="n">LLONG_MIN</span><span class="p">;</span>
+
+	<span class="c1">//최대값</span>
+	<span class="kt">char</span> <span class="n">num6</span> <span class="o">=</span> <span class="n">CHAR_MAX</span><span class="p">;</span>
+	<span class="kt">short</span> <span class="n">num7</span> <span class="o">=</span> <span class="n">SHRT_MAX</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num8</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="n">num9</span> <span class="o">=</span> <span class="n">LONG_MAX</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="kt">long</span> <span class="n">num10</span> <span class="o">=</span> <span class="n">LLONG_MAX</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d %ld %lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num4</span><span class="p">,</span> <span class="n">num5</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="실수형-변수-선언">실수형 변수 선언</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main6</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">float</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="p">;</span> <span class="c1">//소숫점 앞뒤에 0은 생략 가능</span>
+	<span class="kt">double</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">3867</span><span class="p">.</span><span class="mi">215820</span><span class="p">;</span>
+	<span class="kt">long</span> <span class="kt">double</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">9</span><span class="p">.</span><span class="mi">327513l</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f %f %Lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="문자-자료형">문자 자료형</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main7</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c2</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c, %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c1</span><span class="p">);</span> <span class="c1">//a, 97 &lt;= 아스키코드</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c, %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c2</span><span class="p">);</span> <span class="c1">//b, 98</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c, %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">c3</span><span class="p">,</span> <span class="n">c3</span><span class="p">);</span> <span class="c1">// , 0</span>
+
+	<span class="c1">//문자로 연산하기</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="sc">'a'</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="sc">'a'</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//b 98</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">97</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">97</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//b 98</span>
+
+	<span class="c1">//제어문자 사용하기</span>
+	<span class="kt">char</span> <span class="n">linefeed</span> <span class="o">=</span> <span class="sc">'\n'</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c%c%c%c"</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">linefeed</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">linefeed</span><span class="p">);</span> <span class="c1">//a </span>
+													<span class="c1">//b 로 출력</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

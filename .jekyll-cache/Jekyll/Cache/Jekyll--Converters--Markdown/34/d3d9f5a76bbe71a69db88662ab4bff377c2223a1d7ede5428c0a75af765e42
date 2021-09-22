@@ -1,0 +1,6 @@
+I"�<p>저장된 정보가 밖에 나올때 필터링해서 안보이게? 해주는 것
+(</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">sanitizeHtml</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">sanitize-html</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,17 @@
+I"p<h1 id="switch-분기문으로-다양한-조건-처리하기">switch 분기문으로 다양한 조건 처리하기</h1>
+<p>```c
+	// break 생략 응용
+	switch (num1)
+	{
+	case 1:
+	case 2:
+		printf(“1또는 2입니다 \n”);
+		break;
+	case 3:
+	case 4:
+		printf(“3또는 4입니다.\n”);
+	default:
+		printf(“default\n”); //break 생략 가능
+		break;
+	}</p>
+:ET

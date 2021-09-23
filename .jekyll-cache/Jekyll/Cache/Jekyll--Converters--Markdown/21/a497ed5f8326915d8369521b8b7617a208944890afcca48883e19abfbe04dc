@@ -1,5 +1,0 @@
-I"�<h1 id="goto로-프로그램의-흐름을-원하는-대로-바꾸기">goto로 프로그램의 흐름을 원하는 대로 바꾸기</h1>
-<p>```c
-int main28() {
-	//define _CRT_SECURES_NO_WARNINGS</p>
-:ET

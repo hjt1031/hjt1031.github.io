@@ -1,0 +1,574 @@
+I"p<h1 id="구조체-사용하기-struct로-정의">구조체 사용하기 (struct로 정의)</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//관련 정보를 하나의 의미로 묶을 때 사용  한다.</span>
+<span class="c1">//기본 자료형 (char, int, float)등을 조합하여 만든 자료형을 파생형 이라고 한다.</span>
+<span class="k">struct</span> <span class="n">Person</span><span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="c1">//typedef 로 키워드 생략 하기</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">_Person</span><span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">}</span> <span class="n">Person</span>
+
+<span class="c1">//익명 구조체 사용하기</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span><span class="mi">0</span>
+<span class="p">}</span> <span class="n">Person</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="n">p1</span><span class="p">;</span>
+	
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">,</span><span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"주소"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">);</span>
+	
+	<span class="c1">//typedef 로 키워드 생략 하기</span>
+	<span class="n">Person</span> <span class="n">p1</span><span class="p">;</span>
+	
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">,</span><span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"주소"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">);</span>
+	
+	<span class="c1">//익명 구조체 사용하기</span>
+	<span class="n">Person</span> <span class="n">p1</span><span class="p">;</span>
+	
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">,</span><span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"주소"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="구조체-포인터로-선언하고-메모리-할당하기">구조체 포인터로 선언하고 메모리 할당하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Person</span><span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="c1">//구조체 별칭으로 포인터를 선언하고 메모리 할당하기</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">_Person</span><span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">}</span> <span class="n">Person</span><span class="p">;</span>
+
+<span class="c1">//구조체 포인터에 구조체 변수의 주소 할당하기</span>
+<span class="k">struct</span> <span class="n">_Person</span><span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Person</span><span class="p">));</span>
+	
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p1</span><span class="o">-&gt;</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름 %s"</span><span class="p">,</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이 %d"</span><span class="p">,</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"주소 %s"</span><span class="p">,</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">);</span>
+	
+	<span class="n">free</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+	
+	<span class="c1">//구조체 별칭으로 포인터를 선언하고 메모리 할당하기</span>
+	
+	<span class="n">Person</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Person</span><span class="p">));</span>
+	
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p1</span><span class="o">-&gt;</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름 %s"</span><span class="p">,</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이 %d"</span><span class="p">,</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"주소 %s"</span><span class="p">,</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">);</span>
+	
+	<span class="n">free</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+	
+	<span class="c1">//구조체 포인터에 구조체 변수의 주소 할당하기</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="n">p1</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+	
+	<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">p1</span><span class="p">;</span>
+	
+	<span class="n">ptr</span><span class="o">-&gt;</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이 %d"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이 %d"</span><span class="p">,</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="두-점-사이의-거리-구하기">두 점 사이의 거리 구하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Point2D</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="n">p1</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="n">p2</span><span class="p">;</span>
+	
+	<span class="n">p1</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	
+	<span class="n">p2</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+	<span class="n">p2</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d%d"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">);</span> <span class="c1">// 30 20</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d%d"</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">);</span> <span class="c1">// 60 50</span>
+	
+	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">p2</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="c1">//선 a의 길이</span>
+	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">p2</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="c1">//선 b의 길이</span>
+
+	<span class="c1">//sqrt (루트) #include&lt;math.h&gt;</span>
+	<span class="c1">//doublde c = sqrt((a*a) + (b*b)); //거듭제곱</span>
+	<span class="n">doublde</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span> <span class="c1">//거듭제곱</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">c</span><span class="p">);</span> <span class="c1">//42.426407</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//구조체 멤버 정렬 사용하기</span>
+<span class="k">struct</span> <span class="n">PacketHeader</span><span class="p">{</span>
+	<span class="kt">char</span> <span class="n">flags</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">seq</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//구조체 정렬 크기 조절하기</span>
+<span class="cp">#pragma pack(push,1) //1바이트 크기로 정렬 함.
+</span><span class="k">struct</span> <span class="n">PacketHeader</span><span class="p">{</span>
+	<span class="kt">char</span> <span class="n">flags</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">seq</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#pragma pack(pop,1)
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	
+	<span class="k">struct</span> <span class="n">PacketHeader</span> <span class="n">header</span><span class="p">;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">header</span><span class="p">.</span><span class="n">flags</span><span class="p">));</span> <span class="c1">//1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">header</span><span class="p">.</span><span class="n">seq</span><span class="p">));</span> <span class="c1">//4</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">header</span><span class="p">));</span> <span class="c1">//8</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">PacketHeader</span><span class="p">));</span><span class="c1">//8</span>
+	
+	<span class="c1">// include &lt;stddef.h&gt; =&gt; 메모리 위치 확인 offsetof 함수로</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">offsetof</span><span class="p">(</span><span class="k">struct</span> <span class="n">PacketHeader</span><span class="p">,</span> <span class="n">flags</span><span class="p">));</span><span class="c1">//0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">offsetof</span><span class="p">(</span><span class="k">struct</span> <span class="n">PacketHeader</span><span class="p">,</span> <span class="n">seq</span><span class="p">));</span><span class="c1">//4</span>
+	
+	
+	<span class="c1">//구조체 정렬 크기 조절하기</span>
+	<span class="k">struct</span> <span class="n">PacketHeader</span> <span class="n">header</span><span class="p">;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">header</span><span class="p">.</span><span class="n">flags</span><span class="p">));</span> <span class="c1">// 1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">header</span><span class="p">.</span><span class="n">seq</span><span class="p">));</span> <span class="c1">// 4</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">header</span><span class="p">));</span> <span class="c1">// 5</span>
+	<span class="c1">// include &lt;stddef.h&gt;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">offsetof</span><span class="p">(</span><span class="k">struct</span> <span class="n">PacketHeader</span><span class="p">,</span> <span class="n">flags</span><span class="p">));</span> <span class="c1">// 0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">offsetof</span><span class="p">(</span><span class="k">struct</span> <span class="n">PacketHeader</span><span class="p">,</span> <span class="n">seq</span><span class="p">));</span> <span class="c1">// 1</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<h1 id="구조체와-메모리를-간단하게-0으로-설정하기">구조체와 메모리를 간단하게 0으로 설정하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Point2D</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="n">p1</span><span class="p">;</span>
+	
+	<span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">);</span> <span class="c1">// 0 0</span>
+	
+	<span class="c1">//다른방법</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	
+	<span class="n">memset</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span> <span class="c1">// 0</span>
+	
+	<span class="n">free</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+	
+	<span class="c1">//구조체와 메모리 복사하기</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="n">p1</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="n">p2</span><span class="p">;</span>
+	
+	<span class="n">p1</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	
+	<span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+	
+	<span class="c1">//메모리 복사 다른방법 1</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	
+	<span class="n">p1</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">p1</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	
+	<span class="n">memcpy</span><span class="p">(</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p2</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">p2</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span>
+	
+	<span class="n">free</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+	
+	<span class="c1">//메모리 복사 다른방법 2</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="n">p2</span><span class="p">;</span>
+	
+	<span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point2D</span><span class="p">));</span>
+	
+	<span class="n">free</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="구조체-배열-선언하기">구조체 배열 선언하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Point2D</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="n">Point3D</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main34</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Point2D</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+	<span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">x</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">y</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+	<span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+	<span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">y</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">y</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">y</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">y</span><span class="p">);</span>
+
+	<span class="c1">//구조체 포인터 배열 선언</span>
+	<span class="k">struct</span> <span class="n">Point3D</span> <span class="o">*</span><span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point3D</span><span class="o">*</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point3D</span><span class="p">));</span>
+	<span class="p">}</span>
+
+	<span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+	<span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+	<span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Point3D</span><span class="o">*</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="공용체-사용하기">공용체 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">union</span> <span class="n">Box</span> <span class="p">{</span>
+	<span class="kt">short</span> <span class="n">candy</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">snack</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">doll</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+<span class="p">};</span>
+<span class="k">union</span> <span class="n">Data</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">c1</span><span class="p">;</span>
+	<span class="kt">short</span> <span class="n">num1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main35</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//구조체는 각 한자리씩 차지하지만 공용체는 가장큰 메모리를 공유한다.</span>
+
+	<span class="k">union</span> <span class="n">Box</span> <span class="n">b1</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">b1</span><span class="p">));</span> <span class="c1">// 8</span>
+
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">b1</span><span class="p">.</span><span class="n">doll</span><span class="p">,</span> <span class="s">"bear"</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">b1</span><span class="p">.</span><span class="n">candy</span><span class="p">);</span> <span class="c1">// 25954</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">b1</span><span class="p">.</span><span class="n">snack</span><span class="p">);</span> <span class="c1">// 4464428256607..... </span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">b1</span><span class="p">.</span><span class="n">doll</span><span class="p">);</span> <span class="c1">// bear</span>
+	<span class="c1">//가장큰 곳 에 할당을 해서 한꺼번에 값 을 넣으면 안된다. 따로따로 진행해야함</span>
+
+	<span class="n">b1</span><span class="p">.</span><span class="n">candy</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">b1</span><span class="p">.</span><span class="n">candy</span><span class="p">);</span>
+
+	<span class="n">b1</span><span class="p">.</span><span class="n">snack</span> <span class="o">=</span> <span class="mi">60000</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">b1</span><span class="p">.</span><span class="n">snack</span><span class="p">);</span>
+
+	<span class="c1">//공용체와 엔디언</span>
+	<span class="k">union</span> <span class="n">Data</span> <span class="n">d1</span><span class="p">;</span>
+
+	<span class="n">d1</span><span class="p">.</span><span class="n">num2</span> <span class="o">=</span> <span class="mh">0x12345678</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"0x%x"</span><span class="p">,</span> <span class="n">d1</span><span class="p">.</span><span class="n">num2</span><span class="p">);</span> <span class="c1">//0x12345678</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"0x%x"</span><span class="p">,</span> <span class="n">d1</span><span class="p">.</span><span class="n">num1</span><span class="p">);</span> <span class="c1">//0x5678</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"0x%x"</span><span class="p">,</span> <span class="n">d1</span><span class="p">.</span><span class="n">c1</span><span class="p">);</span> <span class="c1">//0x78 1byte 만 나옴(리틀 엔디언) 메모리에 거꾸로 저장되어있음.</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="c1">//공용체 포인터 선언하고 메모리 할당</span>
+	<span class="k">union</span> <span class="n">Box</span><span class="o">*</span> <span class="n">t1</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">union</span> <span class="n">Box</span><span class="p">));</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">union</span> <span class="n">Box</span><span class="p">));</span>
+
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">t1</span><span class="o">-&gt;</span><span class="n">doll</span><span class="p">,</span> <span class="s">"bear"</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">t1</span><span class="o">-&gt;</span><span class="n">candy</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">t1</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="구조체와-공용체-활용하기">구조체와 공용체 활용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Phone</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">areacode</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">number</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">Phone</span> <span class="n">phone</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">Vector3</span> <span class="p">{</span>
+	<span class="k">union</span> <span class="p">{</span>
+		<span class="k">struct</span> <span class="p">{</span>
+			<span class="kt">float</span> <span class="n">x</span><span class="p">;</span>
+			<span class="kt">float</span> <span class="n">y</span><span class="p">;</span>
+			<span class="kt">float</span> <span class="n">z</span><span class="p">;</span>
+		<span class="p">};</span>
+		<span class="kt">float</span> <span class="n">v</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+	<span class="p">};</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main36</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="n">p1</span><span class="p">;</span>
+
+	<span class="n">p1</span><span class="p">.</span><span class="n">phone</span><span class="p">.</span><span class="n">areacode</span> <span class="o">=</span> <span class="mi">82</span><span class="p">;</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">phone</span><span class="p">.</span><span class="n">number</span> <span class="o">=</span> <span class="mi">3045671234</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %llu</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">phone</span><span class="p">.</span><span class="n">areacode</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">phone</span><span class="p">.</span><span class="n">number</span><span class="p">);</span>
+
+	<span class="c1">//구조체 안에 구조체 메모리 할당</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Person</span><span class="p">));</span>
+
+	<span class="n">p2</span><span class="o">-&gt;</span><span class="n">phone</span><span class="p">.</span><span class="n">areacode</span> <span class="o">=</span> <span class="mi">82</span><span class="p">;</span>
+	<span class="n">p2</span><span class="o">-&gt;</span><span class="n">phone</span><span class="p">.</span><span class="n">number</span> <span class="o">=</span> <span class="mi">3045671234</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %llu</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p2</span><span class="o">-&gt;</span><span class="n">phone</span><span class="p">.</span><span class="n">areacode</span><span class="p">,</span> <span class="n">p2</span><span class="o">-&gt;</span><span class="n">phone</span><span class="p">.</span><span class="n">number</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+
+	<span class="c1">//익명 구조체와 익명 공용체 활용하기</span>
+	<span class="k">struct</span> <span class="n">Vector3</span> <span class="n">pos</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">pos</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f %f %f"</span><span class="p">,</span> <span class="n">pos</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">pos</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="구조체-비트필드-사용하기">구조체 비트필드 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Flags</span> <span class="p">{</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//1비트</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">b</span> <span class="o">:</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">//3비트</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">c</span> <span class="o">:</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">//7비트</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">Flags2</span> <span class="p">{</span>
+	<span class="k">union</span> <span class="p">{</span>
+		<span class="k">struct</span> <span class="p">{</span>
+			<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">a</span> <span class="o">:</span> <span class="mi">3</span><span class="p">;</span>
+			<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">b</span> <span class="o">:</span> <span class="mi">2</span><span class="p">;</span>
+			<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">c</span> <span class="o">:</span> <span class="mi">7</span><span class="p">;</span>
+			<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">d</span> <span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
+		<span class="p">};</span>
+		<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">e</span><span class="p">;</span>
+	<span class="p">};</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main37</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Flags</span> <span class="n">f1</span><span class="p">;</span>
+
+	<span class="n">f1</span><span class="p">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="n">f1</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+	<span class="n">f1</span><span class="p">.</span><span class="n">c</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">f1</span><span class="p">.</span><span class="n">a</span><span class="p">);</span> <span class="c1">// 1</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">f1</span><span class="p">.</span><span class="n">b</span><span class="p">);</span> <span class="c1">// 7</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">f1</span><span class="p">.</span><span class="n">c</span><span class="p">);</span> <span class="c1">// 127</span>
+
+	<span class="c1">//비트필드와 공용체 사용하기</span>
+	<span class="k">struct</span> <span class="n">Flags2</span> <span class="n">f2</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="p">};</span> <span class="c1">//0으로 초기화</span>
+	
+	<span class="n">f2</span><span class="p">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	<span class="n">f2</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="n">f2</span><span class="p">.</span><span class="n">c</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
+	<span class="n">f2</span><span class="p">.</span><span class="n">d</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">f2</span><span class="p">.</span><span class="n">e</span><span class="p">);</span> <span class="c1">//64020</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h1 id="열거형-사용하기">열거형 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="n">DayOfWeek</span> <span class="p">{</span>
+	<span class="n">Sunday</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+	<span class="n">Monday</span><span class="p">,</span>
+	<span class="n">Tuesday</span><span class="p">,</span>
+	<span class="n">Wednesday</span><span class="p">,</span>
+	<span class="n">Thursday</span><span class="p">,</span>
+	<span class="n">Friday</span><span class="p">,</span>
+	<span class="n">Saturday</span>
+<span class="p">};</span>
+
+<span class="k">enum</span> <span class="n">LuxSkill</span> <span class="p">{</span>
+	<span class="n">LightBinding</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+	<span class="n">PrismaticBarrier</span><span class="p">,</span>
+	<span class="n">LucentSingularity</span><span class="p">,</span>
+	<span class="n">FinalSpark</span>
+<span class="p">};</span>
+
+<span class="k">typedef</span> <span class="k">enum</span> <span class="n">_DayOfWeek</span> <span class="p">{</span>
+	<span class="n">Sunday</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+	<span class="n">Monday</span><span class="p">,</span>
+	<span class="n">Tuesday</span><span class="p">,</span>
+	<span class="n">Wednesday</span><span class="p">,</span>
+	<span class="n">Thursday</span><span class="p">,</span>
+	<span class="n">Friday</span><span class="p">,</span>
+	<span class="n">Saturday</span><span class="p">,</span>
+	<span class="n">DayOfWeekCount</span>
+<span class="p">}</span> <span class="n">DayOfWeek</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main38</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//열거형은 정수형 상수에 이름을 붙여서 코드를 이해하기 쉽게해준다.</span>
+
+	<span class="k">enum</span> <span class="n">DayOfWeek</span> <span class="n">week</span><span class="p">;</span>
+
+	<span class="n">week</span> <span class="o">=</span> <span class="n">Tuesday</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">week</span><span class="p">);</span> <span class="c1">// 2</span>
+
+	<span class="c1">//열거형 switch 문 사용하기</span>
+	<span class="k">enum</span> <span class="n">LuxSkill</span> <span class="n">skill</span><span class="p">;</span>
+
+	<span class="n">skill</span> <span class="o">=</span> <span class="n">LightBinding</span><span class="p">;</span>
+
+	<span class="k">switch</span> <span class="p">(</span><span class="n">skill</span><span class="p">)</span>
+	<span class="p">{</span>
+	<span class="k">case</span> <span class="n">LightBinding</span> <span class="p">:</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"LightBinding</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span>  <span class="n">PrismaticBarrier</span><span class="p">:</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"PrismaticBarrier</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="n">LucentSingularity</span><span class="p">:</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"LucentSingularity</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="n">FinalSpark</span><span class="p">:</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"FinalSpark</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="k">default</span> <span class="o">:</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">//열거형을 for에 사용하기</span>
+	<span class="k">for</span> <span class="p">(</span><span class="n">DayOfWeek</span> <span class="n">i</span> <span class="o">=</span> <span class="n">Sunday</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">DayOfWeekCount</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="기본-자료형-변환하기">기본 자료형 변환하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Data</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">c1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main39</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num3</span><span class="p">;</span>
+
+	<span class="n">num3</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f"</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span> <span class="c1">// 4.0</span>
+
+	<span class="n">num3</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f"</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span> <span class="c1">//4.571429</span>
+
+	<span class="c1">//포인터 변환하기</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+	<span class="kt">char</span><span class="o">*</span> <span class="n">cPtr</span><span class="p">;</span>
+
+	<span class="o">*</span><span class="n">numPtr</span> <span class="o">=</span> <span class="mh">0x12345678</span><span class="p">;</span>
+
+	<span class="n">cPtr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">numPtr</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"0x%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">cPtr</span><span class="p">);</span> <span class="c1">//0x78</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">numPtr</span><span class="p">);</span>
+
+	<span class="c1">//void 포인터 변환하기</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="n">f</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+	<span class="kt">void</span><span class="o">*</span> <span class="n">ptr</span><span class="p">;</span> <span class="c1">//자료형이 없어 앞에 자료형을 안붙이면 컴파일에러남</span>
+
+	<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span><span class="p">);</span> <span class="c1">// 10</span>
+
+	<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span><span class="p">);</span> <span class="c1">// 3.5</span>
+
+	<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c1</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span><span class="p">);</span> <span class="c1">// a</span>
+
+	<span class="c1">//구조체 포인터 변환</span>
+
+	<span class="k">struct</span> <span class="n">Data</span><span class="o">*</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Data</span><span class="p">));</span>
+	<span class="kt">void</span><span class="o">*</span> <span class="n">ptr</span><span class="p">;</span>
+
+	<span class="n">d1</span><span class="o">-&gt;</span><span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+	<span class="n">d1</span><span class="o">-&gt;</span><span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">ptr</span> <span class="o">=</span> <span class="n">d1</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="p">((</span><span class="k">struct</span> <span class="n">Data</span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">c1</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="p">((</span><span class="k">struct</span> <span class="n">Data</span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">num1</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">d1</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

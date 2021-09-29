@@ -1,0 +1,13 @@
+I"<h1 id="포인터-연산-사용하기">포인터 연산 사용하기</h1>
+<p>```c
+struct Data {
+	int num1;
+	int num2;
+};
+int main40() {
+	//포인터 연산으로 메모리 주소 조작하기
+	int numArr[5] = { 11,22,33,44,55 };
+	int* numPtrA;
+	int* numPtrB;
+	int* numPtrC;</p>
+:ET

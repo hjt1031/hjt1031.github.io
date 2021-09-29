@@ -1,0 +1,140 @@
+I"g<<h1 id="goto로-프로그램의-흐름을-원하는-대로-바꾸기">goto로 프로그램의 흐름을 원하는 대로 바꾸기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main28</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//define _CRT_SECURES_NO_WARNINGS</span>
+
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+
+	<span class="n">scnaf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="k">goto</span> <span class="n">ONE</span><span class="p">;</span>
+	<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+		<span class="k">goto</span> <span class="n">TWO</span><span class="p">;</span>
+	<span class="k">else</span>
+		<span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+
+<span class="nl">ONE:</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"1입니다."</span><span class="p">);</span>
+	<span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+
+<span class="nl">TWO:</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"2입니다."</span><span class="p">);</span>
+	<span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+
+<span class="nl">EXIT:</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+
+	<span class="c1">//중첩 루프 빠져나오기</span>
+	<span class="c1">//#include &lt;stdbool.h&gt;</span>
+
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">bool</span> <span class="n">exitOuterLoop</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+				<span class="n">exitOuterLoop</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="n">num1</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">exitOuterLoop</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span>
+			<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+	<span class="c1">//goto 사용</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+				<span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="n">num1</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+<span class="nl">EXIT:</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+
+	<span class="c1">//goto와 에러 처리 패턴</span>
+
+	<span class="kt">int</span> <span class="n">gender</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="n">bool</span> <span class="n">isOwner</span><span class="p">;</span>
+
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">gender</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">age</span> <span class="p">,</span><span class="o">&amp;</span><span class="n">isOwner</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"안녕하세요</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"문을 연다.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">gender</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">isOwner</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">goto</span> <span class="n">EXIT</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="nl">EXIT:</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"안녕하세요.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"문을 닫는다."</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="fizzbuss-간단한-프로그래밍-문제">FizzBUss 간단한 프로그래밍 문제</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//1부터 100까지 숫자 출력</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="c1">//3의 배수일대와 5의 배수일때</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Fizz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Buzz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> 
+			<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="c1">//3과 5의 공배수</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"FizzBuzz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Fizz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Buzz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> 
+			<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="c1">//3과 5의 공배수 논리연산자를 사용하지 않고</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">15</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// 3과5의 공배수를 15</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"FizzBuzz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Fizz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Buzz</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">else</span> 
+			<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="c1">//코드 단축하기 (코드 골프)</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">?</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">?</span> <span class="s">"%d</span><span class="se">\n</span><span class="s">"</span> <span class="o">:</span> <span class="s">"Buzz</span><span class="se">\n</span><span class="s">"</span> <span class="o">:</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">?</span> <span class="s">"Fizz</span><span class="se">\n</span><span class="s">"</span> <span class="o">:</span> <span class="s">"FizzBuzz</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+	
+	<span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

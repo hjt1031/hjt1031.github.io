@@ -1,0 +1,27 @@
+I"�<h1 id="자연정렬">자연정렬</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">chap03</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringBinarySearch</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Scanner</span> <span class="n">stdIn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		
+		<span class="c1">//자바에서 사용하는 키워드입니다.</span>
+		<span class="nc">String</span><span class="o">[]</span> <span class="n">x</span> <span class="o">=</span> <span class="o">{</span>
+				<span class="s">"abstract"</span><span class="o">,</span> <span class="s">"assert"</span>
+		<span class="o">};</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"원하는 키워드를 입력하세요:"</span><span class="o">);</span>
+		
+		<span class="nc">String</span> <span class="n">ky</span> <span class="o">=</span> <span class="n">stdIn</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+		
+		<span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">binarySearch</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">ky</span><span class="o">);</span>	<span class="c1">//배열 x에서 값이 ky인 요소를 검색</span>
+		
+		<span class="k">if</span><span class="o">(</span><span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"해당키워드 없음"</span><span class="o">);</span>
+		<span class="k">else</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"해당키워드는 "</span> <span class="o">+</span> <span class="n">idx</span> <span class="o">+</span><span class="s">"에있음"</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+:ET

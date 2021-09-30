@@ -1,16 +1,0 @@
-I"I<p>nodejs 에서 가장많이 사용하는 프레임웤</p>
-
-<p>npm install express –save 으로 설치</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">express</span> <span class="o">=</span> <span class="n">require</span><span class="o">(</span><span class="err">'</span><span class="n">express</span><span class="err">'</span><span class="o">)</span> <span class="c1">//express 모듈을 load 해온다 const 는 상수 바뀌지않음.</span>
-<span class="kt">var</span> <span class="n">app</span> <span class="o">=</span> <span class="n">express</span><span class="o">()</span> <span class="c1">//express 호출 (함수)</span>
-
-<span class="n">app</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="sc">'/'</span> <span class="o">,</span> <span class="o">(</span><span class="n">req</span><span class="o">,</span> <span class="n">res</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">res</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="sc">'/'</span><span class="o">))</span><span class="c1">//첫번째 인자는 경로, 두번째는 접속했을때 호출될 함수가 표현되어있음.(라우터라 생각하면됨)</span>
-<span class="c1">//(라우팅라 생각하면됨(라우팅은 경로 즉 길을가고있는데 갈림길 이라 생각하면된다.))</span>
-<span class="n">app</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">page</span><span class="err">'</span><span class="o">,</span> <span class="n">function</span><span class="o">(</span><span class="n">req</span><span class="o">,</span> <span class="n">res</span><span class="o">){</span>
-  <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">page</span><span class="err">'</span><span class="o">);</span>
-<span class="o">})</span> <span class="c1">//위에 app.get 이랑 똑같은 로직, 위에께 최신 밑에께 구버전</span>
-
-<span class="n">app</span><span class="o">.</span><span class="na">listen</span><span class="o">(</span><span class="mi">3000</span><span class="o">,</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="n">console</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="err">'</span><span class="nc">Example</span> <span class="n">app</span> <span class="n">listening</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">3000</span><span class="o">!</span><span class="err">'</span><span class="o">))</span>
-</code></pre></div></div>
-:ET

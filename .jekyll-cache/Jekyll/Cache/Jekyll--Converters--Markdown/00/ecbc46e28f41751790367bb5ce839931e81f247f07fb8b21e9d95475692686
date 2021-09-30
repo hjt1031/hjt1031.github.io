@@ -1,0 +1,29 @@
+I"�<p>상위(부모) 컴포넌트에서 하위(자식) 컴포넌트에게 데이터를 전달 할때 사용</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Subject</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">(){</span> <span class="c1">//반드시 있어야함 class 안에 function 생략</span>
+    <span class="k">return</span><span class="p">(</span> <span class="c1">//하나의 최상위 태그만 써야한다.</span>
+        <span class="o">&lt;</span><span class="nx">header</span><span class="o">&gt;</span> 
+            <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>            <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">sub</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Subject</span> <span class="nx">title</span><span class="o">=</span><span class="dl">"</span><span class="s2">WEB</span><span class="dl">"</span> <span class="nx">sub</span><span class="o">=</span><span class="dl">"</span><span class="s2">world wide web!</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/Subject&gt;</span><span class="err"> 
+</span>      <span class="o">&lt;</span><span class="nx">Subject</span> <span class="nx">title</span><span class="o">=</span><span class="dl">"</span><span class="s2">React</span><span class="dl">"</span> <span class="nx">sub</span><span class="o">=</span><span class="dl">"</span><span class="s2">For UI</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/Subject</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Subject</span><span class="o">&gt;&lt;</span><span class="sr">/Subject</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">TOC</span><span class="o">&gt;&lt;</span><span class="sr">/TOC</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Content</span><span class="o">&gt;&lt;</span><span class="sr">/Content</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

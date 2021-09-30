@@ -1,0 +1,18 @@
+I"�<p>아래는 map()함수를 이용하여 numbers 배열의 값을 두배로 만든 후 map()에서 반환하는 새 배열을 doubled 변수에 할당하고 로그를 확인하는 코드입니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">doubled</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">number</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doubled</span><span class="p">);</span>
+</code></pre></div></div>
+<p>이 코드는 콘솔에 [2, 4, 6, 8, 10]을 출력합니다.</p>
+
+<p>React에서 배열을 엘리먼트 리스트로 만드는 방식은 이와 거의 동일 합니다.</p>
+
+<ol>
+  <li>크롤링이란?
+크롤링은 인터넷 상에 있는 불특정 웹 사이트를 방문해 어떤 링크에 어떤 정보가 있는지 수집하고 색인하는 즉, 검색 사이트의 봇(구글 봇)이 하는 행위</li>
+</ol>
+
+<p>2.스크래핑이란?
+스크래핑은 정해진 특정 웹사이트에서 특정 데이터를 추출하고 가공하는 작업으로 필요한 정보 만을 스크랩하는 행위 참고로 파싱은 스크래핑의 상위 개념 정도 아닐까 생각합니다.</p>
+:ET

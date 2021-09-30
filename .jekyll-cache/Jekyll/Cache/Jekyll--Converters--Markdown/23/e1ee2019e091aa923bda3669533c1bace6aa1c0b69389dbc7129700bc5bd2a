@@ -1,0 +1,407 @@
+I"b�<h1 id="포인터-연산-사용하기">포인터 연산 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Data</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main40</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//포인터 연산으로 메모리 주소 조작하기</span>
+	<span class="kt">int</span> <span class="n">numArr</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">11</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">55</span> <span class="p">};</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtrA</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtrB</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtrC</span><span class="p">;</span>
+
+	<span class="n">numPtrA</span> <span class="o">=</span> <span class="n">numArr</span><span class="p">;</span>
+
+	<span class="n">numPtrB</span> <span class="o">=</span> <span class="n">numPtrA</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="n">numPtrC</span> <span class="o">=</span> <span class="n">numPtrA</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtrA</span><span class="p">);</span> <span class="c1">//00D8FDB0</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtrB</span><span class="p">);</span> <span class="c1">//00D8FDB4 (22가 있는 곳)</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtrC</span><span class="p">);</span> <span class="c1">//00D8FDB8 4바이트 만큼 2번  순방향으로 이동 (33이있는 곳)</span>
+
+	<span class="n">numPtrA</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">numArr</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+	<span class="n">numPtrB</span> <span class="o">=</span> <span class="n">numPtrA</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="n">numPtrC</span> <span class="o">=</span> <span class="n">numPtrA</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtrA</span><span class="p">);</span> <span class="c1">//0076F858</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtrB</span><span class="p">);</span> <span class="c1">//0076F854</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtrC</span><span class="p">);</span> <span class="c1">//0076F850</span>
+
+	<span class="c1">//포인터 연산과 역참조 사용하기</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtrB</span><span class="p">);</span> <span class="c1">// 22</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtrC</span><span class="p">);</span> <span class="c1">// 11</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">numPtrB</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span> <span class="c1">// 22</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtrC</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// 12</span>
+
+	<span class="c1">//void 포인터로 포인터 연산하기</span>
+	<span class="kt">void</span><span class="o">*</span> <span class="n">ptr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="n">ptr</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//9424</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//941C</span>
+
+	<span class="kt">void</span><span class="o">*</span> <span class="n">ptr2</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="o">++</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span><span class="p">);</span> <span class="c1">//9424</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="o">--</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span><span class="p">);</span> <span class="c1">//9420</span>
+	 
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="p">((</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span><span class="p">)</span><span class="o">++</span><span class="p">);</span> <span class="c1">//9420</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p"</span><span class="p">,</span> <span class="p">((</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span><span class="p">)</span><span class="o">--</span><span class="p">);</span> <span class="c1">//9424</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+
+	<span class="c1">//구조체 포인터로 포인터 연산하기</span>
+	<span class="k">struct</span> <span class="n">Data</span> <span class="n">d</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">},{</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">},{</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">}</span> <span class="p">};</span>
+	<span class="k">struct</span> <span class="n">Data</span><span class="o">*</span> <span class="n">ptr</span><span class="p">;</span>
+
+	<span class="n">ptr</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">num1</span><span class="p">,</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">num2</span><span class="p">);</span><span class="c1">// 30, 40</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">num1</span><span class="p">,</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">num2</span><span class="p">);</span><span class="c1">// 50 ,60</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="hello-world-출력함수-만들기">hello world 출력함수 만들기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">hello</span><span class="p">();</span> <span class="c1">//함수 가 있다고 정의를 해줘야 에러가 나지 않음</span>
+<span class="kt">int</span> <span class="nf">main41</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">hello</span><span class="p">();</span>
+	<span class="c1">//hello 함수를 main 함수 밑에 사용하면 에러 발생 c언어 컴파일은 위에서부터 아래로 컴파일 하기 떄문</span>
+	<span class="c1">//그래서 함수 선언을 해야함</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">hello</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Hello world"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="함수에서-반환값-사용하기">함수에서 반환값 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">one</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">float</span> <span class="nf">realNumber</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="mi">1</span><span class="p">.</span><span class="mi">234567</span><span class="n">f</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">bool</span> <span class="nf">truth</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span><span class="o">*</span> <span class="nf">ten</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span> <span class="c1">//잘못 된 방법 malloc 함수를 사용해야함.</span>
+
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+
+	<span class="o">*</span><span class="n">numPtr</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="n">numPtr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="o">*</span> <span class="nf">allocMemory</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">void</span><span class="o">*</span> <span class="n">ptr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="n">Person</span> <span class="nf">getPerson</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="k">struct</span> <span class="n">Person</span> <span class="n">p</span><span class="p">;</span>
+
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">address</span><span class="p">,</span> <span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="n">p</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main42</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+
+	<span class="n">num1</span> <span class="o">=</span> <span class="n">one</span><span class="p">();</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">one</span><span class="p">());</span> <span class="c1">//동일하다</span>
+
+	<span class="kt">float</span> <span class="n">num1</span><span class="p">;</span>
+	<span class="n">bool</span> <span class="n">b1</span><span class="p">;</span>
+
+	<span class="n">num1</span> <span class="o">=</span> <span class="n">realNumber</span><span class="p">();</span>
+	<span class="n">b1</span> <span class="o">=</span> <span class="n">truth</span><span class="p">();</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span>
+
+	<span class="c1">//포인터 반환하기</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr</span><span class="p">;</span>
+
+	<span class="n">numPtr</span> <span class="o">=</span> <span class="n">ten</span><span class="p">();</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtr</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">numPtr</span><span class="p">);</span>
+
+	<span class="c1">// void포인터 반환하기</span>
+	<span class="kt">char</span><span class="o">*</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">allocMemory</span><span class="p">();</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="s">"Hello, world"</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s1</span><span class="p">);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span>
+
+	<span class="kt">int</span><span class="o">*</span> <span class="n">numPtr1</span> <span class="o">=</span> <span class="n">allocMemory</span><span class="p">();</span>
+	<span class="n">numPtr1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">numPtr1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numPtr1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">numPtr1</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="c1">//10 ,20 출력</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">numPtr1</span><span class="p">);</span>
+
+	<span class="c1">//구조체와 구조체 포인터 반환하기</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="n">p1</span><span class="p">;</span>
+
+	<span class="n">p1</span> <span class="o">=</span> <span class="n">getPerson</span><span class="p">();</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름 : %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이 : %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"주소 : %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="함수에서-매개변수-사용하기">함수에서 매개변수 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">helloNumber</span><span class="p">(</span><span class="kt">int</span> <span class="n">num1</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"hello, %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main43</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="n">helloNumber</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// Hello, 10</span>
+	<span class="n">helloNumber</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span> <span class="c1">// Hello, 20</span>
+
+
+	<span class="c1">//덧셈 함수 사용하기</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+
+	<span class="n">num1</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="함수에서-포인터-매개변수-사용하기">함수에서 포인터 매개변수 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kt">void</span> <span class="nf">swapNumber</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">second</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+
+	<span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">first</span><span class="p">;</span>
+	<span class="o">*</span><span class="n">first</span> <span class="o">=</span> <span class="o">*</span><span class="n">second</span><span class="p">;</span>
+	<span class="o">*</span><span class="n">second</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">enum</span> <span class="n">TYPE</span> <span class="p">{</span>
+	<span class="n">TYPE_CHAR</span><span class="p">,</span>
+	<span class="n">TYPE_INT</span><span class="p">,</span>
+	<span class="n">TYPE_FLOAT</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">swapValue</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">ptr1</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">ptr2</span><span class="p">,</span> <span class="k">enum</span> <span class="n">TYPE</span> <span class="n">t</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">switch</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span>
+	<span class="p">{</span>
+	<span class="k">case</span> <span class="n">TYPE_CHAR</span> <span class="p">:</span>
+	<span class="p">{</span>
+		<span class="kt">char</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">ptr1</span><span class="p">;</span>
+		<span class="o">*</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">ptr1</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span><span class="p">;</span>
+		<span class="o">*</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">case</span> <span class="n">TYPE_INT</span> <span class="p">:</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr1</span><span class="p">;</span>
+		<span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr1</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span><span class="p">;</span>
+		<span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">case</span> <span class="n">TYPE_FLOAT</span> <span class="p">:</span>
+	<span class="p">{</span>
+		<span class="kt">float</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">ptr1</span><span class="p">;</span>
+		<span class="o">*</span><span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">ptr1</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span><span class="p">;</span>
+		<span class="o">*</span><span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">ptr2</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">allocMemory</span><span class="p">(</span><span class="kt">void</span><span class="o">**</span> <span class="n">ptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">helloString</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">s1</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s1</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main44</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+	<span class="n">swapNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="n">num1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">//20 10 출력</span>
+
+	<span class="c1">//void 포인터 매개변수 </span>
+	<span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">c2</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+	<span class="n">swapValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">c1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c2</span><span class="p">,</span> <span class="n">TYPE_CHAR</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c %c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">);</span> <span class="c1">// b a</span>
+
+	<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+	<span class="n">swapValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">num1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">,</span> <span class="n">TYPE_INT</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 20 10</span>
+
+	<span class="kt">float</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">1234567</span><span class="n">f</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">7</span><span class="p">.</span><span class="mi">654321</span><span class="n">f</span><span class="p">;</span>
+	<span class="n">swapValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">num3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num4</span><span class="p">,</span> <span class="n">TYPE_FLOAT</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%c %c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">// 7.654321 , 1.234567</span>
+
+	<span class="c1">//이중포인터 매개변수 사용하기</span>
+	<span class="kt">long</span> <span class="kt">long</span><span class="o">*</span> <span class="n">numPtr</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+	<span class="n">allocMemory</span><span class="p">(</span><span class="o">&amp;</span><span class="n">numPtr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">));</span>
+
+	<span class="o">*</span><span class="n">numPtr</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%lld</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">numPtr</span><span class="p">);</span> <span class="c1">//10</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">numPtr</span><span class="p">);</span>
+
+
+	<span class="c1">//문자열 매개변수 사용하기</span>
+	<span class="kt">char</span> <span class="n">s1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="s">"world!"</span><span class="p">;</span>
+	<span class="n">helloString</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span>
+	<span class="n">helloString</span><span class="p">(</span><span class="s">"WORLD"</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="배열-매개변수-사용하기">배열 매개변수 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">printfArray</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">count</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">printf2Darray</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[][</span><span class="mi">5</span><span class="p">],</span> <span class="kt">int</span> <span class="n">col</span><span class="p">,</span> <span class="kt">int</span> <span class="n">row</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">col</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+		<span class="p">}</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main45</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="kt">int</span> <span class="n">numArr</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span> <span class="p">};</span>
+
+	<span class="n">printfArray</span><span class="p">(</span><span class="n">numArr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">numArr</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+
+	<span class="c1">//2차원 배열 매개변수로 사용하기</span>
+	<span class="kt">int</span> <span class="n">numArr</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">},</span>
+		<span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">}</span>
+	<span class="p">};</span>
+
+	<span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">numArr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+
+	<span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">numArr</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">numArr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+	<span class="n">printf2DArray</span><span class="p">(</span><span class="n">numArr</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="구조체-매개변수-사용하기">구조체 매개변수 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">};</span>
+<span class="c1">//void printPerson(struct Person p) {</span>
+<span class="c1">//	printf("이름 : %s", p.name);</span>
+<span class="c1">//	printf("나이 : %d", p.age);</span>
+<span class="c1">//	printf("이름 : %s", p.address);</span>
+<span class="c1">//}</span>
+<span class="kt">void</span> <span class="nf">printPerson</span><span class="p">(</span><span class="k">struct</span> <span class="n">Person</span><span class="o">*</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="s">"고길동"</span><span class="p">);</span>
+	<span class="n">p</span><span class="o">-&gt;</span><span class="n">age</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">,</span> <span class="s">"서울시 서초구 반포동"</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main46</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">struct</span> <span class="n">Person</span> <span class="n">p1</span><span class="p">;</span>
+
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">,</span> <span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+
+	<span class="n">printPerson</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+
+	<span class="c1">//구조체 포인터 매개변수로 사용하기</span>
+
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s">"홍길동"</span><span class="p">);</span>
+	<span class="n">p1</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">,</span> <span class="s">"서울시 용산구 한남동"</span><span class="p">);</span>
+
+	<span class="n">setPerson</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p1</span><span class="p">);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름 : %s"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"나이 : %d"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"이름 : %s"</span><span class="p">,</span> <span class="n">p1</span><span class="p">.</span><span class="n">address</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//가변 인자 함수 만들기</span>
+<span class="kt">void</span> <span class="nf">printNumbers</span><span class="p">(</span><span class="kt">int</span> <span class="n">args</span><span class="p">,</span> <span class="p">...)</span> 
+<span class="p">{</span>
+	<span class="c1">//... 으로 들어온 가변인자를 사용하려면 include &lt;stdarg.h&gt; 파일의 매크로 사용</span>
+	<span class="c1">// va_list : 가변 인자 목록. 가변 인자의 메모리 주소를 저장하는 포인터</span>
+	<span class="c1">// va_start : 가변 인자를 가져올 수 있도록 포인터를 설정</span>
+	<span class="c1">// va_arg : 가변 인자 포인터에서 특정 자료형 크기만큼 값을 가져옴</span>
+	<span class="c1">// va_end : 가변 인자 처리가 끝났을 때 포인터를 NULL로 초기화</span>
+	<span class="kt">va_list</span> <span class="n">ap</span><span class="p">;</span> 
+	<span class="n">va_start</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span> <span class="c1">//가변 인자를</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">va_arg</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">va_end</span><span class="p">(</span><span class="n">ap</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main47</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">printNumbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+	<span class="n">printNumbers</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+	<span class="n">printNumbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+	<span class="n">printNumbers</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

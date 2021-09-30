@@ -689,9 +689,9 @@ var store = [{
         "url": "http://localhost:4000/c11/",
         "teaser": null
       },{
-        "title": "[c]기초11-포인터연산&함수",
+        "title": "[c]기초12-포인터연산&함수 &매개변수(가변인자)",
         "excerpt":"포인터 연산 사용하기 struct Data { int num1; int num2; }; int main40() { //포인터 연산으로 메모리 주소 조작하기 int numArr[5] = { 11,22,33,44,55 }; int* numPtrA; int* numPtrB; int* numPtrC; numPtrA = numArr; numPtrB = numPtrA + 1; numPtrC = numPtrA + 2; printf(\"%p\\n\", numPtrA); //00D8FDB0 printf(\"%p\\n\", numPtrB); //00D8FDB4...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/c11/",
+        "url": "http://localhost:4000/c12/",
         "teaser": null
       }]

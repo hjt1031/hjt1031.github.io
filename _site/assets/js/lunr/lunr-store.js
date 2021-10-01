@@ -694,4 +694,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c12/",
         "teaser": null
+      },{
+        "title": "[c]기초13 - 함수포인터 & 파일생성",
+        "excerpt":"함수 포인터 사용하기 void hello() { printf(\"Hello world\\n\"); } void bonjour() { printf(\"bonjour le monde!\\n\"); } int add(int a, int b) { return a + b; } int mul(int a, int b) { return a * b; } int main47() { printf(\"%p\\n\", hello); //메모리 주소 출력됨. void(*fp)(); fp = hello;...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c13/",
+        "teaser": null
       }]

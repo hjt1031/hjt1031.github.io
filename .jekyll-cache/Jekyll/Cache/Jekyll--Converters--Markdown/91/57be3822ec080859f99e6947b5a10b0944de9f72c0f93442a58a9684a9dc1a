@@ -1,0 +1,136 @@
+I"�2<h1 id="함수-포인터-사용하기">함수 포인터 사용하기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">hello</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Hello world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">bonjour</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"bonjour le monde!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">mul</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main47</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">hello</span><span class="p">);</span> <span class="c1">//메모리 주소 출력됨.</span>
+
+	<span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">fp</span><span class="p">)();</span>
+
+	<span class="n">fp</span> <span class="o">=</span> <span class="n">hello</span><span class="p">;</span>
+	<span class="n">fp</span><span class="p">();</span>
+
+	<span class="n">fp</span> <span class="o">=</span> <span class="n">bonjour</span><span class="p">;</span>
+	<span class="n">fp</span><span class="p">();</span>
+
+	<span class="c1">//반환 값과 매개변수가 있는 함수 포인터 생성</span>
+	<span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">fp</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span> <span class="c1">//반환값 자료형(함수포인터이름)(int형 매개변수 두개)</span>
+
+	<span class="n">fp</span> <span class="o">=</span> <span class="n">add</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+
+	<span class="n">fp</span> <span class="o">=</span> <span class="n">mul</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">));</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="함수-포인터-활용하기배열">함수 포인터 활용하기(배열)</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">sub</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">mul</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">div</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">struct</span> <span class="n">Calc</span> <span class="p">{</span>
+	<span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">fp</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">executer</span><span class="p">(</span><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">fp</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">getAdd</span><span class="p">())(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">add</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main48</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">funcNumber</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">fp</span><span class="p">[</span><span class="mi">4</span><span class="p">])(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+	<span class="n">fp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">add</span><span class="p">;</span>
+	<span class="n">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">;</span>
+	<span class="n">fp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">mul</span><span class="p">;</span>
+	<span class="n">fp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">div</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"함수 번호와 계산할 값을 입력하세요:"</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">funcNumber</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">);</span>
+
+	<span class="c1">//switch (funcNumber)</span>
+	<span class="c1">//{</span>
+	<span class="c1">//case 0:</span>
+	<span class="c1">//	fp = add;</span>
+	<span class="c1">//	break;</span>
+	<span class="c1">//case 1:</span>
+	<span class="c1">//	fp = sub;</span>
+	<span class="c1">//	break;</span>
+	<span class="c1">//case 2:</span>
+	<span class="c1">//	fp = mul;</span>
+	<span class="c1">//	break;</span>
+	<span class="c1">//case 3:</span>
+	<span class="c1">//	fp = div;</span>
+	<span class="c1">//	break;</span>
+	<span class="c1">//}</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fp</span><span class="p">[</span><span class="n">funcNumber</span><span class="p">](</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">));</span>
+
+	<span class="c1">//함수 포인터를 구조체 멤버로 사용하기</span>
+	<span class="k">struct</span> <span class="n">Calc</span> <span class="n">c</span><span class="p">;</span>
+	<span class="n">c</span><span class="p">.</span><span class="n">fp</span> <span class="o">=</span> <span class="n">add</span><span class="p">;</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">c</span><span class="p">.</span><span class="n">fp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">));</span> <span class="c1">//30</span>
+
+	<span class="c1">//함수 포인터를 매개변수와 함수에 반환 값으로 사용하기</span>
+	<span class="n">executer</span><span class="p">(</span><span class="n">add</span><span class="p">);</span>
+
+	<span class="c1">//함수 포인터를 함수의 반환값으로 사용하기</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">getAdd</span><span class="p">()(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h1 id="서식을-지정하여-파일에-문자열-쓰기">서식을 지정하여 파일에 문자열 쓰기</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main49</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">FILE</span><span class="o">*</span> <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"hello.txt"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">);</span> <span class="c1">//"hello.txt : 파일 이름 또는 파일 경로 / "w" : 파일 모드</span>
+
+	<span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">"%s %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="s">"Hello"</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+
+	<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+:ET

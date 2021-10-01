@@ -1,0 +1,15 @@
+I"�<h1 id="함수-포인터-사용하기">함수 포인터 사용하기</h1>
+<p>```c
+void hello()
+{
+	printf(“Hello world\n”);
+}
+void bonjour()
+{
+	printf(“bonjour le monde!\n”);
+}
+int add(int a, int b)
+{
+	return a + b;
+}</p>
+:ET

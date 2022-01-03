@@ -700,4 +700,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/c13/",
         "teaser": null
+      },{
+        "title": "[c]기초14 - 알고리즘",
+        "excerpt":"거품 정렬 구현하기 void bunnle_sort(int arr[], int count) { int temp; for (int i = 0; i &lt; count; i++) { for (int j = 0; j &lt; count - 1; j++) { if (arr[j] &gt; arr[j + 1]) { temp = arr[j]; arr[j] = arr[j + 1]; arr[j +...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/c14/",
+        "teaser": null
+      },{
+        "title": "[Spring] 스프링기초,객체지향 설계5가지원칙",
+        "excerpt":"Spring Framework 핵심기술 : 스프링 DI 컨테이너, AOP, 이벤트, 기타 웹 기술 : 스프링 MVC, 스프링 WebFlux 데이터 접근 기술 : 트랜잭션, JDBC, ORM 지원, MXL 지원 기술 통합 : 캐시, 이메일, 원격접근, 스케줄링 테스트 : 스프링 기반 테스트 지원 언어 : 코틀린, 그룹비 Spring Boot 스프링을 편리하게 사용할 수...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/spring-1/",
+        "teaser": null
       }]

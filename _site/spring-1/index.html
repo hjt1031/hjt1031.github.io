@@ -1,0 +1,631 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Spring] 스프링기초,객체지향 설계5가지원칙 - juntae</title>
+<meta name="description" content="Spring Framework    핵심기술  : 스프링 DI 컨테이너, AOP, 이벤트, 기타   웹 기술 : 스프링 MVC, 스프링 WebFlux   데이터 접근 기술 : 트랜잭션, JDBC, ORM 지원, MXL 지원   기술 통합 : 캐시, 이메일, 원격접근, 스케줄링   테스트 : 스프링 기반 테스트 지원   언어 : 코틀린, 그룹비  ">
+
+
+  <meta name="author" content="동센">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="juntae">
+<meta property="og:title" content="[Spring] 스프링기초,객체지향 설계5가지원칙">
+<meta property="og:url" content="http://localhost:4000/spring-1/">
+
+
+  <meta property="og:description" content="Spring Framework    핵심기술  : 스프링 DI 컨테이너, AOP, 이벤트, 기타   웹 기술 : 스프링 MVC, 스프링 WebFlux   데이터 접근 기술 : 트랜잭션, JDBC, ORM 지원, MXL 지원   기술 통합 : 캐시, 이메일, 원격접근, 스케줄링   테스트 : 스프링 기반 테스트 지원   언어 : 코틀린, 그룹비  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-01-03T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/spring-1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "JunTae",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="juntae Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Developer
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">동센</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>One Day One Commit</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">home</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://www.instagram.com/jun_haaaaa" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Spring] 스프링기초,객체지향 설계5가지원칙">
+    <meta itemprop="description" content="Spring Framework  핵심기술  : 스프링 DI 컨테이너, AOP, 이벤트, 기타  웹 기술 : 스프링 MVC, 스프링 WebFlux  데이터 접근 기술 : 트랜잭션, JDBC, ORM 지원, MXL 지원  기술 통합 : 캐시, 이메일, 원격접근, 스케줄링  테스트 : 스프링 기반 테스트 지원  언어 : 코틀린, 그룹비">
+    <meta itemprop="datePublished" content="2022-01-03T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Spring] 스프링기초,객체지향 설계5가지원칙
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="spring-framework">Spring Framework</h1>
+<ul>
+  <li>핵심기술  : 스프링 DI 컨테이너, AOP, 이벤트, 기타</li>
+  <li>웹 기술 : 스프링 MVC, 스프링 WebFlux</li>
+  <li>데이터 접근 기술 : 트랜잭션, JDBC, ORM 지원, MXL 지원</li>
+  <li>기술 통합 : 캐시, 이메일, 원격접근, 스케줄링</li>
+  <li>테스트 : 스프링 기반 테스트 지원</li>
+  <li>언어 : 코틀린, 그룹비</li>
+</ul>
+
+<h1 id="spring-boot">Spring Boot</h1>
+<ul>
+  <li>스프링을 편리하게 사용할 수 있도록 지원, 최근에는 기본으로 사용</li>
+  <li>단독으로 실행할 수 있는 스프링 애플리케이션을 쉽게 생성</li>
+  <li>Tomcat 같은 웹 서버를 내장해서 별도의 웹 서버를 설치하지 않아도 됨</li>
+  <li>손쉬운 빌드 구성을 위한 starter 종속성 제공</li>
+  <li>스프링과 3rd parth(외부) 라이브러리 자동 구성</li>
+  <li>메트릭, 상태 확인, 외부 구성 같은 프로덕션 준비 기능 제공</li>
+  <li>관례에 의한 간결한 설정</li>
+</ul>
+
+<h3 id="핵심-개념-">핵심 개념 :</h3>
+<p>좋은 객체지향 의 어플리케이션을 개발 할 수 있도록 도와줌.</p>
+
+<p><strong>스프링의 꽃 : 다형성(역할과 구현을 분리) =&gt; 클라이언트는 내부구조를 몰라도 된다.</strong></p>
+<ul>
+  <li>운전자 - 자동차(자동차가 바뀌어도 운전자는 운전이 가능하다!)</li>
+  <li>공연 무대(배우가 바뀌어도 공연이 가능하다!)</li>
+  <li>키보드, 마우스, 세상의 표준 인터페이스들</li>
+  <li>정렬 알고리즘(기능만 충실하다면 다른 알고리즘으로 대체 가능!)</li>
+  <li>할인 정책 로직</li>
+  <li><span style="color:red">본질은 클라이언트를 변경하지 않고, 서버의 구현 기능을 유연하게 변경할 수 있다.</span></li>
+</ul>
+
+<h1 id="좋은-객체-지향-설계의-5가지-원칙solid">좋은 객체 지향 설계의 5가지 원칙(SOLID)</h1>
+<ul>
+  <li>SRP : 단일 책임 원칙(single responsibility principle)
+    <ul>
+      <li>한 클래스는 하나의 책임만 가져야 한다.</li>
+      <li>하나의 책임이라는 것은 모호하다.(클 수 있고, 작을 수 있다)</li>
+      <li><span style="color:red">중요한 기준은 변경</span> 이다. 변경이 있을 때 파급효과가 적을 수록 좋음.</li>
+    </ul>
+  </li>
+  <li>OCP : 개방-폐쇄 원칙(open/closed principle)
+    <ul>
+      <li>소프트웨어 요소는 확장에는 열려 있으나 변경에는 닫혀 있어야 한다(기존 코드 는 건들지말고, 새로운 class 생성).</li>
+      <li>구현 객체를 변경하려면 클라이언트 코드를 변경해야 한다.</li>
+    </ul>
+  </li>
+  <li>LSP : 리스코프 치환 원칙(liskov substitution principle)
+    <ul>
+      <li>프로그램의 객체는 프로그램의 정확성을 꺠뜨리지 않으면서 하위 타입의 인스턴스로 바꿀 수 있어야 한다.</li>
+      <li>ex) 자동차 인터페이스의 엑셀은 앞으로 가라는 기능, 뒤로 가게 구현하면 LSP 위반</li>
+    </ul>
+  </li>
+  <li>ISP : 인터페이스 분리 원칙(interface segregation principle)
+    <ul>
+      <li>특정 클라이언트를 위한 인터페이스 여러 개가 범용 인터페이스 하나 보다 낫다.</li>
+      <li>자동차 인터페이스 -&gt; 운전 인터페이스, 정비 인터페이스로 분리.</li>
+      <li>사용자 클라이언트 -&gt; 운전자 클라이언트, 정비사 클라이언트로 분리.</li>
+      <li>분리하면 정비 인터페이스 자체가 변해도 운전자 클라이언트에 영향을 주지 않음.</li>
+    </ul>
+  </li>
+  <li>DIP : 의존관계 역전 원칙(dependency inversion principle)
+    <ul>
+      <li>프로그래머는 “추상화에 의존해야지, 구체화에 의존 하면 안된다”. 의존성 주입은 이 원칙을 따르는 방법 중 하나.</li>
+      <li>구현 클래스에 의존하지 말고, 인터페이스에 의존하라는 뜻</li>
+      <li>ex) 운전자는 자동차의 역할 만 알면 되고, k3, 아반떼 테슬라 의 기능을 알필요가 없다.</li>
+      <li><span style="color:red">역할(Role)에 의존하게 해야 한다.</span> 클라이언트가 인터페이스에 의존해야 유연하게 구현체를 변경 할 수 있다. 구현체에 의존하면 변경할때 매우 어려움!!!</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="정리">정리</h1>
+<ul>
+  <li>객체 지향의 핵심은 다형성</li>
+  <li>다형성 만으로는 쉽게 부품을 갈아 끼우듯이 개발할 수 없다.</li>
+  <li>다형성 만으로는 구현 객체를 변경할 때 클라이언트 코드도 함께 변경된다.</li>
+  <li>다형성 만으로는 OCP, DIP를 지킬수 없다.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2022-01-03T00:00:00+09:00">January 3, 2022</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BSpring%5D+%EC%8A%A4%ED%94%84%EB%A7%81%EA%B8%B0%EC%B4%88%2C%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5+%EC%84%A4%EA%B3%845%EA%B0%80%EC%A7%80%EC%9B%90%EC%B9%99%20http%3A%2F%2Flocalhost%3A4000%2Fspring-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fspring-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fspring-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/c14/" class="pagination--pager" title="[c]기초14 - 알고리즘
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c14/" rel="permalink">[c]기초14 - 알고리즘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">거품 정렬 구현하기
+```c
+void bunnle_sort(int arr[], int count)
+{
+	int temp;
+	for (int i = 0; i &lt; count; i++)
+	{
+		for (int j = 0; j &lt; count - 1; j++)
+		{
+			if...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c13/" rel="permalink">[c]기초13 - 함수포인터 &amp; 파일생성
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">함수 포인터 사용하기
+```c
+void hello()
+{
+	printf(“Hello world\n”);
+}
+void bonjour()
+{
+	printf(“bonjour le monde!\n”);
+}
+int add(int a, int b)
+{
+	return a + b;
+}
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c12/" rel="permalink">[c]기초12-포인터연산&amp;함수 &amp;매개변수(가변인자)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">포인터 연산 사용하기
+```c
+struct Data {
+	int num1;
+	int num2;
+};
+int main40() {
+	//포인터 연산으로 메모리 주소 조작하기
+	int numArr[5] = { 11,22,33,44,55 };
+	int* numPtrA;
+	int* numP...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/c11/" rel="permalink">[c]기초11 - 구조체
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">구조체 사용하기 (struct로 정의)
+```c
+//관련 정보를 하나의 의미로 묶을 때 사용  한다.
+//기본 자료형 (char, int, float)등을 조합하여 만든 자료형을 파생형 이라고 한다.
+struct Person{
+	char name[20];
+	int age;
+	cha...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 JunTae. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

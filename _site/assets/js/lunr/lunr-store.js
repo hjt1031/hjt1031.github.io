@@ -712,4 +712,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/spring-1/",
         "teaser": null
+      },{
+        "title": "[Spring]이해 1- 예제",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/spring-2/",
+        "teaser": null
       }]

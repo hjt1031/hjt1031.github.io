@@ -713,9 +713,9 @@ var store = [{
         "url": "http://localhost:4000/spring-1/",
         "teaser": null
       },{
-        "title": "[Spring]이해 1- 예제",
-        "excerpt":" ","categories": [],
+        "title": "[Http]TCP/IP, PORT, DNS",
+        "excerpt":"인터넷 네트워크 TCP/IP IP 패킷정보 : 출발지 IP, 출발지 IP , 기타 TCP 세그먼트 : 출발지 PORT, 목적지 PORT, 전송제어, 순서, 검증 정보 등 TCP 특징 전송 제어 프로토콜 (Transmission Control Protocol) 연결지향 - TCP 3 way handshake(가상연결) ** 클라이언트 =&gt; (SYN : 접속 요청) =&gt; 서버 ** 서버 =&gt;...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/spring-2/",
+        "url": "http://localhost:4000/http1/",
         "teaser": null
       }]

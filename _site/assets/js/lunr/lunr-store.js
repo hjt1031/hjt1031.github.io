@@ -714,8 +714,14 @@ var store = [{
         "teaser": null
       },{
         "title": "[Http]TCP/IP, PORT, DNS",
-        "excerpt":"인터넷 네트워크 TCP/IP IP 패킷정보 : 출발지 IP, 출발지 IP , 기타 TCP 세그먼트 : 출발지 PORT, 목적지 PORT, 전송제어, 순서, 검증 정보 등 TCP 특징 전송 제어 프로토콜 (Transmission Control Protocol) 연결지향 - TCP 3 way handshake(가상연결) ** 클라이언트 =&gt; (SYN : 접속 요청) =&gt; 서버 ** 서버 =&gt;...","categories": [],
+        "excerpt":"인터넷 네트워크 TCP/IP IP 패킷정보 : 출발지 IP, 출발지 IP , 기타 TCP 세그먼트 : 출발지 PORT, 목적지 PORT, 전송제어, 순서, 검증 정보 등 TCP 특징 전송 제어 프로토콜 (Transmission Control Protocol) 연결지향 - TCP 3 way handshake(가상연결) 클라이언트 =&gt; (SYN : 접속 요청) =&gt; 서버 서버 =&gt; (SYN +...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/http1/",
+        "teaser": null
+      },{
+        "title": "[Http] HTTP 기본",
+        "excerpt":"모든 것이 HTTP(HyperText Transfer Protocol) TCP : HTTP/1.1, HTTP/2 UDP : HTTP/3 현재 HTTP/2, HTTP/3 도 점점 증가 클라이언트 서버 구조 Request Response 구조 클라이언트는 서버에 요청을 보내고, 응답을 대기 서버가 요청에 대한 결과를 만들어서 응답 무상태(Stateless), 상태유지(Stateful) 상태유지 : 클라이언트와 서버와 1:1 로 연결을 해줘야 함 단점 : 기존...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/http2/",
         "teaser": null
       }]

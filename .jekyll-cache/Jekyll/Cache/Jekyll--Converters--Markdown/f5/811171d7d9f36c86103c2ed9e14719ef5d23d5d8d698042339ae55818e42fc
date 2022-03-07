@@ -1,0 +1,25 @@
+I"+<p>자바스크립트 객체는 함수를 이용해서 만들 수도 있습니다. why? 함수도 객체이기 때문</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Person(name,age){
+	this.name = name;
+	this.age = age;
+}
+
+Person.prototype.walk = function(speed){
+	console.log(speed + 'km 속도로 걸어갑니다.');
+}
+
+var person01 = new Person('소녀시대',20); //생성자
+var person02 = new Person('걸스데이',22);
+
+console.log(person01.name + '객체의 walk(10)을 호출합니다.');
+person01.walk(10);
+
+//
+소녀시대 객체의 walk(10)을 호출합니다.
+10km 속도로 걸어갑니다.
+</code></pre></div></div>
+
+<p>이 객체에 walk 함수를 속성으로 추가 할려면
+Person.prototype.walk = function(){} 으로 생성해야한다.</p>
+:ET

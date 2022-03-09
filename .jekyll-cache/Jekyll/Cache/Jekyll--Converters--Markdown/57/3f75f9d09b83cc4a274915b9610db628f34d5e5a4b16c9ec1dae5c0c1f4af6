@@ -1,0 +1,129 @@
+I"92<h1 id="비트-andorxor-연산자-사용">비트 AND,OR,XOR 연산자 사용</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 0000 0001</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 0000 0011</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">162</span> <span class="c1">// 1010 0010;</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num4</span><span class="p">;</span>
+	
+	<span class="n">num4</span> <span class="o">=</span> <span class="o">~</span><span class="n">num3</span><span class="p">;</span> <span class="c1">//비트를 뒤집는것</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">// 0101 1101;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&amp;</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 0000 0001 :1 </span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">|</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 0000 0011 :3 </span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">^</span> <span class="n">num2</span><span class="p">);</span> <span class="c1">// 0000 0010 :2 </span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="시프트-연산자">시프트 연산자</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 0000 0011</span>
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span> <span class="c1">// 0001 1000</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//3을 왼쪽으로 3번 움직임 : 0001 1000 거듭제곱을 곱하기 3 * 2*3제곱</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num2</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//24를 왼쪽으로 두번 움직임 0000 0110 거듭제곱을 나누기 24/2*2 제곱</span>
+	
+	<span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="비트-할당-연산자">비트 할당 연산자</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num4</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num5</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+	
+	<span class="n">num1</span> <span class="o">&amp;=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">//4 : 0000 0100</span>
+	<span class="n">num2</span> <span class="o">|=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//6 : 0000 0110</span>
+	<span class="n">num3</span> <span class="o">^=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">//7 : 0000 0111</span>
+	<span class="n">num4</span> <span class="o">&lt;&lt;=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//16 : 0001 0000</span>
+	<span class="n">num5</span> <span class="o">&gt;&gt;=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//1 : 0000 0001</span>
+	
+	<span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<h1 id="비트-연산자-응용">비트 연산자 응용</h1>
+<pre><code class="language-C">int main() {
+	
+	unsigned char num1 = 1;
+	
+	printf("%u\n", num1 &lt;&lt; 1); //2
+	printf("%u\n", num1 &lt;&lt; 2); //2의 2제곱
+	printf("%u\n", num1 &lt;&lt; 3);//2의 3제곱
+	printf("%u\n", num1 &lt;&lt; 4);//2의 4제곱
+	printf("%u\n", num1 &lt;&lt; 5);//2의 5제곱
+	printf("%u\n", num1 &lt;&lt; 6);//2의 6제곱
+	printf("%u\n", num1 &lt;&lt; 7);//2의 7ㅠ 제곱
+	return 0;
+}
+</code></pre>
+
+<h1 id="비트-연산자-응용2">비트 연산자 응용2</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">unsigend</span> <span class="kt">char</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">131</span><span class="p">;</span> <span class="c1">// 1000 0011</span>
+	<span class="kt">char</span> <span class="n">num2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">125</span><span class="p">;</span>
+	
+	<span class="n">usigned</span> <span class="kt">char</span> <span class="n">num3</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="n">num4</span><span class="p">;</span>
+	
+	<span class="n">num3</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="n">num4</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="p">;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num3</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%u</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num4</span><span class="p">);</span> <span class="c1">// -4 모자란 부분은 부호비트(- 는 1)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="연산자-우선순위">연산자 우선순위</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+	
+	<span class="n">num1</span> <span class="o">=</span> <span class="mi">35</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 37</span>
+	<span class="n">num1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">35</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 먼저 계산하려면 괄호 사용하기</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+	
+	
+	<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+	
+	<span class="n">num2</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="o">++</span> <span class="n">num3</span><span class="p">;</span> <span class="c1">//14</span>
+	<span class="c1">// 1. 5-3, 2. ++num3, 3.나눗셈 곱셈 왼쪽에서 오른 쪽</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="논리-비교-쉬프트-연산자">논리 비교 쉬프트 연산자</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">bool</span> <span class="n">b1</span><span class="p">;</span>
+	
+	<span class="n">b1</span> <span class="o">=</span> <span class="p">(</span><span class="nb">false</span> <span class="o">||</span> <span class="nb">false</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">false</span> <span class="o">||</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="c1">// 1. 괄호 먼저, 2.not, 3.AND, 4.OR</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">b1</span><span class="p">);</span> <span class="c1">// 0</span>
+	
+	
+	<span class="kt">int</span> <span class="n">num1</span><span class="p">;</span>
+	
+	<span class="n">num1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">//1. 부등호</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">num1</span><span class="p">);</span> <span class="c1">// 0</span>
+	
+	
+	<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">num4</span><span class="p">;</span>
+	
+	<span class="n">num4</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">num3</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 1. 2 + num3</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">num4</span><span class="p">);</span> <span class="c1">// 32</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+:ET

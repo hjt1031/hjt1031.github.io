@@ -724,4 +724,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/http2/",
         "teaser": null
+      },{
+        "title": "[Http] 상태 코드",
+        "excerpt":"상태 코드 클라이언트가 보낸 요청의 처리 상태를 응답에서 알려주는 기능 *1xx (Informational) : 요청이 수신되어 처리중 2xx (Successful) : 요청 정상 처리 201 (Created) : 요청을 성공해서 새로운 리소스가 생성됨 (Location 헤더 필드로 식별) 202 (Accepted) : 요청이 접수 되었으나 처리가 완료되지 않았음 204 (No Content) : 서버가 요청을 성공적으로...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/http3/",
+        "teaser": null
       }]

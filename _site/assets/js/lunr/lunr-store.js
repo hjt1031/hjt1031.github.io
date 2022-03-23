@@ -730,4 +730,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/http3/",
         "teaser": null
+      },{
+        "title": "[Http] 헤더 및 쿠키",
+        "excerpt":"HTTP BODY as - is 메시지 본문 은 엔티티 본문을 전달하는데 사용 엔티티 본문은 요청이나 응답에서 전달할 실제 데이터 엔티티 헤더는 엔티티 본문의 데이터를 해석할 수 있는 정보 제공 데이터 유형(html, json), 데이터 길이, 압축 정보 등등 to - be 메시지 본문 을 통해 표현 데이터 전달 메시지 본문 =...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/http/",
+        "teaser": null
       }]
